@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SAD.Core
 {
-    class Target
+    public class Target
     {
         public string Name { get; set; }
         public double X { get; set; }

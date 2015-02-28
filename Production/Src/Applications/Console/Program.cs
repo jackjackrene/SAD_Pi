@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SAD.Core;
+using BuildDefender;
 
 namespace Console
 {
@@ -24,8 +25,8 @@ namespace Console
 
             // initialize objects
             SAD.Core.FileReader reader; 
-            SAD.Core.MissileLauncher DCMissileLauncher = new SAD.Core.MissileLauncher("DreamCheekyMissileLauncher");
-            SAD.Core.TargetManager = new SAD.Core.TargetManager();
+            BuildDefender.SADMissileLauncherFactory DCMissileLauncher = BuildDefender.SADMissileLauncherFactory.GetInstance("DreamCheekyMissileLauncher");
+            SAD.Core.TargetManager targetManager = SAD.Core.TargetManager.GetInstance();
 
             // List command options for user
             System.Console.WriteLine("Valid Commands: FIRE, MOVE <phi theta>, MOVEBY <phi theta>,");
@@ -104,10 +105,11 @@ namespace Console
                             System.Console.WriteLine("Exception Caught: " + badTargetFile.Message);
                             return;
                         }
+                        targetManager.TargetList = TargetList;
                         break;
                     // if user selects "SCOUNDRELS"
                     case "SCOUNDRELS":
-                        TargetList = TargetManager.GetEnemies();
+                        TargetList = targetManager.GetEnemies;
                         listSize = TargetList.ToList().Count;
                         for (int i = 0; i < listSize; i++)
                         {
@@ -120,23 +122,42 @@ namespace Console
                         break;
                     // if user selects "FRIENDS"
                     case "FRIENDS":
-                        TargetList = TargetManager.GetFriends();
-                        break;
+                        TargetList = targetManager.GetFriends;
+                        listSize = TargetList.ToList().Count;
+                        for (int i = 0; i < listSize; i++)
+                        {
+                            System.Console.WriteLine("Target: {0}", TargetList[i].Name);
+                            System.Console.WriteLine("Friend: For now.");
+                            System.Console.WriteLine("Position: x={0}, y={1}, z={2}", TargetList[i].X, TargetList[i].Y, TargetList[i].Z);
+                            System.Console.WriteLine("Points: {0}", TargetList[i].Points);
+                            System.Console.WriteLine("Status: At Large");
+                        }
+                            break;
                     // if user selects "KILL"
                     case "KILL":
-                        if (words.Length != 3)
+                        if (words.Length != 2)
                         {
                             System.Console.WriteLine("Incorrect number of arguments");
                         }
                         else
                         {
-                            phi = Convert.ToDouble(words[1]);
-                            theta = Convert.ToDouble(words[2]);
-                            DCMissileLauncher.Kill(phi, theta);
+                            if (TargetList.Exists(x => x.Name.ToUpper() == words[1].ToUpper()))
+                            {
+                                // grab target
+                                currentTarget = TargetList.Find(x => x.Name.ToUpper() == words[1].ToUpper());
+                                SAD.Core.Spherical.ConvertToSphere(currentTarget);
+                                DCMissileLauncher.Kill(currentTarget.Phi, currentTarget.Theta);
+                            } else
+                            {
+                                // if target does not exist
+                                System.Console.WriteLine("Target does not exist");
+                            }
                         }
                         break;
                     // if user selects "STATUS"
                     case "STATUS":
+                        System.Console.WriteLine("Launcher: DreamCheeky");
+                        System.Console.WriteLine("Missiles: {0} of 4 remain", DCMissileLauncher.nMissiles);
                         break;
                     // if user selects "EXIT"
                     case "EXIT":

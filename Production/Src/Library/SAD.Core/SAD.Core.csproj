@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Spherical.cs" />
     <Compile Include="IO\CommentException.cs" />
     <Compile Include="IO\INIFileReader.cs" />
     <Compile Include="Devices\MissileLauncher.cs" />
