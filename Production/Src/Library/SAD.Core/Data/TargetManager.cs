@@ -13,7 +13,7 @@ namespace SAD.Core
         // Singletone TargetManager Instance
         // If there is no TargetManager, create one. 
         private static TargetManager instance;
-        private IEnumerable<Target> targetList;
+        private IEnumerable<Target> listOfTargets;
         public static TargetManager GetInstance()
         {           
                 if (instance == null)
@@ -35,8 +35,8 @@ namespace SAD.Core
 
         public IEnumerable<Target> TargetList
       {
-          set { targetList = value; }
-          get { return targetList; }
+          set { listOfTargets = value; }
+          get { return listOfTargets; }
       }
         public void SetTargets()
       {
@@ -61,7 +61,7 @@ namespace SAD.Core
         {
             get
             {
-                return (targetList.Where(c => c.Friend != true));
+                return (listOfTargets.Where(c => c.Friend != true));
             }
         }
 
@@ -69,7 +69,7 @@ namespace SAD.Core
         {
             get
             {
-                return (targetList.Where(c => c.Friend == true));
+                return (listOfTargets.Where(c => c.Friend == true));
             }
         }
 
