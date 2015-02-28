@@ -39,12 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Devices\Missile Launcher\Interfaces\ISADMissileLauncher.cs" />
+    <Compile Include="Devices\Missile Launcher\SADMissileLauncher.cs" />
+    <Compile Include="Devices\Missile Launcher\SADMissileLauncherFactory.cs" />
+    <Compile Include="Devices\Missile Launcher\Subclasses\DreamCheekyMissileLauncher.cs" />
+    <Compile Include="Devices\Missile Launcher\Subclasses\MockMissileLauncher.cs" />
     <Compile Include="IO\INIFileReader.cs" />
-    <Compile Include="Devices\MissileLauncher.cs" />
+    <Compile Include="Devices\Missile Launcher\MissileLauncher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\Target.cs" />
     <Compile Include="Data\TargetManager.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
