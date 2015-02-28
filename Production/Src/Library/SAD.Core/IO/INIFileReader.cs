@@ -6,17 +6,48 @@ using System.Threading.Tasks;
 
 namespace SAD.Core
 {
-    public interface FileReader
+
+    public abstract class FileReader
     {
-        List<Target> ReadTargets();
+        public string path
+        {
+            get;
+            set;
+        }
     }
+    public class ReaderFactory
+    {
+       public INIReader CreateReader()
+        {
+            INIReader reader = null;
+            reader = new INIReader();
+            return reader;
+        }
+        public FileReader CreateReader(ReaderType readerType)
+        {
+            FileReader reader = null;
+            switch(readerType)
+            {
+                case ReaderType.INIReader:
+                    reader = new INIReader();
+                    break;
+            }
+            return reader;
+        }
+
+    }
+    public enum ReaderType
+    {
+
+    INIReader,
+    }
+
     public class INIReader : FileReader
     {
         public string path;
 
-        public INIReader(string INIPath)
+        public INIReader()
         {
-            path = @INIPath;
         }
 
         public List<Target> ReadTargets()
