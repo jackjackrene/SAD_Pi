@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Console
+namespace SAD.Core
 {
     public class TargetManager
     {
@@ -13,52 +13,66 @@ namespace Console
         // Singletone TargetManager Instance
         // If there is no TargetManager, create one. 
         private static TargetManager instance;
-        public static TargetManager Default
-        {
-            get
-            {
+        private IEnumerable<Target> targetList;
+        public static TargetManager GetInstance()
+        {           
                 if (instance == null)
                 {
                     instance = new TargetManager();
                 }
 
                 return instance;
-            }
-
+            
+         
         }
-
-
         /// <summary>
-        /// IEnumerable Target list. 
+        /// Target Manager constructor which creates a targetInstance... A list of Targets
         /// </summary>
-        IEnumerable<Target> TargetList
+      private TargetManager()
         {
-            get { return TargetList; }
-            set;
+
         }
+
+        public IEnumerable<Target> TargetList
+      {
+          set { targetList = value; }
+          get { return targetList; }
+      }
+        public void SetTargets()
+      {
+      }
+
         void Prioritize()
         {
 
 
         }
-        private bool IsFriend(Target target);
+
+        private bool IsFriend(Target target)
+        {
+            if (target.Friend == true)
+            {
+                return true;
+            }
+            else return false;
+
+        }
         public IEnumerable<Target> GetEnemies
         {
             get
             {
-                return (var from TargetList where var.GetFriends == false)
+                return (targetList.Where(c => c.Friend != true));
             }
-
-
-
-
         }
+
         public IEnumerable<Target> GetFriends
         {
-
-
-
+            get
+            {
+                return (targetList.Where(c => c.Friend == true));
+            }
         }
+
         /// <summary>
         /// Function to prioritize Targets within game that will be
         /// implemented later. 
