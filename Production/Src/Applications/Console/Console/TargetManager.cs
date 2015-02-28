@@ -8,6 +8,10 @@ namespace Console
 {
     public class TargetManager
     {
+
+
+        // Singletone TargetManager Instance
+        // If there is no TargetManager, create one. 
         private static TargetManager instance;
         public static TargetManager Default
         {
@@ -24,12 +28,26 @@ namespace Console
         }
 
 
+        /// <summary>
+        /// IEnumerable Target list. 
+        /// </summary>
+        IEnumerable<Target> TargetList
+        {
+            get { return TargetList; }
+            set;
+        }
+        void Prioritize()
+        {
 
-        IEnumerable<Target> TargetList;
-        void Prioritize();
+
+        }
         private bool IsFriend(Target target);
         public IEnumerable<Target> GetEnemies
         {
+            get
+            {
+                return (var from TargetList where var.GetFriends == false)
+            }
 
 
 
@@ -41,7 +59,15 @@ namespace Console
 
 
         }
+        /// <summary>
+        /// Function to prioritize Targets within game that will be
+        /// implemented later. 
+        /// </summary>
+        void Prioritize
+        {
+            
 
+        }
 
         
     }
