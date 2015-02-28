@@ -29,6 +29,8 @@ namespace Console
             SAD.Core.TargetManager targetManager = SAD.Core.TargetManager.GetInstance();
 
             // List command options for user
+            System.Console.WriteLine("System Loaded");
+            System.Console.WriteLine("Ready to Fire Ze Missiles");
             System.Console.WriteLine("Valid Commands: FIRE, MOVE <phi theta>, MOVEBY <phi theta>,");
             System.Console.WriteLine("RELOAD, LOAD <filepath>, SCOUNDRELS, FRIENDS, KILL <targetname>");
             System.Console.WriteLine("STATUS, EXIT");
