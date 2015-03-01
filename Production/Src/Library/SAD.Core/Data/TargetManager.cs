@@ -77,12 +77,6 @@ namespace SAD.Core
         /// Function to prioritize Targets within game that will be
         /// implemented later. 
         /// </summary>
-        void Prioritize
-        {
-            
-
-        }
-
         
     }
 }

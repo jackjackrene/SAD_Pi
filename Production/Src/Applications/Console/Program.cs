@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SAD.Core;
 using BuildDefender;
+using SAD.Core.Devices;
 
 namespace Console
 {
@@ -15,7 +16,7 @@ namespace Console
         {
             // initialize values
             string targetFile;
-            IEnunumerable<SAD.Core.Target> TargetList = new IEnumerable<SAD.Core.Target>();
+            List<SAD.Core.Target> TargetList = new List<SAD.Core.Target>();
             string UserPrompt = " ";
             int listSize = 0;
             char[] delimiter = { ' ' };
@@ -24,8 +25,9 @@ namespace Console
             double theta = 0;
 
             // initialize objects
-            SAD.Core.FileReader reader; 
-            BuildDefender.SADMissileLauncherFactory DCMissileLauncher = BuildDefender.SADMissileLauncherFactory.GetInstance("DreamCheekyMissileLauncher");
+            ReaderType readerType = ReaderType.iniReader;
+            SAD.Core.FileReader reader = SAD.Core.ReaderFactory.CreateReader(readerType); 
+            SAD.Core.Devices.SADMissileLauncherFactory DCMissileLauncher = SAD.Core.Devices.SADMissileLauncherFactory.GetInstance();
             SAD.Core.TargetManager targetManager = SAD.Core.TargetManager.GetInstance();
 
             // List command options for user
@@ -111,8 +113,8 @@ namespace Console
                         break;
                     // if user selects "SCOUNDRELS"
                     case "SCOUNDRELS":
-                        TargetList = targetManager.GetEnemies;
-                        listSize = TargetList.ToList().Count;
+                        TargetList = targetManager.GetEnemies.ToList();
+                        listSize = TargetList.Count;
                         for (int i = 0; i < listSize; i++)
                         {
                             System.Console.WriteLine("Target: {0}", TargetList[i].Name);
@@ -124,8 +126,8 @@ namespace Console
                         break;
                     // if user selects "FRIENDS"
                     case "FRIENDS":
-                        TargetList = targetManager.GetFriends;
-                        listSize = TargetList.ToList().Count;
+                        TargetList = targetManager.GetFriends.ToList();
+                        listSize = TargetList.Count;
                         for (int i = 0; i < listSize; i++)
                         {
                             System.Console.WriteLine("Target: {0}", TargetList[i].Name);

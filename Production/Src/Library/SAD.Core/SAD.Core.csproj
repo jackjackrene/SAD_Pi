@@ -39,11 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Spherical.cs" />
     <Compile Include="Devices\Missile Launcher\Interfaces\ISADMissileLauncher.cs" />
     <Compile Include="Devices\Missile Launcher\SADMissileLauncher.cs" />
     <Compile Include="Devices\Missile Launcher\SADMissileLauncherFactory.cs" />
     <Compile Include="Devices\Missile Launcher\Subclasses\DreamCheekyMissileLauncher.cs" />
     <Compile Include="Devices\Missile Launcher\Subclasses\MockMissileLauncher.cs" />
+    <Compile Include="IO\CommentException.cs" />
     <Compile Include="IO\INIFileReader.cs" />
     <Compile Include="Devices\Missile Launcher\MissileLauncher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

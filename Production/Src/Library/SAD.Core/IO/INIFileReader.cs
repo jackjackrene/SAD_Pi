@@ -28,7 +28,7 @@ namespace SAD.Core
             FileReader reader = null;
             switch(readerType)
             {
-                case ReaderType.INIReader:
+                case ReaderType.iniReader:
                     reader = new INIReader();
                     break;
             }
@@ -39,7 +39,7 @@ namespace SAD.Core
     public enum ReaderType
     {
 
-    INIReader,
+    iniReader,
     }
 
     public class INIReader : FileReader
