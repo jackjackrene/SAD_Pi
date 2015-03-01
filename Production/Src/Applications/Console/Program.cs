@@ -26,7 +26,8 @@ namespace Console
 
             // initialize objects
             ReaderType readerType = ReaderType.iniReader;
-            SAD.Core.FileReader reader = SAD.Core.ReaderFactory.CreateReader(readerType); 
+            SAD.Core.FileReader reader = null;
+            reader = SAD.Core.ReaderFactory.CreateReader(readerType);
             SAD.Core.Devices.SADMissileLauncherFactory DCMissileLauncher = SAD.Core.Devices.SADMissileLauncherFactory.GetInstance();
             SAD.Core.TargetManager targetManager = SAD.Core.TargetManager.GetInstance();
 
@@ -97,7 +98,7 @@ namespace Console
                         }
 
                         // Initialize reader
-                        reader = new SAD.Core.INIReader(@targetFile);
+                        reader.path = @targetFile;
 
                         // Read file, input to target list
                         try

@@ -14,6 +14,11 @@ namespace SAD.Core
             get;
             set;
         }
+        public List<Target> ReadTargets()
+        {
+            List<Target> returnList = null;
+            return returnList;
+        }
     }
     public class ReaderFactory
     {
@@ -23,7 +28,7 @@ namespace SAD.Core
             reader = new INIReader();
             return reader;
         }
-        public FileReader CreateReader(ReaderType readerType)
+        public static FileReader CreateReader(ReaderType readerType)
         {
             FileReader reader = null;
             switch(readerType)
@@ -44,7 +49,11 @@ namespace SAD.Core
 
     public class INIReader : FileReader
     {
-        public string path;
+        public string path
+        {
+            get;
+            set;
+        }
 
         public INIReader()
         {
