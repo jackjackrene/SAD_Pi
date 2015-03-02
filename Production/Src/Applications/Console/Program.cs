@@ -94,27 +94,34 @@ namespace Console
                         break;
                     // if user selects "LOAD"
                     case "LOAD":
-                        targetFile = words[1];
-                        // Test that target file exists
-                        if (!File.Exists(@targetFile))
+                        if (words.Length != 2)
                         {
-                            System.Console.WriteLine("File does not exist");
+                            System.Console.WriteLine("Incorrect number of arguments");
                         }
+                        else
+                        {
+                            targetFile = words[1];
+                            // Test that target file exists
+                            if (!File.Exists(@targetFile))
+                            {
+                                System.Console.WriteLine("File does not exist");
+                            }
 
-                        // Initialize reader
-                        reader.path = @targetFile;
+                            // Initialize reader
+                            reader.path = @targetFile;
 
-                        // Read file, input to target list
-                        try
-                        {
-                            TargetList = reader.ReadTargets();
+                            // Read file, input to target list
+                            try
+                            {
+                                TargetList = reader.ReadTargets();
+                            }
+                            catch (Exception badTargetFile)
+                            {
+                                System.Console.WriteLine("Exception Caught: " + badTargetFile.Message);
+                                return;
+                            }
+                            targetManager.TargetList = TargetList;
                         }
-                        catch (Exception badTargetFile)
-                        {
-                            System.Console.WriteLine("Exception Caught: " + badTargetFile.Message);
-                            return;
-                        }
-                        targetManager.TargetList = TargetList;
                         break;
                     // if user selects "SCOUNDRELS"
                     case "SCOUNDRELS":

@@ -9,16 +9,12 @@ namespace SAD.Core
 
     public abstract class FileReader
     {
-        public string path
+        public abstract string path
         {
             get;
             set;
         }
-        public List<Target> ReadTargets()
-        {
-            List<Target> returnList = null;
-            return returnList;
-        }
+        public abstract List<Target> ReadTargets();
     }
     public class ReaderFactory
     {
@@ -49,7 +45,7 @@ namespace SAD.Core
 
     public class INIReader : FileReader
     {
-        public string path
+        public override string path
         {
             get;
             set;
@@ -59,7 +55,7 @@ namespace SAD.Core
         {
         }
 
-        public List<Target> ReadTargets()
+        public override List<Target> ReadTargets()
         {
             Target target;
             string Name = null;
@@ -83,7 +79,7 @@ namespace SAD.Core
             List<Target> TargetList = new List<Target>();
 
             // read in file to string array
-            string[] lines = System.IO.File.ReadAllLines(@path);
+            string[] lines = System.IO.File.ReadAllLines(this.path);
 
             // loop through file
             for (counter = 1; counter < lines.Length; counter++)
