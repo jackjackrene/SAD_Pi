@@ -32,7 +32,7 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
         {
             System.Console.WriteLine("Kill method of SADMissileLauncher invoked!");
 
-            if (CurrentMissileCount > 0)
+            if (CurrentMissileCount < 1)
                 System.Console.WriteLine("No Missiles left! MUST RELOAD!!");
             else
             {
@@ -43,7 +43,7 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
 
         public override void Fire()
         {
-            if (CurrentMissileCount < 0)
+            if (CurrentMissileCount < 1)
                 System.Console.WriteLine("Reload! No missiles left!");
             else
             {

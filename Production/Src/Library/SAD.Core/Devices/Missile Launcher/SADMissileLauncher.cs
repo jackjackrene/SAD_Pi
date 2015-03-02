@@ -27,7 +27,7 @@ namespace SAD.Core.Devices
         {
             System.Console.WriteLine("Reload method of SADMissileLauncher invoked!");
 
-            if (CurrentMissileCount > 0)
+            if (CurrentMissileCount == MaxMissileCount)
                 System.Console.WriteLine("No Reload is necessary");
             else
             {
@@ -59,7 +59,10 @@ namespace SAD.Core.Devices
         {
             set
             {
-                // Do nothing
+                if (value < 0)
+                    throw new ArgumentException("Error: Invalid Missile Amount assigned in constructor", value.ToString());
+                else
+                    currentMissleCount = value;
             }
 
             get
