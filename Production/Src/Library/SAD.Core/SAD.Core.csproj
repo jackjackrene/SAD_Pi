@@ -37,6 +37,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="USBLib">
+      <HintPath>..\USBLib.DLL</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Spherical.cs" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SAD.Core.Devices
 {
-    abstract class SADMissileLauncher : ISADMissileLauncher
+    public abstract class SADMissileLauncher : ISADMissileLauncher
     {
         protected int maxMissileCount;
         protected int currentMissleCount;
@@ -14,17 +14,28 @@ namespace SAD.Core.Devices
         protected SADMissileLauncher()
         {
         }
+        
+        public abstract void Kill(double phi, double theta);
 
-        public abstract void ISADMissileLauncher.Kill(double phi, double theta);
+        public abstract void Fire();
 
-        public abstract void ISADMissileLauncher.Fire();
+        public abstract void Move(double phi, double theta);
 
-        public abstract void ISADMissileLauncher.Move(double phi, double theta);
+        public abstract void MoveBy(double phi, double theta);
 
-        public abstract void ISADMissileLauncher.MoveBy(double phi, double theta);
+        public void Reload()
+        {
+            System.Console.WriteLine("Reload method of SADMissileLauncher invoked!");
 
-        public abstract void ISADMissileLauncher.Reload();
-
+            if (CurrentMissileCount > 0)
+                System.Console.WriteLine("No Reload is necessary");
+            else
+            {
+                CurrentMissileCount = MaxMissileCount;
+                System.Console.WriteLine("Reload succesful");
+            }
+        }
+        
         // Properties
         public int MaxMissileCount
         {
@@ -62,5 +73,7 @@ namespace SAD.Core.Devices
             DreamCheekyMissileLauncher,
             MockMissileLauncher
         }
+
+
     }
 }

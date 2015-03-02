@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using SAD.Core;
 using BuildDefender;
 using SAD.Core.Devices;
+using SAD.Core.Devices.Missile_Launcher.Subclasses;
 
 namespace Console
 {
@@ -28,8 +29,11 @@ namespace Console
             ReaderType readerType = ReaderType.iniReader;
             SAD.Core.FileReader reader = null;
             reader = SAD.Core.ReaderFactory.CreateReader(readerType);
-            SAD.Core.Devices.SADMissileLauncherFactory DCMissileLauncher = SAD.Core.Devices.SADMissileLauncherFactory.GetInstance();
+            SAD.Core.Devices.SADMissileLauncherFactory missileLauncherFactory = SAD.Core.Devices.SADMissileLauncherFactory.GetInstance();
             SAD.Core.TargetManager targetManager = SAD.Core.TargetManager.GetInstance();
+
+            // Create a SADDreamCheekyMissileLauncher
+            SADMissileLauncher missileLauncher = missileLauncherFactory.CreateSADMissileLauncher(SAD.Core.Devices.SADMissileLauncher.SADMissileType.DreamCheekyMissileLauncher);
 
             // List command options for user
             System.Console.WriteLine("System Loaded");
@@ -58,7 +62,7 @@ namespace Console
                 {
                     // if user selects "FIRE"
                     case "FIRE":
-                        DCMissileLauncher.Fire();
+                        missileLauncher.Fire();
                         break;
                     // if user selects "MOVE"
                     case "MOVE":
@@ -69,7 +73,7 @@ namespace Console
                         {
                             phi = Convert.ToDouble(words[1]);
                             theta = Convert.ToDouble(words[2]);
-                            DCMissileLauncher.Move(phi, theta);
+                            missileLauncher.Move(phi, theta);
                         }
                         break;
                     // if user selects "MOVEBY"
@@ -81,12 +85,12 @@ namespace Console
                         {
                             phi = Convert.ToDouble(words[1]);
                             theta = Convert.ToDouble(words[2]);
-                            DCMissileLauncher.MoveBy(phi, theta);
+                            missileLauncher.MoveBy(phi, theta);
                         }
                         break;
                     // if user selects "RELOAD"
                     case "RELOAD":
-                        DCMissileLauncher.Reload();
+                        missileLauncher.Reload();
                         break;
                     // if user selects "LOAD"
                     case "LOAD":
@@ -151,7 +155,7 @@ namespace Console
                                 // grab target
                                 currentTarget = TargetList.Find(x => x.Name.ToUpper() == words[1].ToUpper());
                                 SAD.Core.Spherical.ConvertToSphere(currentTarget);
-                                DCMissileLauncher.Kill(currentTarget.Phi, currentTarget.Theta);
+                                missileLauncher.Kill(currentTarget.Phi, currentTarget.Theta);
                             } else
                             {
                                 // if target does not exist
@@ -162,7 +166,7 @@ namespace Console
                     // if user selects "STATUS"
                     case "STATUS":
                         System.Console.WriteLine("Launcher: DreamCheeky");
-                        System.Console.WriteLine("Missiles: {0} of 4 remain", DCMissileLauncher.nMissiles);
+                        System.Console.WriteLine("Missiles: {0} of 4 remain", missileLauncher.CurrentMissileCount);
                         break;
                     // if user selects "EXIT"
                     case "EXIT":

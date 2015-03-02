@@ -89,18 +89,5 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
             else
                 internalMissileLauncher.command_Up((int)Math.Round(phi));
         }
-
-        public override void Reload()
-        {
-            System.Console.WriteLine("Reload method of SADMissileLauncher invoked!");
-
-            if (CurrentMissileCount > 0)
-                System.Console.WriteLine("No Reload is necessary");
-            else
-            {
-                CurrentMissileCount = MaxMissileCount;
-                System.Console.WriteLine("Reload succesful");
-            }
-        }
     }
 }

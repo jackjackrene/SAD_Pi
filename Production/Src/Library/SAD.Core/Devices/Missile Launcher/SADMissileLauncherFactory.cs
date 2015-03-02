@@ -8,7 +8,7 @@ using SAD.Core.Devices.Missile_Launcher.Subclasses;
 
 namespace SAD.Core.Devices
 {
-    class SADMissileLauncherFactory
+    public class SADMissileLauncherFactory
     {
         private static SADMissileLauncherFactory sadMissileLauncherFactoryInstance;
 
