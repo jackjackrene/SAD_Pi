@@ -43,10 +43,5 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
         {
             System.Console.WriteLine("MoveBy method of mockMissileLauncher invoked!");
         }
-
-        public override void Reload()
-        {
-            System.Console.WriteLine("Reload method of mockMissileLauncher invoked!");
-        }
     }
 }
