@@ -1,0 +1,1412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="47290cb0-0ae3-40af-b61b-b23b8f13bc3d"
+  name="Subclasses"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="8b51e3ca-b278-42db-bdb0-578178db7f66"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="5b3f5f7f-8756-48bd-836c-c0072e45ffa2"
+        name="DreamCheekyMissileLauncher"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="b0658591-b6e6-4a02-a23e-5a6e8e2f40c9"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DDreamCheekyMissileLauncher"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="27141ee6-20b8-46df-906c-9dfbe0500755"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4a658f23-41fe-488a-bff6-00a3118865c3">
+                <propertyInstance
+                  Id="07e0409a-9079-450d-ba7a-7e42ba658844"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f5a59d18-e8d7-4e1e-a0f2-f7d68b5927fd">
+                <propertyInstance
+                  Id="f6b08b1c-3980-4c42-87cb-629808d57c6d"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="50337c04-f6e0-4bef-90ab-64bc5b6211dc">
+                <propertyInstance
+                  Id="96414cf8-3d55-41d3-8976-feaf649c668f"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="665f5cdc-68f3-4b29-843a-e176e9ad3a3b">
+                <propertyInstance
+                  Id="7ab6543c-fc26-481f-b58f-133741458417"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ae288899-a7aa-4b9d-a819-6869c9129390">
+                <propertyInstance
+                  Id="f0c7694f-246d-4304-886a-1e32c4d0abc8"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="505fadb5-c267-4465-a9d3-9495dbf64a98"
+            isSubstitutable="false">
+            <classMoniker
+              Id="fbbf9f31-3ac7-4122-98fb-388bcd6a30f3"
+              LastKnownName="SADMissileLauncher"
+              LastKnownLocation="Package8_1757.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="5318f10a-8ef4-42a4-a079-16ebcdbe3ffb"
+            name="dreamCheekyMissileLauncherInstance"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="56716a7a-510d-493d-bc15-bd2b61edb0ac"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DDreamCheekyMissileLauncher Member%3DdreamCheekyMissileLauncherInstance"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="25c2f88a-f457-4aac-98a9-da41d10aeeda"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0b3805ac-1edc-4c31-a558-be0444f3eb8f">
+                    <propertyInstance
+                      Id="e08d1928-f8e8-41ba-bb51-bb8250316b06"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9ef4ee23-d42d-4e97-adb3-c24b176487e1">
+                    <propertyInstance
+                      Id="e07649bc-1e49-4488-8c2f-abd58473e6a2"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6d372ee1-5345-4ac4-93df-6b7e455a2bb7">
+                    <propertyInstance
+                      Id="2dae9624-490b-475c-9c02-51cf571559b9"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c89c1262-9727-4f99-bca5-5c195dad2f04">
+                    <propertyInstance
+                      Id="16568238-162e-4b83-888c-82182483f6b3"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="076f47df-9904-4d5f-b10c-8cddbf5c191e">
+                    <propertyInstance
+                      Id="fb51d36a-3f9c-4ac2-b822-0bffcdff4a2b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="5b3f5f7f-8756-48bd-836c-c0072e45ffa2"
+                LastKnownName="DreamCheekyMissileLauncher"
+                LastKnownLocation="Package10_1757.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="446972b8-e1af-49b5-b650-bc01a84493ce"
+            name="internalMissileLauncher"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="4d194f78-0c01-41f0-b002-351f62d3a92a"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DDreamCheekyMissileLauncher Member%3DinternalMissileLauncher"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="de102439-e405-4204-abe0-e13244bc03a7"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52ad2437-c444-4673-9cd0-b3e13e0ae1b0">
+                    <propertyInstance
+                      Id="e0ac774f-e6f3-4b93-a5a3-6f5243325e81"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa13421b-f67f-4c5a-84ec-4e939760cddd">
+                    <propertyInstance
+                      Id="c7c00440-b9a9-42d1-907d-b31be9a01f54"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f90ace50-72e5-4524-b7f5-72ef60e415ed">
+                    <propertyInstance
+                      Id="22a47743-dd24-4de8-9abe-d8b1bde4ec12"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8f11bff0-d2c7-484b-8d21-af68ed86088e">
+                    <propertyInstance
+                      Id="74e46547-4856-416a-9290-42c419ef5e00"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0314f808-9e56-4a7b-9044-63cb8647d027">
+                    <propertyInstance
+                      Id="ad918904-d54a-42af-8a02-5c84051adfa7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="b9aa7d58-5438-428d-adea-3dcda84cd330"
+                LastKnownName="MissileLauncher"
+                LastKnownLocation="Package_1757.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="1c30ef01-d98e-4993-aa59-fb86eb4bf3b6"
+            name="Kill"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="41e7f7a7-c8df-40d1-a4a3-b527db85baff"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DDreamCheekyMissileLauncher Member%3D(Name%3DKill OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6f5e4482-813e-45da-b7e0-9d62f07adec0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b8bbccc1-39d2-4248-8126-fce3d1c576ab">
+                    <propertyInstance
+                      Id="b855bca6-169b-4ae1-80ad-775bd6c04c32"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fbf996b4-8ac1-4c22-9c09-b39908584626">
+                    <propertyInstance
+                      Id="68c4a6c7-e257-400c-9a46-b3feb39b9826"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0d804e7d-2ce8-45a1-bdcd-e40a0aff5679">
+                    <propertyInstance
+                      Id="979e58ed-4f2e-469a-a36b-d2dc10912228"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="64a216e8-e0d1-4944-9bfe-e4a2dc5452b5">
+                    <propertyInstance
+                      Id="21f73c90-6712-4d6c-92d0-d7267e2f5e0e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="35e9510a-9df8-439a-95db-48fa9c6445bd">
+                    <propertyInstance
+                      Id="5651ceea-9740-40ef-b5f7-3a3991462907"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="703c2a77-3e1d-42cc-9d9e-eccbeecaa512">
+                    <propertyInstance
+                      Id="29bf28b5-a73f-4783-a8b3-4da3310b3124"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9864e2fe-442d-4199-b3d0-e4b757547be0"
+                  name="phi"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="405bafdd-cc84-4aa1-b2f7-e509e3711904"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DDreamCheekyMissileLauncher Member%3D(Name%3DKill OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dphi"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0b7b34b9-add4-4a63-a2bf-7bbee4e11baa"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1757.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bdd0bc17-5ff3-4669-99f4-9af662c9b1c5"
+                  name="theta"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="33305238-b38f-456a-9143-31b7fb79489f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DDreamCheekyMissileLauncher Member%3D(Name%3DKill OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dtheta"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0b7b34b9-add4-4a63-a2bf-7bbee4e11baa"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1757.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c3f65ff4-52b3-4112-992b-79ed6ddd0f23"
+            name="Move"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9aa7cb42-560d-47f3-94ff-218ac992234e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DDreamCheekyMissileLauncher Member%3D(Name%3DMove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1af1df87-f861-437c-a4c0-93560d1f265d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6ebcd56b-294e-4a69-8ea6-d1aa35ddcb05">
+                    <propertyInstance
+                      Id="ca04c8d5-5d7d-483c-b88e-1a6fcef94ccd"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94cb9e0b-a98b-4301-b659-faaa8520bb40">
+                    <propertyInstance
+                      Id="a4a780e5-5ca5-42f3-b1a2-26a85ab01f9b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="03b04d9f-03d9-4526-96d8-8b3904a472d6">
+                    <propertyInstance
+                      Id="f073ada9-0f54-4bba-afe6-1a5f5e70b9b4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="54981218-610b-426a-b2d5-6ac126bcd311">
+                    <propertyInstance
+                      Id="d6682957-4aa0-496b-9ece-4b62f98c9511"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7e980958-ff20-478e-8515-beb30d77ed02">
+                    <propertyInstance
+                      Id="0adbee11-7ca3-4e0f-92b1-28706ebaf5c8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f1be06d-fca0-4042-9af7-46c2d1cba0d2">
+                    <propertyInstance
+                      Id="02f03223-9d79-4457-bb08-1e4b935de686"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="341a86a8-ec01-48e5-bb94-78f2e772e2a7"
+                  name="phi"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="686ce951-93c3-4eda-89da-e474fb1c0ff5"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DDreamCheekyMissileLauncher Member%3D(Name%3DMove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dphi"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0b7b34b9-add4-4a63-a2bf-7bbee4e11baa"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1757.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="84eb0841-df28-4a70-8a8b-c06174366a2b"
+                  name="theta"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="4df38b05-8001-4c93-b237-eeea08ca5b04"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DDreamCheekyMissileLauncher Member%3D(Name%3DMove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dtheta"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0b7b34b9-add4-4a63-a2bf-7bbee4e11baa"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1757.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1bf720ad-5118-44a9-8756-6a06fc4aec9d"
+            name="MoveBy"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3d7ce056-b6d2-48ea-a965-642d18dd8c70"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DDreamCheekyMissileLauncher Member%3D(Name%3DMoveBy OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="342a08f3-c1e0-435c-9672-57a8dbfa1711"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b4bfc76b-1707-45bb-b0a3-35c81124c63b">
+                    <propertyInstance
+                      Id="791ccedc-8017-40f5-88d2-767fa58f8d41"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fb1b8f11-9be6-4a07-ab72-7ac1012058f8">
+                    <propertyInstance
+                      Id="b66c8505-266e-4e32-bfdd-9bebb64d2c69"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22f6bc62-83f0-430b-82a6-218993c866d7">
+                    <propertyInstance
+                      Id="0172fbad-9262-43b4-b1d1-b19bfa700a0e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cfa384bf-e10b-463a-89d3-88c875e9df4e">
+                    <propertyInstance
+                      Id="13f3364b-2413-4505-947a-14d6bc909f6a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73677646-f29f-4182-8664-5d638ec776a8">
+                    <propertyInstance
+                      Id="150482f4-7e96-4bc4-a4dc-7cc1b92f3c0e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f8237cce-9783-4328-8d33-e87dd9eacc08">
+                    <propertyInstance
+                      Id="d7e41b38-1fdd-4690-b732-0c46c0b24889"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c6e2af00-39cb-44b9-93cb-1fa9bd2525db"
+                  name="phi"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="004643d1-d85b-4b26-a317-a5a3aec558f0"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DDreamCheekyMissileLauncher Member%3D(Name%3DMoveBy OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dphi"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0b7b34b9-add4-4a63-a2bf-7bbee4e11baa"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1757.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c95e0d10-c802-4719-8f5d-dd92a4088d2b"
+                  name="theta"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8953c28f-91ad-4278-84fc-cb4f6c5693ac"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DDreamCheekyMissileLauncher Member%3D(Name%3DMoveBy OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dtheta"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0b7b34b9-add4-4a63-a2bf-7bbee4e11baa"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1757.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="91783dee-04e3-4b2a-8f53-ef3ef67b82f0"
+            name="DreamCheekyMissileLauncher"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="65a58861-7a4c-410a-8f57-c6d2f1b01d06"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DDreamCheekyMissileLauncher Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6596bbdf-8104-4ef3-ae9e-2d92fa8ec121"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="97cbbdff-61c7-4b05-b36d-d987b95a9760">
+                    <propertyInstance
+                      Id="7f5e32a5-23dd-4a26-81ae-a8c4280f85d8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8916c167-f59b-43ad-9a11-7b65f01a29e4">
+                    <propertyInstance
+                      Id="f00e4ba7-fcce-4c1d-a5f5-719560c8cb20"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7279d84e-e4ea-46d5-b04f-20d71db26593">
+                    <propertyInstance
+                      Id="310fe68d-6516-43e2-a3e9-32be9e21dd04"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2c4a8974-1b96-4016-bc66-6d3bfb5be400">
+                    <propertyInstance
+                      Id="9da52573-5fac-4343-a5f7-ce94ef00b8e5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e871ec9a-6233-438c-8bb9-a3c38265168e">
+                    <propertyInstance
+                      Id="3e46564f-f0c3-45f4-abb8-b473b68197f7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6ad948dd-474f-4efb-9cb1-3c38b295d697">
+                    <propertyInstance
+                      Id="453ff421-de83-4404-bb12-a1776b92f754"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="8be5ed05-8d2c-4317-9b34-58f7a32aca81"
+            name="Fire"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="83f3bdf4-1849-462a-a352-25dbdd549b8c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DDreamCheekyMissileLauncher Member%3DFire"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b52ea700-1139-403f-ada7-3440c113ce47"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9f38972b-78e0-410e-b08b-9aa0f226a9a8">
+                    <propertyInstance
+                      Id="ce478e56-5815-4c3d-b3a1-47754fe98f74"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="41d5eeb1-1cce-4f3f-accd-e45c08d5f41d">
+                    <propertyInstance
+                      Id="658c82f5-76d3-4213-9ae6-13d1f693141a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e003e834-35dd-4356-afb7-5e5e98dfcabb">
+                    <propertyInstance
+                      Id="37e1b1b5-f23c-4ea4-be48-cedd6d2c537a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2cd3d45b-fb2b-44fc-9cbb-515dcb4ae8a5">
+                    <propertyInstance
+                      Id="4c87b4f7-dba8-44f5-aff9-5b6c4736b341"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73c651af-1df1-4daa-b6ba-6372f0c654b2">
+                    <propertyInstance
+                      Id="035b4d26-4aea-430b-9e53-f70f4d062731"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="90f75a40-6590-404a-b52b-db24914b8ff2">
+                    <propertyInstance
+                      Id="99a73af7-798e-43a9-9067-dd497318e791"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="acd64a21-da57-4211-9887-8e56d8d4d4ba"
+            name="GetInstance"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="5e839435-ed8e-44b9-9fb7-cbc7a44ba7d2"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DDreamCheekyMissileLauncher Member%3DGetInstance"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c6e8ecbd-9f94-4150-a7b9-c1720326e8a6"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b399b5b-8c12-483b-9cc0-af627e170ad1">
+                    <propertyInstance
+                      Id="aa3324e8-0b3a-4a5e-baa8-7b6d77628725"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fbe72e1e-cf7d-47e8-9b12-a19a2abfa5dc">
+                    <propertyInstance
+                      Id="a4efdc45-a1a1-4a15-a8db-8d84a89f7f5d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cb5708d7-33d0-45cf-b431-54332a36ae3a">
+                    <propertyInstance
+                      Id="d525b7e6-2955-4bd3-a969-6f0494dbb815"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b09b9572-a187-4799-93fb-4b5252cc37b7">
+                    <propertyInstance
+                      Id="a631b7dd-f56b-4493-aa07-4ac93883fe21"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0e459bf4-680d-4fc4-b757-19d931f4ca7d">
+                    <propertyInstance
+                      Id="01fa8ff5-306c-4984-9325-19d069566dde"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc0ca8d6-2813-4e0f-808a-5670e2f1b543">
+                    <propertyInstance
+                      Id="7a4f8b59-9817-473f-adbe-beb93ff4b8f4"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e1973fb2-368c-45b4-a3c0-8f9cfc45d205"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="5b3f5f7f-8756-48bd-836c-c0072e45ffa2"
+                      LastKnownName="DreamCheekyMissileLauncher"
+                      LastKnownLocation="Package10_1757.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2ae34f89-fe85-44e4-9c2e-afce605e80b8"
+        name="MockMissileLauncher"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="f0302cd8-60cd-4842-aeed-51998838b87e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DMockMissileLauncher"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f889a2a9-0e3b-4744-b584-cca68c29a452"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b79f2526-2915-493d-b017-9984c3726e0e">
+                <propertyInstance
+                  Id="83f205f1-9486-4fb2-a446-d305a2add100"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c4006f8f-f7c9-4e91-983d-3558a9fef05c">
+                <propertyInstance
+                  Id="d178bf1c-0f08-4724-9a12-cab3748a8958"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="602d7d49-68e6-4534-aa3a-718a8cc4257a">
+                <propertyInstance
+                  Id="5f9a3299-092d-497e-83dc-87fe3de8fdf2"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4926a1c8-a16f-457d-b22c-3a96f66a71cc">
+                <propertyInstance
+                  Id="a1c1c2aa-d56b-4aca-ae3f-0988d5805af5"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d5a5baae-acdb-48f0-9c50-009dca5a0681">
+                <propertyInstance
+                  Id="85288b17-94bc-441b-bf01-84a6a1698226"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="e9ed78d7-f31a-4ac6-acb4-f9e1cfc50815"
+            isSubstitutable="false">
+            <classMoniker
+              Id="fbbf9f31-3ac7-4122-98fb-388bcd6a30f3"
+              LastKnownName="SADMissileLauncher"
+              LastKnownLocation="Package8_1757.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="72b7588a-e259-49ce-b9cd-3895d8bd198c"
+            name="mockMissileLauncherInstance"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="1439ef39-c14a-4cdd-b2ca-5257782dbaff"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DMockMissileLauncher Member%3DmockMissileLauncherInstance"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4c2a109c-516e-4188-8558-e79e54407f79"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="57244425-b0f8-406e-9e6e-6d38bc2d9a1f">
+                    <propertyInstance
+                      Id="6425e837-b986-4e7b-b94a-cc29d1b16f3a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fb8f24f2-e2c8-424f-a623-0236d74a030c">
+                    <propertyInstance
+                      Id="e9efc254-ac0b-41e6-96f1-48a362fdd628"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1d2ac3fd-b399-4519-99f6-71f89f042217">
+                    <propertyInstance
+                      Id="dc8e1d43-74d7-494f-b76e-5384622d5ce8"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="05aed1bc-679c-49a0-ae6b-9b2619d67eb3">
+                    <propertyInstance
+                      Id="80ae7957-0696-4fca-b6fa-3bbc9c175139"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b99f8d1-830b-4614-836d-4f494834f740">
+                    <propertyInstance
+                      Id="73a4618a-c400-40b6-aa00-1e076323c802"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="2ae34f89-fe85-44e4-9c2e-afce605e80b8"
+                LastKnownName="MockMissileLauncher"
+                LastKnownLocation="Package10_1757.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="e276e04f-1b03-4e82-9b8a-c3113f522e6b"
+            name="Kill"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="42fbe3ac-714b-492d-92a2-c4b5cfd07358"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DMockMissileLauncher Member%3D(Name%3DKill OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a9c992c5-84ca-4efa-9ec3-bbc2ae33ab5b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="db9d8b24-34d6-4185-a76d-2e8fe1fd89de">
+                    <propertyInstance
+                      Id="15bfe3fd-385a-4f41-984e-bb07dec891b5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ec9ea2ae-91f8-46b3-a8e9-87942b42e1e7">
+                    <propertyInstance
+                      Id="b5c15485-c766-40ce-8685-a5e55a581e5b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b6d4f1b1-579b-4a9d-9156-8ff2a2416ad4">
+                    <propertyInstance
+                      Id="1b0ae4e7-4421-491c-9ff5-6bb8ff1cd7a2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="234fe916-6a76-48a8-b1ce-ac139a9b2296">
+                    <propertyInstance
+                      Id="efc60856-535b-4576-acb7-a46a6cdc3268"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7441a5a0-72f0-47fb-8848-e0c4f268bf67">
+                    <propertyInstance
+                      Id="064b6343-f56a-488e-934d-adf418c436bd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b3497074-6fb6-46c4-934a-ae39bcf6a9f3">
+                    <propertyInstance
+                      Id="46fc41c8-e972-4e60-a7bc-3638aef8e248"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="19909cbf-734f-4da5-a957-a875808c5594"
+                  name="phi"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d1f27a8f-55b7-4901-9759-bca6ce578457"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DMockMissileLauncher Member%3D(Name%3DKill OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dphi"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0b7b34b9-add4-4a63-a2bf-7bbee4e11baa"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1757.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c6b1f6b4-90de-48f7-8791-33d977a87de8"
+                  name="theta"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b97d9267-a2fc-4065-b020-d8578f989880"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DMockMissileLauncher Member%3D(Name%3DKill OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dtheta"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0b7b34b9-add4-4a63-a2bf-7bbee4e11baa"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1757.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4e86ed5d-fdd5-41f7-b011-29a0f8038dde"
+            name="Move"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4dea1848-551f-4872-aad5-0f48432a6b57"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DMockMissileLauncher Member%3D(Name%3DMove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ace859b3-4c99-45cc-aa9b-b5c0d3b46f54"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf14f712-f9cb-4d37-9fa8-bdf6e1a17c36">
+                    <propertyInstance
+                      Id="9e9fcbb6-c0c0-4ccb-8e9d-224d8b9428d0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="39850b96-6251-482e-88ca-2cbdcd9d958b">
+                    <propertyInstance
+                      Id="2b3248e0-49cb-40e9-bd3b-3fa9db971b32"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2abff64f-5840-4668-8ebe-47179ead2507">
+                    <propertyInstance
+                      Id="14a248cb-3bcc-4bf5-ab0b-510b6bfbc3f1"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4035ec1c-9cd9-4337-950e-3d5e35643b9e">
+                    <propertyInstance
+                      Id="ffa1865c-940f-42a1-9766-78cdc771acd4"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f96b34a5-c9b1-4a10-87d5-5beac4ea725a">
+                    <propertyInstance
+                      Id="f4258477-0035-488b-aa8f-8123d89f2fde"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="909411a8-41e1-4eee-a516-1870ce4d5cdd">
+                    <propertyInstance
+                      Id="702164a9-2d03-48b7-be55-e860777237ca"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6e292e3a-6e1c-41f2-bd66-624e1301d300"
+                  name="phi"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="60360f9a-5cca-4790-a91b-f995597a798f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DMockMissileLauncher Member%3D(Name%3DMove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dphi"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0b7b34b9-add4-4a63-a2bf-7bbee4e11baa"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1757.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a0c3505a-df1a-49c8-bc9f-9c78e2846cf0"
+                  name="theta"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="639dc931-24a5-47c8-89d9-a63e60764a5f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DMockMissileLauncher Member%3D(Name%3DMove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dtheta"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0b7b34b9-add4-4a63-a2bf-7bbee4e11baa"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1757.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ff8797b8-3a1f-4823-a3e0-7c60c3f50502"
+            name="MoveBy"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="387adc6d-d27f-4a3a-a0d0-eb8ce70101a1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DMockMissileLauncher Member%3D(Name%3DMoveBy OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6f3ad565-cbb7-4a96-90ae-d981620a7253"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="35bc5028-27c8-42ed-b009-20589b5b47be">
+                    <propertyInstance
+                      Id="7fd8406d-611d-4e2c-aaee-234a2e8ad3e2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c4d97393-9015-447a-8864-4f2b537ae6c2">
+                    <propertyInstance
+                      Id="60c7c7c1-ce23-4257-825b-d6f1ce0e1e3a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74640da8-d695-4181-88b5-e2b43082f161">
+                    <propertyInstance
+                      Id="8c26821a-bffd-4e61-ab9e-7eb5add8476f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5bd26c33-9508-40af-83fa-b5a1599b23c5">
+                    <propertyInstance
+                      Id="bbaa5532-5603-4cce-a888-21967dc99d2d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fb28c83d-13bf-45a0-927d-3422862ba362">
+                    <propertyInstance
+                      Id="433076fc-8467-454c-94ef-639f5a53d367"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2de7c550-95fd-4cfc-be16-797f073187ab">
+                    <propertyInstance
+                      Id="1f01f5fb-77de-41de-b3e0-9610b3b8ef40"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4431af5c-1099-42d4-9971-b2426cb69a9a"
+                  name="phi"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="3b8f6721-8516-4d19-860b-5b9b2d1059c2"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DMockMissileLauncher Member%3D(Name%3DMoveBy OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dphi"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0b7b34b9-add4-4a63-a2bf-7bbee4e11baa"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1757.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1c3afdbb-0299-4d63-8d2b-611d517ae121"
+                  name="theta"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="06f383de-d0b1-47ee-92e9-4c95d339b46e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DMockMissileLauncher Member%3D(Name%3DMoveBy OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dtheta"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0b7b34b9-add4-4a63-a2bf-7bbee4e11baa"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1757.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d30c3dce-ed09-4c12-b3bf-05462184ed67"
+            name="MockMissileLauncher"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="33226057-7a1a-4d46-836c-36262114faab"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DMockMissileLauncher Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4f65568e-6133-4378-852c-c182d55007b0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c58244e0-fa39-4a6c-bf2c-26b46375fe8d">
+                    <propertyInstance
+                      Id="4eb308cd-9fd5-422f-adf5-b6776c3e3ca5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dcb76eca-9728-469f-9c03-60bce4dc8f8a">
+                    <propertyInstance
+                      Id="b5976950-9e2c-43b0-b7d4-399206db07c7"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a75be572-fda2-4bf6-81c1-457aa1874ce1">
+                    <propertyInstance
+                      Id="888fccba-26e4-44bf-8791-8c5e2e93f871"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="de0f5a7f-7c05-47a2-9a44-3875ce45c126">
+                    <propertyInstance
+                      Id="e8b20534-6526-4fe0-87fe-5ae62a41302f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0d8a94c2-2582-4a46-bc0a-8e3990f41d3b">
+                    <propertyInstance
+                      Id="05bb1a6f-e10d-49c9-ac35-03f397d2777b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="21e869eb-dedb-46f5-856d-f4bc7ef3f41b">
+                    <propertyInstance
+                      Id="0e1a46f7-104b-41b0-9c98-0e32a9c8913f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="09037ea5-d5a6-4f31-98f3-dbeb4541f180"
+            name="Fire"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ad21107c-6b85-4f8f-97aa-23878598fbd9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DMockMissileLauncher Member%3DFire"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e71de0c6-1f52-4022-9005-1536bf57805d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="81c77fb2-e425-4a64-a91c-141a296f3e0e">
+                    <propertyInstance
+                      Id="2c2a4ba0-e0a4-403d-b5bc-5e3aef6a030a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="65031d8f-1b38-45b0-8ec5-fe15b9c12bd5">
+                    <propertyInstance
+                      Id="bf27e046-2cce-43dc-89df-84a9231dc8ec"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0424d04c-0f29-4e40-96b3-327f95b909f0">
+                    <propertyInstance
+                      Id="b7dc8211-1e5b-46b5-b0d3-a9c2ee04f6b9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f8e0326f-fb76-408e-b4f9-bbb4de83399c">
+                    <propertyInstance
+                      Id="f958e211-6403-4c32-92d3-438f028ed0c6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f7c83a8b-336e-4f5d-ab43-0af508b617d1">
+                    <propertyInstance
+                      Id="3c4d8cd2-df60-4413-9021-edb59b97b186"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca19d465-70e9-4226-8eda-3548c3c2afa3">
+                    <propertyInstance
+                      Id="d5fa80ec-8266-4b61-bc38-e5bfb7d0c1e1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="2a9dd11d-a8da-48ff-bca8-777a6bef9a7f"
+            name="GetInstance"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3cd63f56-f140-427c-ab63-cef9a791801e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FLibrary%2FSAD.Core%2Fbin%2FDebug%2FSAD.Core.dll Namespace%3DSAD.Core.Devices.Missile_Launcher.Subclasses Type%3DMockMissileLauncher Member%3DGetInstance"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="343a0524-aa86-4ed2-860d-7e1fb74374a7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b1f4a961-2731-4924-bc64-fc6d316cf437">
+                    <propertyInstance
+                      Id="3efc5a3e-c181-4e64-8f0f-2ae17490bdfc"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aae71149-029c-4efb-9734-2a45f0eff379">
+                    <propertyInstance
+                      Id="bb9f7882-bbad-4fcb-af65-cf5fd7727798"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="93a5b619-37e1-4b70-a1ec-e7dbf36f50ae">
+                    <propertyInstance
+                      Id="d59c5225-ac86-4ce6-a64b-b7f93565623c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f7072dc-3b02-4f9d-bc78-9d7f92ee091c">
+                    <propertyInstance
+                      Id="7d542762-d033-40ac-9bb2-9b9f12bc85fa"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b020b613-2df7-4c3b-b3be-89f0f31dfcb2">
+                    <propertyInstance
+                      Id="ed0c15ca-b160-4cf4-943c-0aff88aa4b17"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="86feebec-984b-4b6e-83e3-06fcbdbda09e">
+                    <propertyInstance
+                      Id="1ce730f8-f8c5-4272-85df-2ff98d94bcd5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4a331f6f-9f17-4f84-bfcf-934ffd4fbb6d"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2ae34f89-fe85-44e4-9c2e-afce605e80b8"
+                      LastKnownName="MockMissileLauncher"
+                      LastKnownLocation="Package10_1757.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
