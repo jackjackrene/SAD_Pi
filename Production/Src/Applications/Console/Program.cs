@@ -161,8 +161,15 @@ namespace Console
                             {
                                 // grab target
                                 currentTarget = TargetList.Find(x => x.Name.ToUpper() == words[1].ToUpper());
-                                SAD.Core.Spherical.ConvertToSphere(currentTarget);
-                                missileLauncher.Kill(currentTarget.Phi, currentTarget.Theta);
+                                if (currentTarget.Friend == true)
+                                {
+                                    System.Console.WriteLine("AYYY CAP'N. WE CAN'T SHOOT OUR FRIENDS!");
+                                }
+                                else
+                                {
+                                    SAD.Core.Spherical.ConvertToSphere(currentTarget);
+                                    missileLauncher.Kill(currentTarget.Phi, currentTarget.Theta);
+                                }
                             } else
                             {
                                 // if target does not exist
