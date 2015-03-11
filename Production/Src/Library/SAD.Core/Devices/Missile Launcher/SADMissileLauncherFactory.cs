@@ -19,7 +19,10 @@ namespace SAD.Core.Devices
         public static SADMissileLauncherFactory GetInstance()
         {
             if (sadMissileLauncherFactoryInstance == null)
-                return new SADMissileLauncherFactory();
+            {
+                sadMissileLauncherFactoryInstance = new SADMissileLauncherFactory();
+                return sadMissileLauncherFactoryInstance;
+            }
 
             return sadMissileLauncherFactoryInstance;
         }

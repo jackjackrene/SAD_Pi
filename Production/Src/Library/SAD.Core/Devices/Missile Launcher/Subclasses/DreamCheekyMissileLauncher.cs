@@ -23,8 +23,11 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
         public static DreamCheekyMissileLauncher GetInstance()
         {
             if (dreamCheekyMissileLauncherInstance == null)
-                return new DreamCheekyMissileLauncher();
-            
+            {
+                dreamCheekyMissileLauncherInstance = new DreamCheekyMissileLauncher();
+                return dreamCheekyMissileLauncherInstance;
+            }
+
             return dreamCheekyMissileLauncherInstance;
         }
 
@@ -58,38 +61,57 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
         public override void Move(double phi, double theta)
         {
             System.Console.WriteLine("Move method of SADMissileLauncher invoked!");
+            try
+            {
+                // Reset the Launcher
+                internalMissileLauncher.command_reset();
 
-            // Reset the Launcher
-            internalMissileLauncher.command_reset();
+                // Move by theta
+                if (theta < 0)
+                    internalMissileLauncher.command_Left(Math.Abs((int)Math.Round(theta)));
+                else
+                    internalMissileLauncher.command_Right((int)Math.Round(theta));
 
-            // Move by theta
-            if (theta < 0)
-                internalMissileLauncher.command_Left((int)Math.Round(theta));
-            else
-                internalMissileLauncher.command_Right((int)Math.Round(theta));
+                // Move by phi
+                if (phi < 0)
+                    internalMissileLauncher.command_Down(Math.Abs((int)Math.Round(phi)));
+                else
+                    internalMissileLauncher.command_Up((int)Math.Round(phi));
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                System.Console.WriteLine("EXCEPTION in Move method of DreamCheekyMissileLauncher: The arguments are out of range.", e);
+                System.Console.WriteLine("Reseting to default coordinates...");
 
-            // Move by phi
-            if (phi < 0)
-                internalMissileLauncher.command_Down((int)Math.Round(phi));
-            else
-                internalMissileLauncher.command_Up((int)Math.Round(phi));
+                internalMissileLauncher.command_reset();
+            }
         }
 
         public override void MoveBy(double phi, double theta)
         {
             System.Console.WriteLine("MoveBy method of SADMissileLauncher invoked!");
 
-            // Move by theta
-            if (theta < 0)
-                internalMissileLauncher.command_Left((int)Math.Round(theta));
-            else
-                internalMissileLauncher.command_Right((int)Math.Round(theta));
+            try
+            {
+                // Move by theta
+                if (theta < 0)
+                    internalMissileLauncher.command_Left(Math.Abs((int)Math.Round(theta)));
+                else
+                    internalMissileLauncher.command_Right((int)Math.Round(theta));
 
-            // Move by phi
-            if (phi < 0)
-                internalMissileLauncher.command_Down((int)Math.Round(phi));
-            else
-                internalMissileLauncher.command_Up((int)Math.Round(phi));
+                // Move by phi
+                if (phi < 0)
+                    internalMissileLauncher.command_Down(Math.Abs((int)Math.Round(phi)));
+                else
+                    internalMissileLauncher.command_Up((int)Math.Round(phi));
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                System.Console.WriteLine("EXCEPTION in MoveBy method of DreamCheekyMissileLauncher: The arguments are out of range.", e);
+                System.Console.WriteLine("Reseting to default coordinates...");
+
+                internalMissileLauncher.command_reset();
+            }
         }
     }
 }
