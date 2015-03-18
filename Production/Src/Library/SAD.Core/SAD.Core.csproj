@@ -48,6 +48,7 @@
     <Compile Include="Devices\Missile Launcher\SADMissileLauncherFactory.cs" />
     <Compile Include="Devices\Missile Launcher\Subclasses\DreamCheekyMissileLauncher.cs" />
     <Compile Include="Devices\Missile Launcher\Subclasses\MockMissileLauncher.cs" />
+    <Compile Include="Devices\VideoCamera\Video.cs" />
     <Compile Include="IO\CommentException.cs" />
     <Compile Include="IO\INIFileReader.cs" />
     <Compile Include="Devices\Missile Launcher\MissileLauncher.cs" />

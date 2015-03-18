@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAD.Core", "Library\SAD.Cor
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "SADCommandLineUML", "SADCommandLineUML\SADCommandLineUML.modelproj", "{9DC14723-E86B-4405-A7CF-00317F0B3B63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{018FF906-3E1D-405B-B99E-08AD83F7DAC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{9DC14723-E86B-4405-A7CF-00317F0B3B63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DC14723-E86B-4405-A7CF-00317F0B3B63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DC14723-E86B-4405-A7CF-00317F0B3B63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{018FF906-3E1D-405B-B99E-08AD83F7DAC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{018FF906-3E1D-405B-B99E-08AD83F7DAC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{018FF906-3E1D-405B-B99E-08AD83F7DAC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{018FF906-3E1D-405B-B99E-08AD83F7DAC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,5 +44,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{998A4D40-B4F7-440E-B60E-784D976D0F0F} = {D8BEA8E6-3C73-4306-A8A1-017720F1D70A}
 		{F4B6AE36-E99C-4D86-A020-58F2C940E6B1} = {E2E2CD89-68C7-47BE-A945-3BEAD70741E1}
+		{018FF906-3E1D-405B-B99E-08AD83F7DAC5} = {D8BEA8E6-3C73-4306-A8A1-017720F1D70A}
 	EndGlobalSection
 EndGlobal
