@@ -9,5 +9,6 @@ namespace SAD.Core.Devices
     public interface ISADMissileLauncher
     {
         void Reload();
+        void Fire();
     }
 }
