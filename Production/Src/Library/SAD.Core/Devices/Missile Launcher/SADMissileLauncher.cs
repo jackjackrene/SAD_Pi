@@ -15,6 +15,7 @@ namespace SAD.Core.Devices
         {
         }
         
+        // Interface Methods
         public abstract void Kill(double phi, double theta);
 
         public abstract void Fire();

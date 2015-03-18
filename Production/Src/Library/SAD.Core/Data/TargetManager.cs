@@ -72,6 +72,7 @@ namespace SAD.Core
                 return (listOfTargets.Where(c => c.Friend == true));
             }
         }
+        
 
         /// <summary>
         /// Function to prioritize Targets within game that will be
