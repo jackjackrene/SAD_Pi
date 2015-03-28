@@ -3,6 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Label Content="Label" 
+               HorizontalAlignment="Left" 
+               Margin="47,234,0,0" 
+VerticalAlignment="Top"/>
+
     </Grid>
 </Window>
