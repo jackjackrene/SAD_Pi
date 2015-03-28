@@ -1,12 +1,24 @@
 ﻿<Window x:Class="GUI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="700" Width="1300">
     <Grid>
-        <Label Content="Label" 
-               HorizontalAlignment="Left" 
-               Margin="47,234,0,0" 
-VerticalAlignment="Top"/>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="File">
+                    <MenuItem Header="Load"/>
+                </MenuItem>
+                <MenuItem Header="Edit">
+                </MenuItem>
+                <MenuItem Header="Game">
+                </MenuItem>
+                <MenuItem Header="Server">
+                </MenuItem>
+
+
+            </Menu>
+            <StackPanel></StackPanel>
+        </DockPanel>
 
     </Grid>
 </Window>
