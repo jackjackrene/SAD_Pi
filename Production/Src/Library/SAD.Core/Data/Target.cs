@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-
 
 namespace SAD.Core
 {
-    public class Target : INotifyPropertyChanged
+    public class Target
     {
         public string Name { get; set; }
         public double X { get; set; }
@@ -40,16 +37,5 @@ namespace SAD.Core
             SpawnRate = SR;
             CanSwapSidesWhenHit = CSSWH;
         }
-        public event PropertyChangedEventHandler PropertyChanged;
-     // Commented because I got errors.    [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
     }
-    
 }
