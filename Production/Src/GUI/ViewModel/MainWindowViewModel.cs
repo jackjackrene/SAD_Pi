@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace GUI
+namespace GUI.ViewModel
 {
-    class MainWindowViewModel : ViewModelBase
+    public class MainWindowViewModel : ViewModelBase
     {
         private string m_title;
 
         public MainWindowViewModel()
         {
             Title = "SAD.3.14 Controls";
-
 
         }
         /// <summary>
