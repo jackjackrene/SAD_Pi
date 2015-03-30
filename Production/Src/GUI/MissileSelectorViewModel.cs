@@ -11,6 +11,8 @@ namespace GUI
     class MissileSelectorViewModel : MissileSelectorViewModelBase
     {
         private string m_launcherTitle;
+        private string m_launcherType;
+
         public MissileSelectorViewModel()
         {
             LauncherTitle = "Select Missile Launcher";
@@ -24,6 +26,26 @@ namespace GUI
                 m_launcherTitle = value;
                 OnPropertyChanged();
             }
+        }
+
+        public string LauncherType
+        {
+            get { return m_launcherType; }
+            set
+            {
+                m_launcherType = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public void LauncherSelectMock()
+        {
+            LauncherType = "Mock";
+        }
+
+        public void LauncherSelectDreamCheeky()
+        {
+            LauncherType = "Dream Cheeky";
         }
     }
 

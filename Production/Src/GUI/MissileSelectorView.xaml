@@ -18,9 +18,11 @@
             </Grid.ColumnDefinitions>
             <Button Grid.Column="0"
                     Content="Mock"
+                    Command="{Binding LauncherSelectMock}"
                     Margin="30" />
             <Button Grid.Column="1"
                     Content="Dream Cheeky"
+                    Command="{Binding LauncherSelectDreamCheeky}"
                     Margin="30" />
         </Grid>
     </Grid>
