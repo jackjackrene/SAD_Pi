@@ -2,11 +2,11 @@
 <logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13.625, 17.375" name="UMLClassDiagram1">
   <logicalClassDesignerModelMoniker Id="d7f905a0-cc2b-420d-8e1e-5c84aa92442a" />
   <nestedChildShapes>
-    <classShape Id="8664159b-a31e-4f55-83f8-9466f99ba0a7" absoluteBounds="0.5, 1.5, 4.125, 4.8714292552073788" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+    <classShape Id="8664159b-a31e-4f55-83f8-9466f99ba0a7" absoluteBounds="0.5, 1.5, 4.125, 4.87142925520738" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
       <classMoniker Id="d93c239f-5cff-4157-833b-eaa5f169ee0a" LastKnownName="MissileLauncher" />
       <nestedChildShapes>
         <AttributeElementListCompartment Id="582b924c-4207-4d7c-b244-38d19e229259" absoluteBounds="0.515, 2.0153356393178306, 4.0950000000000006, 1.8027343178788819" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
-        <OperationElementListCompartment Id="a8dc577a-d811-44e4-8837-e96707dc32ee" absoluteBounds="0.515, 3.8280699571967123, 4.0950000000000006, 2.4433592980106669" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="a8dc577a-d811-44e4-8837-e96707dc32ee" absoluteBounds="0.515, 3.8280699571967123, 4.0950000000000006, 2.4433592980106678" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <classShape Id="37678a31-01af-4fc0-b8c0-cdcc85ff4933" absoluteBounds="5.625, 3.5, 1.75, 1.3479918644825619" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
@@ -106,7 +106,7 @@
         <OperationElementListCompartment Id="5bb6a625-9e46-405c-8041-d9d4d3851a66" absoluteBounds="0.515, 14.039175326526165, 3.0949999999999998, 0.36132811258236563" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </interfaceShape>
-    <realizationConnector edgePoints="[(4.875 : 13.5646209123731); (3.625 : 13.5646209123731)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" showAsLollipop="false">
+    <realizationConnector edgePoints="[(4.875 : 13.5646209123731); (3.625 : 13.5646209123731)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" showAsLollipop="false">
       <interfaceRealizationMoniker Id="d6820ba9-2c2a-46d7-b1e1-95d02996d459" />
       <relativeChildShapes />
       <nodes>

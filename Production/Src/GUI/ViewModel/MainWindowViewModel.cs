@@ -29,13 +29,11 @@ namespace GUI.ViewModel
                 OnPropertyChanged();
             }
         }
-
-
     }
     public abstract class ViewModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-      //  [NotifyPropertyChangedInvocator]
+    //    [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChangedEventHandler handler = PropertyChanged;
