@@ -29,8 +29,6 @@ namespace GUI.ViewModel
                 OnPropertyChanged();
             }
         }
-
-
     }
     public abstract class ViewModelBase : INotifyPropertyChanged
     {
