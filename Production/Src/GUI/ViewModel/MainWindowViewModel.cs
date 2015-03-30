@@ -30,6 +30,9 @@ namespace GUI.ViewModel
             }
         }
     }
+
+    /* Moved to its own seperate file
+     * 
     public abstract class ViewModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
@@ -43,4 +46,5 @@ namespace GUI.ViewModel
             }
         }
     }
+    */ 
 }
