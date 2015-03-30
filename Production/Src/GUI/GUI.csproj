@@ -80,6 +80,7 @@
     <Compile Include="MissileSelectorView.xaml.cs">
       <DependentUpon>MissileSelectorView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MissileSelectorViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

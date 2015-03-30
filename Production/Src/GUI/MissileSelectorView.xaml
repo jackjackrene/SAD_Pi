@@ -1,8 +1,27 @@
 ﻿<Window x:Class="GUI.MissileSelectorView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MissileSelectorView" Height="300" Width="300">
+        Title="{Binding LauncherTitle}" Height="300" Width="300">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+              <TextBlock Text="Select Missile Launcher Type:"
+                          FontSize="16"
+                          TextAlignment="Center"
+                          VerticalAlignment="Center" />
+        <Grid Grid.Row="1" IsSharedSizeScope="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*" SharedSizeGroup="MLType" />
+                <ColumnDefinition Width="50*" SharedSizeGroup="MLType" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0"
+                    Content="Mock"
+                    Margin="30" />
+            <Button Grid.Column="1"
+                    Content="Dream Cheeky"
+                    Margin="30" />
+        </Grid>
     </Grid>
 </Window>
