@@ -17,6 +17,5 @@ namespace SAD.Core.Devices
         void MoveBy(double phi, double theta);
 
         void Reload();
-        void Fire();
     }
 }
