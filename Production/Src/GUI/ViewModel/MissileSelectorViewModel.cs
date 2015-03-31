@@ -6,9 +6,9 @@ using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Input;
 
-namespace GUI.MissileSelectorViewModel
+namespace GUI.ViewModel.MissileSelectorViewModel
 {
-    class MissileSelectorViewModel : MissileSelectorViewModelBase
+    class MissileSelectorViewModel : ViewModelBase
     {
         private string m_launcherTitle;
         private string m_launcherType;
@@ -46,19 +46,6 @@ namespace GUI.MissileSelectorViewModel
         public void LauncherSelectDreamCheeky()
         {
             LauncherType = "Dream Cheeky";
-        }
-    }
-
-    public abstract class MissileSelectorViewModelBase : INotifyPropertyChanged
-    {
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if(handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
         }
     }
 }
