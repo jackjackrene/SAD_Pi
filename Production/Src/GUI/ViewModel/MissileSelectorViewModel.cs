@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Input;
 
-namespace GUI.ViewModel.MissileSelectorViewModel
+namespace GUI.ViewModel
 {
     class MissileSelectorViewModel : ViewModelBase
     {
