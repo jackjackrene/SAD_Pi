@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SAD.Core.Devices
 {
-    public abstract class SADMissileLauncher : ISADMissileLauncher, INotifyPropertyChanged 
+    public abstract class SADMissileLauncher : ISADMissileLauncher
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -27,6 +27,14 @@ namespace SAD.Core.Devices
         public abstract void Move(double phi, double theta);
 
         public abstract void MoveBy(double phi, double theta);
+
+        public abstract void MoveUp();
+
+        public abstract void MoveDown();
+
+        public abstract void MoveLeft();
+
+        public abstract void MoveRight();
 
         public void Reload()
         {
@@ -69,7 +77,6 @@ namespace SAD.Core.Devices
                 else
                 {
                     currentMissleCount = value;
-                    OnPropertyChanged();
                 }
 
             }
@@ -84,14 +91,6 @@ namespace SAD.Core.Devices
         {
             DreamCheekyMissileLauncher,
             MockMissileLauncher
-        }
-
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChangedEventHandler handler = PropertyChanged;
-
-            if (handler != null)
-                handler(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

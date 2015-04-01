@@ -129,7 +129,7 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
             }
         }
 
-        public void MoveUp()
+        public override void MoveUp()
         {
             System.Console.WriteLine("MoveUp method of SADMissileLauncher invoked!");
 
@@ -146,7 +146,7 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
             }
         }
 
-        public void MoveDown()
+        public override void MoveDown()
         {
             System.Console.WriteLine("MoveDown method of SADMissileLauncher invoked!");
 
@@ -163,7 +163,7 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
             }
         }
 
-        public void MoveLeft()
+        public override void MoveLeft()
         {
             System.Console.WriteLine("MoveLeft method of SADMissileLauncher invoked!");
 
@@ -180,7 +180,7 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
             }
         }
 
-        public void MoveRight()
+        public override void MoveRight()
         {
             System.Console.WriteLine("MoveRight method of SADMissileLauncher invoked!");
 
