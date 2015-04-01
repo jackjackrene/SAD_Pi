@@ -13,5 +13,14 @@ namespace GUI
     /// </summary>
     public partial class App : Application
     {
+        void App_OnStartup(object sender, StartupEventArgs e)
+        {
+            var missileSelectorView = new MissileSelectorView();
+            var mainWindow = new MainWindow();
+
+            missileSelectorView.ShowDialog();
+
+            mainWindow.ShowDialog();
+        }
     }
 }
