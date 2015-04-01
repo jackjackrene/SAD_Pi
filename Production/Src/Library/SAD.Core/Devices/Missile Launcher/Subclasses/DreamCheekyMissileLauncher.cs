@@ -68,15 +68,15 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
 
                 // Move by theta
                 if (theta < 0)
-                    internalMissileLauncher.command_Left(Math.Abs((int)Math.Round(theta)));
+                    internalMissileLauncher.command_Down(DegreesToTime(theta));
                 else
-                    internalMissileLauncher.command_Right((int)Math.Round(theta));
+                    internalMissileLauncher.command_Up(DegreesToTime(theta));
 
                 // Move by phi
                 if (phi < 0)
-                    internalMissileLauncher.command_Down(Math.Abs((int)Math.Round(phi)));
+                    internalMissileLauncher.command_Left(DegreesToTime(phi));
                 else
-                    internalMissileLauncher.command_Up((int)Math.Round(phi));
+                    internalMissileLauncher.command_Right(DegreesToTime(phi));
             }
             catch (ArgumentOutOfRangeException e)
             {
@@ -95,15 +95,15 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
             {
                 // Move by theta
                 if (theta < 0)
-                    internalMissileLauncher.command_Left(Math.Abs((int)Math.Round(theta)));
+                    internalMissileLauncher.command_Down(DegreesToTime(theta));
                 else
-                    internalMissileLauncher.command_Right((int)Math.Round(theta));
+                    internalMissileLauncher.command_Up(DegreesToTime(theta));
 
                 // Move by phi
                 if (phi < 0)
-                    internalMissileLauncher.command_Down(Math.Abs((int)Math.Round(phi)));
+                    internalMissileLauncher.command_Left(DegreesToTime(phi));
                 else
-                    internalMissileLauncher.command_Up((int)Math.Round(phi));
+                    internalMissileLauncher.command_Right(DegreesToTime(phi));
             }
             catch (ArgumentOutOfRangeException e)
             {
@@ -112,6 +112,16 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
 
                 internalMissileLauncher.command_reset();
             }
+        }
+
+        private int DegreesToTime(double degree)
+        {
+            int returnValue = 0;
+            double conversionRate = 20;
+
+            returnValue = Math.Abs((int)Math.Round(degree * conversionRate));
+
+            return returnValue;
         }
     }
 }
