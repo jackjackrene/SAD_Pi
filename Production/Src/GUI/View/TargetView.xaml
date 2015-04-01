@@ -4,20 +4,99 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
+             xmlns:viewModel="clr-namespace:GUI.ViewModel"
              d:DesignHeight="300" d:DesignWidth="300">
-    <Expander Header="Expander" 
-              HorizontalAlignment="Left" 
-              Margin="10,10,0,0" 
-              VerticalAlignment="Top" Height="177" Width="280">
 
+    <Expander Header="{Binding Target.Name}" 
+              HorizontalAlignment="Left" 
+              Margin="24,21,0,0" 
+              VerticalAlignment="Top" 
+              Height="251" Width="266">
+
+        <!-- The Expander contains an inner Grid -->
         <Grid Background="#FFE5E5E5">
+            
+            <Grid.DataContext>
+                <viewModel:TargetViewModel></viewModel:TargetViewModel>
+            </Grid.DataContext>
+
+            <!-- Row and Column Definitions -->
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0*"/>
-                <ColumnDefinition Width="61*"/>
-                <ColumnDefinition Width="13*"/>
+                <ColumnDefinition Width="29*"></ColumnDefinition>
+                <ColumnDefinition Width="129*"/>
+                <ColumnDefinition Width="106*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!-- Labels contained within the first column -->
+            <Label Grid.Column ="0" 
+                   Grid.Row="0" 
+                   Content="Rectangular Coordinates:" Grid.ColumnSpan="2"/>
+            <Label Grid.Column ="0" 
+                   Grid.Row="1" 
+                   Content="Spherical Coordinates:" Grid.ColumnSpan="2"/>
+            <Label Grid.Column ="0" 
+                   Grid.Row="2" 
+                   Content="Friend or Foe:" Grid.ColumnSpan="2"/>
+            <Label Grid.Column ="0" 
+                   Grid.Row="3" 
+                   Content="Status:" Grid.ColumnSpan="2"/>
+            <Label Grid.Column ="0" 
+                   Grid.Row="4" 
+                   Content="Points:" Grid.ColumnSpan="2"/>
+            <Label Grid.Column ="0" 
+                   Grid.Row="5" 
+                   Content="Flash Rate:" Grid.ColumnSpan="2"/>
+            <Label Grid.Column ="0" 
+                   Grid.Row="6" 
+                   Content="Spawn Rate:" Grid.ColumnSpan="2"/>
+            <Label Grid.Column ="0" 
+                   Grid.Row="7" 
+                   Content="Can Swap Sides:" Grid.ColumnSpan="2"/>
+
+            <!-- Target properties contained in second column -->
+            <Label Grid.Column ="2" 
+                   Grid.Row="0" 
+                   Content="{Binding Target.RectangularCoordinates}"/>
+            <Label Grid.Column ="2" 
+                   Grid.Row="1" 
+                   Content="{Binding Target.SphericalCoordinates}"/>
+            <Label Grid.Column ="2" 
+                   Grid.Row="2" 
+                   Content="{Binding Target.Friend}"/>
+            <Label Grid.Column ="2" 
+                   Grid.Row="3" 
+                   Content="{Binding Target.Status}"/>
+            <Label Grid.Column ="2" 
+                   Grid.Row="4" 
+                   Content="{Binding Target.Points}"/>
+            <Label Grid.Column ="2" 
+                   Grid.Row="5" 
+                   Content="{Binding Target.FlashRate}"/>
+            <Label Grid.Column ="2" 
+                   Grid.Row="6" 
+                   Content="{Binding Target.SpawnRate}"/>
+            <Label Grid.Column ="2" 
+                   Grid.Row="7" 
+                   Content="{Binding Target.CanSwapSidesWhenHit}"/>
+
+            <!-- Button shared across bottom row -->
+            <Button Grid.ColumnSpan="2"
+                    Grid.Row="8"
+                    Content="Kill"
+                    Command="{Binding KillCommand}"/>
+                 
         </Grid>
     </Expander>
-
-
 </UserControl>

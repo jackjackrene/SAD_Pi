@@ -14,6 +14,7 @@ namespace SAD.Core.Devices
 
         protected int maxMissileCount;
         protected int currentMissleCount;
+        protected int moveDirectionConstant;      // Field for MoveUp/Down/Left/Right methods
 
         protected SADMissileLauncher()
         {
@@ -62,10 +63,7 @@ namespace SAD.Core.Devices
                     maxMissileCount = value;
             }
 
-            get
-            {
-                return maxMissileCount;
-            }
+            get { return maxMissileCount; }
         }
 
         public int CurrentMissileCount
@@ -81,9 +79,19 @@ namespace SAD.Core.Devices
 
             }
 
-            get
+            get { return currentMissleCount; }
+        }
+
+        // Property for MoveUp/Down/Left/Right methods
+        public int MoveDirectionConstant
+        {
+            get { return moveDirectionConstant; }
+            set
             {
-                return currentMissleCount;
+                if (value < 0)
+                    throw new ArgumentException("Error: the move direction constant cannot be negative", value.ToString());
+                else
+                    moveDirectionConstant = value;
             }
         }
 

@@ -11,7 +11,6 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
     {
         private static DreamCheekyMissileLauncher dreamCheekyMissileLauncherInstance;
         private MissileLauncher internalMissileLauncher;    // should this be a "singleton?"
-        private int moveDirectionConstant;                  // Field for MoveUp/Down/Left/Right methods
 
         private DreamCheekyMissileLauncher() : base()
         {
@@ -31,19 +30,6 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
             }
 
             return dreamCheekyMissileLauncherInstance;
-        }
-
-        // Property for MoveUp/Down/Left/Right methods
-        public int MoveDirectionConstant
-        {
-            get { return moveDirectionConstant; }
-            set 
-            { 
-                if (value < 0)
-                    throw new ArgumentException("Error: the move direction constant cannot be negative", value.ToString());
-                else
-                    moveDirectionConstant = value; 
-            }
         }
 
         public override void Kill(double phi, double theta)

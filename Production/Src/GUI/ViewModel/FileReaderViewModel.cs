@@ -8,6 +8,7 @@ using GUI.ViewModel;
 using SAD.Core;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+
 namespace GUI.ViewModel
 {
     class FileReaderViewModel : ViewModelBase

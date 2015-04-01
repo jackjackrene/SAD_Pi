@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 
 
-namespace GUI.Commands.MissileLauncheViewModelCommands.DreamCheekyViewModelCommands
+namespace GUI.Commands.MissileLauncheViewModelCommands
 {
-    class DreamCheekyViewModelCommand : ICommand
+    class MissileLauncherViewModelCommand : ICommand
     {
          // Fields
         private Action DreamCheekyViewModelAction;
         public event EventHandler CanExecuteChanged; // I think this is for CanExecute()
 
         // Constructor
-        public DreamCheekyViewModelCommand(Action action)
+        public MissileLauncherViewModelCommand(Action action)
         {
             DreamCheekyViewModelAction = action;
         }
