@@ -78,7 +78,7 @@ namespace SAD.Core
             // create list of targets
             List<Target> TargetList = new List<Target>();
 
-            // read in file to string array
+                // read in file to string array
             string[] lines = System.IO.File.ReadAllLines(this.path);
 
             // loop through file

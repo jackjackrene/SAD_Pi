@@ -13,9 +13,15 @@ namespace GUI.ViewModel
 {
     class FileReaderViewModel : ViewModelBase
     {
+        private TargetManager targetManager;
+        private IEnumerable<Target> listOfTargets;
+
         public FileReaderViewModel()
         {
             LoadTargetsFromFileCommand = new MyCommand(LoadTargetsFromFile);
+            
+            // Get the instance of the TargetManager singleton
+            targetManager = TargetManager.GetInstance();
         }
         private void LoadTargetsFromFile()
         {
@@ -28,9 +34,10 @@ namespace GUI.ViewModel
                 SAD.Core.FileReader reader = null;
                 reader = SAD.Core.ReaderFactory.CreateReader(ReaderType.iniReader);
 
+                // Load the thing
+
+               targetManager.TargetList = reader.ReadTargets();
             }
-
-
         }
           public ICommand LoadTargetsFromFileCommand { get; set; }
     }
