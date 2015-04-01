@@ -16,7 +16,7 @@
             </DockPanel.DataContext>
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="File">
-                    <Button Content="Load" Command="{Binding LoadTargetsFromFileCommand}"/>
+                    <MenuItem Header="Load" Command="{Binding LoadTargetsFromFileCommand}"/>
                     <MenuItem Header="Retrieve Targets from Server"/>
 
                 </MenuItem>
