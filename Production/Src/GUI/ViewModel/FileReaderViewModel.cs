@@ -18,7 +18,7 @@ namespace GUI.ViewModel
         public FileReaderViewModel()
         {
             LoadTargetsFromFileCommand = new MyCommand(LoadTargetsFromFile);
-            
+
             // Get the instance of the TargetManager singleton
             targetManager = TargetManager.GetInstance();
         }
@@ -34,13 +34,14 @@ namespace GUI.ViewModel
                 reader = SAD.Core.ReaderFactory.CreateReader(ReaderType.iniReader);
 
                 // Load the thing
+                reader.path = openFileBox.FileName;
 
-               targetManager.TargetList = reader.ReadTargets();
+                targetManager.TargetList = reader.ReadTargets();
             }
         }
-          public ICommand LoadTargetsFromFileCommand { get; set; }
+        public ICommand LoadTargetsFromFileCommand { get; set; }
     }
-    
+
     public class MyCommand : ICommand
     {
         private Action m_action;
@@ -73,8 +74,7 @@ namespace GUI.ViewModel
         public event EventHandler CanExecuteChanged;
         #endregion
     }
-    
+
 }
 
-    
-    
+
