@@ -3,13 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:view="clr-namespace:GUI.ViewModel"
         xmlns:viewModel="clr-namespace:GUI.ViewModel"
+        
         Title="{Binding Title}" Height="700" Width="1300">
     <Window.DataContext>
         <viewModel:MainWindowViewModel/>
     </Window.DataContext>
     <Grid>
         <DockPanel>
-            <Menu DockPanel.Dock="Top" Margin="-2,0,2,0">
+            <Menu DockPanel.Dock="Top">
                 <MenuItem Header="File">
                     <MenuItem Header="Load"/>
                     <MenuItem Header="Retrieve Targets from Server"/>
@@ -77,15 +78,7 @@
                     <RowDefinition Name="MissileControl" Height="*"/>
                     <RowDefinition Name="GameStatus" Height="*"/>
                 </Grid.RowDefinitions>
-                <Grid Name="Test" Grid.Row="0">
-                    <ListBox  ></ListBox>
-
-                </Grid>
-
                 <Grid Name="Control" Grid.Row="1">
-                    <Grid.DataContext>
-                        <viewModel:MissileSelectorViewModel/>                            
-                    </Grid.DataContext>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="412*" SharedSizeGroup="A"/>
                         <ColumnDefinition Width="363*" SharedSizeGroup="A"/>
@@ -108,7 +101,8 @@
 
                         <Button Grid.Column="1" Grid.Row="0" VerticalAlignment="Bottom" FontSize="50" FontFamily="Marlett" Content="5" />
                         <Button Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" FontSize="50" FontFamily="Marlett" Content="6"/>
-                        <Button Grid.Row="1" FontSize="50" Content="FIRE" Grid.ColumnSpan="2" Margin="90,0,4,0" />
+                        <Button Grid.Column="1" Grid.Row="1" FontSize="50" Content="FIRE" >
+                        </Button>
                     </Grid>
                 </Grid>
 
