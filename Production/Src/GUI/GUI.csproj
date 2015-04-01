@@ -92,7 +92,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Commands\MissileLauncherViewModelCommands\DreamCheekyViewModelCommands\DreamCheekyViewModelCommand.cs" />
+    <Compile Include="ViewModel\FileReaderViewModel.cs" />
     <Compile Include="ViewModel\MissileLauncherViewModel.cs" />
     <Compile Include="Commands\TargetViewModelCommands\TargetViewModelCommand.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
