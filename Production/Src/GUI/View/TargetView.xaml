@@ -5,7 +5,19 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            
-    </Grid>
+    <Expander Header="Expander" 
+              HorizontalAlignment="Left" 
+              Margin="10,10,0,0" 
+              VerticalAlignment="Top" Height="177" Width="280">
+
+        <Grid Background="#FFE5E5E5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition Width="61*"/>
+                <ColumnDefinition Width="13*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </Expander>
+
+
 </UserControl>

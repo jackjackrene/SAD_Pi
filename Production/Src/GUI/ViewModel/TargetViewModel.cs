@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace GUI.ViewModel
 {
-    class TargetViewModel
+    class TargetViewModel : ViewModelBase
     {
+        /*
+         *  NOBODY TOUCH THIS OR SO HELP ME
+         */
     }
 }

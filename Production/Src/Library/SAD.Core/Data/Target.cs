@@ -13,67 +13,17 @@ namespace SAD.Core
         public event PropertyChangedEventHandler PropertyChanged;
 
         // Fields for talking to the ViewModel
-        private string name;
-        private double x;
-        private double y;
-        private double z;
         private bool friend;
         private bool status; // as in "Dead or Alive"
-        private int points;
-        private int flashRate;
-        private int spawnRate;
-        private bool canSwapSidesWhenHit;
-        private double phi;
-        private double theta;
 
-        public string Name 
-        { 
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = value;
-                OnPropertyChanged();
-            }
-        }
-        public double X 
-        { 
-            get
-            {
-                return x;
-            }
-            set
-            {
-                x = value;
-                OnPropertyChanged();
-            }
-        }
-        public double Y 
-        {
-            get
-            {
-                return y;
-            }
-            set
-            {
-                y = value;
-                OnPropertyChanged();
-            }
-        }
-        public double Z 
-        { 
-            get
-            {
-                return z;
-            }
-            set
-            {
-                z = value;
-                OnPropertyChanged();
-            }
-        }
+        public string Name
+        { get; set; }
+        public double X
+        { get; set; }
+        public double Y
+        { get; set; }
+        public double Z
+        { get; set; }
         public bool Friend 
         { 
             get
@@ -98,79 +48,18 @@ namespace SAD.Core
                 OnPropertyChanged();
             }
         }
-        public int Points 
-        { 
-            get
-            {
-                return points;
-            }
-            set
-            {
-                points = value;
-                OnPropertyChanged();
-            }
-        }
+        public int Points
+        { get; set; }
         public int FlashRate
-        {
-            get
-            {
-                return flashRate;
-            }
-            set
-            {
-                flashRate = value;
-                OnPropertyChanged();
-            }
-        }
+        { get; set; }
         public int SpawnRate
-        {
-            get
-            {
-                return spawnRate;
-            }
-            set
-            {
-                spawnRate = value;
-                OnPropertyChanged();
-            }
-        }
-        public bool CanSwapSidesWhenHit 
-        {
-            get
-            {
-                return canSwapSidesWhenHit;
-            }
-            set
-            {
-                canSwapSidesWhenHit = value;
-                OnPropertyChanged();
-            }
-        }
-        public double Phi 
-        {
-            get
-            {
-                return phi;
-            }
-            set
-            {
-                phi = value;
-                OnPropertyChanged();
-            }
-        }
-        public double Theta 
-        {
-            get
-            {
-                return theta;
-            }
-            set
-            {
-                theta = value;
-                OnPropertyChanged();
-            }
-        }
-
+        { get; set; }
+        public bool CanSwapSidesWhenHit
+        { get; set; }
+        public double Phi
+        { get; set; }
+        public double Theta
+        { get; set; }
         public Target()
         {
             Name = "NOT VALID";

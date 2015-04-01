@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SAD.Core.Devices
 {
-    public abstract class SADMissileLauncher : ISADMissileLauncher
+    public abstract class SADMissileLauncher : ISADMissileLauncher, INotifyPropertyChanged 
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         protected int maxMissileCount;
         protected int currentMissleCount;
 
@@ -63,7 +67,11 @@ namespace SAD.Core.Devices
                 if (value < 0)
                     throw new ArgumentException("Error: Invalid Missile Amount assigned in constructor", value.ToString());
                 else
+                {
                     currentMissleCount = value;
+                    OnPropertyChanged();
+                }
+
             }
 
             get
@@ -78,6 +86,12 @@ namespace SAD.Core.Devices
             MockMissileLauncher
         }
 
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
 
+            if (handler != null)
+                handler(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }
