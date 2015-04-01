@@ -1,7 +1,7 @@
 ﻿<Window x:Class="GUI.View.MissileSelectorView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:viewModel="clr-namespace:GUI.ViewModel.MissileSelectorViewModel"
+        xmlns:viewModel="clr-namespace:GUI.ViewModel"
         Title="{Binding LauncherTitle}" Height="300" Width="300">
     <Window.DataContext>
         <viewModel:MissileSelectorViewModel/>

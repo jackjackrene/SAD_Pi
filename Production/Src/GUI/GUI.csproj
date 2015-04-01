@@ -56,6 +56,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\DreamCheekyViewModelCommands\DreamCheekyViewModelCommand.cs" />
     <Compile Include="Commands\TargetViewModelCommands\TargetViewModelCommand.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\TargetViewModel.cs" />
