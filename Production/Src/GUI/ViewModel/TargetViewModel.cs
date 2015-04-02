@@ -15,16 +15,20 @@ namespace GUI.ViewModel
         // Fields
         private SADMissileLauncher missileLauncher;
         private Target target;
+        private TargetManager targetManager;
 
         // Constructor
         public TargetViewModel()
         {
+            TargetManager = TargetManager.GetInstance();
+
             // Something should go in here?!
             KillCommand = new TargetViewModelCommand(Kill);
         }
 
         public TargetViewModel(SADMissileLauncher missileLauncher, Target target)
         {
+            TargetManager = TargetManager.GetInstance();
             MissileLauncher = missileLauncher;
             Target = target;
 
@@ -43,6 +47,12 @@ namespace GUI.ViewModel
         {
             get { return target; }
             set { target = value; }
+        }
+
+        public TargetManager TargetManager
+        {
+            get { return targetManager; }
+            set { targetManager = value; }
         }
 
         // Methods

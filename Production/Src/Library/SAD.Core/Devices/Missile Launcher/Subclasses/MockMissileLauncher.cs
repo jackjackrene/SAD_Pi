@@ -20,6 +20,8 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
         {
             if (mockMissileLauncherInstance == null)
             {
+                MissileLauncherType = SADMissileType.MockMissileLauncher;
+
                 mockMissileLauncherInstance = new MockMissileLauncher();
                 return mockMissileLauncherInstance;
             }
@@ -45,30 +47,5 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
         {
             System.Console.WriteLine("MoveBy method of mockMissileLauncher invoked!");
         }
-
-        //public override void MoveUp()
-        //{
-        //    System.Console.WriteLine("MoveUp method of mockMissileLauncher invoked!");
-
-        //}
-
-        //public override void MoveDown()
-        //{
-        //    System.Console.WriteLine("MoveDown method of mockMissileLauncher invoked!");
-
-        //}
-
-        //public override void MoveLeft()
-        //{
-        //    System.Console.WriteLine("MoveLeft method of mockMissileLauncher invoked!");
-
-        //}
-
-        //public override void MoveRight()
-        //{
-        //    System.Console.WriteLine("MoveUp method of mockMissileLauncher invoked!");
-
-        //}
-
     }
 }
