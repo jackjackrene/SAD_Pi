@@ -13,7 +13,7 @@ using GUI.ViewModel;
 using GUI.Commands.MissileLauncheViewModelCommands;
 using GUI.Commands.TargetViewModelCommands;
 
-namespace GUI.MissileLauncherViewModel
+namespace GUI.ViewModel
 {
     public class MissileLauncherViewModel : ViewModelBase
     {
