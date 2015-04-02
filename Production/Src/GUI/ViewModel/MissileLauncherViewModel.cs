@@ -38,6 +38,7 @@ namespace GUI.ViewModel
             // Trouble area, make sure its the correct missile launcher in the debugger
             SADMissileLauncherFactory missileFactory = SADMissileLauncherFactory.GetInstance();
             MissileLauncher = missileFactory.CreateSADMissileLauncher(SADMissileLauncher.MissileLauncherType);
+          
             FireCommand = new MissileLauncherViewModelCommand(Fire);
             MoveUpCommand = new TargetViewModelCommand(MoveUp);
             MoveDownCommand = new TargetViewModelCommand(MoveDown);

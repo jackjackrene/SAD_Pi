@@ -1,7 +1,7 @@
 ﻿<Window x:Class="GUI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:view="clr-namespace:GUI.ViewModel"
+        xmlns:view="clr-namespace:GUI.View"
         xmlns:viewModel="clr-namespace:GUI.ViewModel"
         
         Title="{Binding Title}" Height="700" Width="1300" WindowState="Maximized">
@@ -49,6 +49,8 @@
                        TextAlignment="Center"
                        VerticalAlignment="Center" HorizontalAlignment="Right" Width="517" Margin="0,10,0,6"/>
 
+                <!-- <view:TargetView /> -->
+                
                 <!-- Buttons at the bottom of the list of targets -->
                 <Grid Grid.Row="3" IsSharedSizeScope="True">
                     <Grid.ColumnDefinitions>

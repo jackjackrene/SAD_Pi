@@ -93,12 +93,17 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Commands\MissileLauncheViewModelCommands\MissileLauncherViewModelCommand.cs" />
+    <Compile Include="Commands\TargetListViewModelCommands\TargetListViewModelCommand.cs" />
     <Compile Include="ViewModel\FileReaderViewModel.cs" />
     <Compile Include="ViewModel\MissileLauncherViewModel.cs" />
     <Compile Include="Commands\TargetViewModelCommands\TargetViewModelCommand.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="ViewModel\TargetListViewModel.cs" />
     <Compile Include="ViewModel\TargetViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="View\TargetListView.xaml.cs">
+      <DependentUpon>TargetListView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\TargetView.xaml.cs">
       <DependentUpon>TargetView.xaml</DependentUpon>
     </Compile>
@@ -115,6 +120,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\MissileSelectorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TargetListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
