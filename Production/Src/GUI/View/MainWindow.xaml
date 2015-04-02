@@ -138,7 +138,7 @@
                         </Grid.DataContext>
                         
                         <!--Still need to fix this binding and implement the necessary methods-->
-                        <!--<TextBlock Grid.Row="0" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding CurrentMissileCount}"/>-->
+                        <TextBlock Grid.Row="0" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding CurrentMissileCount}"/>
 
 
 

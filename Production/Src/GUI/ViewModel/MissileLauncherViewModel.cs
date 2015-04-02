@@ -21,7 +21,7 @@ namespace GUI.ViewModel
         private SADMissileLauncher missileLauncher;
         private Target target;  // Pretty sure this is necessary for the bindings on the .xaml page,
                                 // but otherwise it is not use in here per se 
-        private int currentMissileCount;
+        private int m_currentMissileCount;
 
         private double degreeConstant;
         public double DegreeConstant
@@ -44,6 +44,7 @@ namespace GUI.ViewModel
             MoveDownCommand = new TargetViewModelCommand(MoveDown);
             MoveLeftCommand = new TargetViewModelCommand(MoveLeft);
             MoveRightCommand = new TargetViewModelCommand(MoveRight);
+            CurrentMissileCount = missileLauncher.CurrentMissileCount;
         }
 
         public MissileLauncherViewModel(SADMissileLauncher missileLauncher, Target target)
@@ -58,6 +59,8 @@ namespace GUI.ViewModel
             MoveDownCommand = new TargetViewModelCommand(MoveDown);
             MoveLeftCommand = new TargetViewModelCommand(MoveLeft);
             MoveRightCommand = new TargetViewModelCommand(MoveRight);
+            CurrentMissileCount = missileLauncher.CurrentMissileCount;
+
         }
         // Properties
         public SADMissileLauncher MissileLauncher
@@ -72,20 +75,21 @@ namespace GUI.ViewModel
             set { target = value; }
         }
 
-        //private int CurrentMissileCount
-        //{
-        //    get { return this.currentMissileCount; }
-        //    set
-        //    {
-        //        this.currentMissileCount = value;
-        //        OnPropertyChanged();
-        //    }
-        //}
+        public int CurrentMissileCount
+        {
+            get { return m_currentMissileCount; }
+            set
+            {
+                m_currentMissileCount = value;
+                OnPropertyChanged();
+            }
+        }
 
         // Methods
         public void Fire()
         {
             missileLauncher.Fire();
+            CurrentMissileCount = missileLauncher.CurrentMissileCount;
         }
 
         public void MoveUp()
