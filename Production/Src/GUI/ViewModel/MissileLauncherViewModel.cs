@@ -21,9 +21,9 @@ namespace GUI.MissileLauncherViewModel
         private SADMissileLauncher missileLauncher;
         private Target target;  // Pretty sure this is necessary for the bindings on the .xaml page,
                                 // but otherwise it is not use in here per se
-        private int degreeConstant;
+        private double degreeConstant;
 
-        public int DegreeConstant
+        public double DegreeConstant
         {
             get { return degreeConstant; }
             set { degreeConstant = value; }
@@ -32,6 +32,8 @@ namespace GUI.MissileLauncherViewModel
         // Constructor
         public MissileLauncherViewModel()
         {
+            DegreeConstant = 5.0;
+
             FireCommand = new MissileLauncherViewModelCommand(Fire);
             MoveUpCommand = new TargetViewModelCommand(MoveUp);
             MoveDownCommand = new TargetViewModelCommand(MoveDown);
@@ -41,6 +43,7 @@ namespace GUI.MissileLauncherViewModel
 
         public MissileLauncherViewModel(SADMissileLauncher missileLauncher, Target target)
         {
+            DegreeConstant = 5.0;
             MissileLauncher = missileLauncher;
             Target = target;
 
@@ -78,17 +81,17 @@ namespace GUI.MissileLauncherViewModel
 
         public void MoveDown()
         {
-            missileLauncher.MoveDown(0.0, -DegreeConstant);
+            missileLauncher.MoveBy(0.0, -DegreeConstant);
         }
 
         public void MoveLeft()
         {
-            missileLauncher.MoveLeft(-DegreeConstant, 0.0);
+            missileLauncher.MoveBy(-DegreeConstant, 0.0);
         }
 
         public void MoveRight()
         {
-            missileLauncher.MoveRight();
+            missileLauncher.MoveBy(DegreeConstant, 0.0);
         }
 
         // Commands
