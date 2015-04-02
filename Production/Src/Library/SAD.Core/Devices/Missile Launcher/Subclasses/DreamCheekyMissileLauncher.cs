@@ -24,6 +24,8 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
         {
             if (dreamCheekyMissileLauncherInstance == null)
             {
+                MissileLauncherType = SADMissileType.DreamCheekyMissileLauncher;
+
                 dreamCheekyMissileLauncherInstance = new DreamCheekyMissileLauncher();
                 return dreamCheekyMissileLauncherInstance;
             }

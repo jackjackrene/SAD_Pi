@@ -33,7 +33,10 @@ namespace GUI.MissileLauncherViewModel
         public MissileLauncherViewModel()
         {
             DegreeConstant = 5.0;
-            //MissileLauncher = 
+           
+            // Trouble area, make sure its the correct missile launcher in the debugger
+            SADMissileLauncherFactory missileFactory = SADMissileLauncherFactory.GetInstance();
+            MissileLauncher = missileFactory.CreateSADMissileLauncher(SADMissileLauncher.MissileLauncherType);
 
             FireCommand = new MissileLauncherViewModelCommand(Fire);
             MoveUpCommand = new TargetViewModelCommand(MoveUp);

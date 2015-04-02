@@ -20,6 +20,8 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
         {
             if (mockMissileLauncherInstance == null)
             {
+                MissileLauncherType = SADMissileType.MockMissileLauncher;
+
                 mockMissileLauncherInstance = new MockMissileLauncher();
                 return mockMissileLauncherInstance;
             }

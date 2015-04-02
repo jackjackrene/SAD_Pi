@@ -14,11 +14,12 @@ namespace SAD.Core.Devices
 
         protected int maxMissileCount;
         protected int currentMissleCount;
+        protected static SADMissileType missileLauncherType;
 
         protected SADMissileLauncher()
         {
         }
-        
+
         // Interface Methods
         public abstract void Kill(double phi, double theta);
 
@@ -27,8 +28,6 @@ namespace SAD.Core.Devices
         public abstract void Move(double phi, double theta);
 
         public abstract void MoveBy(double phi, double theta);
-
-
 
         public void Reload()
         {
@@ -69,12 +68,16 @@ namespace SAD.Core.Devices
                 {
                     currentMissleCount = value;
                 }
-
             }
 
             get { return currentMissleCount; }
         }
 
+        public static SADMissileType MissileLauncherType
+        {
+            get { return missileLauncherType; }
+            set { missileLauncherType = value; }
+        }
 
         public enum SADMissileType
         {
