@@ -14,7 +14,6 @@ namespace SAD.Core.Devices
 
         protected int maxMissileCount;
         protected int currentMissleCount;
-        protected int moveDirectionConstant;      // Field for MoveUp/Down/Left/Right methods
 
         protected SADMissileLauncher()
         {
@@ -28,14 +27,6 @@ namespace SAD.Core.Devices
         public abstract void Move(double phi, double theta);
 
         public abstract void MoveBy(double phi, double theta);
-
-        public abstract void MoveUp();
-
-        public abstract void MoveDown();
-
-        public abstract void MoveLeft();
-
-        public abstract void MoveRight();
 
         public void Reload()
         {
@@ -82,18 +73,6 @@ namespace SAD.Core.Devices
             get { return currentMissleCount; }
         }
 
-        // Property for MoveUp/Down/Left/Right methods
-        public int MoveDirectionConstant
-        {
-            get { return moveDirectionConstant; }
-            set
-            {
-                if (value < 0)
-                    throw new ArgumentException("Error: the move direction constant cannot be negative", value.ToString());
-                else
-                    moveDirectionConstant = value;
-            }
-        }
 
         public enum SADMissileType
         {

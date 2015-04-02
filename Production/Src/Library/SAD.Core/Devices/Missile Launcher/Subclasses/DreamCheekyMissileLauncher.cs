@@ -16,7 +16,6 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
         {
             MaxMissileCount = 4;
             CurrentMissileCount = MaxMissileCount;
-            MoveDirectionConstant = 100;
 
             internalMissileLauncher = new MissileLauncher();
         }
@@ -109,74 +108,6 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
             catch (ArgumentOutOfRangeException e)
             {
                 System.Console.WriteLine("EXCEPTION in MoveBy method of DreamCheekyMissileLauncher: The arguments are out of range.", e);
-                System.Console.WriteLine("Reseting to default coordinates...");
-
-                internalMissileLauncher.command_reset();
-            }
-        }
-
-        public override void MoveUp()
-        {
-            System.Console.WriteLine("MoveUp method of SADMissileLauncher invoked!");
-
-            try
-            {
-                internalMissileLauncher.command_Up(DegreesToTime(MoveDirectionConstant));
-            }
-            catch (ArgumentOutOfRangeException e)
-            {
-                System.Console.WriteLine("EXCEPTION in MoveUp method of DreamCheekyMissileLauncher: The arguments are out of range.", e);
-                System.Console.WriteLine("Reseting to default coordinates...");
-
-                internalMissileLauncher.command_reset();
-            }
-        }
-
-        public override void MoveDown()
-        {
-            System.Console.WriteLine("MoveDown method of SADMissileLauncher invoked!");
-
-            try
-            {
-                internalMissileLauncher.command_Down(DegreesToTime(MoveDirectionConstant));
-            }
-            catch (ArgumentOutOfRangeException e)
-            {
-                System.Console.WriteLine("EXCEPTION in MoveDown method of DreamCheekyMissileLauncher: The arguments are out of range.", e);
-                System.Console.WriteLine("Reseting to default coordinates...");
-
-                internalMissileLauncher.command_reset();
-            }
-        }
-
-        public override void MoveLeft()
-        {
-            System.Console.WriteLine("MoveLeft method of SADMissileLauncher invoked!");
-
-            try
-            {
-                internalMissileLauncher.command_Left(DegreesToTime(MoveDirectionConstant));
-            }
-            catch (ArgumentOutOfRangeException e)
-            {
-                System.Console.WriteLine("EXCEPTION in MoveLeft method of DreamCheekyMissileLauncher: The arguments are out of range.", e);
-                System.Console.WriteLine("Reseting to default coordinates...");
-
-                internalMissileLauncher.command_reset();
-            }
-        }
-
-        public override void MoveRight()
-        {
-            System.Console.WriteLine("MoveRight method of SADMissileLauncher invoked!");
-
-            try
-            {
-                internalMissileLauncher.command_Right(DegreesToTime(MoveDirectionConstant));
-            }
-            catch (ArgumentOutOfRangeException e)
-            {
-                System.Console.WriteLine("EXCEPTION in MoveRight method of DreamCheekyMissileLauncher: The arguments are out of range.", e);
                 System.Console.WriteLine("Reseting to default coordinates...");
 
                 internalMissileLauncher.command_reset();
