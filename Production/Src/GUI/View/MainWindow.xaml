@@ -100,12 +100,17 @@
                             <RowDefinition  Height="100"/>
                             <RowDefinition  Height="*"/>
                         </Grid.RowDefinitions>
+                        <Grid.DataContext>
+                            <viewModel:MissileLauncherViewModel>
+                            </viewModel:MissileLauncherViewModel>
+                        </Grid.DataContext>
                         <Button Grid.Column="0" Grid.Row="1" Content="3" HorizontalAlignment="Right" FontSize="50" FontFamily="Marlett"/>
                         <Button Grid.Column="2" Grid.Row="1" FontSize="50" HorizontalAlignment="Left" FontFamily="Marlett" Content="4"/>
 
                         <Button Grid.Column="1" Grid.Row="0" VerticalAlignment="Bottom" FontSize="50" FontFamily="Marlett" Content="5" />
                         <Button Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" FontSize="50" FontFamily="Marlett" Content="6"/>
-                        <Button Grid.Column="1" Grid.Row="1" FontSize="50" Content="FIRE" >
+                        
+                        <Button Grid.Column="1" Grid.Row="1" FontSize="50" Content="FIRE" Command="{Binding FireCommand}">
                         </Button>
                     </Grid>
                 </Grid>
