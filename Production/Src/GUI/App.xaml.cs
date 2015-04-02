@@ -15,9 +15,7 @@ namespace GUI
     {
         void App_OnStartup(object sender, StartupEventArgs e)
         {
-            var missileSelectorView = new MissileSelectorView();
-
-            missileSelectorView.ShowDialog();
+            
 
             var mainWindow = new MainWindow();
 

@@ -38,7 +38,6 @@ namespace GUI.ViewModel
             // Trouble area, make sure its the correct missile launcher in the debugger
             SADMissileLauncherFactory missileFactory = SADMissileLauncherFactory.GetInstance();
             MissileLauncher = missileFactory.CreateSADMissileLauncher(SADMissileLauncher.MissileLauncherType);
-
             FireCommand = new MissileLauncherViewModelCommand(Fire);
             MoveUpCommand = new TargetViewModelCommand(MoveUp);
             MoveDownCommand = new TargetViewModelCommand(MoveDown);
@@ -59,7 +58,6 @@ namespace GUI.ViewModel
             MoveLeftCommand = new TargetViewModelCommand(MoveLeft);
             MoveRightCommand = new TargetViewModelCommand(MoveRight);
         }
-
         // Properties
         public SADMissileLauncher MissileLauncher
         {
@@ -73,15 +71,15 @@ namespace GUI.ViewModel
             set { target = value; }
         }
 
-        private int CurrentMissileCount
-        {
-            get { return this.currentMissileCount; }
-            set
-            {
-                this.currentMissileCount = value;
-                OnPropertyChanged();
-            }
-        }
+        //private int CurrentMissileCount
+        //{
+        //    get { return this.currentMissileCount; }
+        //    set
+        //    {
+        //        this.currentMissileCount = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
 
         // Methods
         public void Fire()
@@ -115,5 +113,8 @@ namespace GUI.ViewModel
         public ICommand MoveDownCommand { get; set; }
         public ICommand MoveLeftCommand { get; set; }
         public ICommand MoveRightCommand { get; set; }
+        public ICommand UpdateMissileCountCommand { get; set; }
+
     }
+
 }

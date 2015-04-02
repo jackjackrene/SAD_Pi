@@ -4,7 +4,7 @@
         xmlns:view="clr-namespace:GUI.ViewModel"
         xmlns:viewModel="clr-namespace:GUI.ViewModel"
         
-        Title="{Binding Title}" Height="700" Width="1300">
+        Title="{Binding Title}" Height="700" Width="1300" WindowState="Maximized">
     <Window.DataContext>
         <viewModel:MainWindowViewModel/>
     </Window.DataContext>
@@ -134,7 +134,9 @@
                             <viewModel:MissileLauncherViewModel>
                             </viewModel:MissileLauncherViewModel>
                         </Grid.DataContext>
-                        <TextBlock Grid.Row="0" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding MissileLauncher.CurrentMissileCount}"/>
+                        
+                        <!--Still need to fix this binding and implement the necessary methods-->
+                        <!--<TextBlock Grid.Row="0" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding CurrentMissileCount}"/>-->
 
 
 
