@@ -33,6 +33,7 @@ namespace GUI.MissileLauncherViewModel
         public MissileLauncherViewModel()
         {
             DegreeConstant = 5.0;
+            //MissileLauncher = 
 
             FireCommand = new MissileLauncherViewModelCommand(Fire);
             MoveUpCommand = new TargetViewModelCommand(MoveUp);

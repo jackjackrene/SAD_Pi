@@ -28,6 +28,8 @@ namespace SAD.Core.Devices
 
         public abstract void MoveBy(double phi, double theta);
 
+
+
         public void Reload()
         {
             System.Console.WriteLine("Reload method of SADMissileLauncher invoked!");
