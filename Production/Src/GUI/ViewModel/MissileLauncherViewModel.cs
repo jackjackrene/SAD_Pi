@@ -20,15 +20,16 @@ namespace GUI.ViewModel
         // Fields
         private SADMissileLauncher missileLauncher;
         private Target target;  // Pretty sure this is necessary for the bindings on the .xaml page,
-                                // but otherwise it is not use in here per se
-        private double degreeConstant;
+                                // but otherwise it is not use in here per se 
+        private int currentMissileCount;
 
+        private double degreeConstant;
         public double DegreeConstant
         {
             get { return degreeConstant; }
             set { degreeConstant = value; }
         }
-
+        
         // Constructor
         public MissileLauncherViewModel()
         {
@@ -70,6 +71,16 @@ namespace GUI.ViewModel
         {
             get { return target; }
             set { target = value; }
+        }
+
+        private int CurrentMissileCount
+        {
+            get { return this.currentMissileCount; }
+            set
+            {
+                this.currentMissileCount = value;
+                OnPropertyChanged();
+            }
         }
 
         // Methods
