@@ -80,19 +80,23 @@
               Grid.Column="1"
               Grid.Row="0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Name="VideoDisplay" Height="*"/>
-                    <RowDefinition Name="MissileControl" Height="*"/>
-                    <RowDefinition Name="GameStatus" Height="*"/>
+                    <RowDefinition Name="VideoDisplay" Height="30*"/>
+                    <RowDefinition Name="MissileControl" Height="20*"/>
+                    <RowDefinition Name="GameStatus" Height="20*"/>
                 </Grid.RowDefinitions>
                 <Grid Name="Video" Grid.Row="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Border BorderThickness="1" BorderBrush="Gray" Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="1" BorderThickness="1" BorderBrush="Gray" Margin="10">
                         <Image Source="{Binding CameraImage}" Margin="-1,-1,1,1"/>
                     </Border>
-                    <Button Grid.Row="1"
+                    <Button Grid.Row="1" Grid.Column="1"
                             Content="Take Image"  
                             Command="{Binding TakePictureCommand}"/>
                 </Grid>
