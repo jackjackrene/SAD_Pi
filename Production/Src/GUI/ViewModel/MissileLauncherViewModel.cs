@@ -22,6 +22,7 @@ namespace GUI.ViewModel
         private Target target;  // Pretty sure this is necessary for the bindings on the .xaml page,
                                 // but otherwise it is not use in here per se 
         private int m_currentMissileCount;
+        private string m_currentPhiTheta;
 
         private double degreeConstant;
         public double DegreeConstant
@@ -46,7 +47,8 @@ namespace GUI.ViewModel
             MoveRightCommand = new TargetViewModelCommand(MoveRight);
             CurrentMissileCount = missileLauncher.CurrentMissileCount;
             m_currentMissileCount = missileLauncher.CurrentMissileCount;
-
+            CurrentPhiTheta = "(" + missileLauncher.CurrentPhi + ", " + missileLauncher.CurrentTheta + ")";
+            m_currentPhiTheta = "(" + missileLauncher.CurrentPhi + ", " + missileLauncher.CurrentTheta + ")";
         }
 
         public MissileLauncherViewModel(SADMissileLauncher missileLauncher, Target target)
@@ -86,6 +88,16 @@ namespace GUI.ViewModel
             }
         }
 
+        public string CurrentPhiTheta
+        {
+            get { return m_currentPhiTheta; }
+            set
+            {
+                m_currentPhiTheta = value;
+                OnPropertyChanged("CurrentPhiTheta");
+            }
+        }
+
         // Methods
         public void Fire()
         {
@@ -96,21 +108,25 @@ namespace GUI.ViewModel
         public void MoveUp()
         {
             missileLauncher.MoveBy(0.0, DegreeConstant);
+            CurrentPhiTheta = "(" + missileLauncher.CurrentPhi + ", " + missileLauncher.CurrentTheta + ")";
         }
 
         public void MoveDown()
         {
             missileLauncher.MoveBy(0.0, -DegreeConstant);
+            CurrentPhiTheta = "(" + missileLauncher.CurrentPhi + ", " + missileLauncher.CurrentTheta + ")";
         }
 
         public void MoveLeft()
         {
             missileLauncher.MoveBy(-DegreeConstant, 0.0);
+            CurrentPhiTheta = "(" + missileLauncher.CurrentPhi + ", " + missileLauncher.CurrentTheta + ")";
         }
 
         public void MoveRight()
         {
             missileLauncher.MoveBy(DegreeConstant, 0.0);
+            CurrentPhiTheta = "(" + missileLauncher.CurrentPhi + ", " + missileLauncher.CurrentTheta + ")";
         }
 
         // Commands
@@ -120,6 +136,7 @@ namespace GUI.ViewModel
         public ICommand MoveLeftCommand { get; set; }
         public ICommand MoveRightCommand { get; set; }
         public ICommand UpdateMissileCountCommand { get; set; }
+        public ICommand UpdatePhiThetaCommand { get; set; }
 
 
     }
