@@ -22,18 +22,23 @@ namespace GUI.ViewModel
         private BitmapSource m_cameraImage;
         private Capture m_capture;
 
+        // ViewModel Instances
+        private TargetListViewModel targetListViewModel;
+
         public MainWindowViewModel()
         {
             Title = "SAD.3.14 Controls";
 
             TakePictureCommand = new MyCommand(TakePicture);
 
-
-            MissileLauncher = new MissileLauncherViewModel();
         }
 
-
-        public MissileLauncherViewModel MissileLauncher { get; set; }
+        // Properties
+        public TargetListViewModel TargetListViewModel
+        {
+            get { return targetListViewModel; }
+            set { targetListViewModel = value; }
+        }
 
         /// <summary>
         /// Setting the title for the window
