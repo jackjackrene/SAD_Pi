@@ -10,7 +10,7 @@ using GUI.Commands.TargetListViewModelCommands;
 
 namespace GUI.ViewModel
 {
-    class TargetListViewModel : ViewModelBase
+    public class TargetListViewModel : ViewModelBase
     {
         // Fields
         private TargetManager targetManager;
@@ -43,19 +43,8 @@ namespace GUI.ViewModel
         public TargetViewModel SelectedTargetView
         {
             get { return selectedTargetView; }
-            set { selectedTargetView = value; }
+            set { selectedTargetView = value; OnPropertyChanged(); }
         }
-
-        /*
-         *  General idea, for every target in TargetManager, 
-         *  get the target
-         *  send an instance to TargetView (via constructor)
-         *  This will populate the list 
-         * 
-         *  ListView will contain TargetView/ViewModel (see his example)
-         * 
-         *  Question: how to notify THIS ViewModel that a target has been killed
-         */ 
 
         // Methods
         public void ClearAll()
@@ -79,8 +68,8 @@ namespace GUI.ViewModel
             // For every target in the list
             for (int count = 0; count < list.Count; count++)
             {
-                var currentTarget = list[count];
-                var newTargetViewModel = new TargetViewModel(currentTarget);
+                var target = list[count];
+                var newTargetViewModel = new TargetViewModel(target);
 
                 targetViewList.Add(newTargetViewModel);
                 SelectedTargetView = newTargetViewModel;

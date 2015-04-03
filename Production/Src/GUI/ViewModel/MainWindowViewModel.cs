@@ -29,15 +29,16 @@ namespace GUI.ViewModel
         {
             Title = "SAD.3.14 Controls";
 
-            TakePictureCommand = new MyCommand(TakePicture);
+            this.TargetListViewModel = new TargetListViewModel();
 
+            TakePictureCommand = new MyCommand(TakePicture);
         }
 
         // Properties
         public TargetListViewModel TargetListViewModel
         {
-            get { return targetListViewModel; }
-            set { targetListViewModel = value; }
+            get { return this.targetListViewModel; }
+            set { targetListViewModel = value; this.OnPropertyChanged(); }
         }
 
         /// <summary>
