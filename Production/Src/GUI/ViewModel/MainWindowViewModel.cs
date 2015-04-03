@@ -28,7 +28,13 @@ namespace GUI.ViewModel
 
             TakePictureCommand = new MyCommand(TakePicture);
 
+
+            MissileLauncher = new MissileLauncherViewModel();
         }
+
+
+        public MissileLauncherViewModel MissileLauncher { get; set; }
+
         /// <summary>
         /// Setting the title for the window
         /// </summary>

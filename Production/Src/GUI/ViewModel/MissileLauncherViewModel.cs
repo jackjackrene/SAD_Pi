@@ -44,6 +44,8 @@ namespace GUI.ViewModel
             MoveLeftCommand = new TargetViewModelCommand(MoveLeft);
             MoveRightCommand = new TargetViewModelCommand(MoveRight);
             CurrentMissileCount = missileLauncher.CurrentMissileCount;
+            m_currentMissileCount = missileLauncher.CurrentMissileCount;
+
         }
 
         public MissileLauncherViewModel(SADMissileLauncher missileLauncher, Target target)
@@ -58,7 +60,7 @@ namespace GUI.ViewModel
             MoveDownCommand = new TargetViewModelCommand(MoveDown);
             MoveLeftCommand = new TargetViewModelCommand(MoveLeft);
             MoveRightCommand = new TargetViewModelCommand(MoveRight);
-            CurrentMissileCount = missileLauncher.CurrentMissileCount;
+
 
         }
         // Properties
@@ -67,7 +69,6 @@ namespace GUI.ViewModel
             get { return missileLauncher; }
             set { missileLauncher = value; }
         }
-
         public Target Target
         {
             get { return target; }
@@ -80,7 +81,7 @@ namespace GUI.ViewModel
             set
             {
                 m_currentMissileCount = value;
-                OnPropertyChanged();
+                OnPropertyChanged("CurrentMissileCount");
             }
         }
 
@@ -118,6 +119,7 @@ namespace GUI.ViewModel
         public ICommand MoveLeftCommand { get; set; }
         public ICommand MoveRightCommand { get; set; }
         public ICommand UpdateMissileCountCommand { get; set; }
+
 
     }
 
