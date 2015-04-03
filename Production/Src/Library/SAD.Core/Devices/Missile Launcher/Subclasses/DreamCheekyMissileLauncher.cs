@@ -62,6 +62,19 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
 
         public override void Move(double phi, double theta)
         {
+            CurrentPhi = phi;
+            CurrentTheta = theta;
+
+            if (CurrentPhi > 135)
+                CurrentPhi = 135;
+            if (CurrentPhi < -135)
+                CurrentPhi = -135;
+
+            if (CurrentTheta > 45)
+                CurrentTheta = 45;
+            if (CurrentTheta < 0)
+                CurrentTheta = 0;
+
             System.Console.WriteLine("Move method of SADMissileLauncher invoked!");
             try
             {
@@ -91,6 +104,19 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
 
         public override void MoveBy(double phi, double theta)
         {
+            CurrentPhi = CurrentPhi + phi;
+            CurrentTheta = CurrentTheta = theta;
+
+            if (CurrentPhi > 135)
+                CurrentPhi = 135;
+            if (CurrentPhi < -135)
+                CurrentPhi = -135;
+
+            if (CurrentTheta > 45)
+                CurrentTheta = 45;
+            if (CurrentTheta < 0)
+                CurrentTheta = 0;
+
             System.Console.WriteLine("MoveBy method of SADMissileLauncher invoked!");
 
             try
