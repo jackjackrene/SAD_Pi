@@ -92,7 +92,7 @@ namespace SAD.Core.Devices
                 currentTheta = value;
             }
 
-            get { return CurrentTheta; }
+            get { return currentTheta; }
         }
 
         public static SADMissileType MissileLauncherType

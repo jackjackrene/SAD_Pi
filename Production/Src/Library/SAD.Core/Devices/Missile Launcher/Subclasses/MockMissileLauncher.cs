@@ -13,6 +13,8 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
         private MockMissileLauncher() : base()
         {
             MaxMissileCount = 1;
+            CurrentPhi = 0;
+            CurrentTheta = 0;
             CurrentMissileCount = MaxMissileCount;
         }
 

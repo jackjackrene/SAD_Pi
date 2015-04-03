@@ -15,6 +15,8 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
         private DreamCheekyMissileLauncher() : base()
         {
             MaxMissileCount = 4;
+            CurrentPhi = 0;
+            CurrentTheta = 0;
             CurrentMissileCount = MaxMissileCount;
 
             internalMissileLauncher = new MissileLauncher();
