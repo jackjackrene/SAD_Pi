@@ -155,7 +155,7 @@
                                    HorizontalAlignment="Center" 
                                    VerticalAlignment="Center" 
                                    Text="{Binding CurrentMissileCount}"></TextBlock>
-                        <TextBlock Grid.Row="1" FontSize="40" 
+                        <TextBlock Grid.Row="1" FontSize="25" 
                                    HorizontalAlignment="Center" 
                                    VerticalAlignment="Center" 
                                    Text="{Binding CurrentPhiTheta}"></TextBlock>

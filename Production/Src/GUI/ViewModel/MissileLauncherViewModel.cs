@@ -49,8 +49,8 @@ namespace GUI.ViewModel
             ReloadCommand = new TargetViewModelCommand(Reload);
             CalibrateCommand = new TargetViewModelCommand(Calibrate);
 
-            CurrentPhiTheta = "(" + missileLauncher.CurrentPhi + ", " + missileLauncher.CurrentTheta + ")";
-            m_currentPhiTheta = "(" + missileLauncher.CurrentPhi + ", " + missileLauncher.CurrentTheta + ")";
+            CurrentPhiTheta = "(" + Math.Round(missileLauncher.CurrentPhi,2) + ", " + Math.Round(missileLauncher.CurrentTheta,2) + ")";
+            m_currentPhiTheta = "(" + Math.Round(missileLauncher.CurrentPhi,2) + ", " + Math.Round(missileLauncher.CurrentTheta,2) + ")";
         }
 
         public MissileLauncherViewModel(SADMissileLauncher missileLauncher, Target target)
@@ -107,30 +107,31 @@ namespace GUI.ViewModel
         {
             missileLauncher.Fire();
             CurrentMissileCount = missileLauncher.CurrentMissileCount;
+            CurrentPhiTheta = "(" + Math.Round(missileLauncher.CurrentPhi, 2) + ", " + Math.Round(missileLauncher.CurrentTheta, 2) + ")";
         }
 
         public void MoveUp()
         {
             missileLauncher.MoveBy(0.0, DegreeConstant);
-            CurrentPhiTheta = "(" + missileLauncher.CurrentPhi + ", " + missileLauncher.CurrentTheta + ")";
+            CurrentPhiTheta = "(" + Math.Round(missileLauncher.CurrentPhi, 2) + ", " + Math.Round(missileLauncher.CurrentTheta, 2) + ")";
         }
 
         public void MoveDown()
         {
             missileLauncher.MoveBy(0.0, -DegreeConstant);
-            CurrentPhiTheta = "(" + missileLauncher.CurrentPhi + ", " + missileLauncher.CurrentTheta + ")";
+            CurrentPhiTheta = "(" + Math.Round(missileLauncher.CurrentPhi, 2) + ", " + Math.Round(missileLauncher.CurrentTheta, 2) + ")";
         }
 
         public void MoveLeft()
         {
             missileLauncher.MoveBy(-DegreeConstant, 0.0);
-            CurrentPhiTheta = "(" + missileLauncher.CurrentPhi + ", " + missileLauncher.CurrentTheta + ")";
+            CurrentPhiTheta = "(" + Math.Round(missileLauncher.CurrentPhi, 2) + ", " + Math.Round(missileLauncher.CurrentTheta, 2) + ")";
         }
 
         public void MoveRight()
         {
             missileLauncher.MoveBy(DegreeConstant, 0.0);
-            CurrentPhiTheta = "(" + missileLauncher.CurrentPhi + ", " + missileLauncher.CurrentTheta + ")";
+            CurrentPhiTheta = "(" + Math.Round(missileLauncher.CurrentPhi, 2) + ", " + Math.Round(missileLauncher.CurrentTheta, 2) + ")";
         }
         public void Reload()
         {
@@ -140,7 +141,7 @@ namespace GUI.ViewModel
         public void Calibrate()
         {
             missileLauncher.Move(0, 0);
-            CurrentPhiTheta = "(" + missileLauncher.CurrentPhi + ", " + missileLauncher.CurrentTheta + ")";
+            CurrentPhiTheta = "(" + Math.Round(missileLauncher.CurrentPhi, 2) + ", " + Math.Round(missileLauncher.CurrentTheta, 2) + ")";
         }
 
         // Commands

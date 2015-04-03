@@ -72,8 +72,8 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
             if (CurrentPhi < -135)
                 CurrentPhi = -135;
 
-            if (CurrentTheta > 45)
-                CurrentTheta = 45;
+            if (CurrentTheta > 90)
+                CurrentTheta = 90;
             if (CurrentTheta < -10)
                 CurrentTheta = -10;
 
@@ -114,8 +114,8 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
             if (CurrentPhi < -135)
                 CurrentPhi = -135;
 
-            if (CurrentTheta > 45)
-                CurrentTheta = 45;
+            if (CurrentTheta > 90)
+                CurrentTheta = 90;
             if (CurrentTheta < -10)
                 CurrentTheta = -10;
 
