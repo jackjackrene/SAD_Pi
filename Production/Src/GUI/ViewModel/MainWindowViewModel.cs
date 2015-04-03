@@ -22,6 +22,9 @@ namespace GUI.ViewModel
         private BitmapSource m_cameraImage;
         private Capture m_capture;
 
+        // ViewModel Instances
+        private TargetListViewModel targetListViewModel;
+
         public MainWindowViewModel()
         {
             Title = "SAD.3.14 Controls";
@@ -29,6 +32,14 @@ namespace GUI.ViewModel
             TakePictureCommand = new MyCommand(TakePicture);
 
         }
+
+        // Properties
+        public TargetListViewModel TargetListViewModel
+        {
+            get { return targetListViewModel; }
+            set { targetListViewModel = value; }
+        }
+
         /// <summary>
         /// Setting the title for the window
         /// </summary>

@@ -10,28 +10,21 @@ using GUI.Commands.TargetListViewModelCommands;
 
 namespace GUI.ViewModel
 {
-    class TargetListViewModel
+    class TargetListViewModel : ViewModelBase
     {
-        /*
-         *  ViewModel for the UserControl containing the ListBox of TargetViews/ViewModels and a button (TargetManager)
-         *  
-         *  NO ONE TOUCH THIS OR SO HELP ME
-         */ 
-
         // Fields
         private TargetManager targetManager;
         private TargetViewModel selectedTargetView;
-        private ObservableCollection<TargetViewModel> targetViewList;
+        private ObservableCollection<TargetViewModel> targetViewList; 
 
         public TargetListViewModel()
         {
             TargetManager = TargetManager.GetInstance();
-
-            // dont forget to populate
             TargetViewList = new ObservableCollection<TargetViewModel>();
 
             // Command stuff
             ClearAllCommand = new TargetListViewModelCommand(ClearAll);
+            LoadTargetsCommand = new TargetListViewModelCommand(LoadTargets);
         }
 
         // Properties
@@ -72,7 +65,30 @@ namespace GUI.ViewModel
             TargetViewList.Clear();
         }
 
+        public void LoadTargets()
+        {
+            PopulateTargetList();
+        }
+
+        // May be better of as private
+        // Modify so triggered on an event
+        public void PopulateTargetList()
+        {
+            List<Target> list = TargetManager.GetAllTargets.ToList();
+
+            // For every target in the list
+            for (int count = 0; count < list.Count; count++)
+            {
+                var currentTarget = list[count];
+                var newTargetViewModel = new TargetViewModel(currentTarget);
+
+                targetViewList.Add(newTargetViewModel);
+                SelectedTargetView = newTargetViewModel;
+            }
+        }
+
         // Commands
         public ICommand ClearAllCommand { get; set; }
+        public ICommand LoadTargetsCommand { get; set; }
     }
 }

@@ -14,7 +14,6 @@ namespace GUI.ViewModel
     class FileReaderViewModel : ViewModelBase
     {
         private TargetManager targetManager;
-        private IEnumerable<Target> listOfTargets;
 
         public FileReaderViewModel()
         {
@@ -36,10 +35,10 @@ namespace GUI.ViewModel
 
                 // Load the thing
                 reader.path = openFileBox.FileName;
-
                 targetManager.TargetList = reader.ReadTargets();
             }
         }
+
         public ICommand LoadTargetsFromFileCommand { get; set; }
     }
 

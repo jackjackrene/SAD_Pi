@@ -19,6 +19,7 @@ namespace GUI.ViewModel
         // Constructor
         public TargetViewModel()
         {
+            // Get the MissileLauncher instance
             SADMissileLauncherFactory missileFactory = SADMissileLauncherFactory.GetInstance();
             MissileLauncher = missileFactory.CreateSADMissileLauncher(SADMissileLauncher.MissileLauncherType);
 
@@ -28,6 +29,7 @@ namespace GUI.ViewModel
 
         public TargetViewModel(Target target)
         {
+            // Get the MissileLauncherInstance
             SADMissileLauncherFactory missileFactory = SADMissileLauncherFactory.GetInstance();
             MissileLauncher = missileFactory.CreateSADMissileLauncher(SADMissileLauncher.MissileLauncherType);
 
@@ -53,7 +55,9 @@ namespace GUI.ViewModel
         // Methods
         public void Kill()
         {
-            missileLauncher.Kill(target.Phi, target.Theta);
+            // Not sure if this will work
+            if (!target.Friend)
+                missileLauncher.Kill(target.Phi, target.Theta);
         }
 
         // Commands
