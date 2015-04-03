@@ -46,7 +46,9 @@ namespace GUI.ViewModel
             MoveLeftCommand = new TargetViewModelCommand(MoveLeft);
             MoveRightCommand = new TargetViewModelCommand(MoveRight);
             CurrentMissileCount = missileLauncher.CurrentMissileCount;
-            m_currentMissileCount = missileLauncher.CurrentMissileCount;
+            ReloadCommand = new TargetViewModelCommand(Reload);
+            CalibrateCommand = new TargetViewModelCommand(Calibrate);
+
             CurrentPhiTheta = "(" + missileLauncher.CurrentPhi + ", " + missileLauncher.CurrentTheta + ")";
             m_currentPhiTheta = "(" + missileLauncher.CurrentPhi + ", " + missileLauncher.CurrentTheta + ")";
         }
@@ -63,6 +65,8 @@ namespace GUI.ViewModel
             MoveDownCommand = new TargetViewModelCommand(MoveDown);
             MoveLeftCommand = new TargetViewModelCommand(MoveLeft);
             MoveRightCommand = new TargetViewModelCommand(MoveRight);
+            ReloadCommand = new TargetViewModelCommand(Reload);
+
 
 
         }
@@ -128,6 +132,16 @@ namespace GUI.ViewModel
             missileLauncher.MoveBy(DegreeConstant, 0.0);
             CurrentPhiTheta = "(" + missileLauncher.CurrentPhi + ", " + missileLauncher.CurrentTheta + ")";
         }
+        public void Reload()
+        {
+            missileLauncher.Reload();
+            CurrentMissileCount = missileLauncher.CurrentMissileCount;
+        }
+        public void Calibrate()
+        {
+            missileLauncher.Move(0, 0);
+            CurrentPhiTheta = "(" + missileLauncher.CurrentPhi + ", " + missileLauncher.CurrentTheta + ")";
+        }
 
         // Commands
         public ICommand FireCommand { get; set; }
@@ -137,7 +151,8 @@ namespace GUI.ViewModel
         public ICommand MoveRightCommand { get; set; }
         public ICommand UpdateMissileCountCommand { get; set; }
         public ICommand UpdatePhiThetaCommand { get; set; }
-
+        public ICommand ReloadCommand { get; set; }
+        public ICommand CalibrateCommand { get; set; }
 
     }
 

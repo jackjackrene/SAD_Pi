@@ -74,8 +74,8 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
 
             if (CurrentTheta > 45)
                 CurrentTheta = 45;
-            if (CurrentTheta < 0)
-                CurrentTheta = 0;
+            if (CurrentTheta < -10)
+                CurrentTheta = -10;
 
             System.Console.WriteLine("Move method of SADMissileLauncher invoked!");
             try
@@ -116,8 +116,8 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
 
             if (CurrentTheta > 45)
                 CurrentTheta = 45;
-            if (CurrentTheta < 0)
-                CurrentTheta = 0;
+            if (CurrentTheta < -10)
+                CurrentTheta = -10;
 
             System.Console.WriteLine("MoveBy method of SADMissileLauncher invoked!");
 
