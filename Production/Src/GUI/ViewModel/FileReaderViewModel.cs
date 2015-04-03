@@ -11,7 +11,7 @@ using System.Runtime.CompilerServices;
 
 namespace GUI.ViewModel
 {
-    class FileReaderViewModel : ViewModelBase
+    public class FileReaderViewModel : ViewModelBase
     {
         private TargetManager targetManager;
 

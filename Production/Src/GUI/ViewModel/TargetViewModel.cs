@@ -10,7 +10,7 @@ using System.Windows.Input;
 
 namespace GUI.ViewModel
 {
-    class TargetViewModel : ViewModelBase
+    public class TargetViewModel : ViewModelBase
     {
         // Fields
         private SADMissileLauncher missileLauncher;
@@ -51,6 +51,8 @@ namespace GUI.ViewModel
             get { return target; }
             set { target = value; }
         }
+
+
 
         // Methods
         public void Kill()

@@ -16,9 +16,12 @@
         <!-- The Expander contains an inner Grid -->
         <Grid Background="#FFE5E5E5">
             
-            <Grid.DataContext>
+           <!-- You were 'reseting'/ making the data context point
+                to something else
+            
+                <Grid.DataContext>
                 <viewModel:TargetViewModel></viewModel:TargetViewModel>
-            </Grid.DataContext>
+            </Grid.DataContext> -->
 
             <!-- Row and Column Definitions -->
             <Grid.ColumnDefinitions>

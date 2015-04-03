@@ -9,17 +9,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     
+    <!--
     <UserControl.DataContext>
         <viewModel:TargetListViewModel></viewModel:TargetListViewModel>
     </UserControl.DataContext>
+    -->
     
-    <Grid>
-        <!-- Set the Grid's Data context
-        <Grid.DataContext>
-            <viewModel:TargetListViewModel></viewModel:TargetListViewModel>
-        </Grid.DataContext> -->
-        
-        <!-- Define two rows (no need for columns) -->
+    <Grid>        
+        <!-- Define three rows and two columns -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width ="60*"></ColumnDefinition>
             <ColumnDefinition Width ="40*"></ColumnDefinition>
@@ -52,14 +49,14 @@
             </ListBox.ItemTemplate>          
         </ListBox>
         
-        <!-- Place the button in the third row -->
+        <!-- Place the Clear All button in the third row -->
         <Button Grid.Row="2" 
                 Margin="10" 
                 Content="Clear All Targets"
                 Command="{Binding ClearAllCommand}">
         </Button>
         
-        <!-- Temp button to load targetst -->
+        <!-- Temp button to load targetst (for debugging) -->
         <Button Grid.Row="2"
                 Grid.Column="1"
                 Content="Load Targets" 

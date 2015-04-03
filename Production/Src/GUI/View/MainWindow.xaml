@@ -50,6 +50,15 @@
                        VerticalAlignment="Center" HorizontalAlignment="Right" Width="517" Margin="0,10,0,6"/>
 
                 <!-- <view:TargetView /> -->
+
+                <!-- This is the UserControl that displays the listBox of targets
+                     alogn with a button to clear the targets -->
+                <view:TargetListView Grid.Row="2"
+                                     Grid.Column="0"
+                                     Width="auto"
+                                     Height="auto"
+                                     x:Name="TargetListView"
+                                     DataContext="{Binding TargetListViewModel}"/>
                 
                 <!-- Buttons at the bottom of the list of targets -->
                 <Grid Grid.Row="3" IsSharedSizeScope="True">
