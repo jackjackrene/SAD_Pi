@@ -107,7 +107,7 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
         public override void MoveBy(double phi, double theta)
         {
             CurrentPhi = CurrentPhi + phi;
-            CurrentTheta = CurrentTheta = theta;
+            CurrentTheta = CurrentTheta + theta;
 
             if (CurrentPhi > 135)
                 CurrentPhi = 135;
