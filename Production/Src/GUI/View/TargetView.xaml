@@ -9,9 +9,7 @@
 
     <Expander Header="{Binding Target.Name}" 
               HorizontalAlignment="Left" 
-              Margin="24,21,0,0" 
-              VerticalAlignment="Top" 
-              Height="251" Width="266">
+             >
 
         <!-- The Expander contains an inner Grid -->
         <Grid Background="#FFE5E5E5">
@@ -51,7 +49,7 @@
                    Content="Spherical Coordinates:" Grid.ColumnSpan="2"/>
             <Label Grid.Column ="0" 
                    Grid.Row="2" 
-                   Content="Friend or Foe:" Grid.ColumnSpan="2"/>
+                   Content="Friend?:" Grid.ColumnSpan="2"/>
             <Label Grid.Column ="0" 
                    Grid.Row="3" 
                    Content="Status:" Grid.ColumnSpan="2"/>
