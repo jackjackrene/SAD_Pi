@@ -20,5 +20,6 @@ namespace GUI.ViewModel
                 handler(this, new PropertyChangedEventArgs(propertyName));
             }
         }
+        
     }
 }
