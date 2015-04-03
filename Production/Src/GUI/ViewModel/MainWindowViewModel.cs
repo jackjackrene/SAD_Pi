@@ -34,11 +34,11 @@ namespace GUI.ViewModel
         }
 
         // Properties
-        public TargetListViewModel TargetListViewModel
-        {
-            get { return targetListViewModel; }
-            set { targetListViewModel = value; }
-        }
+        //public TargetListViewModel TargetListViewModel
+        //{
+        //    get { return targetListViewModel; }
+        //    set { targetListViewModel = value; }
+        //}
 
         /// <summary>
         /// Setting the title for the window
