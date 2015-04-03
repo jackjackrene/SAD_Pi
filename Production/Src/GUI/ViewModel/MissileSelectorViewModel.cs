@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
@@ -50,7 +52,13 @@ namespace GUI.MissileSelectorViewModel
             SAD.Core.Devices.SADMissileLauncherFactory missileLauncherFactory = SAD.Core.Devices.SADMissileLauncherFactory.GetInstance();
             // Create a SADDreamCheekyMissileLauncher
             SADMissileLauncher missileLauncher = missileLauncherFactory.CreateSADMissileLauncher(SAD.Core.Devices.SADMissileLauncher.SADMissileType.MockMissileLauncher);
-            Application.Current.MainWindow.Close();
+
+            MainWindow mainWindow = new MainWindow();
+
+            Window win = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.Name == "MissileSelector");
+            win.Close();
+
+            mainWindow.ShowDialog();
         }
 
         public void GetLauncherDreamCheeky()
@@ -58,7 +66,13 @@ namespace GUI.MissileSelectorViewModel
             SAD.Core.Devices.SADMissileLauncherFactory missileLauncherFactory = SAD.Core.Devices.SADMissileLauncherFactory.GetInstance();
             // Create a SADDreamCheekyMissileLauncher
             SADMissileLauncher missileLauncher = missileLauncherFactory.CreateSADMissileLauncher(SAD.Core.Devices.SADMissileLauncher.SADMissileType.DreamCheekyMissileLauncher);
-            Application.Current.MainWindow.Close();
+
+            MainWindow mainWindow = new MainWindow();
+
+            Window win = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.Name == "MissileSelector");
+            win.Close();
+
+            mainWindow.ShowDialog();
         }
 
         public ICommand LauncherSelectMock { get; set; }

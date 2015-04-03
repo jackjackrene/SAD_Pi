@@ -13,6 +13,8 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
         private MockMissileLauncher() : base()
         {
             MaxMissileCount = 1;
+            CurrentPhi = 0;
+            CurrentTheta = 0;
             CurrentMissileCount = MaxMissileCount;
         }
 
@@ -31,6 +33,8 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
         public override void Kill(double phi, double theta)
         {
             System.Console.WriteLine("Kill method of mockMissileLauncher invoked!");
+            Move(phi, theta);
+            Fire();
         }
 
         public override void Fire()
@@ -41,11 +45,15 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
         public override void Move(double phi, double theta)
         {
             System.Console.WriteLine("Move method of mockMissileLauncher invoked!");
+            CurrentPhi = phi;
+            CurrentTheta = theta;
         }
 
         public override void MoveBy(double phi, double theta)
         {
             System.Console.WriteLine("MoveBy method of mockMissileLauncher invoked!");
+            CurrentPhi = CurrentPhi + phi;
+            CurrentTheta = CurrentTheta + theta;
         }
     }
 }

@@ -15,6 +15,8 @@ namespace SAD.Core.Devices
         protected int maxMissileCount;
         protected int currentMissleCount;
         protected static SADMissileType missileLauncherType;
+        protected double currentPhi;
+        protected double currentTheta;
 
         protected SADMissileLauncher()
         {
@@ -71,6 +73,26 @@ namespace SAD.Core.Devices
             }
 
             get { return currentMissleCount; }
+        }
+
+        public double CurrentPhi
+        {
+            set
+            {
+                currentPhi = value;
+            }
+
+            get { return currentPhi; }
+        }
+
+        public double CurrentTheta
+        {
+            set
+            {
+                currentTheta = value;
+            }
+
+            get { return currentTheta; }
         }
 
         public static SADMissileType MissileLauncherType
