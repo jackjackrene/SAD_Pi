@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
-  Id="68044351-edde-4a90-95ca-fbbce7e085c6"
-  name="SADCommandLineUML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  Id="d541d7d4-7e57-4ee4-ad09-8f4d4f438368"
+  name="GUIModeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -17,50 +17,48 @@
         name="StandardProfileL3" />
     </packageHasProfileInstances>
     <packageHasProfileInstances
-      Id="afeda5a5-1d20-4508-90e8-74f0e971ca96">
+      Id="e24e8d4a-521d-4c15-8229-3ab05c56dd4e">
       <profileInstance
-        Id="b39ba147-ff82-4c87-b81e-27b9d6cd1e94"
+        Id="73f69f8b-e7c8-44a3-9a72-8e2a0eadc116"
         name="CSharpProfile" />
     </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
       <packageMoniker
-        Id="7663d02f-98e9-444c-a770-a843beb8af87"
-        LastKnownName="BuildDefender"
-        LastKnownLocation="Package_1757.uml" />
+        Id="5f975015-644a-4b48-b585-d76b9536190c"
+        LastKnownName="GUI"
+        LastKnownLocation="Package_1710.uml" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <packageMoniker
-        Id="c835912f-1232-412c-b44d-fa01db593fa2"
+        Id="11df3278-cf2e-4aef-bf5a-d409515c91f8"
         LastKnownName="System"
-        LastKnownLocation="Package1_1757.uml" />
+        LastKnownLocation="Package1_1710.uml" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <packageMoniker
-        Id="f34c1329-367e-4c41-8078-7517371f27a0"
-        LastKnownName="UsbLibrary"
-        LastKnownLocation="Package2_1757.uml" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <packageMoniker
-        Id="99166c90-492d-42b8-a7ee-ff8ff0087ee6"
-        LastKnownName="Console"
-        LastKnownLocation="Package3_1757.uml" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <packageMoniker
-        Id="e4e34736-62b0-4880-a594-5939138986c3"
+        Id="f9d0f912-8e22-4bf0-81e5-a79d90d2577c"
         LastKnownName="SAD"
-        LastKnownLocation="Package4_1757.uml" />
+        LastKnownLocation="Package5_1710.uml" />
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <class
-        Id="f31558a4-b08b-4933-a45a-d02b15a8c1b6"
-        name="Class1"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false" />
+      <packageMoniker
+        Id="1a0d75f2-2fd0-4595-9550-ee8d97ba1203"
+        LastKnownName="Emgu"
+        LastKnownLocation="Package13_1710.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="d95ecd06-0d2b-4567-bb0e-f4ec2d2a6564"
+        LastKnownName="BuildDefender"
+        LastKnownLocation="Package2_1711.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="946d3416-e6b4-4775-9825-2040f617f431"
+        LastKnownName="UsbLibrary"
+        LastKnownLocation="Package4_1711.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

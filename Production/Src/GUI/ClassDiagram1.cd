@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GUI.App">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GUI.MainWindow">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GUI.MissileSelectorView">
+    <Position X="0.5" Y="8.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\MissileSelectorView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GUI.Commands.MissileLauncheViewModelCommands.MissileLauncherViewModelCommand" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="2" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\MissileLauncheViewModelCommands\MissileLauncherViewModelCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GUI.Commands.TargetListViewModelCommands.TargetListViewModelCommand" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\TargetListViewModelCommands\TargetListViewModelCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GUI.Commands.TargetViewModelCommands.TargetViewModelCommand" BaseTypeListCollapsed="true">
+    <Position X="16.75" Y="5.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\TargetViewModelCommands\TargetViewModelCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GUI.Properties.Resources">
+    <Position X="14" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GUI.Properties.Settings">
+    <Position X="20.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GUI.View.TargetListView">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\TargetListView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GUI.View.TargetView">
+    <Position X="3" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\TargetView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GUI.ViewModel.FileReaderViewModel">
+    <Position X="3" Y="8" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAASAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\FileReaderViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GUI.ViewModel.MyCommand" BaseTypeListCollapsed="true">
+    <Position X="15.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAASAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\FileReaderViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GUI.ViewModel.MainWindowViewModel">
+    <Position X="5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAAgAAABAAEAAAAYAAAQCsAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\MainWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GUI.ViewModel.MissileLauncherViewModel">
+    <Position X="7.25" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAEBEAAAAMAAKAAAICFAACgACAQGAAAISgAAACgAICA=</HashCode>
+      <FileName>ViewModel\MissileLauncherViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GUI.ViewModel.TargetListViewModel">
+    <Position X="9.75" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABACAABKAAAAAABAAAAAAAgIAAAAEAAAAIAAAAAAAAI=</HashCode>
+      <FileName>ViewModel\TargetListViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GUI.ViewModel.TargetViewModel">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAIAAAIiAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\TargetViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GUI.ViewModel.ViewModelBase">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\ViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GUI.MissileSelectorViewModel.MissileSelectorViewModel">
+    <Position X="0.5" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAABAAAAAAAAAACAAAAoAgCAAAACAAAAAA=</HashCode>
+      <FileName>ViewModel\MissileSelectorViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GUI.MissileSelectorViewModel.LauncherSelectMock" BaseTypeListCollapsed="true">
+    <Position X="12" Y="6.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAACAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\MissileSelectorViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GUI.MissileSelectorViewModel.LauncherSelectDreamCheeky" BaseTypeListCollapsed="true">
+    <Position X="14" Y="5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAACAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\MissileSelectorViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GUI.MissileSelectorViewModel.MissileSelectorViewModelBase">
+    <Position X="1" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\MissileSelectorViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GUI.MissileSelectorViewModel.MyCommand" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAASAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\MissileSelectorViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

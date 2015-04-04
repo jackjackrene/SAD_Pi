@@ -58,7 +58,7 @@ namespace GUI.ViewModel
         private void TakePicture()
         {
             if (m_capture == null)
-                m_capture = new Capture(0);
+                m_capture = new Capture(1);
 
             // take a picture
 

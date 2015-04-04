@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="a3ebebdb-5d85-43f6-a773-d0bb937c9de3"
+  name="TargetViewModelCommands"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="62b6fa9a-205e-4a9d-a6d1-01d0f585a29d"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DGUI.Commands.TargetViewModelCommands"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="c474d5d2-d99d-4b6f-bc99-7e1aae86c49c"
+        name="TargetViewModelCommand"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="38a3cc17-7628-4f06-82d8-140fad5da1c7"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FGUI%2Fbin%2FDebug%2FGUI.exe Namespace%3DGUI.Commands.TargetViewModelCommands Type%3DTargetViewModelCommand"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6e087c42-a8fa-4fe6-83f0-855acc49a46d"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8b146716-9741-406f-8253-70e2e41a96ac">
+                <propertyInstance
+                  Id="f9d2cf5d-b7b7-4f56-878c-bf964d0b9207"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="54e9758f-6516-4a08-9a10-043d4908abb8">
+                <propertyInstance
+                  Id="1100b88a-5f40-4731-abe8-012466c80832"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="09eeaa1a-6bda-49cc-92f7-0f78d55066b5">
+                <propertyInstance
+                  Id="e908d22b-df81-42c7-bb32-ec12f87fc0d4"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c2c8ee96-95a4-4c29-8ffc-a4723d98140b">
+                <propertyInstance
+                  Id="84db2a81-742f-4c84-8884-f33d82d2d367"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="57de1c4c-3b30-48c2-a807-0d9cfcd2f0d3">
+                <propertyInstance
+                  Id="190f642a-9c97-444b-855b-ee29d29b5588"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="b968b85e-9f27-43aa-b637-1070797f805f">
+            <interfaceMoniker
+              Id="2b9aab3d-d828-4c93-b815-bd2174eedc20"
+              LastKnownName="ICommand"
+              LastKnownLocation="Package4_1710.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="d996baf0-26b4-4f56-9edf-01abec233571"
+            name="CanExecuteChanged"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="ab87a915-d200-4c16-9382-18dc6235debe"
+                handle="viewcode://./CodeSchema_Event?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FGUI%2Fbin%2FDebug%2FGUI.exe Namespace%3DGUI.Commands.TargetViewModelCommands Type%3DTargetViewModelCommand Member%3DCanExecuteChanged"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="88b3b9cd-b61d-47b4-b7b4-d9b1b6f4446e"
+                name="event"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="303b6fc5-a0fa-420b-a202-7a982ebd421f">
+                    <propertyInstance
+                      Id="3d334faa-d673-41b8-8798-740b140acd58"
+                      name="Add"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b37ff033-cc78-478d-b803-56b001f91719">
+                    <propertyInstance
+                      Id="f3f347fb-01ff-4de6-b284-2d8b047c9c5b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b5390503-21c8-4954-bf66-6beae569cf32">
+                    <propertyInstance
+                      Id="051a70be-c3a0-457a-b47f-28916474cfda"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fcabfc31-4b7a-4110-9c74-01fe6e391d67">
+                    <propertyInstance
+                      Id="f1602d8e-fa5c-4eb6-8b6b-3ca7d17688e3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31056931-5083-4c37-9ff9-d759c61156e5">
+                    <propertyInstance
+                      Id="5f40ac73-6afd-42c9-bfcd-977060cace05"
+                      name="Remove"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="60de8e4e-5507-490f-90c7-020e5eb36f47"
+                LastKnownName="EventHandler"
+                LastKnownLocation="Package1_1710.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d5f9c157-f1d3-412d-84f0-3447906fbcc8"
+            name="TargetViewModelAction"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="5481976f-4013-453d-b91a-7f631a6bc138"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FGUI%2Fbin%2FDebug%2FGUI.exe Namespace%3DGUI.Commands.TargetViewModelCommands Type%3DTargetViewModelCommand Member%3DTargetViewModelAction"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="712235e0-53ee-4b2e-9be3-ad0e318bd681"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b96125dc-6154-4b75-ab17-78934810c372">
+                    <propertyInstance
+                      Id="7fe5daf4-b7ca-4f1d-8667-3f9806b8e44c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="479a396f-c5fb-449d-a357-978843fcbdcd">
+                    <propertyInstance
+                      Id="c1b0e7de-537c-4596-9b72-7f4f40593634"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="815402a0-838f-4292-9237-53fb65275b95">
+                    <propertyInstance
+                      Id="0bf2df45-bba5-40ff-ab61-4c75478df6d3"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22fa82a0-8109-4f95-ab9f-52c3252d4046">
+                    <propertyInstance
+                      Id="bda026ab-9e68-4b29-a96e-99fcfb421d34"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5b8ff493-2b0d-48c5-9de3-56cae9ef1757">
+                    <propertyInstance
+                      Id="dccf9e30-0e92-4169-b71a-18f4b589fcc1"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="9ba063a6-c7b6-409d-8535-dcb9424c8eaa"
+                LastKnownName="Action"
+                LastKnownLocation="Package1_1710.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8d38ba5c-9b63-43d9-8e08-088c30997673"
+            name="TargetViewModelCommand"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4867bcb5-82da-4013-a60e-03fec92c8927"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FGUI%2Fbin%2FDebug%2FGUI.exe Namespace%3DGUI.Commands.TargetViewModelCommands Type%3DTargetViewModelCommand Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DAction)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="aa47f380-e454-4e0a-8998-8574a4f3d1f3"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3ae11adc-a2ca-43a6-b995-df14a3cbee99">
+                    <propertyInstance
+                      Id="eda4e266-27d0-4b29-bdfd-b3935a9ed7e8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a49bb2bf-c419-4777-9f13-6c6f63522c5f">
+                    <propertyInstance
+                      Id="50d6273a-b1e1-4fec-8664-90bae58b8625"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="93ccdab1-ad6d-4c2f-949a-c89dd53486d6">
+                    <propertyInstance
+                      Id="fa5f5164-9999-4afb-88cc-a8f24fb9f6ca"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0973de17-b78e-4417-b158-400e99853bec">
+                    <propertyInstance
+                      Id="06e6f88c-f54e-44c0-ae84-80643e5f25f9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd62af4d-cc7e-4ab8-9963-89dae25fda24">
+                    <propertyInstance
+                      Id="d4cfd6d3-6235-44db-be9a-c247413f6f96"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4f11ef25-46b6-4599-b94f-c7a289e400ca">
+                    <propertyInstance
+                      Id="a460da72-dc56-474d-b3e5-a7dd73cb9e5a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0d9be356-6712-4a95-9d50-fa2514f5054c"
+                  name="action"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="2df586b4-2a95-487a-910e-af53eeeca7b6"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FGUI%2Fbin%2FDebug%2FGUI.exe Namespace%3DGUI.Commands.TargetViewModelCommands Type%3DTargetViewModelCommand Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DAction)]) ParameterIdentifier%3Daction"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="9ba063a6-c7b6-409d-8535-dcb9424c8eaa"
+                      LastKnownName="Action"
+                      LastKnownLocation="Package1_1710.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="16f413e9-1d60-47fd-9d77-68420fab7210"
+            name="CanExecute"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b6442daa-49de-4a33-a7b8-3da254471105"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FGUI%2Fbin%2FDebug%2FGUI.exe Namespace%3DGUI.Commands.TargetViewModelCommands Type%3DTargetViewModelCommand Member%3D(Name%3DCanExecute OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2cc67708-a64d-47a6-8294-8350d5f72a2a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="859d205c-066a-4497-85d4-b9997ca4c1d2">
+                    <propertyInstance
+                      Id="a010ea98-67cd-4119-a9e9-2c803c23e36e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1d4f631d-04c0-4d68-8451-00c5b95c5eed">
+                    <propertyInstance
+                      Id="96c989a2-feb9-4cb2-8e5a-713b4c9f8947"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="65991dfa-862f-4a8e-a3fc-46073e4a4bf6">
+                    <propertyInstance
+                      Id="00f4cd79-69c7-4099-97de-714bf8a24c7e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="29bf965c-38be-4fb1-a62a-51896b092895">
+                    <propertyInstance
+                      Id="884f3188-96ce-40fe-a922-46c980b528a9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="58678b99-3621-43a7-9e9c-49796e5db035">
+                    <propertyInstance
+                      Id="fc604862-c4aa-40c7-bb7f-fe76debb1ca8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62ad43a5-2171-4c01-ba7d-60189977cc88">
+                    <propertyInstance
+                      Id="92602973-4f65-47b5-9c5a-b2d0c799ddfa"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="eaf0c3c7-9f1d-4a6d-bd9e-358f222772c0"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b41e03f9-29eb-4cff-8d69-9c9f1922e710"
+                  name="parameter"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="61c967d1-593b-4f6e-806b-efc11086d8ec"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FGUI%2Fbin%2FDebug%2FGUI.exe Namespace%3DGUI.Commands.TargetViewModelCommands Type%3DTargetViewModelCommand Member%3D(Name%3DCanExecute OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3Dparameter"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2d4f6fc5-4f46-4291-aef0-67e143e70262"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_1710.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ca4a5b90-7e3a-48eb-a4e4-81e4f94a03a4"
+            name="Execute"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c1125ad8-2a04-4f9e-b9f8-f1ca60ee41f5"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FGUI%2Fbin%2FDebug%2FGUI.exe Namespace%3DGUI.Commands.TargetViewModelCommands Type%3DTargetViewModelCommand Member%3D(Name%3DExecute OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="570965df-8214-4ede-8185-c2ffed53c990"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="70626e8d-2f92-4f97-acfb-f62834939151">
+                    <propertyInstance
+                      Id="a2e4766b-8273-48f8-9604-375085f7379b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ce3301f-beda-434c-8913-2c5c5a437ae5">
+                    <propertyInstance
+                      Id="e97a2f80-7d2d-4dfb-813e-55ffa952c9da"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7f612d37-f990-417b-8bd8-7a8ddd98615e">
+                    <propertyInstance
+                      Id="f1b5557c-5808-441f-8ab6-538f48715390"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cb98c252-9ccc-4e86-b89f-9c83a07eed26">
+                    <propertyInstance
+                      Id="5a271ba4-b049-4ed5-984d-a76bdbf09106"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4192928f-3305-43be-94fc-6a39a1928148">
+                    <propertyInstance
+                      Id="152a5c1e-ac69-4786-a4ee-5f13e41b7c3d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="284a1b61-0ed8-468a-8840-54b98a850d9a">
+                    <propertyInstance
+                      Id="aea2f869-c67b-4c75-b844-be4c46da8039"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6edcb46f-f0f5-4b67-a458-e2f9c99f6d80"
+                  name="parameter"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7a100abb-aa15-48c9-b1da-e626abe5ce03"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fethomas%2FSource%2FRepos%2FSAD_Pi%2FProduction%2FSrc%2FGUI%2Fbin%2FDebug%2FGUI.exe Namespace%3DGUI.Commands.TargetViewModelCommands Type%3DTargetViewModelCommand Member%3D(Name%3DExecute OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3Dparameter"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2d4f6fc5-4f46-4291-aef0-67e143e70262"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_1710.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

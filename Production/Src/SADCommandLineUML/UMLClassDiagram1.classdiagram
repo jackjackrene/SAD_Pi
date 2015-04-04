@@ -1628,6 +1628,56 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <elementDefinition Id="25144af2-8219-4f5f-8b62-561057942ba9" />
+        <targetEnds>
+          <association Id="c2b275d8-163e-4c62-a1f2-f3bbccd69298" isDerived="false" sourceEndRoleName="Program" targetEndRoleName="ReaderType" isLeaf="false" isAbstract="false">
+            <enumerationMoniker Id="a45dd3c1-2691-4534-b278-fbcd95833ec1" LastKnownName="ReaderType" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="69875c1e-2d23-4abd-8bf2-1fdc5a115776" name="Program" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="873f8611-944f-4659-8b27-3132fdced88f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9067193e-93c1-4d1b-a342-e3cade049fbb" name="ReaderType" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5eee8f87-8ab0-4409-8207-c27c04d39829" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="65c1df2d-8f7b-4dc2-ac40-a26d7d018a54" />
+          </association>
+          <association Id="701916d2-45cb-4016-bee2-b07f6264ac0d" isDerived="false" sourceEndRoleName="Program" targetEndRoleName="Spherical" isLeaf="false" isAbstract="false">
+            <classMoniker Id="c565db91-dc61-4c8f-aa14-eed38ec68829" LastKnownName="Spherical" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2a354fe7-42d3-4f73-9ac2-41443a472ca9" name="Program" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="44368ebd-9f9f-4b8c-bb1f-77e27a918227" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d362264e-5c70-49a7-b81d-8c79fb82b6de" name="Spherical" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8e9c5a84-f33e-4afe-8853-a93765dbabc6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7461129d-b7d6-4d1e-a45e-37a125917d78" />
+          </association>
+          <association Id="6a9dfca5-3249-47e9-9846-3590c3388257" isDerived="false" sourceEndRoleName="Program" targetEndRoleName="TargetManager" isLeaf="false" isAbstract="false">
+            <classMoniker Id="7ca1b528-9803-4898-8967-02e023039c5d" LastKnownName="TargetManager" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="597cb4ff-607e-4966-ba90-eed31ae391b9" name="Program" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e336cb0d-c737-4045-8326-ea3d3427372d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9186e559-e74d-4e7f-b6b8-8758ac3febd6" name="TargetManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="85d1e4ed-0ff9-4b53-9ae8-611349583699" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ac10e753-c4c5-48cb-9ed3-d83115f2ecc2" />
+          </association>
+        </targetEnds>
         <ownedOperationsInternal>
           <operation Id="7f65251a-b88a-460b-9ffe-6f54f1c4410e" name="Main" visibility="Private" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
             <referencesInternal>
@@ -2043,6 +2093,16 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <elementDefinition Id="ff137619-f9af-442d-84cf-2679b7172a0e" />
+        <generalsInternal>
+          <generalization Id="56ddbe23-bc47-4378-af86-3855c6d86716" isSubstitutable="false">
+            <classMoniker Id="56820b38-2e7c-46a0-bd5b-9b94f0c30c62" LastKnownName="FileReader" />
+            <elementDefinition Id="f85dfad0-b4c7-4963-b949-b7719865723f" />
+          </generalization>
+          <generalization Id="1cb853b6-3599-4f60-970f-3a485bb55a43" isSubstitutable="false">
+            <classMoniker Id="3631cb94-1eea-451b-a582-1d3b85b8df3e" LastKnownName="INIReader" />
+            <elementDefinition Id="ba8f74b3-0a8b-4137-a053-e5d123f1521c" />
+          </generalization>
+        </generalsInternal>
         <ownedOperationsInternal>
           <operation Id="5452c996-8faf-41e7-a20f-048174efd156" name="ReaderFactory" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <referencesInternal>
@@ -3395,6 +3455,24 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <elementDefinition Id="66bd051e-836d-43c6-858e-f3c4c4bb66ce" />
+        <targetEnds>
+          <association Id="e43609cd-989e-417b-ae2b-00aab3d2c5c1" isDerived="false" sourceEndRoleName="TargetManager" targetEndRoleName="Target" isLeaf="false" isAbstract="false">
+            <classMoniker Id="99701d85-c40d-49ca-b72f-5c10904d9e71" LastKnownName="Target" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c7855cfb-ce3c-4e18-92a0-7cb22879518e" name="TargetManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b79f8c03-80f0-4e07-9967-c3e1bb1e475c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="97afe7be-fb32-4505-aaeb-9d544bdd9227" name="Target" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c6546385-aa71-44d7-a44b-2fa79a57bd63" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="88014aff-5533-4c89-b28a-c1279fe9543c" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="46473529-a5d3-448f-9469-10a4d20c89dc" name="GetEnemies" isLeaf="false" isStatic="false" isReadOnly="true" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>
@@ -5021,6 +5099,12 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <elementDefinition Id="6299cd27-482d-45ad-af1c-787c2b3c9f33" />
+        <suppliersInternal>
+          <dependency Id="61e143fd-6fe4-4547-84c9-24bb1bf3dce2">
+            <classMoniker Id="5d9bf455-946c-4e5b-9131-9426717d6c4b" LastKnownName="SADMissileLauncher" />
+            <elementDefinition Id="d1d49c2c-fba4-414f-a740-04b0a850543a" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property Id="11ca92bc-019d-456c-a9fe-3f8b8fdf425e" name="sadMissileLauncherFactoryInstance" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>
@@ -5368,6 +5452,12 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <elementDefinition Id="b1d8fc9f-6fa2-4e03-aafe-a68f8dcf76bf" />
+        <suppliersInternal>
+          <dependency Id="f822fceb-a465-4b64-bacb-52656b4a6eaf">
+            <classMoniker Id="5d9bf455-946c-4e5b-9131-9426717d6c4b" LastKnownName="SADMissileLauncher" />
+            <elementDefinition Id="32959b98-cc4f-490f-bfcb-531bd0a8637d" />
+          </dependency>
+        </suppliersInternal>
         <ownedOperations>
           <operation Id="9db439ce-15a1-4a0a-9c1f-2a27b0146605" name="Reload" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
             <referencesInternal>
@@ -5468,6 +5558,16 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <elementDefinition Id="5b3f5f7f-8756-48bd-836c-c0072e45ffa2" />
+        <suppliersInternal>
+          <dependency Id="11697fa4-b6ef-4d1b-8100-cf18bfb1628c">
+            <classMoniker Id="44ba25fb-ac15-4fb0-9dd6-245f176b1df5" LastKnownName="SADMissileLauncherFactory" />
+            <elementDefinition Id="d4625b5a-e994-4caf-b88a-784a02bbea48" />
+          </dependency>
+          <dependency Id="14129519-4b96-4b6e-a3b3-db7ae16de32b">
+            <classMoniker Id="d93c239f-5cff-4157-833b-eaa5f169ee0a" LastKnownName="MissileLauncher" />
+            <elementDefinition Id="7f63834c-7c57-4c8c-b924-905dab3dd8d7" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization Id="c4306d14-aa87-4d4f-a355-ecf49663dbcc" isSubstitutable="false">
             <classMoniker Id="5d9bf455-946c-4e5b-9131-9426717d6c4b" LastKnownName="SADMissileLauncher" />
@@ -6031,6 +6131,12 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <elementDefinition Id="2ae34f89-fe85-44e4-9c2e-afce605e80b8" />
+        <suppliersInternal>
+          <dependency Id="96021e63-da05-4443-9fb5-fb2417bb6e6f">
+            <classMoniker Id="44ba25fb-ac15-4fb0-9dd6-245f176b1df5" LastKnownName="SADMissileLauncherFactory" />
+            <elementDefinition Id="b2de859b-d916-4730-a446-3938f6e7f40e" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization Id="2aca1f6e-e163-4feb-bfb2-f90b634c8dd0" isSubstitutable="false">
             <classMoniker Id="5d9bf455-946c-4e5b-9131-9426717d6c4b" LastKnownName="SADMissileLauncher" />

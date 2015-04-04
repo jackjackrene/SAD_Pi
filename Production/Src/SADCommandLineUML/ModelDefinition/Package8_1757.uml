@@ -935,6 +935,15 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="32959b98-cc4f-490f-bfcb-531bd0a8637d">
+            <classMoniker
+              Id="fbbf9f31-3ac7-4122-98fb-388bcd6a30f3"
+              LastKnownName="SADMissileLauncher"
+              LastKnownLocation="Package8_1757.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedOperations>
           <operation
             Id="7b7103e0-6b40-40db-bdda-195b93a06d5b"
@@ -1060,6 +1069,15 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="d1d49c2c-fba4-414f-a740-04b0a850543a">
+            <classMoniker
+              Id="fbbf9f31-3ac7-4122-98fb-388bcd6a30f3"
+              LastKnownName="SADMissileLauncher"
+              LastKnownLocation="Package8_1757.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property
             Id="8236572c-d97a-4c48-a592-72a69462af8a"

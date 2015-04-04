@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="2b12540b-62d5-46c7-b3e7-e2b1a5f849bc"
+  name="Commands"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="1c7a3c94-9c97-48b6-9238-f1c894b1591e"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DGUI.Commands"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="71caa332-2c60-4f2b-bf7e-8a591d62b035"
+        LastKnownName="MissileLauncheViewModelCommands"
+        LastKnownLocation="Package17_1710.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="6eb7891f-0151-4399-8e69-60306477b02d"
+        LastKnownName="TargetListViewModelCommands"
+        LastKnownLocation="Package25_1710.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="a3ebebdb-5d85-43f6-a773-d0bb937c9de3"
+        LastKnownName="TargetViewModelCommands"
+        LastKnownLocation="Package26_1710.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

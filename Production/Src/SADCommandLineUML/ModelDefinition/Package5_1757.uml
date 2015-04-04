@@ -2226,6 +2226,24 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="f85dfad0-b4c7-4963-b949-b7719865723f"
+            isSubstitutable="false">
+            <classMoniker
+              Id="c5708ab6-0710-435a-8180-886bfd33b2e7"
+              LastKnownName="FileReader"
+              LastKnownLocation="Package5_1757.uml" />
+          </generalization>
+          <generalization
+            Id="ba8f74b3-0a8b-4137-a053-e5d123f1521c"
+            isSubstitutable="false">
+            <classMoniker
+              Id="d1404fee-d9ee-4001-87e4-5bb153cf786e"
+              LastKnownName="INIReader"
+              LastKnownLocation="Package5_1757.uml" />
+          </generalization>
+        </generalsInternal>
         <ownedOperationsInternal>
           <operation
             Id="a7727591-2f8d-4bf9-a227-4d025f771e5c"
@@ -2925,6 +2943,45 @@
                       value="1" />
                   </upperValueInternal>
                 </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="88014aff-5533-4c89-b28a-c1279fe9543c"
+            isDerived="false"
+            sourceEndRoleName="TargetManager"
+            targetEndRoleName="Target"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="df76162c-0f9f-47fb-93fa-be0831ba2167"
+              LastKnownName="Target"
+              LastKnownLocation="Package5_1757.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b79f8c03-80f0-4e07-9967-c3e1bb1e475c"
+                  name="TargetManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c6546385-aa71-44d7-a44b-2fa79a57bd63"
+                  name="Target"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>

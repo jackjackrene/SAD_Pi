@@ -68,6 +68,125 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="65c1df2d-8f7b-4dc2-ac40-a26d7d018a54"
+            isDerived="false"
+            sourceEndRoleName="Program"
+            targetEndRoleName="ReaderType"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="b9f85949-ddab-4dd4-a946-dcafea84dec4"
+              LastKnownName="ReaderType"
+              LastKnownLocation="Package5_1757.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="873f8611-944f-4659-8b27-3132fdced88f"
+                  name="Program"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5eee8f87-8ab0-4409-8207-c27c04d39829"
+                  name="ReaderType"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7461129d-b7d6-4d1e-a45e-37a125917d78"
+            isDerived="false"
+            sourceEndRoleName="Program"
+            targetEndRoleName="Spherical"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="30fd85cf-2d33-4860-9c79-df999d8598c8"
+              LastKnownName="Spherical"
+              LastKnownLocation="Package5_1757.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="44368ebd-9f9f-4b8c-bb1f-77e27a918227"
+                  name="Program"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8e9c5a84-f33e-4afe-8853-a93765dbabc6"
+                  name="Spherical"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ac10e753-c4c5-48cb-9ed3-d83115f2ecc2"
+            isDerived="false"
+            sourceEndRoleName="Program"
+            targetEndRoleName="TargetManager"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="66bd051e-836d-43c6-858e-f3c4c4bb66ce"
+              LastKnownName="TargetManager"
+              LastKnownLocation="Package5_1757.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e336cb0d-c737-4045-8326-ea3d3427372d"
+                  name="Program"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="85d1e4ed-0ff9-4b53-9ae8-611349583699"
+                  name="TargetManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedOperationsInternal>
           <operation
             Id="449bcada-b97a-48c0-bd0d-341b799a65e6"
