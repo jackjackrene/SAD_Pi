@@ -1570,6 +1570,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="45595082-5aee-4544-95f6-85e06563524f"
+            isDerived="false"
+            sourceEndRoleName="Target"
+            targetEndRoleName="Spherical"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="1fa62170-e11f-4f33-b3f5-1667bafe4f6c"
+              LastKnownName="Spherical"
+              LastKnownLocation="Package6_1710.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="de8aa025-e9d5-48dc-8a95-87f9586b4746"
+                  name="Target"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="71b43368-0e8b-4f19-b300-7b1b8b9a0ef4"
+                  name="Spherical"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property

@@ -77,6 +77,47 @@
               LastKnownLocation="Package4_1710.uml" />
           </interfaceRealization>
         </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="6117719f-de8a-4c19-9be7-abf9fd904a4c"
+            isDerived="false"
+            sourceEndRoleName="MissileLauncherViewModelCommand"
+            targetEndRoleName="MyCommand"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f1572283-1be6-419f-92c6-762f1e23f03a"
+              LastKnownName="MyCommand"
+              LastKnownLocation="Package7_1710.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b9ce1d1a-cd0c-491b-a7f4-2287aebde61d"
+                  name="MissileLauncherViewModelCommand"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0c4ee8c3-5c29-4317-9cf8-9fde663f2e8b"
+                  name="MyCommand"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="a2c9590a-66ff-442b-85f2-2e49f5a7ae3c"
