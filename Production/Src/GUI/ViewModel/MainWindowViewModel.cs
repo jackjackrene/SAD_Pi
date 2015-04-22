@@ -13,14 +13,24 @@ using System.Windows.Media.Imaging;
 using Emgu.CV;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
+using System.Collections.Concurrent;
+using System.Threading;
+using ReactiveUI;
+using System.Reactive.Linq;
+using System.Windows.Threading;
+using Timer = System.Timers.Timer;
 
 namespace GUI.ViewModel
 {
-    public class MainWindowViewModel : ViewModelBase
+    public class MainWindowViewModel : ReactiveObject
     {
         private string m_title;
-        private BitmapSource m_cameraImage;
-        private Capture m_capture;
+        private BitmapSource bitmapImage;
+        private readonly Capture capture;
+        private bool isRunning;
+        private CancellationTokenSource cts;
+        private BlockingCollection<Image<Bgr, byte>> imageBlockingCollection;
+        private BlockingCollection<Image<Bgr, byte>> processBuffer;
 
         // ViewModel Instances
         private TargetListViewModel targetListViewModel;
@@ -31,7 +41,17 @@ namespace GUI.ViewModel
 
             this.TargetListViewModel = new TargetListViewModel();
 
-            TakePictureCommand = new MyCommand(TakePicture);
+            this.capture = new Capture();
+            cts = new CancellationTokenSource(); // necessary to indicate cancellation of tasks.
+            imageBlockingCollection = new BlockingCollection<Image<Bgr, byte>>(); // Acts as a FIFO. Part of the .NET framework as of .NET 4.0. No bounded capacity.
+            processBuffer = new BlockingCollection<Image<Bgr, byte>>();
+            this.Start = ReactiveCommand.Create(this.WhenAnyValue(x => x.IsRunning).Select(x => x == false));
+            this.Start.Subscribe(x => this.StartAcquisition());
+
+            this.Stop = ReactiveCommand.Create(this.WhenAnyValue(x => x.IsRunning).Select(x => x == true));
+            this.Stop.Subscribe(x => this.StopAcquisition());
+
+            this.IsRunning = false;
         }
 
         // Properties
@@ -54,74 +74,88 @@ namespace GUI.ViewModel
             }
         }
 
-        #region Camera Stuff
-        private void TakePicture()
+        private void StartAcquisition()
         {
-            if (m_capture == null)
-                m_capture = new Capture(1);
+            this.IsRunning = true;
+            cts = new CancellationTokenSource();
+            imageBlockingCollection = new BlockingCollection<Image<Bgr, byte>>(); // Acts as a FIFO. Part of the .NET framework as of .NET 4.0. No bounded capacity.
+            processBuffer = new BlockingCollection<Image<Bgr, byte>>();
 
-            // take a picture
-
-            var image = m_capture.QueryFrame();
-            //image.Save(@"c:\data\test.png");
-
-            var wpfImage = ConvertImageToBitmap(image);
-            CameraImage = wpfImage;
+            var producerTask = Task.Run(() => this.ProduceFrame(imageBlockingCollection, cts.Token));
+            var consumerTask = Task.Run(() => this.ConsumeFrame(imageBlockingCollection, cts.Token));
         }
 
-        [DllImport("gdi32")]
-        private static extern int DeleteObject(IntPtr ptr);
-        private static BitmapSource ConvertImageToBitmap(IImage image)
+        private void StopAcquisition()
         {
-            if (image != null)
+            this.IsRunning = false;
+            this.cts.Cancel();
+        }
+
+        /// <summary>
+        /// Producer
+        /// </summary>
+        private void ProduceFrame(BlockingCollection<Image<Bgr, byte>> bc, CancellationToken ct)
+        {
+            if (this.capture != null)
             {
-                using (var source = image.Bitmap)
+                while (!ct.IsCancellationRequested)
                 {
-                    var hbitmap = source.GetHbitmap();
-                    try
-                    {
-                        var bitmap = System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(hbitmap, IntPtr.Zero,
-                                                     Int32Rect.Empty,
-                                                     BitmapSizeOptions.FromEmptyOptions());
-                        DeleteObject(hbitmap);
-                        bitmap.Freeze();
-                        return bitmap;
-                    }
-                    catch
-                    {
-                        image = null;
-                    }
+                    var image = this.capture.QueryFrame();
+                    bc.Add(image);
                 }
+
+                bc.CompleteAdding();
             }
-            return null;
         }
 
-        public BitmapSource CameraImage
+        /// <summary>
+        /// 1 consumer thread. May have n consumer threads! (Of course the other threads will be doing *other* activities with the frames, not displaying them to the screen!
+        /// </summary>
+        private void ConsumeFrame(BlockingCollection<Image<Bgr, byte>> bc, CancellationToken ct)
         {
-         get { return m_cameraImage; }
-         set
-         {
-            if(Equals(value, m_cameraImage))
+            while (!bc.IsCompleted)
             {
-               return;
+                var imageToDisplay = bc.Take();
+                App.Current.Dispatcher.Invoke(
+                    () => this.BitmapImage = BitmapConverter.ToBitmapSource(image: imageToDisplay));
+                processBuffer.Add(imageToDisplay);
+                // property implements IPropertyNotify. Will update fairly quickly. Use dependency properties to make this even faster.
             }
-            m_cameraImage = value;
-            OnPropertyChanged();
-         }
-      }
-      #endregion
 
-        public ICommand TakePictureCommand { get; set; }
+            processBuffer.CompleteAdding();
+        }
 
+        public bool IsRunning
+        {
+            get
+            {
+                return this.isRunning;
+            }
 
-    }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref this.isRunning, value);
+            }
+        }
 
-    /* Moved to its own seperate file
-     * 
-    public abstract class ViewModelBase : INotifyPropertyChanged
-    {
+        public BitmapSource BitmapImage
+        {
+            get
+            {
+                return bitmapImage;
+            }
+
+            set
+            {
+                this.RaiseAndSetIfChanged(ref this.bitmapImage, value);
+            }
+        }
+
+        public ReactiveCommand<object> Start { get; private set; }
+        public ReactiveCommand<object> Stop { get; private set; }
+
         public event PropertyChangedEventHandler PropertyChanged;
-    //    [NotifyPropertyChangedInvocator]
+        //    [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChangedEventHandler handler = PropertyChanged;
@@ -131,5 +165,32 @@ namespace GUI.ViewModel
             }
         }
     }
-    */ 
+
+    public class BitmapConverter
+    {
+        [DllImport("gdi32")]
+        private static extern int DeleteObject(IntPtr ptr);
+
+        /// <summary>
+        /// Convert an IImage to a WPF BitmapSource. The result can be used in the Set Property of Image.Source
+        /// </summary>
+        /// <param name="image">The Emgu CV Image</param>
+        /// <returns>The equivalent BitmapSource</returns>
+        public static BitmapSource ToBitmapSource(IImage image)
+        {
+            using (System.Drawing.Bitmap source = image.Bitmap)
+            {
+                IntPtr ptr = source.GetHbitmap(); //obtain the Hbitmap
+
+                BitmapSource bs = System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(
+                    ptr,
+                    IntPtr.Zero,
+                    Int32Rect.Empty,
+                    System.Windows.Media.Imaging.BitmapSizeOptions.FromEmptyOptions());
+
+                DeleteObject(ptr); //release the HBitmap
+                return bs;
+            }
+        }
+    }
 }
