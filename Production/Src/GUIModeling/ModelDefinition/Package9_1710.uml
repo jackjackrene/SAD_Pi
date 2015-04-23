@@ -86,6 +86,47 @@
               LastKnownLocation="Package8_1710.uml" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association
+            Id="c032defd-5e7f-4af6-a145-09e0996e8c41"
+            isDerived="false"
+            sourceEndRoleName="TargetListView"
+            targetEndRoleName="TargetListViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="9db7a7a1-99a9-4ffe-86b1-672d468178c0"
+              LastKnownName="TargetListViewModel"
+              LastKnownLocation="Package3_1710.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="09183d32-8ff5-4b1b-8f82-eff70181a9fd"
+                  name="TargetListView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5697da28-834d-439f-a9d4-98fb51cee467"
+                  name="TargetListViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="678b33fb-13c5-4177-9962-59ff673f04a5"

@@ -77,6 +77,47 @@
               LastKnownLocation="Package4_1710.uml" />
           </interfaceRealization>
         </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="23d96e63-9dd1-47cc-9738-f405a5b2cc5a"
+            isDerived="false"
+            sourceEndRoleName="TargetListViewModelCommand"
+            targetEndRoleName="MyCommand"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f1572283-1be6-419f-92c6-762f1e23f03a"
+              LastKnownName="MyCommand"
+              LastKnownLocation="Package7_1710.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b8e210c0-3867-4ec7-ae78-ac15e17d3764"
+                  name="TargetListViewModelCommand"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e2907819-c9e2-41e6-8882-afdcca23363f"
+                  name="MyCommand"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="36e0b25e-b061-4736-8b46-aa675ad10e3b"

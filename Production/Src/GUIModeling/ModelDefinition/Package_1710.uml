@@ -77,6 +77,47 @@
               LastKnownLocation="Package2_1710.uml" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association
+            Id="e8e38d5b-f305-4581-810b-c9ded111596a"
+            isDerived="false"
+            sourceEndRoleName="App"
+            targetEndRoleName="MainWindow"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="255a67ea-a183-4fbb-bce4-f4fc67d9777f"
+              LastKnownName="MainWindow"
+              LastKnownLocation="Package_1710.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="eb374a84-ee7b-4059-9bf0-2017ab25f18c"
+                  name="App"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e96f4c10-514f-497b-81ae-7eb76ac2deca"
+                  name="MainWindow"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedOperationsInternal>
           <operation
             Id="4dd13485-24d1-4395-9535-d8b0c226ac75"
@@ -1590,6 +1631,45 @@
                 <memberEnd
                   Id="6877d67d-ee45-417e-a915-ed246aa459ea"
                   name="LauncherSelectDreamCheeky"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="10e465c9-80e3-4104-94ba-90a7932e4e2c"
+            isDerived="false"
+            sourceEndRoleName="MissileSelectorView"
+            targetEndRoleName="LauncherSelectMock"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="bf8a056c-5f25-4856-afed-38aed311fddd"
+              LastKnownName="LauncherSelectMock"
+              LastKnownLocation="Package7_1710.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b6af2878-7120-4803-95b3-34ac6862e723"
+                  name="MissileSelectorView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7baf59e1-9145-4d46-94cc-8910ee3d8338"
+                  name="LauncherSelectMock"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
