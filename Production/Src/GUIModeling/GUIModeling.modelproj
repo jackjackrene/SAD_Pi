@@ -118,6 +118,13 @@
     <Content Include="ModelDefinition\Package_1711.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="SequenceDiagram.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagram.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagram.sequencediagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="GUI.classdiagram">
       <SubType>Content</SubType>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="20ef23bb-769d-4a17-b868-2b837ae519ca" name="SequenceDiagram" linkedPackageId="8e982b5c-3d98-4041-ba78-2e43745013d5" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="6e07404e-9d47-4efb-b041-ff1cded7a198">
+      <profileInstance Id="8a791eb3-bd69-44c3-a4c2-27a161e6533b" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="7f8f6ab1-1385-4427-b400-752d064c641f">
+      <profileInstance Id="fd0d2cf9-b852-4476-9683-c08537010314" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="48c18965-813b-4ceb-a89d-c7dc54a0a542">
+      <profileInstance Id="46226268-57a1-4f88-b72d-2c39b7a0ca97" name="CSharpProfile">
+        <elementDefinition Id="73f69f8b-e7c8-44a3-9a72-8e2a0eadc116" />
+      </profileInstance>
+      <elementDefinition Id="e24e8d4a-521d-4c15-8229-3ab05c56dd4e" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="65d28349-eb12-4a36-b193-31c7f474c144" name="SequenceDiagram" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <elementDefinition Id="9a933089-ea9c-4ffc-963c-fb1333af79ad" />
+        <ownedAttributesInternal>
+          <property Id="f6dd034e-b1a4-4cf4-9724-af18b00c9664" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="95c50d25-1ee4-463f-be50-cea31c3e4f60" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="09f7b5d8-cb2f-41f6-9490-f6e4ae19b6f1" LastKnownName="Capture" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0d3cfc1c-6a8c-42a1-817b-53fadbbc82e4" name="MissileLauncher" isAbstract="false" isLeaf="false" cachedFullName="GUIModeling::BuildDefender::MissileLauncher">
+        <elementDefinition Id="4bc8aba8-9b8e-4529-bc2f-ecd8f5928d68" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="09f7b5d8-cb2f-41f6-9490-f6e4ae19b6f1" name="Capture" isAbstract="false" isLeaf="false" cachedFullName="GUIModeling::Emgu::CV::Capture">
+        <elementDefinition Id="72ae6aad-1381-4a26-8fda-ac242b95610a" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="8e982b5c-3d98-4041-ba78-2e43745013d5" name="GUIModeling">
+    <elementDefinition Id="d541d7d4-7e57-4ee4-ad09-8f4d4f438368" />
+  </package>
+</SequenceDesignerModel>
