@@ -26,6 +26,7 @@
             <RowDefinition Height="10*"></RowDefinition>
             <RowDefinition Height="70*"></RowDefinition>
             <RowDefinition Height="20*"></RowDefinition>
+            <RowDefinition Height="20*"></RowDefinition>
         </Grid.RowDefinitions>
         
         <!-- Place a label in the first row -->
@@ -64,5 +65,31 @@
                 Command="{Binding LoadTargetsCommand}">         
         </Button>
                 
+        <!-- Row that contains kill buttons -->
+        <Button Grid.Row="3"
+                Grid.Column="0"
+                HorizontalAlignment="Left"
+                Width="75"
+                Content="Kill All" 
+                Margin="10"
+                Command="{Binding KillAllCommand}">
+        </Button>
+        
+        <Button Grid.Row="3"
+                Grid.Column="0"
+                HorizontalAlignment="Right"
+                Width="75"
+                Content="Kill Foes" 
+                Margin="10"
+                Command="{Binding KillFoesCommand}">
+        </Button>
+
+        <Button Grid.Row="3"
+                Grid.Column="1"
+                Content="Kill Friends" 
+                Margin="10"
+                Command="{Binding KillFriendsCommand}">
+        </Button>
+        
     </Grid>
 </UserControl>

@@ -52,13 +52,11 @@ namespace GUI.ViewModel
             set { target = value; }
         }
 
-
-
         // Methods
         public void Kill()
         {
             // Not sure if this will work
-            if (!target.Friend)
+            //  if (!target.Friend)
                 missileLauncher.Kill(target.Phi, target.Theta);
         }
 

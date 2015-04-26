@@ -28,7 +28,6 @@ namespace GUI.ViewModel
             var worked = openFileBox.ShowDialog();
             if (worked == true)
             {
-
                 // openFileDialog.FileName
                 SAD.Core.FileReader reader = null;
                 reader = SAD.Core.ReaderFactory.CreateReader(ReaderType.iniReader);
@@ -36,6 +35,8 @@ namespace GUI.ViewModel
                 // Load the thing
                 reader.path = openFileBox.FileName;
                 targetManager.TargetList = reader.ReadTargets();
+
+                // at this point send out an event or something 
             }
         }
 

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using GUI.Commands.TargetListViewModelCommands;
+using SAD.Core.Devices;
 
 namespace GUI.ViewModel
 {
@@ -15,16 +16,23 @@ namespace GUI.ViewModel
         // Fields
         private TargetManager targetManager;
         private TargetViewModel selectedTargetView;
-        private ObservableCollection<TargetViewModel> targetViewList; 
+        private ObservableCollection<TargetViewModel> targetViewList;
+        private SADMissileLauncher missileLauncher; // needed for KillAll, KillFriends, KillFoes
 
         public TargetListViewModel()
         {
             TargetManager = TargetManager.GetInstance();
             TargetViewList = new ObservableCollection<TargetViewModel>();
 
+            SADMissileLauncherFactory missileFactory = SADMissileLauncherFactory.GetInstance();
+            MissileLauncher = missileFactory.CreateSADMissileLauncher(SADMissileLauncher.MissileLauncherType);
+
             // Command stuff
             ClearAllCommand = new TargetListViewModelCommand(ClearAll);
             LoadTargetsCommand = new TargetListViewModelCommand(LoadTargets);
+            KillAllCommand = new TargetListViewModelCommand(KillAll);
+            KillFoesCommand = new TargetListViewModelCommand(KillFoes);
+            KillFriendsCommand = new TargetListViewModelCommand(KillFriends);
         }
 
         // Properties
@@ -46,6 +54,12 @@ namespace GUI.ViewModel
             set { selectedTargetView = value; OnPropertyChanged(); }
         }
 
+        public SADMissileLauncher MissileLauncher
+        {
+            get { return missileLauncher; }
+            set { missileLauncher = value; }
+        }
+
         // Methods
         public void ClearAll()
         {
@@ -57,6 +71,36 @@ namespace GUI.ViewModel
         public void LoadTargets()
         {
             PopulateTargetList();
+        }
+
+        public void KillAll()
+        {
+            List<Target> list = TargetManager.GetAllTargets.ToList();
+
+            for (int count = 0; count < list.Count; count++)
+            {
+                missileLauncher.Kill(list[count].Phi, list[count].Theta);
+            }
+        }
+
+        public void KillFoes()
+        {
+            List<Target> list = TargetManager.GetEnemies.ToList();
+
+            for (int count = 0; count < list.Count; count++)
+            {
+                missileLauncher.Kill(list[count].Phi, list[count].Theta);
+            }
+        }
+
+        public void KillFriends()
+        {
+            List<Target> list = TargetManager.GetFriends.ToList();
+
+            for (int count = 0; count < list.Count; count++)
+            {
+                missileLauncher.Kill(list[count].Phi, list[count].Theta);
+            }
         }
 
         // May be better of as private
@@ -79,5 +123,8 @@ namespace GUI.ViewModel
         // Commands
         public ICommand ClearAllCommand { get; set; }
         public ICommand LoadTargetsCommand { get; set; }
+        public ICommand KillAllCommand { get; set; }
+        public ICommand KillFriendsCommand { get; set; }
+        public ICommand KillFoesCommand { get; set; }
     }
 }
