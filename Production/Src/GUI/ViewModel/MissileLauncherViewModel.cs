@@ -12,6 +12,7 @@ using SAD.Core.Devices.Missile_Launcher.Subclasses;
 using GUI.ViewModel;
 using GUI.Commands.MissileLauncheViewModelCommands;
 using GUI.Commands.TargetViewModelCommands;
+using System.Threading.Tasks;
 
 namespace GUI.ViewModel
 {
@@ -103,13 +104,18 @@ namespace GUI.ViewModel
         }
 
         // Methods
-        public void Fire()
+        public async void Fire()
         {
-            missileLauncher.Fire();
+            Task fireTask = Task.Run(() =>
+                {
+                    missileLauncher.Fire();
+                });
+            await fireTask;
+            Task updateUITask = Task.Run(() =>
+                
             CurrentMissileCount = missileLauncher.CurrentMissileCount;
             CurrentPhiTheta = "(" + Math.Round(missileLauncher.CurrentPhi, 2) + ", " + Math.Round(missileLauncher.CurrentTheta, 2) + ")";
-        }
-
+               
         public void MoveUp()
         {
             missileLauncher.MoveBy(0.0, DegreeConstant);
