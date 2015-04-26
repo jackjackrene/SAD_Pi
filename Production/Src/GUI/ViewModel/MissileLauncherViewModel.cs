@@ -109,35 +109,50 @@ namespace GUI.ViewModel
             Task fireTask = Task.Run(() =>
                 {
                     missileLauncher.Fire();
+                    CurrentMissileCount = missileLauncher.CurrentMissileCount;
+                    CurrentPhiTheta = "(" + Math.Round(missileLauncher.CurrentPhi, 2) + ", " + Math.Round(missileLauncher.CurrentTheta, 2) + ")";
                 });
             await fireTask;
-            Task updateUITask = Task.Run(() =>
-                
-            CurrentMissileCount = missileLauncher.CurrentMissileCount;
-            CurrentPhiTheta = "(" + Math.Round(missileLauncher.CurrentPhi, 2) + ", " + Math.Round(missileLauncher.CurrentTheta, 2) + ")";
-        }   
-        public void MoveUp()
+            
+        }     
+        public async void MoveUp()
         {
-            missileLauncher.MoveBy(0.0, DegreeConstant);
-            CurrentPhiTheta = "(" + Math.Round(missileLauncher.CurrentPhi, 2) + ", " + Math.Round(missileLauncher.CurrentTheta, 2) + ")";
+            Task moveUpTask = Task.Run(() =>
+                {
+                    missileLauncher.MoveBy(0.0, DegreeConstant);
+                    CurrentPhiTheta = "(" + Math.Round(missileLauncher.CurrentPhi, 2) + ", " + Math.Round(missileLauncher.CurrentTheta, 2) + ")";
+                });
+            await moveUpTask;
         }
 
-        public void MoveDown()
+        public async void MoveDown()
         {
+            Task moveDownTask = Task.Run(() =>
+                {
             missileLauncher.MoveBy(0.0, -DegreeConstant);
             CurrentPhiTheta = "(" + Math.Round(missileLauncher.CurrentPhi, 2) + ", " + Math.Round(missileLauncher.CurrentTheta, 2) + ")";
+             });
+            await moveDownTask;
         }
 
-        public void MoveLeft()
+        public async void MoveLeft()
         {
+            Task moveLeftTask = Task.Run(() =>
+                {
             missileLauncher.MoveBy(-DegreeConstant, 0.0);
             CurrentPhiTheta = "(" + Math.Round(missileLauncher.CurrentPhi, 2) + ", " + Math.Round(missileLauncher.CurrentTheta, 2) + ")";
+                });
+            await moveLeftTask;
         }
 
-        public void MoveRight()
+        public async void MoveRight()
         {
+            Task moveRightTask = Task.Run(() =>
+            {
             missileLauncher.MoveBy(DegreeConstant, 0.0);
             CurrentPhiTheta = "(" + Math.Round(missileLauncher.CurrentPhi, 2) + ", " + Math.Round(missileLauncher.CurrentTheta, 2) + ")";
+             });
+            await moveRightTask;
         }
         public void Reload()
         {
