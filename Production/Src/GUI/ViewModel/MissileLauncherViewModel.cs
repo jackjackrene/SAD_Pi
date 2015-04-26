@@ -115,7 +115,7 @@ namespace GUI.ViewModel
                 
             CurrentMissileCount = missileLauncher.CurrentMissileCount;
             CurrentPhiTheta = "(" + Math.Round(missileLauncher.CurrentPhi, 2) + ", " + Math.Round(missileLauncher.CurrentTheta, 2) + ")";
-               
+        }   
         public void MoveUp()
         {
             missileLauncher.MoveBy(0.0, DegreeConstant);
