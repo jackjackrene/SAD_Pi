@@ -1,8 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="d541d7d4-7e57-4ee4-ad09-8f4d4f438368"
   name="GUIModeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="f19cff6f-f447-455c-be0f-5a52144bd16b">
+      <body>Application Startup
+</body>
+    </comment>
+    <comment
+      Id="e4a99944-627d-4a18-ae30-8e7283153187">
+      <body>If launcher is out of ammo. </body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="cc6b64ac-6bc7-458d-aae8-f2630ee8e1dd"
+          LastKnownName="Decision8"
+          LastKnownLocation="GUIModeling.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="b7716ac5-c374-44cb-94b9-e4ff310602c4">
+      <body>If the game ends
+</body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="f1537310-8a4d-4490-8bfd-c72d76666b47"
+          LastKnownName="Decision7"
+          LastKnownLocation="GUIModeling.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="ab9b06fe-a7fc-4093-b15e-d7f6785234ba">
+      <body>If the game ends
+</body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="078e7bd4-8f12-49e5-a412-b7f68ea6e76d"
+          LastKnownName="Decision6"
+          LastKnownLocation="GUIModeling.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="0d313480-c55d-40ee-a48e-7ba70dc417fd">
+      <body>If user clicks "start" video
+</body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="e13488e2-b36b-44eb-a9c2-73f4ed1bdb7e"
+          LastKnownName="Decision9"
+          LastKnownLocation="GUIModeling.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -69,1911 +119,6 @@
         isAbstract="false"
         isLeaf="false"
         isReentrant="false">
-        <fragments>
-          <behaviorExecutionSpecification
-            Id="b540780c-f3cf-4f98-a299-ec9a3fdc04b7"
-            name="BehaviorExecutionSpecification1">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="5b25b13b-c8c2-4d91-b463-82f2eb9a7e16"
-                LastKnownName="GUI"
-                LastKnownLocation="GUIModeling.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="ffbcf287-7aed-42aa-a3b9-ad80e3850f93"
-                LastKnownName="ExecutionOccurrenceSpecification2"
-                LastKnownLocation="GUIModeling.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="d5f91334-9fa8-45b2-a726-a961d605c92c"
-                LastKnownName="ExecutionOccurrenceSpecification1"
-                LastKnownLocation="GUIModeling.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="0324023a-b900-48c3-b129-25bc803556a0"
-                LastKnownName="MessageOccurrenceSpecification1"
-                LastKnownLocation="GUIModeling.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="72fd757a-4672-445a-a2ea-0db431e6f19a"
-                LastKnownName="MessageOccurrenceSpecification2"
-                LastKnownLocation="GUIModeling.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="dede69cf-f37b-48de-83b5-0ef006d02e4f"
-                LastKnownName="MessageOccurrenceSpecification8"
-                LastKnownLocation="GUIModeling.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="d5f91334-9fa8-45b2-a726-a961d605c92c"
-            name="ExecutionOccurrenceSpecification1">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="30cddcfd-5d15-4f2f-8516-2d94a58c8f01"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="5b25b13b-c8c2-4d91-b463-82f2eb9a7e16"
-                LastKnownName="GUI"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <lostFoundTarget
-            Id="8968598f-fc1d-426e-8434-795b79ef21d1"
-            name="LostFoundTarget1" />
-          <messageOccurrenceSpecification
-            Id="0324023a-b900-48c3-b129-25bc803556a0"
-            name="MessageOccurrenceSpecification1">
-            <covered>
-              <lifelineMoniker
-                Id="5b25b13b-c8c2-4d91-b463-82f2eb9a7e16"
-                LastKnownName="GUI"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="0cd13352-70bf-498d-8a3d-c883034d92c0"
-            name="BehaviorExecutionSpecification2">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="a4db2bc7-8d0c-44df-9cac-a3b7a78919bf"
-                LastKnownName="Game Server"
-                LastKnownLocation="GUIModeling.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="7c8de138-7688-4c61-a009-402451829991"
-                LastKnownName="ExecutionOccurrenceSpecification4"
-                LastKnownLocation="GUIModeling.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="1a8da7f4-db64-4dfb-b4ff-3d0359d10f02"
-                LastKnownName="ExecutionOccurrenceSpecification3"
-                LastKnownLocation="GUIModeling.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="28de4c54-8245-4c5c-860c-2b2c6fc31e98"
-                LastKnownName="MessageOccurrenceSpecification3"
-                LastKnownLocation="GUIModeling.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="284d891d-1b4e-42f0-99bc-74d7c44052d1"
-                LastKnownName="MessageOccurrenceSpecification4"
-                LastKnownLocation="GUIModeling.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="1a8da7f4-db64-4dfb-b4ff-3d0359d10f02"
-            name="ExecutionOccurrenceSpecification3">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="472a5e6d-d649-420b-aba9-484bcf372061"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="a4db2bc7-8d0c-44df-9cac-a3b7a78919bf"
-                LastKnownName="Game Server"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="72fd757a-4672-445a-a2ea-0db431e6f19a"
-            name="MessageOccurrenceSpecification2">
-            <covered>
-              <lifelineMoniker
-                Id="5b25b13b-c8c2-4d91-b463-82f2eb9a7e16"
-                LastKnownName="GUI"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="28de4c54-8245-4c5c-860c-2b2c6fc31e98"
-            name="MessageOccurrenceSpecification3">
-            <covered>
-              <lifelineMoniker
-                Id="a4db2bc7-8d0c-44df-9cac-a3b7a78919bf"
-                LastKnownName="Game Server"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="5d46c741-a60b-4b24-901b-9eb6ad3f6cc3"
-            name="BehaviorExecutionSpecification5">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="d7bd438f-bfbe-46c6-8f39-df9a77fdee18"
-                LastKnownName="Video"
-                LastKnownLocation="GUIModeling.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="2a42fb9c-e7fe-4cd0-99a2-c263a7e57ad0"
-                LastKnownName="ExecutionOccurrenceSpecification10"
-                LastKnownLocation="GUIModeling.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="d4a893b3-462f-494a-a5e5-589cacf54207"
-                LastKnownName="ExecutionOccurrenceSpecification9"
-                LastKnownLocation="GUIModeling.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="d0748d02-0c47-4ba4-946a-e28d0d101092"
-                LastKnownName="MessageOccurrenceSpecification9"
-                LastKnownLocation="GUIModeling.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="d4a893b3-462f-494a-a5e5-589cacf54207"
-            name="ExecutionOccurrenceSpecification9">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="7441eb81-ae79-44c7-9909-e0d2b8140970"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="d7bd438f-bfbe-46c6-8f39-df9a77fdee18"
-                LastKnownName="Video"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="dede69cf-f37b-48de-83b5-0ef006d02e4f"
-            name="MessageOccurrenceSpecification8">
-            <covered>
-              <lifelineMoniker
-                Id="5b25b13b-c8c2-4d91-b463-82f2eb9a7e16"
-                LastKnownName="GUI"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="d0748d02-0c47-4ba4-946a-e28d0d101092"
-            name="MessageOccurrenceSpecification9">
-            <covered>
-              <lifelineMoniker
-                Id="d7bd438f-bfbe-46c6-8f39-df9a77fdee18"
-                LastKnownName="Video"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="bbdcab5c-2da3-45c7-8326-de4fc002c84e"
-            name="BehaviorExecutionSpecification3">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="fc553558-3425-49dc-8d9d-43e0e2b12741"
-                LastKnownName="Target Manager"
-                LastKnownLocation="GUIModeling.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="2996b9f4-b133-4d58-80ba-2a946a0ac307"
-                LastKnownName="ExecutionOccurrenceSpecification6"
-                LastKnownLocation="GUIModeling.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="bb79e037-6db7-465f-977d-49a454852eff"
-                LastKnownName="ExecutionOccurrenceSpecification5"
-                LastKnownLocation="GUIModeling.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="76f3ae10-ce47-4e69-939a-144cce605182"
-                LastKnownName="MessageOccurrenceSpecification5"
-                LastKnownLocation="GUIModeling.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="e12a8444-187a-40e8-a20e-a0d1e245abbe"
-                LastKnownName="MessageOccurrenceSpecification6"
-                LastKnownLocation="GUIModeling.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="bb79e037-6db7-465f-977d-49a454852eff"
-            name="ExecutionOccurrenceSpecification5">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="9e68cbd9-71e1-45c9-bf5b-8a3653701bda"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="fc553558-3425-49dc-8d9d-43e0e2b12741"
-                LastKnownName="Target Manager"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="76f3ae10-ce47-4e69-939a-144cce605182"
-            name="MessageOccurrenceSpecification5">
-            <covered>
-              <lifelineMoniker
-                Id="fc553558-3425-49dc-8d9d-43e0e2b12741"
-                LastKnownName="Target Manager"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="284d891d-1b4e-42f0-99bc-74d7c44052d1"
-            name="MessageOccurrenceSpecification4">
-            <covered>
-              <lifelineMoniker
-                Id="a4db2bc7-8d0c-44df-9cac-a3b7a78919bf"
-                LastKnownName="Game Server"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="ffbcf287-7aed-42aa-a3b9-ad80e3850f93"
-            name="ExecutionOccurrenceSpecification2">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="e1ccdcd0-f870-4d78-b7d0-c7f57c84afaa"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="5b25b13b-c8c2-4d91-b463-82f2eb9a7e16"
-                LastKnownName="GUI"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="7c8de138-7688-4c61-a009-402451829991"
-            name="ExecutionOccurrenceSpecification4">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="e8819341-76dd-4ab7-b821-2242fa9edcb1"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="a4db2bc7-8d0c-44df-9cac-a3b7a78919bf"
-                LastKnownName="Game Server"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="2a42fb9c-e7fe-4cd0-99a2-c263a7e57ad0"
-            name="ExecutionOccurrenceSpecification10">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="19c225fd-6ba9-4b3d-a953-152ecd90c6c5"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="d7bd438f-bfbe-46c6-8f39-df9a77fdee18"
-                LastKnownName="Video"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="fa4462d3-f7fb-4c7b-b3d5-dbe5d060f272"
-            name="BehaviorExecutionSpecification4">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="d7bd438f-bfbe-46c6-8f39-df9a77fdee18"
-                LastKnownName="Video"
-                LastKnownLocation="GUIModeling.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="87fbd37e-f35a-4102-981f-19aa32e445ce"
-                LastKnownName="ExecutionOccurrenceSpecification8"
-                LastKnownLocation="GUIModeling.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="fc73c37d-4396-47e6-9bf2-34f37756d54e"
-                LastKnownName="ExecutionOccurrenceSpecification7"
-                LastKnownLocation="GUIModeling.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="7d705172-9085-42ec-ad6b-3bb75d3f5215"
-                LastKnownName="MessageOccurrenceSpecification7"
-                LastKnownLocation="GUIModeling.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="11db4b37-915b-4244-9945-00b304a6358a"
-                LastKnownName="MessageOccurrenceSpecification10"
-                LastKnownLocation="GUIModeling.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="fc73c37d-4396-47e6-9bf2-34f37756d54e"
-            name="ExecutionOccurrenceSpecification7">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="705d7c08-73bc-4ffd-9722-3f2c440825b2"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="d7bd438f-bfbe-46c6-8f39-df9a77fdee18"
-                LastKnownName="Video"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="e12a8444-187a-40e8-a20e-a0d1e245abbe"
-            name="MessageOccurrenceSpecification6">
-            <covered>
-              <lifelineMoniker
-                Id="fc553558-3425-49dc-8d9d-43e0e2b12741"
-                LastKnownName="Target Manager"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="7d705172-9085-42ec-ad6b-3bb75d3f5215"
-            name="MessageOccurrenceSpecification7">
-            <covered>
-              <lifelineMoniker
-                Id="d7bd438f-bfbe-46c6-8f39-df9a77fdee18"
-                LastKnownName="Video"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="2996b9f4-b133-4d58-80ba-2a946a0ac307"
-            name="ExecutionOccurrenceSpecification6">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="96b5a4f2-0996-467e-aa72-c30b12bc05f5"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="fc553558-3425-49dc-8d9d-43e0e2b12741"
-                LastKnownName="Target Manager"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="5b9a872b-b8ef-4177-9f30-d5f62ce1acd9"
-            name="BehaviorExecutionSpecification6">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="fc553558-3425-49dc-8d9d-43e0e2b12741"
-                LastKnownName="Target Manager"
-                LastKnownLocation="GUIModeling.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="26793efa-0e96-4293-920a-81382280e0bd"
-                LastKnownName="ExecutionOccurrenceSpecification12"
-                LastKnownLocation="GUIModeling.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="9cd0f164-c17b-4d7c-ad1a-1de518a7c5a4"
-                LastKnownName="ExecutionOccurrenceSpecification11"
-                LastKnownLocation="GUIModeling.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="d08326b3-c483-48e1-ab0c-5b3fb8e56f37"
-                LastKnownName="MessageOccurrenceSpecification11"
-                LastKnownLocation="GUIModeling.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="7ad91f7e-f2dd-43bd-93cd-3faa49582824"
-                LastKnownName="MessageOccurrenceSpecification12"
-                LastKnownLocation="GUIModeling.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="9cd0f164-c17b-4d7c-ad1a-1de518a7c5a4"
-            name="ExecutionOccurrenceSpecification11">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="05e5aca0-64f4-4934-bb86-cb6f3c389573"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="fc553558-3425-49dc-8d9d-43e0e2b12741"
-                LastKnownName="Target Manager"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="d08326b3-c483-48e1-ab0c-5b3fb8e56f37"
-            name="MessageOccurrenceSpecification11">
-            <covered>
-              <lifelineMoniker
-                Id="fc553558-3425-49dc-8d9d-43e0e2b12741"
-                LastKnownName="Target Manager"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="11db4b37-915b-4244-9945-00b304a6358a"
-            name="MessageOccurrenceSpecification10">
-            <covered>
-              <lifelineMoniker
-                Id="d7bd438f-bfbe-46c6-8f39-df9a77fdee18"
-                LastKnownName="Video"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="87fbd37e-f35a-4102-981f-19aa32e445ce"
-            name="ExecutionOccurrenceSpecification8">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="9ded608b-3956-4aa4-967c-9d3af6b31a57"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="d7bd438f-bfbe-46c6-8f39-df9a77fdee18"
-                LastKnownName="Video"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="ab7d12e5-fc21-44ff-aa51-04cdb661833e"
-            name="BehaviorExecutionSpecification7">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="5b25b13b-c8c2-4d91-b463-82f2eb9a7e16"
-                LastKnownName="GUI"
-                LastKnownLocation="GUIModeling.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="8d748e9c-0e4c-4e7d-a03e-6e801a0cf982"
-                LastKnownName="ExecutionOccurrenceSpecification14"
-                LastKnownLocation="GUIModeling.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="1d58dbeb-18ce-4490-bd99-0ce66fef14c6"
-                LastKnownName="ExecutionOccurrenceSpecification13"
-                LastKnownLocation="GUIModeling.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="2abc317d-94d2-497d-b19c-a2231635509e"
-                LastKnownName="MessageOccurrenceSpecification13"
-                LastKnownLocation="GUIModeling.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="30fcbcaa-6b9f-4768-82b2-2352014eb6e1"
-                LastKnownName="MessageOccurrenceSpecification14"
-                LastKnownLocation="GUIModeling.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="280362cd-f16f-4554-b0b5-43239bd720f0"
-                LastKnownName="MessageOccurrenceSpecification31"
-                LastKnownLocation="GUIModeling.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="1d58dbeb-18ce-4490-bd99-0ce66fef14c6"
-            name="ExecutionOccurrenceSpecification13">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="86ede305-5ed4-4733-a7ce-b1f7c33bd05d"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="5b25b13b-c8c2-4d91-b463-82f2eb9a7e16"
-                LastKnownName="GUI"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="2abc317d-94d2-497d-b19c-a2231635509e"
-            name="MessageOccurrenceSpecification13">
-            <covered>
-              <lifelineMoniker
-                Id="5b25b13b-c8c2-4d91-b463-82f2eb9a7e16"
-                LastKnownName="GUI"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="7ad91f7e-f2dd-43bd-93cd-3faa49582824"
-            name="MessageOccurrenceSpecification12">
-            <covered>
-              <lifelineMoniker
-                Id="fc553558-3425-49dc-8d9d-43e0e2b12741"
-                LastKnownName="Target Manager"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="26793efa-0e96-4293-920a-81382280e0bd"
-            name="ExecutionOccurrenceSpecification12">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="ffa557a9-fd41-4d6f-a860-e94d63feff4d"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="fc553558-3425-49dc-8d9d-43e0e2b12741"
-                LastKnownName="Target Manager"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="f91872a1-c6b9-4034-8161-0037d35d624d"
-            name="BehaviorExecutionSpecification8">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="d1c33eab-c783-4d5e-a0d2-253365251676"
-                LastKnownName="Timer"
-                LastKnownLocation="GUIModeling.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="2fd96a37-3b4a-4c15-a44e-543626ac7377"
-                LastKnownName="ExecutionOccurrenceSpecification16"
-                LastKnownLocation="GUIModeling.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="84a0f0d9-6236-4010-a193-2a4a3e693cc7"
-                LastKnownName="ExecutionOccurrenceSpecification15"
-                LastKnownLocation="GUIModeling.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="5e9cd577-50fd-4815-8ade-066b2d2b04b6"
-                LastKnownName="MessageOccurrenceSpecification15"
-                LastKnownLocation="GUIModeling.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="54c77c59-5b00-4711-a764-d4cfb57899c0"
-                LastKnownName="MessageOccurrenceSpecification43"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="5be29a33-1c52-4b47-92c7-4c9897027bd7"
-                LastKnownName="ExecutionOccurrenceSpecification45"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="8cfb6516-4278-44f7-9b3b-9b8dae33a2e9"
-                LastKnownName="ExecutionOccurrenceSpecification46"
-                LastKnownLocation="GUIModeling.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="90871586-5ab5-4b25-9512-a5c4b9388121"
-                LastKnownName="MessageOccurrenceSpecification47"
-                LastKnownLocation="GUIModeling.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="84a0f0d9-6236-4010-a193-2a4a3e693cc7"
-            name="ExecutionOccurrenceSpecification15">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="8bd8eb77-81ae-4161-866d-3318d0426423"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="d1c33eab-c783-4d5e-a0d2-253365251676"
-                LastKnownName="Timer"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="5e9cd577-50fd-4815-8ade-066b2d2b04b6"
-            name="MessageOccurrenceSpecification15">
-            <covered>
-              <lifelineMoniker
-                Id="d1c33eab-c783-4d5e-a0d2-253365251676"
-                LastKnownName="Timer"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="30fcbcaa-6b9f-4768-82b2-2352014eb6e1"
-            name="MessageOccurrenceSpecification14">
-            <covered>
-              <lifelineMoniker
-                Id="5b25b13b-c8c2-4d91-b463-82f2eb9a7e16"
-                LastKnownName="GUI"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="4d73db84-9d31-41a6-a482-8b5be5f9e10c"
-            name="BehaviorExecutionSpecification17">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="f8010952-59b1-421b-8e6f-caf2f52c555d"
-                LastKnownName="Strategy"
-                LastKnownLocation="GUIModeling.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="f23e7518-6bfb-46fe-bcdf-3e863bfe99fd"
-                LastKnownName="ExecutionOccurrenceSpecification34"
-                LastKnownLocation="GUIModeling.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="3c029801-56db-4450-bfb3-f3b0a8a561b6"
-                LastKnownName="ExecutionOccurrenceSpecification33"
-                LastKnownLocation="GUIModeling.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="26b1aaa0-6a87-4d66-9aa3-79e0f4e7f528"
-                LastKnownName="MessageOccurrenceSpecification32"
-                LastKnownLocation="GUIModeling.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="0c9084a3-8db2-49bf-a249-2ad9534c156d"
-                LastKnownName="MessageOccurrenceSpecification33"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="ec1d4c81-3a64-4eb2-8f90-292a04f28fa0"
-                LastKnownName="ExecutionOccurrenceSpecification43"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="27a688ef-d164-4e2f-a725-7c181af4c03a"
-                LastKnownName="ExecutionOccurrenceSpecification44"
-                LastKnownLocation="GUIModeling.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="3c029801-56db-4450-bfb3-f3b0a8a561b6"
-            name="ExecutionOccurrenceSpecification33">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="d8cdd57c-4f7b-4ed6-9101-115fbf40307f"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="f8010952-59b1-421b-8e6f-caf2f52c555d"
-                LastKnownName="Strategy"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="26b1aaa0-6a87-4d66-9aa3-79e0f4e7f528"
-            name="MessageOccurrenceSpecification32">
-            <covered>
-              <lifelineMoniker
-                Id="f8010952-59b1-421b-8e6f-caf2f52c555d"
-                LastKnownName="Strategy"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="280362cd-f16f-4554-b0b5-43239bd720f0"
-            name="MessageOccurrenceSpecification31">
-            <covered>
-              <lifelineMoniker
-                Id="5b25b13b-c8c2-4d91-b463-82f2eb9a7e16"
-                LastKnownName="GUI"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="54c77c59-5b00-4711-a764-d4cfb57899c0"
-            name="MessageOccurrenceSpecification43">
-            <covered>
-              <lifelineMoniker
-                Id="d1c33eab-c783-4d5e-a0d2-253365251676"
-                LastKnownName="Timer"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="8d748e9c-0e4c-4e7d-a03e-6e801a0cf982"
-            name="ExecutionOccurrenceSpecification14">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="a1b2ee5e-d052-4956-8482-35807ce2cb72"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="5b25b13b-c8c2-4d91-b463-82f2eb9a7e16"
-                LastKnownName="GUI"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="55ab2a23-a5cb-4b3c-8914-f3e62a52caae"
-            name="BehaviorExecutionSpecification18">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="bbc43301-8c12-4aa7-ae43-32e6ed2bbca5"
-                LastKnownName="Missile Launcher"
-                LastKnownLocation="GUIModeling.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="c430b261-1ceb-4b1e-a069-c29193cbae60"
-                LastKnownName="ExecutionOccurrenceSpecification36"
-                LastKnownLocation="GUIModeling.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="70b7d5a7-6b94-4c95-87da-a11b1fd0413f"
-                LastKnownName="ExecutionOccurrenceSpecification35"
-                LastKnownLocation="GUIModeling.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="41d633aa-c858-4870-9cb7-9d767f544cf7"
-                LastKnownName="MessageOccurrenceSpecification34"
-                LastKnownLocation="GUIModeling.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="06655ff5-fc0c-49e7-a3b1-e18ced1ba907"
-                LastKnownName="MessageOccurrenceSpecification35"
-                LastKnownLocation="GUIModeling.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="70b7d5a7-6b94-4c95-87da-a11b1fd0413f"
-            name="ExecutionOccurrenceSpecification35">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="c75e8839-9bf7-48e2-98c4-83679c39dda3"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="bbc43301-8c12-4aa7-ae43-32e6ed2bbca5"
-                LastKnownName="Missile Launcher"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="0c9084a3-8db2-49bf-a249-2ad9534c156d"
-            name="MessageOccurrenceSpecification33">
-            <covered>
-              <lifelineMoniker
-                Id="f8010952-59b1-421b-8e6f-caf2f52c555d"
-                LastKnownName="Strategy"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="41d633aa-c858-4870-9cb7-9d767f544cf7"
-            name="MessageOccurrenceSpecification34">
-            <covered>
-              <lifelineMoniker
-                Id="bbc43301-8c12-4aa7-ae43-32e6ed2bbca5"
-                LastKnownName="Missile Launcher"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="2cfdf37a-3f14-442f-a7bc-e0b84e5b69c5"
-            name="BehaviorExecutionSpecification23">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="d1c33eab-c783-4d5e-a0d2-253365251676"
-                LastKnownName="Timer"
-                LastKnownLocation="GUIModeling.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="8cfb6516-4278-44f7-9b3b-9b8dae33a2e9"
-                LastKnownName="ExecutionOccurrenceSpecification46"
-                LastKnownLocation="GUIModeling.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="5be29a33-1c52-4b47-92c7-4c9897027bd7"
-                LastKnownName="ExecutionOccurrenceSpecification45"
-                LastKnownLocation="GUIModeling.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="43c1fc1f-2c44-4727-a7f1-14d917c869dd"
-                LastKnownName="MessageOccurrenceSpecification44"
-                LastKnownLocation="GUIModeling.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="5be29a33-1c52-4b47-92c7-4c9897027bd7"
-            name="ExecutionOccurrenceSpecification45">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="2e235beb-ac51-4066-8c95-419ae555e7ac"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="d1c33eab-c783-4d5e-a0d2-253365251676"
-                LastKnownName="Timer"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="43c1fc1f-2c44-4727-a7f1-14d917c869dd"
-            name="MessageOccurrenceSpecification44">
-            <covered>
-              <lifelineMoniker
-                Id="d1c33eab-c783-4d5e-a0d2-253365251676"
-                LastKnownName="Timer"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="f5d91f42-24a2-4e79-b5db-692f150e2bb5"
-            name="BehaviorExecutionSpecification24">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="d7bd438f-bfbe-46c6-8f39-df9a77fdee18"
-                LastKnownName="Video"
-                LastKnownLocation="GUIModeling.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="3a212d44-568e-4405-9319-b805b38a60de"
-                LastKnownName="ExecutionOccurrenceSpecification48"
-                LastKnownLocation="GUIModeling.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="da3e9a85-8000-4376-ac6d-00983224fbfb"
-                LastKnownName="ExecutionOccurrenceSpecification47"
-                LastKnownLocation="GUIModeling.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="fb873937-49b6-4ddd-9508-bfd39d294658"
-                LastKnownName="MessageOccurrenceSpecification45"
-                LastKnownLocation="GUIModeling.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="da3e9a85-8000-4376-ac6d-00983224fbfb"
-            name="ExecutionOccurrenceSpecification47">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="f85178d8-3b38-4c24-8b7d-aa10d17ea334"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="d7bd438f-bfbe-46c6-8f39-df9a77fdee18"
-                LastKnownName="Video"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <lostFoundTarget
-            Id="ee1b2c69-0be1-4ad4-827a-2d6a1944efae"
-            name="LostFoundTarget3" />
-          <messageOccurrenceSpecification
-            Id="fb873937-49b6-4ddd-9508-bfd39d294658"
-            name="MessageOccurrenceSpecification45">
-            <covered>
-              <lifelineMoniker
-                Id="d7bd438f-bfbe-46c6-8f39-df9a77fdee18"
-                LastKnownName="Video"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="a2cdcac6-0641-471e-80e9-db51e101d68a"
-            name="BehaviorExecutionSpecification19">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="fc553558-3425-49dc-8d9d-43e0e2b12741"
-                LastKnownName="Target Manager"
-                LastKnownLocation="GUIModeling.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="ece7fb7f-07a3-4e6c-92da-f8fc67087019"
-                LastKnownName="ExecutionOccurrenceSpecification38"
-                LastKnownLocation="GUIModeling.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="59565886-ea82-46ec-8510-90838394eed7"
-                LastKnownName="ExecutionOccurrenceSpecification37"
-                LastKnownLocation="GUIModeling.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="f84ae4ad-17ff-494b-a5d7-b2511724835e"
-                LastKnownName="MessageOccurrenceSpecification36"
-                LastKnownLocation="GUIModeling.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="b110cd8b-f696-4ea0-9e7a-4e366fba3263"
-                LastKnownName="MessageOccurrenceSpecification37"
-                LastKnownLocation="GUIModeling.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="59565886-ea82-46ec-8510-90838394eed7"
-            name="ExecutionOccurrenceSpecification37">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="1eb01c60-19cc-4f15-9664-2f75f55ed2ea"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="fc553558-3425-49dc-8d9d-43e0e2b12741"
-                LastKnownName="Target Manager"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="06655ff5-fc0c-49e7-a3b1-e18ced1ba907"
-            name="MessageOccurrenceSpecification35">
-            <covered>
-              <lifelineMoniker
-                Id="bbc43301-8c12-4aa7-ae43-32e6ed2bbca5"
-                LastKnownName="Missile Launcher"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="f84ae4ad-17ff-494b-a5d7-b2511724835e"
-            name="MessageOccurrenceSpecification36">
-            <covered>
-              <lifelineMoniker
-                Id="fc553558-3425-49dc-8d9d-43e0e2b12741"
-                LastKnownName="Target Manager"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="8cfb6516-4278-44f7-9b3b-9b8dae33a2e9"
-            name="ExecutionOccurrenceSpecification46">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="c15be275-acf4-403e-a4bf-2653ef301a38"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="d1c33eab-c783-4d5e-a0d2-253365251676"
-                LastKnownName="Timer"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="3a212d44-568e-4405-9319-b805b38a60de"
-            name="ExecutionOccurrenceSpecification48">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="aa22beef-9c88-412a-a771-229b38217fe2"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="d7bd438f-bfbe-46c6-8f39-df9a77fdee18"
-                LastKnownName="Video"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="c430b261-1ceb-4b1e-a069-c29193cbae60"
-            name="ExecutionOccurrenceSpecification36">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="bf874274-186c-47b4-b54a-78ffced21e64"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="bbc43301-8c12-4aa7-ae43-32e6ed2bbca5"
-                LastKnownName="Missile Launcher"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="2c6d3574-f900-4ec5-b15d-9af5dadde9c5"
-            name="BehaviorExecutionSpecification20">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="5b25b13b-c8c2-4d91-b463-82f2eb9a7e16"
-                LastKnownName="GUI"
-                LastKnownLocation="GUIModeling.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="58981703-956f-4174-81c7-b68a12eec4e0"
-                LastKnownName="ExecutionOccurrenceSpecification40"
-                LastKnownLocation="GUIModeling.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="7fd27f69-0af7-4e09-93cd-a56605f3fb6f"
-                LastKnownName="ExecutionOccurrenceSpecification39"
-                LastKnownLocation="GUIModeling.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="3ccef216-0f67-42b5-a183-b3a67e650420"
-                LastKnownName="MessageOccurrenceSpecification38"
-                LastKnownLocation="GUIModeling.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="e12d7c40-3ca7-4653-8598-24873877ed01"
-                LastKnownName="MessageOccurrenceSpecification41"
-                LastKnownLocation="GUIModeling.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="7fd27f69-0af7-4e09-93cd-a56605f3fb6f"
-            name="ExecutionOccurrenceSpecification39">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="41282d4a-fa93-4108-adaf-cd0121a252e6"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="5b25b13b-c8c2-4d91-b463-82f2eb9a7e16"
-                LastKnownName="GUI"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="3ccef216-0f67-42b5-a183-b3a67e650420"
-            name="MessageOccurrenceSpecification38">
-            <covered>
-              <lifelineMoniker
-                Id="5b25b13b-c8c2-4d91-b463-82f2eb9a7e16"
-                LastKnownName="GUI"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="b110cd8b-f696-4ea0-9e7a-4e366fba3263"
-            name="MessageOccurrenceSpecification37">
-            <covered>
-              <lifelineMoniker
-                Id="fc553558-3425-49dc-8d9d-43e0e2b12741"
-                LastKnownName="Target Manager"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="db246166-9302-412a-ae94-9ee18f38227c"
-            name="BehaviorExecutionSpecification25">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="d7bd438f-bfbe-46c6-8f39-df9a77fdee18"
-                LastKnownName="Video"
-                LastKnownLocation="GUIModeling.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="6199200a-aeb3-417f-9522-a68a1de06e31"
-                LastKnownName="ExecutionOccurrenceSpecification50"
-                LastKnownLocation="GUIModeling.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="7b67a3e2-bd5d-415a-b632-9eaa77addd77"
-                LastKnownName="ExecutionOccurrenceSpecification49"
-                LastKnownLocation="GUIModeling.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="e2f342e5-8eca-42a1-b7d8-06ddf70f5291"
-                LastKnownName="MessageOccurrenceSpecification46"
-                LastKnownLocation="GUIModeling.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="7b67a3e2-bd5d-415a-b632-9eaa77addd77"
-            name="ExecutionOccurrenceSpecification49">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="cc93584e-f15e-4246-bf32-26134c93f930"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="d7bd438f-bfbe-46c6-8f39-df9a77fdee18"
-                LastKnownName="Video"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <lostFoundTarget
-            Id="0532d221-395a-4373-990d-5692f04dc364"
-            name="LostFoundTarget4" />
-          <messageOccurrenceSpecification
-            Id="e2f342e5-8eca-42a1-b7d8-06ddf70f5291"
-            name="MessageOccurrenceSpecification46">
-            <covered>
-              <lifelineMoniker
-                Id="d7bd438f-bfbe-46c6-8f39-df9a77fdee18"
-                LastKnownName="Video"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="ece7fb7f-07a3-4e6c-92da-f8fc67087019"
-            name="ExecutionOccurrenceSpecification38">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="616cbb32-5f98-4ad2-b702-7a4907ed8789"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="fc553558-3425-49dc-8d9d-43e0e2b12741"
-                LastKnownName="Target Manager"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="e7cc2c3b-d726-49b8-a765-927215a2567f"
-            name="BehaviorExecutionSpecification22">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="f8010952-59b1-421b-8e6f-caf2f52c555d"
-                LastKnownName="Strategy"
-                LastKnownLocation="GUIModeling.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="27a688ef-d164-4e2f-a725-7c181af4c03a"
-                LastKnownName="ExecutionOccurrenceSpecification44"
-                LastKnownLocation="GUIModeling.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="ec1d4c81-3a64-4eb2-8f90-292a04f28fa0"
-                LastKnownName="ExecutionOccurrenceSpecification43"
-                LastKnownLocation="GUIModeling.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="c813e026-6e4d-4aca-ae08-5b5f3e88a4ef"
-                LastKnownName="MessageOccurrenceSpecification42"
-                LastKnownLocation="GUIModeling.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="ec1d4c81-3a64-4eb2-8f90-292a04f28fa0"
-            name="ExecutionOccurrenceSpecification43">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="ba050aec-2da5-4d2c-9a94-ba5c21bb8ed6"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="f8010952-59b1-421b-8e6f-caf2f52c555d"
-                LastKnownName="Strategy"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="c813e026-6e4d-4aca-ae08-5b5f3e88a4ef"
-            name="MessageOccurrenceSpecification42">
-            <covered>
-              <lifelineMoniker
-                Id="f8010952-59b1-421b-8e6f-caf2f52c555d"
-                LastKnownName="Strategy"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="e12d7c40-3ca7-4653-8598-24873877ed01"
-            name="MessageOccurrenceSpecification41">
-            <covered>
-              <lifelineMoniker
-                Id="5b25b13b-c8c2-4d91-b463-82f2eb9a7e16"
-                LastKnownName="GUI"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="6199200a-aeb3-417f-9522-a68a1de06e31"
-            name="ExecutionOccurrenceSpecification50">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="509844ee-3829-45a7-bcc6-72312cf9aa8e"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="d7bd438f-bfbe-46c6-8f39-df9a77fdee18"
-                LastKnownName="Video"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="58981703-956f-4174-81c7-b68a12eec4e0"
-            name="ExecutionOccurrenceSpecification40">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="e9963c26-b3b0-4360-a92d-a0dc3bae9394"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="5b25b13b-c8c2-4d91-b463-82f2eb9a7e16"
-                LastKnownName="GUI"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="27a688ef-d164-4e2f-a725-7c181af4c03a"
-            name="ExecutionOccurrenceSpecification44">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="cc158e2f-3f82-404a-b137-e47a684be0f4"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="f8010952-59b1-421b-8e6f-caf2f52c555d"
-                LastKnownName="Strategy"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="f23e7518-6bfb-46fe-bcdf-3e863bfe99fd"
-            name="ExecutionOccurrenceSpecification34">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="7b799e69-48e0-4a50-ab30-a82e6065d5e7"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="f8010952-59b1-421b-8e6f-caf2f52c555d"
-                LastKnownName="Strategy"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="90871586-5ab5-4b25-9512-a5c4b9388121"
-            name="MessageOccurrenceSpecification47">
-            <covered>
-              <lifelineMoniker
-                Id="d1c33eab-c783-4d5e-a0d2-253365251676"
-                LastKnownName="Timer"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <lostFoundTarget
-            Id="ed23f6e8-ff30-40f6-b817-0bc957d91a44"
-            name="LostFoundTarget5" />
-          <executionOccurrenceSpecification
-            Id="2fd96a37-3b4a-4c15-a44e-543626ac7377"
-            name="ExecutionOccurrenceSpecification16">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="315bdb8f-c0e0-49d6-be0d-80ebc33b12f0"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="GUIModeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="d1c33eab-c783-4d5e-a0d2-253365251676"
-                LastKnownName="Timer"
-                LastKnownLocation="GUIModeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-        </fragments>
-        <lifelines>
-          <lifeline
-            Id="d1c33eab-c783-4d5e-a0d2-253365251676"
-            name="Timer"
-            isActor="false"
-            lifelineDisplayName="Timer">
-            <topLevelOccurrences>
-              <executionOccurrenceSpecificationMoniker
-                Id="84a0f0d9-6236-4010-a193-2a4a3e693cc7"
-                LastKnownName="ExecutionOccurrenceSpecification15"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="2fd96a37-3b4a-4c15-a44e-543626ac7377"
-                LastKnownName="ExecutionOccurrenceSpecification16"
-                LastKnownLocation="GUIModeling.uml" />
-            </topLevelOccurrences>
-          </lifeline>
-          <lifeline
-            Id="d7bd438f-bfbe-46c6-8f39-df9a77fdee18"
-            name="Video"
-            isActor="false"
-            lifelineDisplayName="Video">
-            <topLevelOccurrences>
-              <executionOccurrenceSpecificationMoniker
-                Id="d4a893b3-462f-494a-a5e5-589cacf54207"
-                LastKnownName="ExecutionOccurrenceSpecification9"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="2a42fb9c-e7fe-4cd0-99a2-c263a7e57ad0"
-                LastKnownName="ExecutionOccurrenceSpecification10"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="fc73c37d-4396-47e6-9bf2-34f37756d54e"
-                LastKnownName="ExecutionOccurrenceSpecification7"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="87fbd37e-f35a-4102-981f-19aa32e445ce"
-                LastKnownName="ExecutionOccurrenceSpecification8"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="da3e9a85-8000-4376-ac6d-00983224fbfb"
-                LastKnownName="ExecutionOccurrenceSpecification47"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="3a212d44-568e-4405-9319-b805b38a60de"
-                LastKnownName="ExecutionOccurrenceSpecification48"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="7b67a3e2-bd5d-415a-b632-9eaa77addd77"
-                LastKnownName="ExecutionOccurrenceSpecification49"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="6199200a-aeb3-417f-9522-a68a1de06e31"
-                LastKnownName="ExecutionOccurrenceSpecification50"
-                LastKnownLocation="GUIModeling.uml" />
-            </topLevelOccurrences>
-          </lifeline>
-          <lifeline
-            Id="bbc43301-8c12-4aa7-ae43-32e6ed2bbca5"
-            name="Missile Launcher"
-            isActor="false"
-            lifelineDisplayName="Missile Launcher">
-            <topLevelOccurrences>
-              <executionOccurrenceSpecificationMoniker
-                Id="70b7d5a7-6b94-4c95-87da-a11b1fd0413f"
-                LastKnownName="ExecutionOccurrenceSpecification35"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="c430b261-1ceb-4b1e-a069-c29193cbae60"
-                LastKnownName="ExecutionOccurrenceSpecification36"
-                LastKnownLocation="GUIModeling.uml" />
-            </topLevelOccurrences>
-          </lifeline>
-          <lifeline
-            Id="5b25b13b-c8c2-4d91-b463-82f2eb9a7e16"
-            name="GUI"
-            isActor="false"
-            lifelineDisplayName="GUI">
-            <topLevelOccurrences>
-              <executionOccurrenceSpecificationMoniker
-                Id="d5f91334-9fa8-45b2-a726-a961d605c92c"
-                LastKnownName="ExecutionOccurrenceSpecification1"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="ffbcf287-7aed-42aa-a3b9-ad80e3850f93"
-                LastKnownName="ExecutionOccurrenceSpecification2"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="1d58dbeb-18ce-4490-bd99-0ce66fef14c6"
-                LastKnownName="ExecutionOccurrenceSpecification13"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="8d748e9c-0e4c-4e7d-a03e-6e801a0cf982"
-                LastKnownName="ExecutionOccurrenceSpecification14"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="7fd27f69-0af7-4e09-93cd-a56605f3fb6f"
-                LastKnownName="ExecutionOccurrenceSpecification39"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="58981703-956f-4174-81c7-b68a12eec4e0"
-                LastKnownName="ExecutionOccurrenceSpecification40"
-                LastKnownLocation="GUIModeling.uml" />
-            </topLevelOccurrences>
-          </lifeline>
-          <lifeline
-            Id="fc553558-3425-49dc-8d9d-43e0e2b12741"
-            name="Target Manager"
-            isActor="false"
-            lifelineDisplayName="Target Manager">
-            <topLevelOccurrences>
-              <executionOccurrenceSpecificationMoniker
-                Id="bb79e037-6db7-465f-977d-49a454852eff"
-                LastKnownName="ExecutionOccurrenceSpecification5"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="2996b9f4-b133-4d58-80ba-2a946a0ac307"
-                LastKnownName="ExecutionOccurrenceSpecification6"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="9cd0f164-c17b-4d7c-ad1a-1de518a7c5a4"
-                LastKnownName="ExecutionOccurrenceSpecification11"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="26793efa-0e96-4293-920a-81382280e0bd"
-                LastKnownName="ExecutionOccurrenceSpecification12"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="59565886-ea82-46ec-8510-90838394eed7"
-                LastKnownName="ExecutionOccurrenceSpecification37"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="ece7fb7f-07a3-4e6c-92da-f8fc67087019"
-                LastKnownName="ExecutionOccurrenceSpecification38"
-                LastKnownLocation="GUIModeling.uml" />
-            </topLevelOccurrences>
-          </lifeline>
-          <lifeline
-            Id="f8010952-59b1-421b-8e6f-caf2f52c555d"
-            name="Strategy"
-            isActor="false"
-            lifelineDisplayName="Strategy">
-            <topLevelOccurrences>
-              <executionOccurrenceSpecificationMoniker
-                Id="3c029801-56db-4450-bfb3-f3b0a8a561b6"
-                LastKnownName="ExecutionOccurrenceSpecification33"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="f23e7518-6bfb-46fe-bcdf-3e863bfe99fd"
-                LastKnownName="ExecutionOccurrenceSpecification34"
-                LastKnownLocation="GUIModeling.uml" />
-            </topLevelOccurrences>
-          </lifeline>
-          <lifeline
-            Id="a4db2bc7-8d0c-44df-9cac-a3b7a78919bf"
-            name="Game Server"
-            isActor="false"
-            lifelineDisplayName="Game Server">
-            <topLevelOccurrences>
-              <executionOccurrenceSpecificationMoniker
-                Id="1a8da7f4-db64-4dfb-b4ff-3d0359d10f02"
-                LastKnownName="ExecutionOccurrenceSpecification3"
-                LastKnownLocation="GUIModeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="7c8de138-7688-4c61-a009-402451829991"
-                LastKnownName="ExecutionOccurrenceSpecification4"
-                LastKnownLocation="GUIModeling.uml" />
-            </topLevelOccurrences>
-          </lifeline>
-        </lifelines>
-        <messages>
-          <message
-            Id="eb5656a9-5533-43c7-ab30-4c8b4e83ebfa"
-            name="Start"
-            messageKind="Found"
-            messageSort="AsynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <lostFoundTargetMoniker
-                Id="8968598f-fc1d-426e-8434-795b79ef21d1"
-                LastKnownName="LostFoundTarget1"
-                LastKnownLocation="GUIModeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="0324023a-b900-48c3-b129-25bc803556a0"
-                LastKnownName="MessageOccurrenceSpecification1"
-                LastKnownLocation="GUIModeling.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="41bfc2a7-2936-4da2-b411-2a300cf60d40"
-            name="Call for targets"
-            messageKind="Complete"
-            messageSort="AsynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="72fd757a-4672-445a-a2ea-0db431e6f19a"
-                LastKnownName="MessageOccurrenceSpecification2"
-                LastKnownLocation="GUIModeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="28de4c54-8245-4c5c-860c-2b2c6fc31e98"
-                LastKnownName="MessageOccurrenceSpecification3"
-                LastKnownLocation="GUIModeling.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="2dcf3d9e-aa56-40c0-abce-0bd896e992ed"
-            name="Start Video"
-            messageKind="Complete"
-            messageSort="AsynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="dede69cf-f37b-48de-83b5-0ef006d02e4f"
-                LastKnownName="MessageOccurrenceSpecification8"
-                LastKnownLocation="GUIModeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="d0748d02-0c47-4ba4-946a-e28d0d101092"
-                LastKnownName="MessageOccurrenceSpecification9"
-                LastKnownLocation="GUIModeling.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="54ed742d-9aeb-4351-85e5-625a4ee8ea38"
-            name="load targets"
-            messageKind="Complete"
-            messageSort="AsynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="284d891d-1b4e-42f0-99bc-74d7c44052d1"
-                LastKnownName="MessageOccurrenceSpecification4"
-                LastKnownLocation="GUIModeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="76f3ae10-ce47-4e69-939a-144cce605182"
-                LastKnownName="MessageOccurrenceSpecification5"
-                LastKnownLocation="GUIModeling.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="04d3929e-a6d7-4852-8c4b-f83ebd2f0c10"
-            name="call for positions"
-            messageKind="Complete"
-            messageSort="AsynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="e12a8444-187a-40e8-a20e-a0d1e245abbe"
-                LastKnownName="MessageOccurrenceSpecification6"
-                LastKnownLocation="GUIModeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="7d705172-9085-42ec-ad6b-3bb75d3f5215"
-                LastKnownName="MessageOccurrenceSpecification7"
-                LastKnownLocation="GUIModeling.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="46415fbd-8119-4897-87a1-685c9cbb7f90"
-            name="Update positions"
-            messageKind="Complete"
-            messageSort="AsynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="11db4b37-915b-4244-9945-00b304a6358a"
-                LastKnownName="MessageOccurrenceSpecification10"
-                LastKnownLocation="GUIModeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="d08326b3-c483-48e1-ab0c-5b3fb8e56f37"
-                LastKnownName="MessageOccurrenceSpecification11"
-                LastKnownLocation="GUIModeling.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="341dc3e4-82a8-4507-b3c2-e1c1b29d5992"
-            name="Update display"
-            messageKind="Complete"
-            messageSort="AsynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="7ad91f7e-f2dd-43bd-93cd-3faa49582824"
-                LastKnownName="MessageOccurrenceSpecification12"
-                LastKnownLocation="GUIModeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="2abc317d-94d2-497d-b19c-a2231635509e"
-                LastKnownName="MessageOccurrenceSpecification13"
-                LastKnownLocation="GUIModeling.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="254b43d0-74e3-41ad-9140-1b2606216aa8"
-            name="Start Timer"
-            messageKind="Complete"
-            messageSort="AsynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="30fcbcaa-6b9f-4768-82b2-2352014eb6e1"
-                LastKnownName="MessageOccurrenceSpecification14"
-                LastKnownLocation="GUIModeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="5e9cd577-50fd-4815-8ade-066b2d2b04b6"
-                LastKnownName="MessageOccurrenceSpecification15"
-                LastKnownLocation="GUIModeling.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="f9b434ee-3d23-4374-9d9d-90815de1492b"
-            name="start algorithm"
-            messageKind="Complete"
-            messageSort="AsynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="280362cd-f16f-4554-b0b5-43239bd720f0"
-                LastKnownName="MessageOccurrenceSpecification31"
-                LastKnownLocation="GUIModeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="26b1aaa0-6a87-4d66-9aa3-79e0f4e7f528"
-                LastKnownName="MessageOccurrenceSpecification32"
-                LastKnownLocation="GUIModeling.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="9d8673a8-e0bb-4370-96c6-2fe3035c5a99"
-            name="shoot target"
-            messageKind="Complete"
-            messageSort="AsynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="0c9084a3-8db2-49bf-a249-2ad9534c156d"
-                LastKnownName="MessageOccurrenceSpecification33"
-                LastKnownLocation="GUIModeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="41d633aa-c858-4870-9cb7-9d767f544cf7"
-                LastKnownName="MessageOccurrenceSpecification34"
-                LastKnownLocation="GUIModeling.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="45a95ffd-f017-495a-8366-d6e583ae0ee4"
-            name="count down timer"
-            messageKind="Complete"
-            messageSort="AsynchCall"
-            createSelfMessage="true">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="54c77c59-5b00-4711-a764-d4cfb57899c0"
-                LastKnownName="MessageOccurrenceSpecification43"
-                LastKnownLocation="GUIModeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="43c1fc1f-2c44-4727-a7f1-14d917c869dd"
-                LastKnownName="MessageOccurrenceSpecification44"
-                LastKnownLocation="GUIModeling.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="760b9900-69fa-40ec-a900-de971e80e230"
-            name="stop"
-            messageKind="Found"
-            messageSort="AsynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <lostFoundTargetMoniker
-                Id="ee1b2c69-0be1-4ad4-827a-2d6a1944efae"
-                LastKnownName="LostFoundTarget3"
-                LastKnownLocation="GUIModeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="fb873937-49b6-4ddd-9508-bfd39d294658"
-                LastKnownName="MessageOccurrenceSpecification45"
-                LastKnownLocation="GUIModeling.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="bb410cce-36b5-45d9-920b-dcca091f067c"
-            name="update data"
-            messageKind="Complete"
-            messageSort="AsynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="06655ff5-fc0c-49e7-a3b1-e18ced1ba907"
-                LastKnownName="MessageOccurrenceSpecification35"
-                LastKnownLocation="GUIModeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="f84ae4ad-17ff-494b-a5d7-b2511724835e"
-                LastKnownName="MessageOccurrenceSpecification36"
-                LastKnownLocation="GUIModeling.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="dd9e4cef-748d-4187-a37a-70ca363580aa"
-            name="update display"
-            messageKind="Complete"
-            messageSort="AsynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="b110cd8b-f696-4ea0-9e7a-4e366fba3263"
-                LastKnownName="MessageOccurrenceSpecification37"
-                LastKnownLocation="GUIModeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="3ccef216-0f67-42b5-a183-b3a67e650420"
-                LastKnownName="MessageOccurrenceSpecification38"
-                LastKnownLocation="GUIModeling.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="5c507cab-84a6-464a-8324-0d77083b8035"
-            name="start"
-            messageKind="Found"
-            messageSort="AsynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <lostFoundTargetMoniker
-                Id="0532d221-395a-4373-990d-5692f04dc364"
-                LastKnownName="LostFoundTarget4"
-                LastKnownLocation="GUIModeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="e2f342e5-8eca-42a1-b7d8-06ddf70f5291"
-                LastKnownName="MessageOccurrenceSpecification46"
-                LastKnownLocation="GUIModeling.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="e1a4e8d6-d983-446c-9f8a-329498295f20"
-            name="find target"
-            messageKind="Complete"
-            messageSort="AsynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="e12d7c40-3ca7-4653-8598-24873877ed01"
-                LastKnownName="MessageOccurrenceSpecification41"
-                LastKnownLocation="GUIModeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="c813e026-6e4d-4aca-ae08-5b5f3e88a4ef"
-                LastKnownName="MessageOccurrenceSpecification42"
-                LastKnownLocation="GUIModeling.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="b5bcbaaa-2432-47a5-ac28-634619039aaf"
-            name="stop"
-            messageKind="Lost"
-            messageSort="AsynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="90871586-5ab5-4b25-9512-a5c4b9388121"
-                LastKnownName="MessageOccurrenceSpecification47"
-                LastKnownLocation="GUIModeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <lostFoundTargetMoniker
-                Id="ed23f6e8-ff30-40f6-b817-0bc957d91a44"
-                LastKnownName="LostFoundTarget5"
-                LastKnownLocation="GUIModeling.uml" />
-            </receiveEvent>
-          </message>
-        </messages>
         <ownedAttributesInternal>
           <property
             Id="95c50d25-1ee4-463f-be50-cea31c3e4f60"
@@ -1995,164 +140,418 @@
       </interaction>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <executionEvent
-        Id="30cddcfd-5d15-4f2f-8516-2d94a58c8f01"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="e1ccdcd0-f870-4d78-b7d0-c7f57c84afaa"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="472a5e6d-d649-420b-aba9-484bcf372061"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="e8819341-76dd-4ab7-b821-2242fa9edcb1"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="9e68cbd9-71e1-45c9-bf5b-8a3653701bda"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="96b5a4f2-0996-467e-aa72-c30b12bc05f5"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="705d7c08-73bc-4ffd-9722-3f2c440825b2"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="9ded608b-3956-4aa4-967c-9d3af6b31a57"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="7441eb81-ae79-44c7-9909-e0d2b8140970"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="19c225fd-6ba9-4b3d-a953-152ecd90c6c5"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="05e5aca0-64f4-4934-bb86-cb6f3c389573"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="ffa557a9-fd41-4d6f-a860-e94d63feff4d"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="86ede305-5ed4-4733-a7ce-b1f7c33bd05d"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="a1b2ee5e-d052-4956-8482-35807ce2cb72"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="8bd8eb77-81ae-4161-866d-3318d0426423"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="315bdb8f-c0e0-49d6-be0d-80ebc33b12f0"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="d8cdd57c-4f7b-4ed6-9101-115fbf40307f"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="7b799e69-48e0-4a50-ab30-a82e6065d5e7"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="c75e8839-9bf7-48e2-98c4-83679c39dda3"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="bf874274-186c-47b4-b54a-78ffced21e64"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="1eb01c60-19cc-4f15-9664-2f75f55ed2ea"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="616cbb32-5f98-4ad2-b702-7a4907ed8789"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="41282d4a-fa93-4108-adaf-cd0121a252e6"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="e9963c26-b3b0-4360-a92d-a0dc3bae9394"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="ba050aec-2da5-4d2c-9a94-ba5c21bb8ed6"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="cc158e2f-3f82-404a-b137-e47a684be0f4"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="2e235beb-ac51-4066-8c95-419ae555e7ac"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="c15be275-acf4-403e-a4bf-2653ef301a38"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="f85178d8-3b38-4c24-8b7d-aa10d17ea334"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="aa22beef-9c88-412a-a771-229b38217fe2"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="cc93584e-f15e-4246-bf32-26134c93f930"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="509844ee-3829-45a7-bcc6-72312cf9aa8e"
-        name="ExecutionEvent" />
+      <activity
+        Id="5acf8c35-c49b-4420-9e53-99f31db80c0c"
+        name="Iteration4ActivityDiagram"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="737a9c23-48a3-42b7-a587-d8f903d05f06"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ffade96b-2bca-4583-a6bf-5ea5d51e1f99"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="50ca4e30-a9ad-414a-870d-e243989d3057"
+                  LastKnownName="User selects missile launcher type"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="50ca4e30-a9ad-414a-870d-e243989d3057"
+            name="User selects missile launcher type"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="90471eec-313f-4d16-a0de-2625ed8da85c"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="431a7f10-723b-4869-a759-a2a0e6aa00ef"
+                  LastKnownName="Main Window is initialized"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="c01df1db-fdb8-48fc-a9cc-7a396b302cc9"
+            name="Camera is turned on and in a ready state"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b02c9ed4-289d-4924-9455-291479c49e3d"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="28920df0-3cc2-488b-97ff-ef3055c62fc9"
+                  LastKnownName="Main window is awaiting action. "
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="431a7f10-723b-4869-a759-a2a0e6aa00ef"
+            name="Main Window is initialized"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f31be351-d60d-495d-95f7-2aea6f3ced97"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c01df1db-fdb8-48fc-a9cc-7a396b302cc9"
+                  LastKnownName="Camera is turned on and in a ready state"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="0a74e016-48a6-48bc-952b-3396536e1d66"
+            name="Video displayed on user interface"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f5e17474-2c4b-4d71-bbba-4d586f7ac460"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="0a74e016-48a6-48bc-952b-3396536e1d66"
+                  LastKnownName="Video displayed on user interface"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="655d45d9-df16-4161-910a-dd78f299d331"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="06ca88b3-970c-4799-85a0-0283446df5ef"
+                  LastKnownName="User selects &quot;Stop&quot;"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="06ca88b3-970c-4799-85a0-0283446df5ef"
+            name="User selects &quot;Stop&quot;"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ac74a6b0-d29b-4190-bb17-308c4d017e61"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c01df1db-fdb8-48fc-a9cc-7a396b302cc9"
+                  LastKnownName="Camera is turned on and in a ready state"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="54bd08d1-8fe0-4086-a12e-c46b70d16f8e"
+            name="App connects to game server"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="875eab7e-04bb-489f-aac1-e1052f775847"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="5d088fbd-e03f-445a-a714-87e68b616767"
+                  LastKnownName="Game is selected"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="5d088fbd-e03f-445a-a714-87e68b616767"
+            name="Game is selected"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="539258bc-bfb5-482c-9877-242b3eda1c51"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8bc7a1d5-ab3a-484a-9320-9f8c926d91ce"
+                  LastKnownName="Targets are loaded from Server"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="8bc7a1d5-ab3a-484a-9320-9f8c926d91ce"
+            name="Targets are loaded from Server"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4c09d554-8f41-47fd-a77d-048f74f0faa4"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8de010e5-9bdc-4e01-80b6-ee1789e93948"
+                  LastKnownName="User starts game"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="8de010e5-9bdc-4e01-80b6-ee1789e93948"
+            name="User starts game"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="429e42ab-5c14-4e05-bba7-f8dcb1f9e7b7"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="4a0c517b-313b-4548-9eaf-7140d1986f8a"
+                  LastKnownName="Game starts in automatic mode"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="4a0c517b-313b-4548-9eaf-7140d1986f8a"
+            name="Game starts in automatic mode"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3079cc03-7a3e-41a2-9a9f-e3d471183971"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="57b6cfa6-081d-41b7-a9e2-92a0fce9dd25"
+                  LastKnownName="Fork5"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="aa4eb7fd-dd3f-4bbf-af90-8d14b0a2962d"
+            name="Fire at target"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="a167770d-d0ce-4578-8409-665205f32103"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="cc6b64ac-6bc7-458d-aae8-f2630ee8e1dd"
+                  LastKnownName="Decision8"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="38e67e8a-8a0b-477f-ba2d-277927b0dad4"
+            name="Game Timer Thread Starts"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e3dd6e9c-9f24-4fb4-84ab-b0327ada917f"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="3f180a1c-2e1b-4174-90cf-af47f693186b"
+                  LastKnownName="Time is displayed on screen for current game"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="28920df0-3cc2-488b-97ff-ef3055c62fc9"
+            name="Main window is awaiting action. "
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4ad83092-4ffb-4067-995a-8f64326fca32"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="54bd08d1-8fe0-4086-a12e-c46b70d16f8e"
+                  LastKnownName="App connects to game server"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="1f5c0dd8-fd51-48cf-abc7-e3af14d09c6c"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="e13488e2-b36b-44eb-a9c2-73f4ed1bdb7e"
+                  LastKnownName="Decision9"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="3f180a1c-2e1b-4174-90cf-af47f693186b"
+            name="Time is displayed on screen for current game"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="fd85dd16-eea3-4713-9247-d356d2fc6727"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="f1537310-8a4d-4490-8bfd-c72d76666b47"
+                  LastKnownName="Decision7"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode
+            Id="57b6cfa6-081d-41b7-a9e2-92a0fce9dd25"
+            name="Fork5"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3903baeb-33d5-4df9-ba3f-8cebe17f671c"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="38e67e8a-8a0b-477f-ba2d-277927b0dad4"
+                  LastKnownName="Game Timer Thread Starts"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="c5ecf095-5077-42f9-a066-aa8024a9d3eb"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="078e7bd4-8f12-49e5-a412-b7f68ea6e76d"
+                  LastKnownName="Decision6"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction
+            Id="2fcbafed-8fc9-41af-b478-c1b2b84d0b5a"
+            name="Move launcher to target position based on strategy"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="bfb5d9d5-e935-4dd1-8622-36167e960d29"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="aa4eb7fd-dd3f-4bbf-af90-8d14b0a2962d"
+                  LastKnownName="Fire at target"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="f1537310-8a4d-4490-8bfd-c72d76666b47"
+            name="Decision7"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="780e2074-3e0d-4075-a39c-25ad92650316"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="3f180a1c-2e1b-4174-90cf-af47f693186b"
+                  LastKnownName="Time is displayed on screen for current game"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="71407a37-9f6c-46eb-ab7f-3d4e4d7c42ee"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="ec12ee6d-8bb3-4301-9552-9de30e5d5af7"
+                  LastKnownName="Join2"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode
+            Id="cc6b64ac-6bc7-458d-aae8-f2630ee8e1dd"
+            name="Decision8"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e27a2f83-7a40-49da-927f-da1e17766b3d"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="360328b7-fd48-4d85-b6f6-34ec40708a98"
+                  LastKnownName="Reload"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="360328b7-fd48-4d85-b6f6-34ec40708a98"
+            name="Reload"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="314001be-afee-40c8-b260-ac62ba08095a"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="2fcbafed-8fc9-41af-b478-c1b2b84d0b5a"
+                  LastKnownName="Move launcher to target position based on strategy"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="078e7bd4-8f12-49e5-a412-b7f68ea6e76d"
+            name="Decision6"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="76dff148-560e-4aab-8c0a-6b4e060bdaca"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="2fcbafed-8fc9-41af-b478-c1b2b84d0b5a"
+                  LastKnownName="Move launcher to target position based on strategy"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="0c0935a9-0263-454d-9fb1-85ca669ec762"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="ec12ee6d-8bb3-4301-9552-9de30e5d5af7"
+                  LastKnownName="Join2"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode
+            Id="e13488e2-b36b-44eb-a9c2-73f4ed1bdb7e"
+            name="Decision9"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="47f3d746-2070-446e-af58-e412a18e208f"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="8549c7fa-a28a-48f8-b8d1-d28552016926"
+                  LastKnownName="Fork2"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <forkNode
+            Id="8549c7fa-a28a-48f8-b8d1-d28552016926"
+            name="Fork2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5b3ee5c7-d84f-4a2d-a954-ef736de93205"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="0a74e016-48a6-48bc-952b-3396536e1d66"
+                  LastKnownName="Video displayed on user interface"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <joinNode
+            Id="ec12ee6d-8bb3-4301-9552-9de30e5d5af7"
+            name="Join2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="cda33fc9-7165-4165-8e86-61968b294812"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8de010e5-9bdc-4e01-80b6-ee1789e93948"
+                  LastKnownName="User starts game"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+        </nodes>
+      </activity>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
