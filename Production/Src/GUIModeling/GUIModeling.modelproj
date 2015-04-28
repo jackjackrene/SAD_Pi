@@ -125,6 +125,13 @@
     <Content Include="ModelDefinition\Package_1711.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="SadPieComponentDiagram.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SadPieComponentDiagram.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SadPieComponentDiagram.componentdiagram</DependentUpon>
+    </Content>
     <Content Include="SequenceDiagram.sequencediagram">
       <SubType>Content</SubType>
     </Content>
