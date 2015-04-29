@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="beada040-8da8-42af-b815-e1b5308d7c21" name="Iteration4ActivityDiagram" linkedPackageId="a0bb5fb5-e6fa-499d-b26c-d72400228c4d" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="783bc8e7-4246-4a81-bb3c-91d7874fb2c5">
+      <elementDefinition Id="f19cff6f-f447-455c-be0f-5a52144bd16b" />
+      <body>Application Startup
+</body>
+    </comment>
+    <comment Id="7d4fbfd9-147f-488d-aa6a-7c8788360121">
+      <elementDefinition Id="e4a99944-627d-4a18-ae30-8e7283153187" />
+      <body>If launcher is out of ammo. </body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="31790402-c989-4afe-ba50-2ff37f85ee08" LastKnownName="Decision8" />
+      </annotatedElements>
+    </comment>
+    <comment Id="a3090815-9845-4a73-9c0a-eac3523618a6">
+      <elementDefinition Id="b7716ac5-c374-44cb-94b9-e4ff310602c4" />
+      <body>If the game ends
+</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="ffbadccc-c03c-4bca-89f6-874970884aef" LastKnownName="Decision7" />
+      </annotatedElements>
+    </comment>
+    <comment Id="71c1d0c4-4198-4c1f-a547-34078bf2ebf5">
+      <elementDefinition Id="ab9b06fe-a7fc-4093-b15e-d7f6785234ba" />
+      <body>If the game ends
+</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="9868b860-0fd8-413e-94b0-483423f0862a" LastKnownName="Decision6" />
+      </annotatedElements>
+    </comment>
+    <comment Id="676d2dc7-1d9c-42d2-af94-d99af4080c7a">
+      <elementDefinition Id="0d313480-c55d-40ee-a48e-7ba70dc417fd" />
+      <body>If user clicks "start" video
+</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="9c93735d-0355-45f7-85fe-23626ab6f1bf" LastKnownName="Decision9" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="4bb8a375-9603-4404-9dc7-b0193cc1b3c9" name="Iteration4ActivityDiagram" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="5acf8c35-c49b-4420-9e53-99f31db80c0c" />
+        <nodes>
+          <initialNode Id="63184a1a-e190-4dee-bc6e-96bfb73a35c9" name="Initial1" isLeaf="false">
+            <elementDefinition Id="737a9c23-48a3-42b7-a587-d8f903d05f06" />
+            <flowNodeTargets>
+              <controlFlow Id="cdffb6a1-421f-440b-a699-21fdade5148b" isLeaf="false">
+                <opaqueActionMoniker Id="81ebfb2c-7bfd-466e-bb89-05b9f63b04ed" LastKnownName="User selects missile launcher type" />
+                <elementDefinition Id="ffade96b-2bca-4583-a6bf-5ea5d51e1f99" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="81ebfb2c-7bfd-466e-bb89-05b9f63b04ed" name="User selects missile launcher type" isLeaf="false">
+            <elementDefinition Id="50ca4e30-a9ad-414a-870d-e243989d3057" />
+            <flowNodeTargets>
+              <controlFlow Id="a22f766e-9aed-4fbc-89cf-42a84afb5838" isLeaf="false">
+                <opaqueActionMoniker Id="a7e809c4-45cb-4b78-b065-6d94bc70ce9b" LastKnownName="Main Window is initialized" />
+                <elementDefinition Id="90471eec-313f-4d16-a0de-2625ed8da85c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="dba3290b-b8bb-400f-8b81-49e48a7aae09" name="Camera is turned on and in a ready state" isLeaf="false">
+            <elementDefinition Id="c01df1db-fdb8-48fc-a9cc-7a396b302cc9" />
+            <flowNodeTargets>
+              <controlFlow Id="418db16d-7d9c-4e0b-bc52-2c9c824622d8" isLeaf="false">
+                <opaqueActionMoniker Id="e3645ab0-acdf-41fe-a73a-f7fcb2c473d5" LastKnownName="Main window is awaiting action. " />
+                <elementDefinition Id="b02c9ed4-289d-4924-9455-291479c49e3d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="a7e809c4-45cb-4b78-b065-6d94bc70ce9b" name="Main Window is initialized" isLeaf="false">
+            <elementDefinition Id="431a7f10-723b-4869-a759-a2a0e6aa00ef" />
+            <flowNodeTargets>
+              <controlFlow Id="ada88546-100e-450b-9d9b-3e921ecaa5c2" isLeaf="false">
+                <opaqueActionMoniker Id="dba3290b-b8bb-400f-8b81-49e48a7aae09" LastKnownName="Camera is turned on and in a ready state" />
+                <elementDefinition Id="f31be351-d60d-495d-95f7-2aea6f3ced97" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="7567a177-df11-45de-9ab7-529566f1d5b4" name="Video displayed on user interface" isLeaf="false">
+            <elementDefinition Id="0a74e016-48a6-48bc-952b-3396536e1d66" />
+            <flowNodeTargets>
+              <controlFlow Id="20108150-2e9d-45f2-b5d6-6359c06c3918" isLeaf="false">
+                <opaqueActionMoniker Id="7567a177-df11-45de-9ab7-529566f1d5b4" LastKnownName="Video displayed on user interface" />
+                <elementDefinition Id="f5e17474-2c4b-4d71-bbba-4d586f7ac460" />
+              </controlFlow>
+              <controlFlow Id="a7cba824-d963-419b-9306-82100c448e95" isLeaf="false">
+                <opaqueActionMoniker Id="3ad3880d-8c0d-4fa6-9ad9-69f2b34abe9c" LastKnownName="User selects &quot;Stop&quot;" />
+                <elementDefinition Id="655d45d9-df16-4161-910a-dd78f299d331" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="3ad3880d-8c0d-4fa6-9ad9-69f2b34abe9c" name="User selects &quot;Stop&quot;" isLeaf="false">
+            <elementDefinition Id="06ca88b3-970c-4799-85a0-0283446df5ef" />
+            <flowNodeTargets>
+              <controlFlow Id="fe85a47d-3d53-46b3-b641-8e34f6729ea1" isLeaf="false">
+                <opaqueActionMoniker Id="dba3290b-b8bb-400f-8b81-49e48a7aae09" LastKnownName="Camera is turned on and in a ready state" />
+                <elementDefinition Id="ac74a6b0-d29b-4190-bb17-308c4d017e61" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="28901e01-975f-4e79-9238-167231db1fe2" name="App connects to game server" isLeaf="false">
+            <elementDefinition Id="54bd08d1-8fe0-4086-a12e-c46b70d16f8e" />
+            <flowNodeTargets>
+              <controlFlow Id="a594ef58-f63c-4f13-a463-904bdfa21446" isLeaf="false">
+                <opaqueActionMoniker Id="4e3bbf28-389e-481a-878b-752a728e0d84" LastKnownName="Game is selected" />
+                <elementDefinition Id="875eab7e-04bb-489f-aac1-e1052f775847" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="4e3bbf28-389e-481a-878b-752a728e0d84" name="Game is selected" isLeaf="false">
+            <elementDefinition Id="5d088fbd-e03f-445a-a714-87e68b616767" />
+            <flowNodeTargets>
+              <controlFlow Id="96eb5f95-698d-4f5f-9b65-c323ea83e09c" isLeaf="false">
+                <opaqueActionMoniker Id="37315a8b-6130-4825-850b-b466793db997" LastKnownName="Targets are loaded from Server" />
+                <elementDefinition Id="539258bc-bfb5-482c-9877-242b3eda1c51" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="37315a8b-6130-4825-850b-b466793db997" name="Targets are loaded from Server" isLeaf="false">
+            <elementDefinition Id="8bc7a1d5-ab3a-484a-9320-9f8c926d91ce" />
+            <flowNodeTargets>
+              <controlFlow Id="49145b84-2b76-47e6-9d6c-b16ac9dccb16" isLeaf="false">
+                <opaqueActionMoniker Id="b1350aab-7e29-43f2-b1df-74109bc1edf0" LastKnownName="User starts game" />
+                <elementDefinition Id="4c09d554-8f41-47fd-a77d-048f74f0faa4" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="b1350aab-7e29-43f2-b1df-74109bc1edf0" name="User starts game" isLeaf="false">
+            <elementDefinition Id="8de010e5-9bdc-4e01-80b6-ee1789e93948" />
+            <flowNodeTargets>
+              <controlFlow Id="d2ba1920-5eba-4d5a-800e-fd7ef02fd1b0" isLeaf="false">
+                <opaqueActionMoniker Id="26515b7d-20a8-4484-add9-f7e2f5c5564c" LastKnownName="Game starts in automatic mode" />
+                <elementDefinition Id="429e42ab-5c14-4e05-bba7-f8dcb1f9e7b7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="26515b7d-20a8-4484-add9-f7e2f5c5564c" name="Game starts in automatic mode" isLeaf="false">
+            <elementDefinition Id="4a0c517b-313b-4548-9eaf-7140d1986f8a" />
+            <flowNodeTargets>
+              <controlFlow Id="c0b2d9ac-9399-4c55-b564-ef491bc2cb00" isLeaf="false">
+                <forkNodeMoniker Id="6501ba95-08b9-45ff-9368-6049706611a1" LastKnownName="Fork5" />
+                <elementDefinition Id="3079cc03-7a3e-41a2-9a9f-e3d471183971" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="193235a4-903b-4a92-a771-109c6013e06b" name="Fire at target" isLeaf="false">
+            <elementDefinition Id="aa4eb7fd-dd3f-4bbf-af90-8d14b0a2962d" />
+            <flowNodeTargets>
+              <controlFlow Id="0927d662-988b-4bba-a395-f3fceaa79b3a" isLeaf="false">
+                <decisionNodeMoniker Id="31790402-c989-4afe-ba50-2ff37f85ee08" LastKnownName="Decision8" />
+                <elementDefinition Id="a167770d-d0ce-4578-8409-665205f32103" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="0e150089-2d30-4efc-be98-df6ab042b0dc" name="Game Timer Thread Starts" isLeaf="false">
+            <elementDefinition Id="38e67e8a-8a0b-477f-ba2d-277927b0dad4" />
+            <flowNodeTargets>
+              <controlFlow Id="12ba8d65-2486-4436-a495-499ad29a9e96" isLeaf="false">
+                <opaqueActionMoniker Id="d5dbca62-4286-4819-9d23-867c6d4e4d60" LastKnownName="Time is displayed on screen for current game" />
+                <elementDefinition Id="e3dd6e9c-9f24-4fb4-84ab-b0327ada917f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="e3645ab0-acdf-41fe-a73a-f7fcb2c473d5" name="Main window is awaiting action. " isLeaf="false">
+            <elementDefinition Id="28920df0-3cc2-488b-97ff-ef3055c62fc9" />
+            <flowNodeTargets>
+              <controlFlow Id="70ef0ac2-a231-4ccc-a937-80256a0c453a" isLeaf="false">
+                <opaqueActionMoniker Id="28901e01-975f-4e79-9238-167231db1fe2" LastKnownName="App connects to game server" />
+                <elementDefinition Id="4ad83092-4ffb-4067-995a-8f64326fca32" />
+              </controlFlow>
+              <controlFlow Id="51ab63f1-c11f-44f5-a109-8eed2825d4e6" isLeaf="false">
+                <decisionNodeMoniker Id="9c93735d-0355-45f7-85fe-23626ab6f1bf" LastKnownName="Decision9" />
+                <elementDefinition Id="1f5c0dd8-fd51-48cf-abc7-e3af14d09c6c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="d5dbca62-4286-4819-9d23-867c6d4e4d60" name="Time is displayed on screen for current game" isLeaf="false">
+            <elementDefinition Id="3f180a1c-2e1b-4174-90cf-af47f693186b" />
+            <flowNodeTargets>
+              <controlFlow Id="224d3e03-2f3f-4613-85a5-e5223b228767" isLeaf="false">
+                <decisionNodeMoniker Id="ffbadccc-c03c-4bca-89f6-874970884aef" LastKnownName="Decision7" />
+                <elementDefinition Id="fd85dd16-eea3-4713-9247-d356d2fc6727" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode Id="6501ba95-08b9-45ff-9368-6049706611a1" name="Fork5" isLeaf="false">
+            <elementDefinition Id="57b6cfa6-081d-41b7-a9e2-92a0fce9dd25" />
+            <flowNodeTargets>
+              <controlFlow Id="777ec5e2-e4fd-4927-a04a-8dd561f4ebf7" isLeaf="false">
+                <opaqueActionMoniker Id="0e150089-2d30-4efc-be98-df6ab042b0dc" LastKnownName="Game Timer Thread Starts" />
+                <elementDefinition Id="3903baeb-33d5-4df9-ba3f-8cebe17f671c" />
+              </controlFlow>
+              <controlFlow Id="f09a67a9-e510-4b26-8a92-a53f4d50dcbb" isLeaf="false">
+                <decisionNodeMoniker Id="9868b860-0fd8-413e-94b0-483423f0862a" LastKnownName="Decision6" />
+                <elementDefinition Id="c5ecf095-5077-42f9-a066-aa8024a9d3eb" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction Id="d105af9c-e805-46a6-80e3-ae0980bd8dff" name="Move launcher to target position based on strategy" isLeaf="false">
+            <elementDefinition Id="2fcbafed-8fc9-41af-b478-c1b2b84d0b5a" />
+            <flowNodeTargets>
+              <controlFlow Id="6d38a1ba-434f-4be8-be3f-64bb81cafeeb" isLeaf="false">
+                <opaqueActionMoniker Id="193235a4-903b-4a92-a771-109c6013e06b" LastKnownName="Fire at target" />
+                <elementDefinition Id="bfb5d9d5-e935-4dd1-8622-36167e960d29" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="ffbadccc-c03c-4bca-89f6-874970884aef" name="Decision7" isLeaf="false">
+            <elementDefinition Id="f1537310-8a4d-4490-8bfd-c72d76666b47" />
+            <flowNodeTargets>
+              <controlFlow Id="7b1e57e4-4e68-4f33-8988-93974da495a5" isLeaf="false">
+                <opaqueActionMoniker Id="d5dbca62-4286-4819-9d23-867c6d4e4d60" LastKnownName="Time is displayed on screen for current game" />
+                <elementDefinition Id="780e2074-3e0d-4075-a39c-25ad92650316" />
+              </controlFlow>
+              <controlFlow Id="5fbf2f8c-8683-40f4-9c60-bc32690e3a32" isLeaf="false">
+                <joinNodeMoniker Id="ed05d7aa-d295-47e9-8bc8-25452b5deb2f" LastKnownName="Join2" />
+                <elementDefinition Id="71407a37-9f6c-46eb-ab7f-3d4e4d7c42ee" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode Id="31790402-c989-4afe-ba50-2ff37f85ee08" name="Decision8" isLeaf="false">
+            <elementDefinition Id="cc6b64ac-6bc7-458d-aae8-f2630ee8e1dd" />
+            <flowNodeTargets>
+              <controlFlow Id="7d40164e-1820-42c1-be5d-906fde61c320" isLeaf="false">
+                <opaqueActionMoniker Id="efc58a01-fc50-4742-82a4-92f1c5b926b8" LastKnownName="Reload" />
+                <elementDefinition Id="e27a2f83-7a40-49da-927f-da1e17766b3d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="efc58a01-fc50-4742-82a4-92f1c5b926b8" name="Reload" isLeaf="false">
+            <elementDefinition Id="360328b7-fd48-4d85-b6f6-34ec40708a98" />
+            <flowNodeTargets>
+              <controlFlow Id="9d050cf8-468d-42d8-9ad7-58ae4cf8fc55" isLeaf="false">
+                <opaqueActionMoniker Id="d105af9c-e805-46a6-80e3-ae0980bd8dff" LastKnownName="Move launcher to target position based on strategy" />
+                <elementDefinition Id="314001be-afee-40c8-b260-ac62ba08095a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="9868b860-0fd8-413e-94b0-483423f0862a" name="Decision6" isLeaf="false">
+            <elementDefinition Id="078e7bd4-8f12-49e5-a412-b7f68ea6e76d" />
+            <flowNodeTargets>
+              <controlFlow Id="3663ff4d-8cd2-4dcb-a7cb-24b782ca80f4" isLeaf="false">
+                <opaqueActionMoniker Id="d105af9c-e805-46a6-80e3-ae0980bd8dff" LastKnownName="Move launcher to target position based on strategy" />
+                <elementDefinition Id="76dff148-560e-4aab-8c0a-6b4e060bdaca" />
+              </controlFlow>
+              <controlFlow Id="ffc51e7f-7711-4928-8178-b0fd149ea7e6" isLeaf="false">
+                <joinNodeMoniker Id="ed05d7aa-d295-47e9-8bc8-25452b5deb2f" LastKnownName="Join2" />
+                <elementDefinition Id="0c0935a9-0263-454d-9fb1-85ca669ec762" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode Id="9c93735d-0355-45f7-85fe-23626ab6f1bf" name="Decision9" isLeaf="false">
+            <elementDefinition Id="e13488e2-b36b-44eb-a9c2-73f4ed1bdb7e" />
+            <flowNodeTargets>
+              <controlFlow Id="57206d6b-c179-4772-b5bb-d4029d0baadf" isLeaf="false">
+                <forkNodeMoniker Id="c0747994-9d45-40cf-870f-20b2e9f34c19" LastKnownName="Fork2" />
+                <elementDefinition Id="47f3d746-2070-446e-af58-e412a18e208f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <forkNode Id="c0747994-9d45-40cf-870f-20b2e9f34c19" name="Fork2" isLeaf="false">
+            <elementDefinition Id="8549c7fa-a28a-48f8-b8d1-d28552016926" />
+            <flowNodeTargets>
+              <controlFlow Id="151ef5c9-d5a5-41d7-9cd1-b63195eb0740" isLeaf="false">
+                <opaqueActionMoniker Id="7567a177-df11-45de-9ab7-529566f1d5b4" LastKnownName="Video displayed on user interface" />
+                <elementDefinition Id="5b3ee5c7-d84f-4a2d-a954-ef736de93205" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <joinNode Id="ed05d7aa-d295-47e9-8bc8-25452b5deb2f" name="Join2" isLeaf="false">
+            <elementDefinition Id="ec12ee6d-8bb3-4301-9552-9de30e5d5af7" />
+            <flowNodeTargets>
+              <controlFlow Id="0aeee60e-afc6-45db-9aa5-6d4979076e5e" isLeaf="false">
+                <opaqueActionMoniker Id="b1350aab-7e29-43f2-b1df-74109bc1edf0" LastKnownName="User starts game" />
+                <elementDefinition Id="cda33fc9-7165-4165-8e86-61968b294812" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="a0bb5fb5-e6fa-499d-b26c-d72400228c4d" name="GUIModeling">
+    <elementDefinition Id="d541d7d4-7e57-4ee4-ad09-8f4d4f438368" />
+    <profileInstances>
+      <packageHasProfileInstances Id="e5945952-3fa1-46c5-9956-e4dcfffb720e">
+        <profileInstance Id="4b660774-f565-4aa8-a9ca-a253bb706eb7" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="ec73cf53-9583-4a48-9e68-62ae3800f4a1">
+        <profileInstance Id="64f06a14-e01d-4194-9577-8f15d2da8b90" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="c07c96f5-c84b-4b0e-9a2b-67b3d3de6e0a">
+        <profileInstance Id="767746c0-8987-4808-bb33-bcd6ef67620f" name="CSharpProfile">
+          <elementDefinition Id="73f69f8b-e7c8-44a3-9a72-8e2a0eadc116" />
+        </profileInstance>
+        <elementDefinition Id="e24e8d4a-521d-4c15-8229-3ab05c56dd4e" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>
