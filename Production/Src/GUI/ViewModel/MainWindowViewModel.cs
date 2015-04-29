@@ -25,6 +25,9 @@ namespace GUI.ViewModel
     public class MainWindowViewModel : ReactiveObject
     {
         private string m_title;
+        private string m_ip;
+        private string m_port;
+        private string m_teamName;
         private BitmapSource bitmapImage;
         private readonly Capture capture;
         private bool isRunning;
@@ -60,6 +63,7 @@ namespace GUI.ViewModel
             get { return this.targetListViewModel; }
             set { targetListViewModel = value; this.OnPropertyChanged(); }
         }
+     
 
         /// <summary>
         /// Setting the title for the window
@@ -70,6 +74,33 @@ namespace GUI.ViewModel
             set
             {
                 m_title = value;
+                OnPropertyChanged();
+            }
+        }
+        public string IP
+        {
+            get { return m_ip; }
+            set
+            {
+                m_ip = value;
+                OnPropertyChanged();
+            }
+        }
+        public string Port
+        {
+            get { return m_port; }
+            set
+            {
+                m_port = value;
+                OnPropertyChanged();
+            }
+        }
+        public string TeamName
+        {
+            get { return m_teamName; }
+            set
+            {
+                m_teamName = value;
                 OnPropertyChanged();
             }
         }

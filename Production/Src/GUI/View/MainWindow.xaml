@@ -19,8 +19,9 @@
                     <MenuItem Header="Load Targets From File" Command="{Binding LoadTargetsFromFileCommand}"/>
                 </MenuItem>             
                 <MenuItem Header="Server">
-                    <TextBox Text="Enter IP address" MinWidth="50"></TextBox>
-                    <TextBox Text="Enter port number" MinWidth="50"></TextBox>
+                    <TextBox Text="Enter team name" Name ="TeamName" MinWidth="50"></TextBox>
+                    <TextBox Text="Enter IP address" Name="IPAddress" MinWidth="50"></TextBox>
+                    <TextBox Text="Enter port number" Name="PortNumber" MinWidth="50"></TextBox>
                     <Button>
                         <TextBlock Text="Submit IP and Port"></TextBlock>
                     </Button>
