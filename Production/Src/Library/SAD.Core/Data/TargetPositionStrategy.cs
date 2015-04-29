@@ -35,7 +35,7 @@ namespace SAD.Core
             Capture capture;
             capture = new Capture(0);
             //sourceImage = capture.QueryFrame();
-            var image   = capture.QueryFrame();
+            var image = capture.QueryFrame();
             sourceImageGreen = image.ToBitmap();
             sourceImageRed = image.ToBitmap();
 
@@ -54,7 +54,7 @@ namespace SAD.Core
             foreach (HoughCircle circle in circlesGreen)
             {
                 // process circles
-                
+
             }
 
             // set image to red, find circles

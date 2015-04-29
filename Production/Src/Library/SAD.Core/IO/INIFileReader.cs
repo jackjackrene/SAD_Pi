@@ -167,7 +167,7 @@ namespace SAD.Core
                 countFields[i] = 0;
             }
             target = new Target(Name, x, y, z, Frd, Pts, FR, SR, CSSWH);
-            // SAD.Core.Spherical.ConvertToSphere(target);
+            SAD.Core.Spherical.ConvertToSphere(target);
             TargetList.Add(target);
 
             return TargetList;
