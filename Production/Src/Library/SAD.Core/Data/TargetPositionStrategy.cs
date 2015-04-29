@@ -28,6 +28,11 @@ namespace SAD.Core
             SAD.Core.TargetManager targetManager = SAD.Core.TargetManager.GetInstance();
             List<SAD.Core.Target> TargetList = new List<SAD.Core.Target>();
             TargetList = targetManager.GetAllTargets.ToList();
+            int currentTargetNum = 0;
+            int targetListSize = TargetList.Count;
+            int radius;
+            int x;
+            int y;
 
             // use camera to detect positions
             Bitmap sourceImageGreen;
@@ -54,7 +59,10 @@ namespace SAD.Core
             foreach (HoughCircle circle in circlesGreen)
             {
                 // process circles
-
+                radius = circle.Radius;
+                x = circle.X;
+                y = circle.Y;
+                currentTargetNum++;
             }
 
             // set image to red, find circles
@@ -71,7 +79,9 @@ namespace SAD.Core
             foreach (HoughCircle circle in circlesRed)
             {
                 // process circles
-
+                radius = circle.Radius;
+                x = circle.X;
+                y = circle.Y;
             }
         }
     }

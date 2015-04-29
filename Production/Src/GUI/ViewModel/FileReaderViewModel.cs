@@ -36,6 +36,13 @@ namespace GUI.ViewModel
                 reader.path = openFileBox.FileName;
                 targetManager.TargetList = reader.ReadTargets();
 
+                SAD.Core.ITargetPositionStrategy targetPositionStrategy = new UseCurrentXYZ();
+                CalculatePositions calculatePositions = new CalculatePositions(targetPositionStrategy);
+                calculatePositions.CalculatePhiTheta();
+
+                // var targetPositionStrategy = new UseCurrentXYZ();
+                // var calculatePositions = new CalculatePositions(targetPositionStrategy);
+                // calculatePositions.CalculatePhiTheta();
                 // at this point send out an event or something 
             }
         }

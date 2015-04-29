@@ -41,7 +41,7 @@ namespace GUI.ViewModel
 
             this.TargetListViewModel = new TargetListViewModel();
 
-            this.capture = new Capture();
+            this.capture = new Capture(1);
             cts = new CancellationTokenSource(); // necessary to indicate cancellation of tasks.
             imageBlockingCollection = new BlockingCollection<Image<Bgr, byte>>(); // Acts as a FIFO. Part of the .NET framework as of .NET 4.0. No bounded capacity.
             processBuffer = new BlockingCollection<Image<Bgr, byte>>();
