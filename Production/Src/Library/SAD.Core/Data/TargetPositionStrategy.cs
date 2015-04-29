@@ -63,6 +63,7 @@ namespace SAD.Core
                 x = circle.X;
                 y = circle.Y;
                 currentTargetNum++;
+                // calculate positions and update targets
             }
 
             // set image to red, find circles
@@ -82,6 +83,8 @@ namespace SAD.Core
                 radius = circle.Radius;
                 x = circle.X;
                 y = circle.Y;
+                currentTargetNum++;
+                // calculate positions and update targets
             }
         }
     }
