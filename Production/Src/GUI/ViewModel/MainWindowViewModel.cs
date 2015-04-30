@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +30,10 @@ namespace GUI.ViewModel
         private string m_ip;
         private string m_port;
         private string m_teamName;
+        private string m_game;
+        private string m_selectedGame;
+        private IGameServer m_server;
+
         private BitmapSource bitmapImage;
         private readonly Capture capture;
         private bool isRunning;
@@ -59,23 +65,78 @@ namespace GUI.ViewModel
             this.IsRunning = false;
 
 
-            UpdateServerAttributesCommand = new MyCommand(UpdateServerAttributes);
+            ConnectToGameServerCommand = new MyCommand(ConnectToGameServer);
+         //   GetGameListCommand = new MyCommand(GetGameList);
+            GetTargetsCommand = new MyCommand(GetTargets);
+            StartGameCommand = new MyCommand(StartGame);
+            StopGameCommand = new MyCommand(StopGame);
+
 
         }
-        private void UpdateServerAttributes()
+        /// <summary>
+        ///  Game Server shhhhhhtuff. 
+        /// </summary>
+        private void ConnectToGameServer()
         {
-            IP = m_ip;
-            TeamName = m_teamName;
-            Port = m_port;
+            m_server server = GameServerFactory.Create(GameServerType.WebClient, TeamName, IP, Port);
+            server.StopRunningGame();
+            // Returns an IEnumerable of strings... a collection. 
+            var games = server.RetrieveGameList();
+            foreach(games in games){
+                Games.Add(game);
+            }
         }
+        //private void GetGameList()
+        //{
 
-        // Properties
-        public TargetListViewModel TargetListViewModel
+        //}
+        /// <summary>
+        /// Gets a list of targets for the game that was selected. 
+        /// </summary>
+        private void GetTargets()
         {
-            get { return this.targetListViewModel; }
-            set { targetListViewModel = value; this.OnPropertyChanged(); }
+            if (m_server == null)
+            {
+                return;
+            }
+            if (SelectedGame == null)
+            {
+                return;
+            }
+            // Translate the gameservercommunicatortarget into your own...
+            // Then add to your own collection of targets bound by the view. 
+            var targets = m_server.RetrieveTargetList(SelectedGame);
+            foreach (var target in targets)
+            {
+                Targets.Add(target);
+            }
+
         }
-     
+        private void StartGame()
+        {
+            if (m_server == null)
+            {
+                return;
+            }
+            if (SelectedGame == null)
+            {
+                return;
+            }
+            m_server.StartGame(SelectedGame);
+        }
+        private void StopGame()
+        {
+            if (m_server == null)
+            {
+                return;
+            }
+            if (SelectedGame == null)
+            {
+                return;
+            }
+            m_server.StopGame(SelectedGame);
+        }
+      
 
         /// <summary>
         /// Setting the title for the window
@@ -117,7 +178,37 @@ namespace GUI.ViewModel
                 OnPropertyChanged("TeamName");
             }
         }
+        public string Game
+        {
+            get { return m_game; }
+            set
+            {
+                m_game = value;
+            }
+        }
+        public ObservableCollection<string> Games { get; set; }
+        public string SelectedGame
+        {
+            get { return m_selectedGame; }
+            set
+            {
+                if (value == m_selectedGame)
+                {
+                    return;
+                }
+                m_selectedGame = value;
+                OnPropertyChanged();
+            }
+        }
 
+
+        // Properties
+        public TargetListViewModel TargetListViewModel
+        {
+            get { return this.targetListViewModel; }
+            set { targetListViewModel = value; this.OnPropertyChanged(); }
+        }
+     
         private void StartAcquisition()
         {
             this.IsRunning = true;
@@ -194,7 +285,12 @@ namespace GUI.ViewModel
                 this.RaiseAndSetIfChanged(ref this.bitmapImage, value);
             }
         }
-        public ICommand UpdateServerAttributesCommand { get; set; }
+  
+        public ICommand ConnectToGameServerCommand { get; set; }
+        public ICommand GetGameListCommand { get; set; }
+        public ICommand GetTargetsCommand { get; set; }
+        public ICommand StartGameCommand { get; set; }
+        public ICommand StopGameCommand { get; set; }
 
 
         public ReactiveCommand<object> Start { get; private set; }
