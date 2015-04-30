@@ -11,25 +11,23 @@
     <Grid>
         <DockPanel>
             <DockPanel.DataContext>
-                <viewModel:FileReaderViewModel>  
-                </viewModel:FileReaderViewModel>
+                <viewModel:MainWindowViewModel>  
+                </viewModel:MainWindowViewModel>
             </DockPanel.DataContext>
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="File">
                     <MenuItem Header="Load Targets From File" Command="{Binding LoadTargetsFromFileCommand}"/>
-                </MenuItem>             
+                </MenuItem>
+
                 <MenuItem Header="Server">
-                    <TextBox Text="Enter IP address" MinWidth="50"></TextBox>
-                    <TextBox Text="Enter port number" MinWidth="50"></TextBox>
-                    <Button>
-                        <TextBlock Text="Submit IP and Port"></TextBlock>
-                    </Button>
+                    <TextBox Text="{Binding TeamName}"  Name ="TeamName" MinWidth="50"></TextBox>
+                    <TextBox Text="{Binding IP}" Name="IP" MinWidth="50"></TextBox>
+                    <TextBox Text="{Binding Port}" MinWidth="50"></TextBox>
+                    <MenuItem Header="Submit IP and Port" Command="{Binding UpdateServerAttributesCommand}"></MenuItem>
+
                     <MenuItem Header="Connect to Game Server"/>
                     <MenuItem Header="Start Game"/>
                     <MenuItem Header="End Game"/>
-
-                </MenuItem>
-                <MenuItem Header="Select Game">
                     <ComboBox>
                         
                     </ComboBox>
