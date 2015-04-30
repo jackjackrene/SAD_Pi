@@ -21,6 +21,8 @@ using ReactiveUI;
 using System.Reactive.Linq;
 using System.Windows.Threading;
 using Timer = System.Timers.Timer;
+using TargetServerCommunicator;
+using TargetServerCommunicator.Servers;
 
 namespace GUI.ViewModel
 {
@@ -28,7 +30,7 @@ namespace GUI.ViewModel
     {
         private string m_title;
         private string m_ip;
-        private string m_port;
+        private int m_port;
         private string m_teamName;
         private string m_game;
         private string m_selectedGame;
@@ -50,7 +52,7 @@ namespace GUI.ViewModel
 
             this.TargetListViewModel = new TargetListViewModel();
             m_ip = "Enter IP address";
-            m_port = "Enter Port number";
+            m_port = 0000;
             m_teamName = "Enter team name";
             this.capture = new Capture();
             cts = new CancellationTokenSource(); // necessary to indicate cancellation of tasks.
@@ -63,13 +65,15 @@ namespace GUI.ViewModel
             this.Stop.Subscribe(x => this.StopAcquisition());
 
             this.IsRunning = false;
+            Games = new ObservableCollection<String>();
 
 
-            ConnectToGameServerCommand = new MyCommand(ConnectToGameServer);
+
+              ConnectToGameServerCommand = new MyCommand(ConnectToGameServer);
          //   GetGameListCommand = new MyCommand(GetGameList);
-            GetTargetsCommand = new MyCommand(GetTargets);
-            StartGameCommand = new MyCommand(StartGame);
-            StopGameCommand = new MyCommand(StopGame);
+          //  GetTargetsCommand = new MyCommand(GetTargets);
+              StartGameCommand = new MyCommand(StartGame);
+       //     StopGameCommand = new MyCommand(StopGame);
 
 
         }
@@ -78,11 +82,12 @@ namespace GUI.ViewModel
         /// </summary>
         private void ConnectToGameServer()
         {
-            m_server server = GameServerFactory.Create(GameServerType.WebClient, TeamName, IP, Port);
-            server.StopRunningGame();
+            m_server = GameServerFactory.Create(GameServerType.WebClient, TeamName, IP, Port);
+            m_server.StopRunningGame();
             // Returns an IEnumerable of strings... a collection. 
-            var games = server.RetrieveGameList();
-            foreach(games in games){
+            var games = m_server.RetrieveGameList();
+            
+            foreach(var game in games){
                 Games.Add(game);
             }
         }
@@ -93,25 +98,25 @@ namespace GUI.ViewModel
         /// <summary>
         /// Gets a list of targets for the game that was selected. 
         /// </summary>
-        private void GetTargets()
-        {
-            if (m_server == null)
-            {
-                return;
-            }
-            if (SelectedGame == null)
-            {
-                return;
-            }
-            // Translate the gameservercommunicatortarget into your own...
-            // Then add to your own collection of targets bound by the view. 
-            var targets = m_server.RetrieveTargetList(SelectedGame);
-            foreach (var target in targets)
-            {
-                Targets.Add(target);
-            }
+        //private void GetTargets()
+        //{
+        //    if (m_server == null)
+        //    {
+        //        return;
+        //    }
+        //    if (SelectedGame == null)
+        //    {
+        //        return;
+        //    }
+        //    // Translate the gameservercommunicatortarget into your own...
+        //    // Then add to your own collection of targets bound by the view. 
+        //    var targets = m_server.RetrieveTargetList(SelectedGame);
+        //    foreach (var target in targets)
+        //    {
+        //        Targets.Add(target);
+        //    }
 
-        }
+        //}
         private void StartGame()
         {
             if (m_server == null)
@@ -124,18 +129,18 @@ namespace GUI.ViewModel
             }
             m_server.StartGame(SelectedGame);
         }
-        private void StopGame()
-        {
-            if (m_server == null)
-            {
-                return;
-            }
-            if (SelectedGame == null)
-            {
-                return;
-            }
-            m_server.StopGame(SelectedGame);
-        }
+        //private void StopGame()
+        //{
+        //    if (m_server == null)
+        //    {
+        //        return;
+        //    }
+        //    if (SelectedGame == null)
+        //    {
+        //        return;
+        //    }
+        //    m_server.StopGame(SelectedGame);
+        //}
       
 
         /// <summary>
@@ -159,7 +164,7 @@ namespace GUI.ViewModel
                 OnPropertyChanged("IP");
             }
         }
-        public string Port
+        public int Port
         {
             get { return m_port; }
             set
@@ -186,7 +191,11 @@ namespace GUI.ViewModel
                 m_game = value;
             }
         }
-        public ObservableCollection<string> Games { get; set; }
+        public ObservableCollection<string> Games
+        {
+            get;
+            set;
+        }
         public string SelectedGame
         {
             get { return m_selectedGame; }

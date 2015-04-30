@@ -23,17 +23,13 @@
                     <TextBox Text="{Binding TeamName}" Name ="TeamName" MinWidth="50"></TextBox>
                     <TextBox Text="{Binding IP}" Name="IP" MinWidth="50"></TextBox>
                     <TextBox Text="{Binding Port}" MinWidth="50"></TextBox>
-                    <MenuItem Header="Submit IP and Port/Connect to Game Server" Command="{Binding ConnectToGameServer}"></MenuItem>
+                    <MenuItem Header="Submit IP and Port/Connect to Game Server" Command="{Binding ConnectToGameServerCommand}"></MenuItem>
                     <MenuItem Header="Start Game" Command="{Binding StartGameCommand}"/>
                     <MenuItem Header="End Game" Command="{Binding StopGameCommand}"/>
                     <MenuItem Header="Retrieve Game List" Command="{Binding GetGameListCommand}"/>
                     <MenuItem Header="Retrieve Targets" Command="{Binding GetTargetsCommand}"/>
                     <ComboBox SelectedItem="{Binding SelectedGame}"
                               ItemsSource="{Binding Games}">
-                        <TextBox Text="asdf"></TextBox>
-                        <TextBox Text="asdf"></TextBox>
-                        <TextBox Text="asdfasdf"></TextBox>
-                        <TextBox Text="asdf"></TextBox>
                     </ComboBox>
                 </MenuItem>
             </Menu>
