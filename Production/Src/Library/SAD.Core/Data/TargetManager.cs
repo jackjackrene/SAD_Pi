@@ -69,7 +69,6 @@ namespace SAD.Core
                 return (listOfTargets.Where(c => c.Friend == true));
             }
         }
-
         public IEnumerable<Target> GetAllTargets
         {
             get

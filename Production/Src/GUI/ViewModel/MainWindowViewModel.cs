@@ -23,6 +23,7 @@ using System.Windows.Threading;
 using Timer = System.Timers.Timer;
 using TargetServerCommunicator;
 using TargetServerCommunicator.Servers;
+using SAD.Core.Server.ServerDataCoverter;
 
 namespace GUI.ViewModel
 {
@@ -94,9 +95,13 @@ namespace GUI.ViewModel
      
         /// <summary>
         /// Gets a list of targets for the game that was selected. 
+        /// Still need to implement. Must add each temporaryTarget to a list of targets
+        /// then add the list of targets to our targetmanager. 
         /// </summary>
         //private void GetTargets()
         //{
+        //    SAD.Core.Server.ServerDataCoverter.TargetConverter targetConverter = new SAD.Core.Server.ServerDataCoverter.TargetConverter();
+
         //    if (m_server == null)
         //    {
         //        return;
@@ -110,7 +115,9 @@ namespace GUI.ViewModel
         //    var targets = m_server.RetrieveTargetList(SelectedGame);
         //    foreach (var target in targets)
         //    {
-        //        Targets.Add(target);
+        //        var temporaryTarget = targetConverter.convertServerTarget(target);
+
+
         //    }
 
         //}
