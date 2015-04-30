@@ -45,15 +45,15 @@ namespace GUI.ViewModel
 
         // ViewModel Instances
         private TargetListViewModel targetListViewModel;
-
+        
         public MainWindowViewModel()
         {
             Title = "SAD.3.14 Controls";
 
             this.TargetListViewModel = new TargetListViewModel();
-            m_ip = "Enter IP address";
+            m_ip = "192.168.1.3";
             m_port = 0000;
-            m_teamName = "Enter team name";
+            m_teamName = "Desperate Housewives";
             this.capture = new Capture();
             cts = new CancellationTokenSource(); // necessary to indicate cancellation of tasks.
             imageBlockingCollection = new BlockingCollection<Image<Bgr, byte>>(); // Acts as a FIFO. Part of the .NET framework as of .NET 4.0. No bounded capacity.
@@ -91,10 +91,7 @@ namespace GUI.ViewModel
                 Games.Add(game);
             }
         }
-        //private void GetGameList()
-        //{
-
-        //}
+     
         /// <summary>
         /// Gets a list of targets for the game that was selected. 
         /// </summary>
@@ -129,18 +126,18 @@ namespace GUI.ViewModel
             }
             m_server.StartGame(SelectedGame);
         }
-        //private void StopGame()
-        //{
-        //    if (m_server == null)
-        //    {
-        //        return;
-        //    }
-        //    if (SelectedGame == null)
-        //    {
-        //        return;
-        //    }
-        //    m_server.StopGame(SelectedGame);
-        //}
+        private void StopGame()
+        {
+            if (m_server == null)
+            {
+                return;
+            }
+            if (SelectedGame == null)
+            {
+                return;
+            }
+            m_server.StopRunningGame();
+        }
       
 
         /// <summary>
