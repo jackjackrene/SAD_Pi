@@ -74,6 +74,10 @@
     <Reference Include="Emgu.Util">
       <HintPath>..\..\packages\EmguCV.221.x86.1.0\lib\Emgu.Util.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Ookii.Dialogs.Wpf">
       <HintPath>..\..\packages\Ookii.Dialogs.1.0\lib\net35\Ookii.Dialogs.Wpf.dll</HintPath>
     </Reference>
@@ -108,6 +112,10 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="TargetServerCommunicator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TargetServerCommunicator.dll</HintPath>
+    </Reference>
     <Reference Include="USBLib">
       <HintPath>..\USBLib.DLL</HintPath>
     </Reference>
@@ -128,6 +136,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\Target.cs" />
     <Compile Include="Data\TargetManager.cs" />
+    <Compile Include="Server\ServerDataCoverter\TargetConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
