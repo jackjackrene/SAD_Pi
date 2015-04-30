@@ -43,7 +43,9 @@ namespace GUI.ViewModel
             Title = "SAD.3.14 Controls";
 
             this.TargetListViewModel = new TargetListViewModel();
-
+            m_ip = "Enter IP address";
+            m_port = "Enter Port number";
+            m_teamName = "Enter team name";
             this.capture = new Capture();
             cts = new CancellationTokenSource(); // necessary to indicate cancellation of tasks.
             imageBlockingCollection = new BlockingCollection<Image<Bgr, byte>>(); // Acts as a FIFO. Part of the .NET framework as of .NET 4.0. No bounded capacity.
@@ -55,6 +57,16 @@ namespace GUI.ViewModel
             this.Stop.Subscribe(x => this.StopAcquisition());
 
             this.IsRunning = false;
+
+
+            UpdateServerAttributesCommand = new MyCommand(UpdateServerAttributes);
+
+        }
+        private void UpdateServerAttributes()
+        {
+            IP = m_ip;
+            TeamName = m_teamName;
+            Port = m_port;
         }
 
         // Properties
@@ -74,7 +86,7 @@ namespace GUI.ViewModel
             set
             {
                 m_title = value;
-                OnPropertyChanged();
+                OnPropertyChanged("Title");
             }
         }
         public string IP
@@ -83,7 +95,7 @@ namespace GUI.ViewModel
             set
             {
                 m_ip = value;
-                OnPropertyChanged();
+                OnPropertyChanged("IP");
             }
         }
         public string Port
@@ -92,16 +104,17 @@ namespace GUI.ViewModel
             set
             {
                 m_port = value;
-                OnPropertyChanged();
+                OnPropertyChanged("Port");
             }
         }
+
         public string TeamName
         {
             get { return m_teamName; }
             set
             {
                 m_teamName = value;
-                OnPropertyChanged();
+                OnPropertyChanged("TeamName");
             }
         }
 
@@ -181,6 +194,8 @@ namespace GUI.ViewModel
                 this.RaiseAndSetIfChanged(ref this.bitmapImage, value);
             }
         }
+        public ICommand UpdateServerAttributesCommand { get; set; }
+
 
         public ReactiveCommand<object> Start { get; private set; }
         public ReactiveCommand<object> Stop { get; private set; }
@@ -195,6 +210,41 @@ namespace GUI.ViewModel
                 handler(this, new PropertyChangedEventArgs(propertyName));
             }
         }
+        public class MyCommand : ICommand
+        {
+            private Action m_action;
+
+            public MyCommand(Action someAction)
+            {
+                m_action = someAction;
+            }
+
+            #region Implementation of ICommand
+            /// <summary>
+            /// Defines the method that determines whether the command can execute in its current state.
+            /// </summary>
+            /// <returns>
+            /// true if this command can be executed; otherwise, false.
+            /// </returns>
+            /// <param name="parameter">Data used by the command.  If the command does not require data to be passed, this object can be set to null.</param>
+            public bool CanExecute(object parameter)
+            {
+                return true;
+            }
+            /// <summary>
+            /// Defines the method to be called when the command is invoked.
+            /// </summary>
+            /// <param name="parameter">Data used by the command.  If the command does not require data to be passed, this object can be set to null.</param>
+            public void Execute(object parameter)
+            {
+                m_action();
+            }
+            public event EventHandler CanExecuteChanged;
+            #endregion
+        }
+
+
+
     }
 
     public class BitmapConverter
