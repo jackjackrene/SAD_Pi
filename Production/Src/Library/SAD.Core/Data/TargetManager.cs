@@ -43,7 +43,6 @@ namespace SAD.Core
         void Prioritize()
         {
         }
-
         private bool IsFriend(Target target)
         {
             if (target.Friend == true)
@@ -69,7 +68,6 @@ namespace SAD.Core
                 return (listOfTargets.Where(c => c.Friend == true));
             }
         }
-
         public IEnumerable<Target> GetAllTargets
         {
             get

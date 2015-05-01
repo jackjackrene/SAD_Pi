@@ -8,7 +8,7 @@ using TargetServerCommunicator.Data;
 
 namespace SAD.Core.Server.ServerDataCoverter
 {
-    class TargetConverter
+    public class TargetConverter
     {
         // Time the target was hit, used to determine if its alive or not
         private double timeOfLastHit;
@@ -19,7 +19,7 @@ namespace SAD.Core.Server.ServerDataCoverter
             set { timeOfLastHit = value; }
         }
 
-        Target convertServerTarget(TargetServerCommunicator.Data.Target serverTarget)
+        public Target convertServerTarget(TargetServerCommunicator.Data.Target serverTarget)
         {
             Target target = new Target();
 
