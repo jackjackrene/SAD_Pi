@@ -74,7 +74,7 @@ namespace GUI.ViewModel
          //   GetGameListCommand = new MyCommand(GetGameList);
           //  GetTargetsCommand = new MyCommand(GetTargets);
               StartGameCommand = new MyCommand(StartGame);
-       //     StopGameCommand = new MyCommand(StopGame);
+            StopGameCommand = new MyCommand(StopGame);
 
 
         }

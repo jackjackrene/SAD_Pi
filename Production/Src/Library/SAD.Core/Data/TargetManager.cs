@@ -43,7 +43,6 @@ namespace SAD.Core
         void Prioritize()
         {
         }
-
         private bool IsFriend(Target target)
         {
             if (target.Friend == true)
