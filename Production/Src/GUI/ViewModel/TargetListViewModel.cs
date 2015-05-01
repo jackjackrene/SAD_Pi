@@ -73,16 +73,21 @@ namespace GUI.ViewModel
             PopulateTargetList();
         }
 
-        public void KillAll()
+        public async void KillAll()
         {
+
             List<Target> list = TargetManager.GetAllTargets.ToList();
 
-            for (int count = 0; count < list.Count; count++)
-            {
-                missileLauncher.Kill(list[count].Phi, list[count].Theta);
-            }
+            Task killAllTask = Task.Run(() =>
+                {
+                    for (int count = 0; count < list.Count; count++)
+                    {
+                        missileLauncher.Kill(list[count].Phi, list[count].Theta);
+                    }
+                });
+            await killAllTask;
+            
         }
-
         public void KillFoes()
         {
             List<Target> list = TargetManager.GetEnemies.ToList();
