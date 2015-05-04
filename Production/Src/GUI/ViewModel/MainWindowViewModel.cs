@@ -131,7 +131,20 @@ namespace GUI.ViewModel
             {
                 return;
             }
+
+            // add timer and start here
             m_server.StartGame(SelectedGame);
+            while (true)
+            {
+                // load targets
+                // check for missile count
+                // convert targets to list
+                // pass list to strategy
+                // strategy returns target
+                // kill target
+            }
+            // stop game?
+            // stop timer??
         }
         private void StopGame()
         {

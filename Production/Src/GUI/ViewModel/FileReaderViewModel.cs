@@ -40,9 +40,6 @@ namespace GUI.ViewModel
                 CalculatePositions calculatePositions = new CalculatePositions(targetPositionStrategy);
                 calculatePositions.CalculatePhiTheta();
 
-                // var targetPositionStrategy = new UseCurrentXYZ();
-                // var calculatePositions = new CalculatePositions(targetPositionStrategy);
-                // calculatePositions.CalculatePhiTheta();
                 // at this point send out an event or something 
             }
         }
