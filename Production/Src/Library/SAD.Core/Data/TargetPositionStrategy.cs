@@ -35,49 +35,20 @@ namespace SAD.Core
             int y;
 
             // use camera to detect positions
-            Bitmap sourceImageGreen;
-            Bitmap sourceImageRed;
+            Bitmap sourceImage;
             Capture capture;
             capture = new Capture(0);
             //sourceImage = capture.QueryFrame();
             var image = capture.QueryFrame();
-            sourceImageGreen = image.ToBitmap();
-            sourceImageRed = image.ToBitmap();
+            sourceImage = image.ToBitmap();
 
+            // find circles
+            HoughCircleTransformation circleTransform = new HoughCircleTransformation(35);
+            circleTransform.ProcessImage(sourceImage);
+            Bitmap houghCircleImage = circleTransform.ToBitmap();
+            HoughCircle[] circles = circleTransform.GetCirclesByRelativeIntensity(0.5);
 
-            // set image to green, find circles
-            EuclideanColorFiltering filterGreen = new EuclideanColorFiltering();
-            filterGreen.CenterColor = new AForge.Imaging.RGB(215, 30, 30);
-            filterGreen.Radius = 100;
-            filterGreen.ApplyInPlace(sourceImageGreen);
-
-            HoughCircleTransformation circleTransformGreen = new HoughCircleTransformation(35);
-            circleTransformGreen.ProcessImage(sourceImageGreen);
-            Bitmap houghCircleImageGreen = circleTransformGreen.ToBitmap();
-            HoughCircle[] circlesGreen = circleTransformGreen.GetCirclesByRelativeIntensity(0.5);
-
-            foreach (HoughCircle circle in circlesGreen)
-            {
-                // process circles
-                radius = circle.Radius;
-                x = circle.X;
-                y = circle.Y;
-                currentTargetNum++;
-                // calculate positions and update targets
-            }
-
-            // set image to red, find circles
-            EuclideanColorFiltering filterRed = new EuclideanColorFiltering();
-            filterRed.CenterColor = new AForge.Imaging.RGB(215, 30, 30);
-            filterRed.Radius = 100;
-            filterRed.ApplyInPlace(sourceImageRed);
-
-            HoughCircleTransformation circleTransformRed = new HoughCircleTransformation(35);
-            circleTransformRed.ProcessImage(sourceImageRed);
-            Bitmap houghCircleImageRed = circleTransformRed.ToBitmap();
-            HoughCircle[] circlesRed = circleTransformRed.GetCirclesByRelativeIntensity(0.5);
-
-            foreach (HoughCircle circle in circlesRed)
+            foreach (HoughCircle circle in circles)
             {
                 // process circles
                 radius = circle.Radius;
