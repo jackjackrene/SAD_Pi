@@ -1,22 +1,46 @@
-﻿using System;
+﻿using SAD.Core.Time;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TargetServerCommunicator;
 using TargetServerCommunicator.Data;
+using TargetServerCommunicator.Servers;
 
 
 namespace SAD.Core.Server.ServerDataCoverter
 {
     public class TargetConverter
     {
+        private TargetManager targetManager;
+        private GameServer gameServer;
+        private GameWatch gameWatch;
+
         // Time the target was hit, used to determine if its alive or not
         private double timeOfLastHit;
 
-        public double TimeOfLastHit
+        public TargetConverter()
         {
-            get { return timeOfLastHit; }
-            set { timeOfLastHit = value; }
+            targetManager = TargetManager.GetInstance();
+            gameServer = GameServer.GetInstance();
+            gameWatch = GameWatch.GetInstance();
+        }
+
+        public void UpdateTargetList()
+        {
+            // Toast the target list
+            targetManager.TargetList = null;
+
+            // Get the updated list
+            // gameServer.RetrieveServerTargetList();
+
+            // Convert each ServerTarget to Target and pass to targetManager
+        }
+
+        public bool DetermineIfHit()
+        {
+            return true;
         }
 
         public Target convertServerTarget(TargetServerCommunicator.Data.Target serverTarget)
@@ -43,11 +67,14 @@ namespace SAD.Core.Server.ServerDataCoverter
             target.Points = (int)serverTarget.points;
             target.FlashRate = (int)serverTarget.dutyCycle;
 
+            /*
             // To determine if the target is alive or not
             if ((TimeOfLastHit - serverTarget.spawnRate) < 0)
                 target.Status = false; // still dead
             else
                 target.Status = true;  // its alive!    
+
+             */
 
             return target;
         }         
