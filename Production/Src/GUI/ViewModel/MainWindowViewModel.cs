@@ -24,6 +24,7 @@ using Timer = System.Timers.Timer;
 using TargetServerCommunicator;
 using TargetServerCommunicator.Servers;
 using SAD.Core.Server.ServerDataCoverter;
+using System.Timers;
 
 namespace GUI.ViewModel
 {
@@ -36,6 +37,7 @@ namespace GUI.ViewModel
         private string m_game;
         private string m_selectedGame;
         private IGameServer m_server;
+        private static Timer myTimer;
 
         private BitmapSource bitmapImage;
         private readonly Capture capture;
@@ -50,7 +52,6 @@ namespace GUI.ViewModel
         public MainWindowViewModel()
         {
             Title = "SAD.3.14 Controls";
-
             this.TargetListViewModel = new TargetListViewModel();
             m_ip = "192.168.1.3";
             m_port = 0000;
@@ -98,31 +99,10 @@ namespace GUI.ViewModel
         /// Still need to implement. Must add each temporaryTarget to a list of targets
         /// then add the list of targets to our targetmanager. 
         /// </summary>
-        //private void GetTargets()
-        //{
-        //    SAD.Core.Server.ServerDataCoverter.TargetConverter targetConverter = new SAD.Core.Server.ServerDataCoverter.TargetConverter();
-
-        //    if (m_server == null)
-        //    {
-        //        return;
-        //    }
-        //    if (SelectedGame == null)
-        //    {
-        //        return;
-        //    }
-        //    // Translate the gameservercommunicatortarget into your own...
-        //    // Then add to your own collection of targets bound by the view. 
-        //    var targets = m_server.RetrieveTargetList(SelectedGame);
-        //    foreach (var target in targets)
-        //    {
-        //        var temporaryTarget = targetConverter.convertServerTarget(target);
-
-
-        //    }
-
-        //}
-        private void StartGame()
+        private void GetTargets()
         {
+            SAD.Core.Server.ServerDataCoverter.TargetConverter targetConverter = new SAD.Core.Server.ServerDataCoverter.TargetConverter();
+
             if (m_server == null)
             {
                 return;
@@ -131,11 +111,33 @@ namespace GUI.ViewModel
             {
                 return;
             }
+            // Translate the gameservercommunicatortarget into your own...
+            // Then add to your own collection of targets bound by the view. 
+            var targets = m_server.RetrieveTargetList(SelectedGame);
+            foreach (var target in targets)
+            {
+                var temporaryTarget = targetConverter.convertServerTarget(target);
 
-            // add timer and start here
-            m_server.StartGame(SelectedGame);
+
+            }
+
+        }
+        private void StartGame()
+        {
+            
+            if (m_server == null)
+            {
+                return;
+            }
+            if (SelectedGame == null)
+            {
+                return;
+            }
+            
+
             while (true)
             {
+
                 // load targets
                 // check for missile count
                 // convert targets to list
