@@ -130,17 +130,29 @@
     <Compile Include="Devices\Missile Launcher\Subclasses\DreamCheekyMissileLauncher.cs" />
     <Compile Include="Devices\Missile Launcher\Subclasses\MockMissileLauncher.cs" />
     <Compile Include="Devices\VideoCamera\Video.cs" />
+    <Compile Include="Game\IGame.cs" />
     <Compile Include="IO\CommentException.cs" />
     <Compile Include="IO\INIFileReader.cs" />
     <Compile Include="Devices\Missile Launcher\MissileLauncher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\Target.cs" />
     <Compile Include="Data\TargetManager.cs" />
+    <Compile Include="Server\GameServer.cs" />
     <Compile Include="Server\ServerDataCoverter\TargetConverter.cs" />
+    <Compile Include="Strategy\Data\GameStrategyType.cs" />
+    <Compile Include="Strategy\GameStrategy.cs" />
+    <Compile Include="Strategy\GameStrategyFactory.cs" />
+    <Compile Include="Strategy\Interfaces\IPriorityStrategy.cs" />
+    <Compile Include="Strategy\Subclasses\PrioritizeFriendsStrategy.cs" />
+    <Compile Include="Strategy\Subclasses\PrioritizePointsStrategy.cs" />
+    <Compile Include="Strategy\Subclasses\PriotitizeFoesStrategy.cs" />
+    <Compile Include="Strategy\Subclasses\PriotizeDistanceStrategy.cs" />
+    <Compile Include="Time\GameWatch.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
