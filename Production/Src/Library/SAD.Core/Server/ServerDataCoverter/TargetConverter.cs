@@ -52,10 +52,6 @@ namespace SAD.Core.Server.ServerDataCoverter
             for (int count = 0; count < serverTargetList.Count; count++)
                 newSadTargetList.Add(convertServerTarget(serverTargetList[count]));
             
-            if (oldSadTargetList == null)
-            {
-                oldSadTargetList = newSadTargetList;
-            }
             // Determine if we need the camera
             if (DetermineIfCameraIsInUse(serverTargetList.ElementAt(0)) == true)
             {
