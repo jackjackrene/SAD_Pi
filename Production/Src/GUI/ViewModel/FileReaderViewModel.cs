@@ -36,7 +36,7 @@ namespace GUI.ViewModel
                 reader.path = openFileBox.FileName;
                 targetManager.TargetList = reader.ReadTargets();
 
-                ITargetPositionStrategy targetPositionStrategy = new UseCurrentXYZ();
+                ITargetPositionStrategy targetPositionStrategy = new DetectPosition();
                 CalculatePositions calculatePositions = new CalculatePositions(targetPositionStrategy);
                 calculatePositions.CalculatePhiTheta();
 
