@@ -25,6 +25,7 @@ using TargetServerCommunicator;
 using TargetServerCommunicator.Servers;
 using SAD.Core.Server.ServerDataCoverter;
 using System.Timers;
+using SAD.Core.EricStrategy;
 
 namespace GUI.ViewModel
 {
@@ -45,6 +46,7 @@ namespace GUI.ViewModel
         private CancellationTokenSource cts;
         private BlockingCollection<Image<Bgr, byte>> imageBlockingCollection;
         private BlockingCollection<Image<Bgr, byte>> processBuffer;
+        private IStrategy m_strategy;
 
         // ViewModel Instances
         private TargetListViewModel targetListViewModel;
@@ -76,6 +78,8 @@ namespace GUI.ViewModel
           //  GetTargetsCommand = new MyCommand(GetTargets);
               StartGameCommand = new MyCommand(StartGame);
             StopGameCommand = new MyCommand(StopGame);
+
+            m_strategy = new KillAllStrategy();
 
 
         }
@@ -111,42 +115,38 @@ namespace GUI.ViewModel
             {
                 return;
             }
+            m_strategy.GetTargetAndKillIt();
             // Translate the gameservercommunicatortarget into your own...
             // Then add to your own collection of targets bound by the view. 
-            var targets = m_server.RetrieveTargetList(SelectedGame);
-            foreach (var target in targets)
-            {
-                var temporaryTarget = targetConverter.convertServerTarget(target);
+            //var targets = m_server.RetrieveTargetList(SelectedGame);
+            //foreach (var target in targets)
+            //{
+            //    var temporaryTarget = targetConverter.convertServerTarget(target);
 
 
-            }
+            //}
 
         }
-        private void StartGame()
+        private async void StartGame()
         {
-            
-            if (m_server == null)
-            {
-                return;
-            }
-            if (SelectedGame == null)
-            {
-                return;
-            }
-            
 
-            while (true)
-            {
+            //if (m_server == null)
+            //{
+            //    return;
+            //}
+            //if (SelectedGame == null)
+            //{
+            //    return;
+            //}
+            // declare the strategy and use it.  0
+             Task runGameTask = Task.Run(() =>
+                 {
+            m_strategy.GetTargetAndKillIt();
+             });
+             await runGameTask;
 
-                // load targets
-                // check for missile count
-                // convert targets to list
-                // pass list to strategy
-                // strategy returns target
-                // kill target
-            }
-            // stop game?
-            // stop timer??
+
+           
         }
         private void StopGame()
         {

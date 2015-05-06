@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SAD.Core.Time
 {
-    class GameWatch
+    public class GameWatch
     {
         private static GameWatch gameWatchInstance;
         private Stopwatch stopWatch;

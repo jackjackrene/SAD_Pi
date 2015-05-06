@@ -16,7 +16,7 @@
             </DockPanel.DataContext>
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="File">
-                    <MenuItem Header="Load Targets From File" Command="{Binding LoadTargetsFromFileCommand}"/>
+                    <MenuItem Header="Load Targets From File"  DataContext="{Binding FileReaderViewModel}" Command="{Binding LoadTargetsFromFileCommand}"/>
                 </MenuItem>
 
                 <MenuItem Header="Server">
@@ -32,13 +32,28 @@
                               ItemsSource="{Binding Games}">
                     </ComboBox>
                 </MenuItem>
+                
             </Menu>
         </DockPanel>
+            
+      
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="40*"/>
                 <ColumnDefinition Width="60*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+            
+            <Grid x:Name="Test" Grid.Column="1">
+                <Grid.DataContext>
+                    <viewModel:FileReaderViewModel>
+                    </viewModel:FileReaderViewModel>
+                </Grid.DataContext>
+
+                <Button Content="Load Targets From File" Command="{Binding LoadTargetsFromFileCommand}"/>
+            </Grid>
+            
+            
             <!-- List of Targets -->
             <Grid x:Name="TargetView"
               Grid.Column="0"
@@ -49,7 +64,6 @@
                     <RowDefinition Height="549*"/>
                     <RowDefinition Height="60"/>
                 </Grid.RowDefinitions>
-
                 <TextBlock Text="Targets" Grid.Row="1"
                        FontSize="18" 
                        TextAlignment="Center"

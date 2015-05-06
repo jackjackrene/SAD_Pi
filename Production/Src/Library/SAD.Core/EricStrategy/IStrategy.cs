@@ -8,7 +8,7 @@ namespace SAD.Core.EricStrategy
 {
    public interface IStrategy
    {
-       void GetTargetToKill();
+       void GetTargetAndKillIt();
    }
 
 }

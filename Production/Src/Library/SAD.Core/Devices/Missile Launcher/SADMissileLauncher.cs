@@ -73,6 +73,7 @@ namespace SAD.Core.Devices
             }
 
             get { return currentMissleCount; }
+
         }
 
         public double CurrentPhi
