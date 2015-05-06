@@ -49,7 +49,7 @@ namespace SAD.Core.Server
 
         public IEnumerable<String> RetrieveServerGameList()
         {
-            return gameServerInstance.RetrieveServerGameList();
+            return gameServerInterface.RetrieveGameList();
         }
 
         public IEnumerable<TargetServerCommunicator.Data.Target> RetrieveServerTargetList()
@@ -57,9 +57,14 @@ namespace SAD.Core.Server
             return gameServerInterface.RetrieveTargetList(GameType);
         }
 
+        public void StartGame()
+        {
+            gameServerInterface.StartGame(gameType);
+        }
+
         public void StopRunningGame()
         {
-            gameServerInstance.StopRunningGame();
+            gameServerInterface.StopRunningGame();
         }
 
         public GameServerType ServerType

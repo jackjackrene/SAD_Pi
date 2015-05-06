@@ -57,8 +57,8 @@ namespace GUI.ViewModel
         {
             Title = "SAD.3.14 Controls";
             this.TargetListViewModel = new TargetListViewModel();
-            m_ip = "192.168.1.3";
-            m_port = 0000;
+            m_ip = "192.168.1.2";
+            m_port = 3000;
             m_teamName = "Desperate Housewives";
             this.capture = new Capture();
             cts = new CancellationTokenSource(); // necessary to indicate cancellation of tasks.
@@ -147,6 +147,7 @@ namespace GUI.ViewModel
             // declare the strategy and use it.  0
              Task runGameTask = Task.Run(() =>
                  {
+                     m_server.StartGame();
             m_strategy.GetTargetAndKillIt();
              });
              await runGameTask;

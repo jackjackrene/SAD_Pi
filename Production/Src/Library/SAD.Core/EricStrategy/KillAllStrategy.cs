@@ -40,14 +40,11 @@ namespace SAD.Core.EricStrategy
             
             // We do not know if the target is dead or alive. 
             // Must use the timer to figure this out. 
-
-
             
 
 
             foreach (Target target in TargetList)
             {
-                targetConverter.UpdateTargetList();
                 if (missileLauncher.CurrentMissileCount == 0)
                 {
                     MessageBox.Show("Reload", "Reload", MessageBoxButtons.OK);

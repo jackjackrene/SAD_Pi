@@ -39,7 +39,11 @@ namespace SAD.Core.Server.ServerDataCoverter
         public void UpdateTargetList()
         {
             // Save the old state of targets
-            oldSadTargetList = targetManager.TargetList.ToList();
+            if (targetManager.TargetList != null)
+            {
+                oldSadTargetList = targetManager.TargetList.ToList();
+            }
+ 
 
             // Toast the target list
             targetManager.TargetList = null;
@@ -47,10 +51,15 @@ namespace SAD.Core.Server.ServerDataCoverter
             // Get the updated list
             serverTargetList = gameServer.RetrieveServerTargetList().ToList(); 
 
+           
             // Convert each ServerTarget to Target and pass to targetManager
             for (int count = 0; count < serverTargetList.Count; count++)
                 newSadTargetList.Add(convertServerTarget(serverTargetList[count]));
             
+            if (oldSadTargetList == null)
+            {
+                oldSadTargetList = newSadTargetList;
+            }
             // Determine if we need the camera
             if (DetermineIfCameraIsInUse(serverTargetList.ElementAt(0)) == true)
             {
@@ -121,15 +130,20 @@ namespace SAD.Core.Server.ServerDataCoverter
             target.FlashRate = serverTarget.dutyCycle;
 
             // Is it dead?
-            Target lastTargetShotAt = FindOldTarget(serverTarget.name);
-
-            if (wasHit(lastTargetShotAt.HitCount, serverTarget.hit))
+            if (oldSadTargetList != null)
             {
-                target.Status = false; // its dead
-                target.TimeOfLastHit = gameWatch.GetCurrentTime();
+                Target lastTargetShotAt = FindOldTarget(serverTarget.name);
+
+                if (wasHit(lastTargetShotAt.HitCount, serverTarget.hit))
+                {
+                    target.Status = false; // its dead
+                    target.TimeOfLastHit = gameWatch.GetCurrentTime();
+                }
+                else
+                    target.Status = true;  // its alive
             }
             else
-                target.Status = true;  // its alive
+                target.Status = true;
 
             return target;
         }         
