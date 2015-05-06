@@ -23,6 +23,7 @@ namespace SAD.Core.Server
         private string teamName;
         private string ipAddress;
         private int portNumber;
+        private string gameType;
 
         private GameServer()
         {
@@ -41,17 +42,19 @@ namespace SAD.Core.Server
                                         string ipAddress,
                                         int portNumber)
         {
+
+            // check if connected 
             gameServerInterface = GameServerFactory.Create(serverType, teamName, ipAddress, portNumber);
         }
 
-        public IEnumerable RetrieveServerGameList()
+        public IEnumerable<String> RetrieveServerGameList()
         {
             return gameServerInstance.RetrieveServerGameList();
         }
 
-        public IEnumerable RetrieveServerTargetList(string gameType)
+        public IEnumerable<TargetServerCommunicator.Data.Target> RetrieveServerTargetList()
         {
-            return gameServerInterface.RetrieveTargetList(gameType);
+            return gameServerInterface.RetrieveTargetList(GameType);
         }
 
         public void StopRunningGame()
@@ -81,6 +84,11 @@ namespace SAD.Core.Server
         {
             get { return portNumber; }
             set { portNumber = value; }
+        }
+        public string GameType
+        {
+            get { return gameType; }
+            set { gameType = value; }
         }
     }
 }

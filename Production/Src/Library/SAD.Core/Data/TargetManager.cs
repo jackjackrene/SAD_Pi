@@ -36,13 +36,6 @@ namespace SAD.Core
             get { return listOfTargets; }
         }
         
-        public void SetTargets()
-        {
-        }
-
-        void Prioritize()
-        {
-        }
         private bool IsFriend(Target target)
         {
             if (target.Friend == true)
