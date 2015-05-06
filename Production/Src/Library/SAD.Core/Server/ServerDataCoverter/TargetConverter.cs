@@ -41,13 +41,6 @@ namespace SAD.Core.Server.ServerDataCoverter
 
         public void UpdateTargetList()
         {
-            // Save the old state of targets
-            if (targetManager.TargetList != null)
-            {
-                oldSadTargetList = targetManager.TargetList.ToList();
-            }
- 
-
             // Toast the target list
             targetManager.TargetList = null;
 
@@ -77,6 +70,15 @@ namespace SAD.Core.Server.ServerDataCoverter
             // Update the list
             targetManager.TargetList = newSadTargetList;
             calculatePositions.CalculatePhiTheta();
+
+            // Save the old state of targets
+            oldSadTargetList.Clear();
+            
+            for (int count = 0; count < newSadTargetList.Count; count++)
+                oldSadTargetList.Add(newSadTargetList[count]);
+
+            // Dont forget to clear the new list!
+            newSadTargetList.Clear();
         }
 
         public bool DetermineIfCameraIsInUse(TargetServerCommunicator.Data.Target serverTarget)
@@ -93,8 +95,6 @@ namespace SAD.Core.Server.ServerDataCoverter
                 return true;
             else
                 return false;
-
-            return true;
         }
 
         public Target FindOldTarget(string name)
