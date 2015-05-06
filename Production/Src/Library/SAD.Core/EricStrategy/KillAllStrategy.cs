@@ -42,9 +42,10 @@ namespace SAD.Core.EricStrategy
             // Must use the timer to figure this out. 
 
             TimeSpan currentTime = gameWatch.GetCurrentTime();
-            int secondsInGame = currentTime.Seconds;
+            int minutesInGame = currentTime.Minutes;
+
             // While we are at less than 60 seconds... the game is running
-            while (secondsInGame <= 60)
+            while (minutesInGame < 1)
             {
                 // update the list of targets. 
                 targetConverter.UpdateTargetList();
@@ -59,8 +60,10 @@ namespace SAD.Core.EricStrategy
                 // call the fire method on the target. 
                 var targetToShoot = prioritize(TargetList);
                 missileLauncher.Kill(targetToShoot.Phi, targetToShoot.Theta);
+
+
                 currentTime = gameWatch.GetCurrentTime();
-                secondsInGame = currentTime.Seconds;
+                minutesInGame = currentTime.Minutes;
             }
         }
 

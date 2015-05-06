@@ -42,7 +42,10 @@ namespace SAD.Core.Server.ServerDataCoverter
         public void UpdateTargetList()
         {
             // Toast the target list
-            targetManager.TargetList = null;
+            // targetManager.TargetList = null;
+
+            // Dont forget to clear the new list!
+            newSadTargetList.Clear();
 
             // Get the updated list
             serverTargetList = gameServer.RetrieveServerTargetList().ToList(); 
@@ -72,9 +75,6 @@ namespace SAD.Core.Server.ServerDataCoverter
             
             for (int count = 0; count < newSadTargetList.Count; count++)
                 oldSadTargetList.Add(newSadTargetList[count]);
-
-            // Dont forget to clear the new list!
-            newSadTargetList.Clear();
         }
 
         public bool DetermineIfCameraIsInUse(TargetServerCommunicator.Data.Target serverTarget)
