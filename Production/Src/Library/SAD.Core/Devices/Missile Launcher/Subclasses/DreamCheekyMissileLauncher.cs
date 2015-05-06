@@ -64,6 +64,13 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
 
         public override void Move(double phi, double theta)
         {
+            double movebyPhi = currentPhi - phi;
+            double movebyTheta = currentTheta - theta;
+
+            // MoveBy(movebyPhi, movebyTheta);
+            phi = movebyPhi;
+            theta = movebyTheta;
+
             CurrentPhi = phi;
             CurrentTheta = theta;
 
@@ -81,7 +88,7 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
             try
             {
                 // Reset the Launcher
-                internalMissileLauncher.command_reset();
+                // internalMissileLauncher.command_reset();
 
                 // Move by theta
                 if (theta < 0)

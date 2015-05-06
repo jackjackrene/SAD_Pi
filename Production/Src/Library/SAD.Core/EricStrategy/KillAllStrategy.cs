@@ -22,18 +22,19 @@ namespace SAD.Core.EricStrategy
         private GameWatch gameWatch;
         public void GetTargetAndKillIt()
         {
+
             SAD.Core.TargetManager targetManager = SAD.Core.TargetManager.GetInstance();
             List<SAD.Core.Target> TargetList = new List<SAD.Core.Target>();
             SAD.Core.Server.ServerDataCoverter.TargetConverter targetConverter = new SAD.Core.Server.ServerDataCoverter.TargetConverter();
-            targetManager = TargetManager.GetInstance();
             gameWatch = GameWatch.GetInstance();
             SAD.Core.Devices.SADMissileLauncherFactory missileLauncherFactory = SAD.Core.Devices.SADMissileLauncherFactory.GetInstance();
             SADMissileLauncher missileLauncher = missileLauncherFactory.CreateSADMissileLauncher(SAD.Core.Devices.SADMissileLauncher.SADMissileType.DreamCheekyMissileLauncher);
 
 
-            // TargetList should contain a list of targets. 
-            TargetList = targetManager.GetAllTargets.ToList();
+            // TargetList should contain a list of targets.  
             targetConverter.UpdateTargetList();
+            TargetList = targetManager.GetAllTargets.ToList();
+
             // target manager.update list updates the list and sends it to target manager. 
             gameWatch.StartGameWatch();
             
@@ -41,11 +42,12 @@ namespace SAD.Core.EricStrategy
             // Must use the timer to figure this out. 
 
 
-
+            
 
 
             foreach (Target target in TargetList)
             {
+                targetConverter.UpdateTargetList();
                 if (missileLauncher.CurrentMissileCount == 0)
                 {
                     MessageBox.Show("Reload", "Reload", MessageBoxButtons.OK);

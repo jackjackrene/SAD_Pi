@@ -14,7 +14,7 @@ namespace SAD.Core.Server
      *  It is a singleton
      */ 
 
-    class GameServer
+    public class GameServer
     {
         private static GameServer gameServerInstance = null;
 

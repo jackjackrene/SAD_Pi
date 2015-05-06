@@ -143,7 +143,10 @@ namespace SAD.Core
                                 }
                                 countFields[i] = 0;
                             }
-                            target = new Target(Name, x, y, z, Frd, Pts, FR, SR, CSSWH);
+
+                            TimeSpan timeSpan = TimeSpan.MinValue;
+
+                            target = new Target(Name, x, y, z, Frd, Pts, FR, SR, CSSWH,0, timeSpan);
                             // SAD.Core.Spherical.ConvertToSphere(target);
                             TargetList.Add(target);
                             break;
@@ -166,8 +169,8 @@ namespace SAD.Core
                 }
                 countFields[i] = 0;
             }
-            target = new Target(Name, x, y, z, Frd, Pts, FR, SR, CSSWH);
-            // SAD.Core.Spherical.ConvertToSphere(target);
+            TimeSpan timeSpan1 = TimeSpan.MinValue;
+            target = new Target(Name, x, y, z, Frd, Pts, FR, SR, CSSWH, 0, timeSpan1);         
             TargetList.Add(target);
 
             return TargetList;

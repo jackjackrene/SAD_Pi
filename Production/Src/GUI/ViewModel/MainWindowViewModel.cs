@@ -26,6 +26,7 @@ using TargetServerCommunicator.Servers;
 using SAD.Core.Server.ServerDataCoverter;
 using System.Timers;
 using SAD.Core.EricStrategy;
+using SAD.Core.Server;
 
 namespace GUI.ViewModel
 {
@@ -37,7 +38,8 @@ namespace GUI.ViewModel
         private string m_teamName;
         private string m_game;
         private string m_selectedGame;
-        private IGameServer m_server;
+       // private IGameServer m_server;
+        GameServer m_server;
         private static Timer myTimer;
 
         private BitmapSource bitmapImage;
@@ -86,10 +88,14 @@ namespace GUI.ViewModel
         /// </summary>
         private void ConnectToGameServer()
         {
-            m_server = GameServerFactory.Create(GameServerType.WebClient, TeamName, IP, Port);
+           // m_server = GameServerFactory.Create(GameServerType.WebClient, TeamName, IP, Port);
+            m_server = GameServer.GetInstance();
+
+            m_server.ConnectToGameServer(GameServerType.WebClient, TeamName, IP, Port);
+
             m_server.StopRunningGame();
             // Returns an IEnumerable of strings... a collection. 
-            var games = m_server.RetrieveGameList();
+            var games = m_server.RetrieveServerGameList();
             
             foreach(var game in games){
                 Games.Add(game);
@@ -128,14 +134,16 @@ namespace GUI.ViewModel
         private async void StartGame()
         {
 
-            //if (m_server == null)
-            //{
-            //    return;
-            //}
-            //if (SelectedGame == null)
-            //{
-            //    return;
-            //}
+            if (m_server == null)
+            {
+                return;
+            }
+            if (SelectedGame == null)
+            {
+                return;
+            }
+            // Muy importante to set the game type on our created m_server object. 
+            m_server.GameType = m_selectedGame;
             // declare the strategy and use it.  0
              Task runGameTask = Task.Run(() =>
                  {
