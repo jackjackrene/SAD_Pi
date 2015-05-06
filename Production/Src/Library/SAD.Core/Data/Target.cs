@@ -22,11 +22,15 @@ namespace SAD.Core
         { get; set; }
         public bool Status
         { get; set; }
-        public int Points
+        public double Points
         { get; set; }
-        public int FlashRate
+        public double FlashRate
         { get; set; }
-        public int SpawnRate
+        public int HitCount
+        { get; set; }
+        public TimeSpan TimeOfLastHit
+        { get; set; }
+        public double SpawnRate
         { get; set; }
         public bool CanSwapSidesWhenHit
         { get; set; }
@@ -53,7 +57,7 @@ namespace SAD.Core
             Name = "NOT VALID";
         }
         
-        public Target(string Nm, double x, double y, double z, bool Frd, int Pts, int FR, int SR, bool CSSWH)
+        public Target(string Nm, double x, double y, double z, bool Frd, int Pts, int FR, int SR, bool CSSWH, int hitCount, TimeSpan timeOfLastHit)
         {
             Name = Nm;
             X = x;
@@ -64,6 +68,7 @@ namespace SAD.Core
             FlashRate = FR;
             SpawnRate = SR;
             CanSwapSidesWhenHit = CSSWH;
+            TimeOfLastHit = timeOfLastHit;
         }
     }
 }
