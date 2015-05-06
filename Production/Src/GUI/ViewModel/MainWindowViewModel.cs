@@ -80,8 +80,6 @@ namespace GUI.ViewModel
             StopGameCommand = new MyCommand(StopGame);
 
             m_strategy = new KillAllStrategy();
-
-
         }
         /// <summary>
         ///  Game Server shhhhhhtuff. 

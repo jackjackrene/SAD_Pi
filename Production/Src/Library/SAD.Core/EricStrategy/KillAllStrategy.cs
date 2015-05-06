@@ -49,6 +49,7 @@ namespace SAD.Core.EricStrategy
                 if (missileLauncher.CurrentMissileCount == 0)
                 {
                     MessageBox.Show("Reload", "Reload", MessageBoxButtons.OK);
+                    missileLauncher.Reload();
                     // add logic stating that we must reload and wait until the reload is complete. 
                 }
                 missileLauncher.Kill(target.Phi, target.Theta);
