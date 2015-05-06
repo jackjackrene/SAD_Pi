@@ -34,6 +34,9 @@ namespace SAD.Core.Server.ServerDataCoverter
             targetManager = TargetManager.GetInstance();
             gameServer = GameServer.GetInstance();
             gameWatch = GameWatch.GetInstance();
+
+            oldSadTargetList = new List<Target>();
+            newSadTargetList = new List<Target>();
         }
 
         public void UpdateTargetList()
@@ -73,6 +76,7 @@ namespace SAD.Core.Server.ServerDataCoverter
 
             // Update the list
             targetManager.TargetList = newSadTargetList;
+            calculatePositions.CalculatePhiTheta();
         }
 
         public bool DetermineIfCameraIsInUse(TargetServerCommunicator.Data.Target serverTarget)
@@ -130,7 +134,7 @@ namespace SAD.Core.Server.ServerDataCoverter
             target.FlashRate = serverTarget.dutyCycle;
 
             // Is it dead?
-            if (oldSadTargetList != null)
+            if (oldSadTargetList.Count != 0)
             {
                 Target lastTargetShotAt = FindOldTarget(serverTarget.name);
 
