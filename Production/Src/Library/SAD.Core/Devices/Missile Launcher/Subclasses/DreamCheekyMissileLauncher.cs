@@ -64,8 +64,8 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
 
         public override void Move(double phi, double theta)
         {
-            double movebyPhi = currentPhi - phi;
-            double movebyTheta = currentTheta - theta;
+            double movebyPhi = phi - currentPhi;
+            double movebyTheta = theta - currentTheta;
 
             // MoveBy(movebyPhi, movebyTheta);
             phi = movebyPhi;
