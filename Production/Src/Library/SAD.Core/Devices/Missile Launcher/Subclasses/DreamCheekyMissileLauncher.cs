@@ -64,10 +64,10 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
 
         public override void Move(double phi, double theta)
         {
-            double movebyPhi = phi - currentPhi;
-            double movebyTheta = theta - currentTheta;
+            double movebyPhi = phi - CurrentPhi;
+            double movebyTheta = theta - CurrentTheta;
 
-            // MoveBy(movebyPhi, movebyTheta);
+            MoveBy(movebyPhi, movebyTheta);
             phi = movebyPhi;
             theta = movebyTheta;
 
@@ -85,6 +85,7 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
                 CurrentTheta = -10;
 
             System.Console.WriteLine("Move method of SADMissileLauncher invoked!");
+            /*
             try
             {
                 // Reset the Launcher
@@ -108,7 +109,7 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
                 System.Console.WriteLine("Reseting to default coordinates...");
 
                 internalMissileLauncher.command_reset();
-            }
+            } */
         }
 
         public override void MoveBy(double phi, double theta)
@@ -149,6 +150,14 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
 
                 internalMissileLauncher.command_reset();
             }
+        }
+
+        public override void reset()
+        {
+            // Reset the Launcher
+            internalMissileLauncher.command_reset();
+            CurrentPhi = 0;
+            CurrentTheta = 0;
         }
 
         private int DegreesToTime(double degree)

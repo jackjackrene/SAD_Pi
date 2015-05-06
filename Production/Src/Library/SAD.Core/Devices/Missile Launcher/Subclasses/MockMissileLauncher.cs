@@ -55,5 +55,11 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
             CurrentPhi = CurrentPhi + phi;
             CurrentTheta = CurrentTheta + theta;
         }
+
+        public override void reset()
+        {
+            CurrentPhi = 0;
+            CurrentTheta = 0;
+        }
     }
 }
