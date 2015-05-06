@@ -37,24 +37,54 @@ namespace SAD.Core.EricStrategy
 
             // target manager.update list updates the list and sends it to target manager. 
             gameWatch.StartGameWatch();
-            
+
             // We do not know if the target is dead or alive. 
             // Must use the timer to figure this out. 
-            
 
-
-            foreach (Target target in TargetList)
+            TimeSpan currentTime = gameWatch.GetCurrentTime();
+            int secondsInGame = currentTime.Seconds;
+            // While we are at less than 60 seconds... the game is running
+            while (secondsInGame <= 60)
             {
+                // update the list of targets. 
+                targetConverter.UpdateTargetList();
+
+                // call the prioritize function to decide which target to hit. 4
+
                 if (missileLauncher.CurrentMissileCount == 0)
                 {
                     MessageBox.Show("Reload", "Reload", MessageBoxButtons.OK);
                     missileLauncher.Reload();
-                    // add logic stating that we must reload and wait until the reload is complete. 
                 }
-                missileLauncher.Kill(target.Phi, target.Theta);
-                gameWatch.GetCurrentTime();
+                // call the fire method on the target. 
+                var targetToShoot = prioritize(TargetList);
+                missileLauncher.Kill(targetToShoot.Phi, targetToShoot.Theta);
+                currentTime = gameWatch.GetCurrentTime();
+                secondsInGame = currentTime.Seconds;
             }
         }
-           
+
+
+        Target prioritize(List<Target> TargetList)
+        {
+            double highestPointValue = 0;
+            int targetToHitIndex = 0;
+            for (int index = 0; index < TargetList.Count; index++)
+            {
+                var targetToShoot = TargetList[index];
+                // The target has been hit at least once. Check the time it was last hit to make 
+                // certain we don't shoot it if it is off. 
+                if (targetToShoot.HitCount != 0)
+                {
+                    // logic to check time of last hit. 
+                }
+                if (targetToShoot.Points > highestPointValue)
+                {
+                    targetToHitIndex = index;
+                }
+
+            }
+            return TargetList[targetToHitIndex];
+        }
     }
 }
