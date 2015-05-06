@@ -129,7 +129,50 @@ namespace SAD.Core.Server.ServerDataCoverter
             target.Points = serverTarget.points;
             target.FlashRate = serverTarget.dutyCycle;
 
-            // Is it dead?
+
+            // Is it the first time shooting?
+            if (oldSadTargetList.Count == 0)
+            {
+                // Everyone is alive!
+                target.WasHtLastTime = false;
+                target.Status = true;
+            }
+            else
+            {
+                Target lastTargetShotAt = FindOldTarget(serverTarget.name);
+
+                // Has it been hit and were waiting for it respawn?
+                if (target.WasHtLastTime == true)
+                {
+                    TimeSpan spawnRate = TimeSpan.FromSeconds(lastTargetShotAt.SpawnRate);
+
+                    // Has it respawned?
+                    if ((lastTargetShotAt.TimeOfLastHit + spawnRate) > gameWatch.GetCurrentTime())
+                    {
+                        // Its alive again!
+                        target.Status = true;
+                        target.WasHtLastTime = false; // we havent hit again
+                    }
+                    else
+                        target.Status = false; // still dead
+                }
+                else
+                {
+                    // Target was not hit. Did we just hit it?
+                    if (wasHit(lastTargetShotAt.HitCount, serverTarget.hit))
+                    {
+                        // Its hit!
+                        target.Status = false; // its dead
+                        target.WasHtLastTime = true; 
+
+                        target.TimeOfLastHit = gameWatch.GetCurrentTime();
+                    }
+                    else
+                        target.Status = true;  // still alive
+                }
+            }
+            /*
+
             if (oldSadTargetList.Count != 0)
             {
                 Target lastTargetShotAt = FindOldTarget(serverTarget.name);
@@ -144,6 +187,7 @@ namespace SAD.Core.Server.ServerDataCoverter
             }
             else
                 target.Status = true;
+            */
 
             return target;
         }         

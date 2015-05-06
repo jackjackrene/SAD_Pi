@@ -30,6 +30,9 @@ namespace SAD.Core
         { get; set; }
         public TimeSpan TimeOfLastHit
         { get; set; }
+        public bool WasHtLastTime
+        { get; set; }
+
         public double SpawnRate
         { get; set; }
         public bool CanSwapSidesWhenHit
