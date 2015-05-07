@@ -16,7 +16,7 @@ using System.Windows.Forms;
 
 namespace SAD.Core.EricStrategy
 {
-    public class KillAllStrategy : IStrategy
+    public class KillAllFriendsStrategy : IStrategy
     {
         private TargetManager targetManager;
         private GameWatch gameWatch;
@@ -76,12 +76,12 @@ namespace SAD.Core.EricStrategy
 
                 currentTime = gameWatch.GetCurrentTime();
                 minutesInGame = currentTime.Minutes;
-                
+
             }
             MessageBox.Show("GAME OVER", "GAME OVER", MessageBoxButtons.OK);
             gameWatch.StopGameWatch();
             gameWatch.ResetGameWatch();
-            
+
 
         }
 
