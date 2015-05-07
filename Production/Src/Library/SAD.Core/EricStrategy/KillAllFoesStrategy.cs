@@ -16,7 +16,7 @@ using System.Windows.Forms;
 
 namespace SAD.Core.EricStrategy
 {
-    public class KillAllFriendsStrategy : IStrategy
+    public class KillAllFoesStrategy : IStrategy
     {
         private TargetManager targetManager;
         private GameWatch gameWatch;
