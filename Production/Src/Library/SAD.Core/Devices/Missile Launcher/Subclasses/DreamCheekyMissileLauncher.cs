@@ -68,11 +68,9 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
             double movebyTheta = theta - CurrentTheta;
 
             MoveBy(movebyPhi, movebyTheta);
-            phi = movebyPhi;
-            theta = movebyTheta;
 
-            CurrentPhi = phi;
-            CurrentTheta = theta;
+            // CurrentPhi = phi;
+            // CurrentTheta = theta;
 
             if (CurrentPhi > 135)
                 CurrentPhi = 135;
@@ -134,13 +132,13 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
                 // Move by theta
                 if (theta < 0)
                     internalMissileLauncher.command_Down(DegreesToTime(theta));
-                else
+                else if (theta > 0)
                     internalMissileLauncher.command_Up(DegreesToTime(theta));
 
                 // Move by phi
                 if (phi < 0)
                     internalMissileLauncher.command_Left(DegreesToTime(phi));
-                else
+                else if (phi > 0)
                     internalMissileLauncher.command_Right(DegreesToTime(phi));
             }
             catch (ArgumentOutOfRangeException e)
@@ -156,6 +154,7 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
         {
             // Reset the Launcher
             internalMissileLauncher.command_reset();
+            internalMissileLauncher.command_Down(DegreesToTime(-18.5));
             CurrentPhi = 0;
             CurrentTheta = 0;
         }
@@ -163,7 +162,7 @@ namespace SAD.Core.Devices.Missile_Launcher.Subclasses
         private int DegreesToTime(double degree)
         {
             int returnValue = 0;
-            double conversionRate = 20;
+            double conversionRate = 14;
 
             returnValue = Math.Abs((int)Math.Round(degree * conversionRate));
 
