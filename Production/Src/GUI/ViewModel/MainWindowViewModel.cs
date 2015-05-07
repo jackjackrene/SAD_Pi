@@ -81,7 +81,7 @@ namespace GUI.ViewModel
               StartGameCommand = new MyCommand(StartGame);
             StopGameCommand = new MyCommand(StopGame);
 
-            m_strategy = new KillAllStrategy();
+            m_strategy = new RapidFireStrategy();
            
         }
         /// <summary>
@@ -97,7 +97,7 @@ namespace GUI.ViewModel
             m_server.StopRunningGame();
             // Returns an IEnumerable of strings... a collection. 
             var games = m_server.RetrieveServerGameList();
-            
+
             foreach(var game in games){
                 Games.Add(game);
             }
@@ -120,16 +120,11 @@ namespace GUI.ViewModel
             {
                 return;
             }
-            m_strategy.GetTargetAndKillIt();
-            // Translate the gameservercommunicatortarget into your own...
-            // Then add to your own collection of targets bound by the view. 
-            //var targets = m_server.RetrieveTargetList(SelectedGame);
-            //foreach (var target in targets)
-            //{
-            //    var temporaryTarget = targetConverter.convertServerTarget(target);
+            m_server.RetrieveServerTargetList();
+            targetConverter.UpdateTargetList();
 
+            targetListViewModel.LoadTargets();
 
-            //}
 
         }
         private async void StartGame()
@@ -149,7 +144,7 @@ namespace GUI.ViewModel
              Task runGameTask = Task.Run(() =>
                  {
                      m_server.StartGame();
-            m_strategy.GetTargetAndKillIt();
+                     m_strategy.GetTargetAndKillIt();
              });
              await runGameTask;
 

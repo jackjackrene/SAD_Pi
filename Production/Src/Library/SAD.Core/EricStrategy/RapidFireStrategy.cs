@@ -15,11 +15,11 @@ using System.Windows.Forms;
 
 namespace SAD.Core.EricStrategy
 {
-    class RapidFireStrategy : IStrategy
+    public class RapidFireStrategy : IStrategy
     {
         private TargetManager targetManager;
         private GameWatch gameWatch;
-        public void RapidFire()
+        public async void GetTargetAndKillIt()
         {
             SAD.Core.TargetManager targetManager = SAD.Core.TargetManager.GetInstance();
             List<SAD.Core.Target> TargetList = new List<SAD.Core.Target>();
@@ -42,6 +42,7 @@ namespace SAD.Core.EricStrategy
             TimeSpan currentTime = gameWatch.GetCurrentTime();
             int minutesInGame = currentTime.Minutes;
             bool moveRight = true;
+
             // While we are at less than 60 seconds... the game is running
             while (minutesInGame < 1)
             {
@@ -53,22 +54,29 @@ namespace SAD.Core.EricStrategy
 
                 if (moveRight == true)
                 {
-                    missileLauncher.MoveBy(2, 0);
+                    Task moveTask = Task.Run(() =>
+                        {
+                    missileLauncher.MoveBy(5, 0);
+                        });
+                    await moveTask;
                     missileLauncher.Fire();
                 }
 
                 if (moveRight == false)
                 {
-                    missileLauncher.MoveBy(-2, 0);
+                    Task moveTask = Task.Run(() =>
+                        {
+                    missileLauncher.MoveBy(-5, 0);
+                        });
+                    await moveTask;
                     missileLauncher.Fire();
                 }
 
-
-                if (missileLauncher.CurrentPhi < -18)
+                if (missileLauncher.CurrentPhi < -13)
                 {
                     moveRight = true;
                 }
-                if (missileLauncher.CurrentPhi > 18)
+                if (missileLauncher.CurrentPhi > 13)
                 {
                     moveRight = false;
                 }
@@ -77,6 +85,7 @@ namespace SAD.Core.EricStrategy
                 currentTime = gameWatch.GetCurrentTime();
                 minutesInGame = currentTime.Minutes;
             }
+
             MessageBox.Show("GAME OVER", "GAME OVER", MessageBoxButtons.OK);
             gameWatch.StopGameWatch();
             gameWatch.ResetGameWatch();
@@ -84,5 +93,3 @@ namespace SAD.Core.EricStrategy
         }
     }
 }
-
-

@@ -161,8 +161,12 @@ namespace GUI.ViewModel
         }
         public void Calibrate()
         {
-            missileLauncher.reset();
-            CurrentPhiTheta = "(" + Math.Round(missileLauncher.CurrentPhi, 2) + ", " + Math.Round(missileLauncher.CurrentTheta, 2) + ")";
+            Task calibrateTask = Task.Run(() =>
+            {
+                missileLauncher.reset();
+                CurrentPhiTheta = "(" + Math.Round(missileLauncher.CurrentPhi, 2) + ", " + Math.Round(missileLauncher.CurrentTheta, 2) + ")";
+
+            });
         }
 
         // Commands
