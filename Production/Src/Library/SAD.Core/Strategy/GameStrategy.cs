@@ -162,8 +162,14 @@ namespace SAD.Core.Strategy
                 {
                     if (targetList[largestPointValue].Points < targetList[j].Points)
                         largestPointValue = j;
+
+                    Target temp = targetList[i];
+                    targetList[i] = targetList[largestPointValue];
+                    targetList[largestPointValue] = temp;
                 }
             }
+
+
 
 
                 return priorityTarget;
