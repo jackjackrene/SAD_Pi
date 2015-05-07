@@ -21,16 +21,7 @@ namespace SAD.Core.EricStrategy
         private TargetManager targetManager;
         private GameWatch gameWatch;
 
-        public IStrategy IStrategy
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+   
     
         public void GetTargetAndKillIt()
         {
