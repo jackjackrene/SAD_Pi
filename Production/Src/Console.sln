@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Applications", "{D8BEA8E6-3C73-4306-A8A1-017720F1D70A}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{018FF906-3E1D-405B-B99E-08AD83F7DAC5}"
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "GUIModeling", "GUIModeling\GUIModeling.modelproj", "{5D270639-CE13-4AF2-994B-8422CB47A153}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "StrategyModeling", "StrategyModeling\StrategyModeling.modelproj", "{A8D95AFD-1CF6-4222-9587-73D69DDA4047}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,12 @@ Global
 		{5D270639-CE13-4AF2-994B-8422CB47A153}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D270639-CE13-4AF2-994B-8422CB47A153}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5D270639-CE13-4AF2-994B-8422CB47A153}.Release|x86.ActiveCfg = Release|Any CPU
+		{A8D95AFD-1CF6-4222-9587-73D69DDA4047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8D95AFD-1CF6-4222-9587-73D69DDA4047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8D95AFD-1CF6-4222-9587-73D69DDA4047}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A8D95AFD-1CF6-4222-9587-73D69DDA4047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8D95AFD-1CF6-4222-9587-73D69DDA4047}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8D95AFD-1CF6-4222-9587-73D69DDA4047}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

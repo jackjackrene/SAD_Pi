@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="8f225903-8f9a-4816-a3e2-c5b61d1d62c8" name="Strategy" linkedPackageId="81dc47be-13e2-4441-b66e-fa55fe9778ea" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="b5d49c9a-8c70-4cb1-a6c8-4cedcde369a7">
+      <profileInstance Id="b4674f83-721f-4941-8915-0793a2890d12" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="4478953a-6196-46d3-a7f1-1d2a89dd3bb9">
+      <profileInstance Id="b86b0ad3-82e7-4a4f-a414-ed9797fe0c14" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="56693fd8-c790-4a6c-ac8e-7f9b63fbeb7d">
+      <profileInstance Id="51f0877f-2d4f-4a64-b9e9-7f7031c0fe97" name="CSharpProfile">
+        <elementDefinition Id="73f69f8b-e7c8-44a3-9a72-8e2a0eadc116" />
+      </profileInstance>
+      <elementDefinition Id="e24e8d4a-521d-4c15-8229-3ab05c56dd4e" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a47a1e28-ddd7-4311-b3d2-0f0642be9fa6" name="GUI::ViewModel::MainWindowViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5fa70c47-dfc4-40d8-9b82-1ff7f01662be" />
+        <targetEnds>
+          <association Id="0797844a-9e8a-4292-905d-b237700632c7" isDerived="false" sourceEndRoleName="GUI::ViewModel::MainWindowViewModel" targetEndRoleName="IStrategy" isLeaf="false" isAbstract="false">
+            <classMoniker Id="143330f7-417f-4acb-837d-54a37c22ed6f" LastKnownName="IStrategy" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="65525e07-8301-4eed-bb7f-b8c7fac964ec" name="GUI::ViewModel::MainWindowViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="86fcb5df-704d-4913-b9aa-20a6c88b12a5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9758f03d-150c-486a-984a-f848914373a5" name="IStrategy" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="370d1060-e6e6-4b80-ae8b-0d35724a1e96" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="cd9473f8-61a3-4a62-b601-92100091f4f4" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="9385a2e9-1fb7-4383-910f-3aac516b5351" name="CameraImage" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9a8eec41-0ce1-4860-a5c5-64f14561cc22" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="f4b08eb0-cd2c-4e9a-b2f0-eb98f1bb9f75" LastKnownName="BitmapSource" />
+            </type_NamedElement>
+          </property>
+          <property Id="bf9b44ea-43cd-434a-9080-9589463747ac" name="TakePictureCommand" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e0c857fa-ba58-4fb4-b943-f8df3de644fd" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7c4f19f9-1fe2-4173-9a2f-2031364338b2" LastKnownName="ICommand" />
+            </type_NamedElement>
+          </property>
+          <property Id="b4de1641-2f0e-443d-8013-cbb350479f8d" name="TargetListViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="07662fa7-11b1-4cf1-b6b6-9a9747d0529e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="1c039569-8891-4164-b18e-0110aa7cd739" LastKnownName="targetListViewModel" />
+            </type_NamedElement>
+          </property>
+          <property Id="64dd93e6-bc49-46c6-9f17-b0be86702fc6" name="m_cameraImage" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="215a6227-89e2-4011-9a61-a6e9a9720b18" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="64fa0c6e-5f96-417a-b740-9d63b8913e76" LastKnownName="BitmapSource" />
+            </type_NamedElement>
+          </property>
+          <property Id="258e8ed5-f386-4cfb-8881-90f7d123ab96" name="m_capture" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9df2b587-37b1-4fe0-b51d-b1c17253caf1" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="4d12b639-6477-470c-9132-6681d006972f" LastKnownName="Capture" />
+            </type_NamedElement>
+          </property>
+          <property Id="0c23fb59-798a-472a-8093-76637a823e60" name="m_title" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b5ad9847-2be8-4a83-a680-48153d98b051" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b5fc52b4-5987-4e68-a8f0-f81eb524c8b8" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="5249f4e5-7936-4160-aa1b-f029f75a87be" name="targetListViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6e904c19-f962-4677-ab0a-29a376519c9f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="090ee103-2f91-41e9-86ff-11439fec5718" LastKnownName="TargetListViewModel" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="b0ab8e87-1525-4ec7-933a-c1e3fc0b5698" name="ConvertImageToBitmap" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4fdcd79c-1c35-4ec4-ac86-6ed80b1f73d7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="269df67b-e17c-4e05-a203-3761a8c4a31c" name="Image" direction="In" isUnique="false">
+                  <elementDefinition Id="de92ad33-9ef4-46d5-85b5-b07db37b2e8c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4520d787-8f51-43f0-83eb-d7e9e7c09a66" LastKnownName="IImage" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="38a0e3f9-ac54-4a7c-8a90-c8da1dddc635" direction="Return" isUnique="false">
+                  <elementDefinition Id="3ac71061-ca3a-456e-b543-c8607bd1b054" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f4b08eb0-cd2c-4e9a-b2f0-eb98f1bb9f75" LastKnownName="BitmapSource" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="d1da2259-69d4-426c-93b0-d025eed5166b" name="DeleteObject" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6eaed623-70cb-488b-9152-e0754226b328" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="10b6e3d2-da49-4178-8f61-5cda9ce6a2c5" name="ptr" direction="In" isUnique="false">
+                  <elementDefinition Id="dc37834f-98e2-4fc5-a98d-a68799c91b99" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c547dcaf-d642-4181-beb5-7c3a53f470c9" LastKnownName="IntPtr" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="911bc1d0-aa54-4bf3-9f6d-b83e1c121e93" direction="Return" isUnique="false">
+                  <elementDefinition Id="c1eb6854-83ee-4fed-81b1-75d96a2c9844" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a7c61e95-da72-45dd-aee6-809e3183e085" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="4b1ce865-12b1-4856-9bde-ded72cb321d9" name="TakePicture" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e38882a9-941d-4d96-a580-57b425a8957b" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="f4b08eb0-cd2c-4e9a-b2f0-eb98f1bb9f75" name="BitmapSource" isAbstract="false" isLeaf="false" cachedFullName="BitmapSource">
+        <elementDefinition Id="d03ee9a5-1882-433c-adc1-fb03259c8aff" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7c4f19f9-1fe2-4173-9a2f-2031364338b2" name="ICommand" isAbstract="false" isLeaf="false" cachedFullName="ICommand">
+        <elementDefinition Id="4271f2dc-cdef-40bd-bf21-00251e8d0db7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="1c039569-8891-4164-b18e-0110aa7cd739" name="targetListViewModel" isAbstract="false" isLeaf="false" cachedFullName="targetListViewModel">
+        <elementDefinition Id="93ca7a6c-a06d-472b-9545-9fe11278a280" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="64fa0c6e-5f96-417a-b740-9d63b8913e76" name="BitmapSource" isAbstract="false" isLeaf="false" cachedFullName="BitmapSource">
+        <elementDefinition Id="d03ee9a5-1882-433c-adc1-fb03259c8aff" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4d12b639-6477-470c-9132-6681d006972f" name="Capture" isAbstract="false" isLeaf="false" cachedFullName="Capture">
+        <elementDefinition Id="abc22189-1c41-465a-a180-6ba18d3d6ba1" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b5fc52b4-5987-4e68-a8f0-f81eb524c8b8" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="090ee103-2f91-41e9-86ff-11439fec5718" name="TargetListViewModel" isAbstract="false" isLeaf="false" cachedFullName="TargetListViewModel">
+        <elementDefinition Id="02f68944-4bcd-4f28-b259-71167fc9b136" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4520d787-8f51-43f0-83eb-d7e9e7c09a66" name="IImage" isAbstract="false" isLeaf="false" cachedFullName="IImage">
+        <elementDefinition Id="0820483b-8470-4958-bcda-4cfef11201e7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c547dcaf-d642-4181-beb5-7c3a53f470c9" name="IntPtr" isAbstract="false" isLeaf="false" cachedFullName="IntPtr">
+        <elementDefinition Id="ecaf525f-79a8-48f0-95bc-197bc87b713b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a7c61e95-da72-45dd-aee6-809e3183e085" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="143330f7-417f-4acb-837d-54a37c22ed6f" name="IStrategy" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e60cb238-6c50-442b-9e1e-3fbe43fdad44" />
+        <ownedOperationsInternal>
+          <operation Id="9e9a6b3f-f3d9-4822-bba5-d1f3b75a09c3" name="GetTargetAndKillIt" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8f5a63e6-4871-498a-bb5c-e1ac61f0f6b8" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="98786459-1509-4c1d-b7eb-84972278ce9c" name="KillAllFriendsStrategy" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d9536813-a37f-4920-b5bc-7cb14215d375" />
+        <generalsInternal>
+          <generalization Id="3e0e0c28-c8a9-4c89-8ad3-de6404dde5ae" isSubstitutable="false">
+            <classMoniker Id="143330f7-417f-4acb-837d-54a37c22ed6f" LastKnownName="IStrategy" />
+            <elementDefinition Id="c1539c87-43d7-4a56-a726-e8004bb2959d" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="eb28c94c-eb8c-4952-a5f5-00ca0d59a4a9" name="GetTargetAndKillIt" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="406fde34-6bb3-4be5-98e8-8229b9e291be" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9ea5aee6-533f-4635-b7e4-1780fafaeaae" name="KillAllStrategy" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8c3aa0c7-b59b-4b60-a1f0-4bfd5c6fc6c9" />
+        <generalsInternal>
+          <generalization Id="df6dbdac-d398-4ce6-a8b7-9295326b9e89" isSubstitutable="false">
+            <classMoniker Id="143330f7-417f-4acb-837d-54a37c22ed6f" LastKnownName="IStrategy" />
+            <elementDefinition Id="5e846a10-a79f-483d-9654-2bcb551db48e" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="694228d3-3dee-49a2-b41f-6dc84d1df123" name="GetTargetAndKillIt" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1bb6794c-3933-4701-a8e6-acdd57663954" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b0cd5e5a-b965-4a75-bd1b-3b9c7bd96bcb" name="RapidFireStrategy" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d65c0831-fb7c-4e8b-965e-2a5de5d7d83a" />
+        <generalsInternal>
+          <generalization Id="0ac136ab-320e-447e-a4d7-7e3bc9335d80" isSubstitutable="false">
+            <classMoniker Id="143330f7-417f-4acb-837d-54a37c22ed6f" LastKnownName="IStrategy" />
+            <elementDefinition Id="258745b5-bb52-4f52-80f7-a7fdb4a86f0b" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="d4add7ea-64fc-4766-81ac-91f1ecfd97bd" name="GetTargetAndKillIt" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5fd342b8-9d11-4d4a-96d6-18ac9c5f9ae0" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="81dc47be-13e2-4441-b66e-fa55fe9778ea" name="GUIModeling">
+    <elementDefinition Id="d541d7d4-7e57-4ee4-ad09-8f4d4f438368" />
+  </package>
+</logicalClassDesignerModel>
