@@ -16,6 +16,12 @@ namespace SAD.Core.Strategy
 {
     public abstract class GameStrategy : IPriorityStrategy, IGame
     {
+        protected TargetConverter targetConverter;
+        protected GameWatch gameWatch;
+        private SADMissileLauncher missileLauncher;
+        private GameServer gameServer;
+        private TargetManager targetManager;
+
         // Game Fields
         private bool foesOnly;
         private bool isBlinking;
@@ -24,12 +30,8 @@ namespace SAD.Core.Strategy
 
         // Strategy Fields
         private double gameStartTime;
+        private Target lastTargetShotAt;
 
-        protected TargetConverter targetConverter;
-        protected GameWatch gameWatch;
-        private SADMissileLauncher missileLauncher;
-        private GameServer gameServer;
-        private TargetManager targetManager;
 
         public GameStrategy()
         {
@@ -106,10 +108,46 @@ namespace SAD.Core.Strategy
             return false;
         }
 
-        protected bool HasSwapedSides(bool wasHitLastTime)
+        protected TimeSpan TimeTillTargetRespawns(TimeSpan timeOfLastHit, TimeSpan spawnRate)
         {
-            // If it was hit last time, yes
-            if (wasHitLastTime == true)
+            return (gameWatch.GetCurrentTime() - (timeOfLastHit + spawnRate));
+        }
+
+        protected List<Target> SortTargetList()
+        {
+            List<Target> sortedList;
+
+            // What do we care about?
+            if (foesOnly == true || canChangeSides == false)
+                sortedList = targetManager.GetEnemies.ToList();
+            else
+                sortedList = targetManager.GetAllTargets.ToList(); // Traitors!
+
+            // Use selection sort to order from greatest points to least points
+            for (int i = 0; i < sortedList.Count; i++)
+            {
+                int largestPointValue = i;
+
+                for (int j = i; j < sortedList.Count; j++)
+                {
+                    if (sortedList[largestPointValue].Points < sortedList[j].Points)
+                        largestPointValue = j;
+
+                    Target temp = sortedList[i];
+                    sortedList[i] = sortedList[largestPointValue];
+                    sortedList[largestPointValue] = temp;
+                }
+            }
+
+            return sortedList;
+        }
+
+        protected bool HasSwapedSides(int hitCount)
+        {
+            // Assume all start off as 'normal'
+            // If the hit count is odd, hes flipped
+            // If even, hes following his dogma
+            if ((hitCount == 0) || (hitCount % 2 == 0))
                 return true;
             else
                 return false;
@@ -126,6 +164,7 @@ namespace SAD.Core.Strategy
             gameWatch.StartGameWatch();
             TimeSpan timeLimit = TimeSpan.FromMinutes(1.00);
 
+            // For as long as the game is running
             while ((TimeSpan.Compare(gameWatch.GetCurrentTime(), timeLimit) == -1))
             {
                 Target victim;
@@ -141,38 +180,6 @@ namespace SAD.Core.Strategy
             }
         }
 
-        public Target PrioritizeTargets()
-        {
-            Target priorityTarget = new Target();
-            List<Target> targetList;
-            List<Target> sortedList;
-
-            // What do we care about?
-            if (foesOnly == true)
-                targetList = targetManager.GetEnemies.ToList();
-            else
-                targetList = targetManager.GetAllTargets.ToList();
-
-            // Use selection sort to order from greatest points to least points
-            for (int i = 0; i < targetList.Count; i++)
-            {
-                int largestPointValue = i;
-
-                for (int j = i; j < targetList.Count; j++)
-                {
-                    if (targetList[largestPointValue].Points < targetList[j].Points)
-                        largestPointValue = j;
-
-                    Target temp = targetList[i];
-                    targetList[i] = targetList[largestPointValue];
-                    targetList[largestPointValue] = temp;
-                }
-            }
-
-
-
-
-                return priorityTarget;
-        }
+        public abstract Target PrioritizeTargets();
     }
 }

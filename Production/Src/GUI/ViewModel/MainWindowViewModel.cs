@@ -27,6 +27,8 @@ using SAD.Core.Server.ServerDataCoverter;
 using System.Timers;
 using SAD.Core.EricStrategy;
 using SAD.Core.Server;
+using SAD.Core.Strategy.Subclasses; // JAD's Strategy
+using SAD.Core.Strategy;
 
 namespace GUI.ViewModel
 {
@@ -49,6 +51,10 @@ namespace GUI.ViewModel
         private BlockingCollection<Image<Bgr, byte>> imageBlockingCollection;
         private BlockingCollection<Image<Bgr, byte>> processBuffer;
         private IStrategy m_strategy;
+
+        /* JAD's Strategy */
+        // private GameStrategyFactory gameStrategyFactory;
+        // private GameStrategy gameStrategy;
 
         // ViewModel Instances
         private TargetListViewModel targetListViewModel;
@@ -73,7 +79,8 @@ namespace GUI.ViewModel
             this.IsRunning = false;
             Games = new ObservableCollection<String>();
 
-
+            /* JAD's Strategy */
+            // gameStrategyFactory = GameStrategyFactory.GetInstance();
 
               ConnectToGameServerCommand = new MyCommand(ConnectToGameServer);
          //   GetGameListCommand = new MyCommand(GetGameList);
@@ -143,17 +150,33 @@ namespace GUI.ViewModel
             {
                 return;
             }
+
             // Muy importante to set the game type on our created m_server object. 
             m_server.GameType = m_selectedGame;
+
+
             // declare the strategy and use it.  0
-             Task runGameTask = Task.Run(() =>
-                 {
-                     m_server.StartGame();
-            m_strategy.GetTargetAndKillIt();
+            Task runGameTask = Task.Run(() =>
+            {
+                m_server.StartGame();
+                m_strategy.GetTargetAndKillIt();
              });
+
              await runGameTask;
 
+            /* JAD's version 
+               WARNING. NOT TESTED */
+            /*
+             gameStrategy = gameStrategyFactory.CreateGameStrategy(m_selectedGame);
 
+             Task TaskRunGame = Task.Run(() =>
+             {
+                 m_server.StartGame();
+                 gameStrategy.StartGame();
+             });
+
+             await TaskRunGame;
+             */
            
         }
         private void StopGame()

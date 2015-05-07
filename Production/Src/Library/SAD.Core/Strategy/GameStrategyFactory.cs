@@ -9,7 +9,7 @@ using SAD.Core.Server;
 
 namespace SAD.Core.Strategy
 {
-    class GameStrategyFactory
+    public class GameStrategyFactory
     {
         private static GameStrategyFactory gameStrategyInstance;
         private GameServer gameServer;
