@@ -136,7 +136,6 @@
     <Compile Include="EricStrategy\KillAllStrategy.cs" />
     <Compile Include="EricStrategy\RapidFireStrategy.cs" />
     <Compile Include="Game\IGame.cs" />
-    <Compile Include="GUIViewModelMainWindowViewModel.cs" />
     <Compile Include="IO\CommentException.cs" />
     <Compile Include="IO\INIFileReader.cs" />
     <Compile Include="Devices\Missile Launcher\MissileLauncher.cs" />
@@ -148,7 +147,6 @@
     <Compile Include="Time\GameWatch.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
