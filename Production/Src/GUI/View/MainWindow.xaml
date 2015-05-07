@@ -44,16 +44,6 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             
-            <Grid x:Name="Test" Grid.Column="1">
-                <Grid.DataContext>
-                    <viewModel:FileReaderViewModel>
-                    </viewModel:FileReaderViewModel>
-                </Grid.DataContext>
-
-                <Button Content="Load Targets From File" Command="{Binding LoadTargetsFromFileCommand}"/>
-            </Grid>
-            
-            
             <!-- List of Targets -->
             <Grid x:Name="TargetView"
               Grid.Column="0"
