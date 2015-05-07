@@ -65,6 +65,11 @@ namespace SAD.Core.EricStrategy
                 currentTime = gameWatch.GetCurrentTime();
                 minutesInGame = currentTime.Minutes;
             }
+            MessageBox.Show("GAME OVER", "GAME OVER", MessageBoxButtons.OK);
+            gameWatch.StopGameWatch();
+            gameWatch.ResetGameWatch();
+            
+
         }
 
 
