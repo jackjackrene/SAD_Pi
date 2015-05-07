@@ -19,6 +19,7 @@ namespace SAD.Core.EricStrategy
     {
         private TargetManager targetManager;
         private GameWatch gameWatch;
+    
         public async void GetTargetAndKillIt()
         {
             SAD.Core.TargetManager targetManager = SAD.Core.TargetManager.GetInstance();

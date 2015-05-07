@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="d541d7d4-7e57-4ee4-ad09-8f4d4f438368"
   name="GUIModeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -83,6 +83,49 @@
           LastKnownName="TargetListViewModel"
           LastKnownLocation="GUIModeling.uml" />
       </annotatedElements>
+    </comment>
+    <comment
+      Id="85a4045b-7c9c-4ee9-b0d3-506430e0c43a">
+      <body>Application Startup
+</body>
+    </comment>
+    <comment
+      Id="3823fbf4-73b3-435a-a43f-142b4ff20f96">
+      <body>If game timer reached 60 seconds. End Game
+</body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="bf15b027-7546-4a44-8dd7-776cc1d92913"
+          LastKnownName="Decision7"
+          LastKnownLocation="GUIModeling.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="13f103f0-a8e8-443a-9a97-113d90ff0a48">
+      <body>If user clicks "start" video
+</body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="552c0506-2e2f-4b9b-886f-60360e1823c4"
+          LastKnownName="Decision9"
+          LastKnownLocation="GUIModeling.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="93555b1e-94cf-41b0-b8ff-1032669366e5">
+      <body>If out of ammo
+</body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="baeea5fe-d8f8-476e-ac34-ae4e2c8cd9b4"
+          LastKnownName="Decision1"
+          LastKnownLocation="GUIModeling.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="49c3767a-49ce-4f27-a4f6-ac3a396e8df2">
+      <body>If game timer reaches 1 minute
+</body>
     </comment>
   </ownedCommentsInternal>
   <profileInstances>
@@ -1083,6 +1126,857 @@
         name="ICamera"
         isAbstract="false"
         isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5fa70c47-dfc4-40d8-9b82-1ff7f01662be"
+        name="GUI::ViewModel::MainWindowViewModel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="cd9473f8-61a3-4a62-b601-92100091f4f4"
+            isDerived="false"
+            sourceEndRoleName="GUI::ViewModel::MainWindowViewModel"
+            targetEndRoleName="IStrategy"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e60cb238-6c50-442b-9e1e-3fbe43fdad44"
+              LastKnownName="IStrategy"
+              LastKnownLocation="GUIModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="86fcb5df-704d-4913-b9aa-20a6c88b12a5"
+                  name="GUI::ViewModel::MainWindowViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="370d1060-e6e6-4b80-ae8b-0d35724a1e96"
+                  name="IStrategy"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="9a8eec41-0ce1-4860-a5c5-64f14561cc22"
+            name="CameraImage"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="d03ee9a5-1882-433c-adc1-fb03259c8aff"
+                LastKnownName="BitmapSource"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e0c857fa-ba58-4fb4-b943-f8df3de644fd"
+            name="TakePictureCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="4271f2dc-cdef-40bd-bf21-00251e8d0db7"
+                LastKnownName="ICommand"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="07662fa7-11b1-4cf1-b6b6-9a9747d0529e"
+            name="TargetListViewModel"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="93ca7a6c-a06d-472b-9545-9fe11278a280"
+                LastKnownName="targetListViewModel"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="215a6227-89e2-4011-9a61-a6e9a9720b18"
+            name="m_cameraImage"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="d03ee9a5-1882-433c-adc1-fb03259c8aff"
+                LastKnownName="BitmapSource"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9df2b587-37b1-4fe0-b51d-b1c17253caf1"
+            name="m_capture"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="abc22189-1c41-465a-a180-6ba18d3d6ba1"
+                LastKnownName="Capture"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b5ad9847-2be8-4a83-a680-48153d98b051"
+            name="m_title"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6e904c19-f962-4677-ab0a-29a376519c9f"
+            name="targetListViewModel"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="02f68944-4bcd-4f28-b259-71167fc9b136"
+                LastKnownName="TargetListViewModel"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="4fdcd79c-1c35-4ec4-ac86-6ed80b1f73d7"
+            name="ConvertImageToBitmap"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="de92ad33-9ef4-46d5-85b5-b07db37b2e8c"
+                  name="Image"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="0820483b-8470-4958-bcda-4cfef11201e7"
+                      LastKnownName="IImage"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3ac71061-ca3a-456e-b543-c8607bd1b054"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="d03ee9a5-1882-433c-adc1-fb03259c8aff"
+                      LastKnownName="BitmapSource"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6eaed623-70cb-488b-9152-e0754226b328"
+            name="DeleteObject"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dc37834f-98e2-4fc5-a98d-a68799c91b99"
+                  name="ptr"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="ecaf525f-79a8-48f0-95bc-197bc87b713b"
+                      LastKnownName="IntPtr"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c1eb6854-83ee-4fed-81b1-75d96a2c9844"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e38882a9-941d-4d96-a580-57b425a8957b"
+            name="TakePicture"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="d03ee9a5-1882-433c-adc1-fb03259c8aff"
+        name="BitmapSource" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="4271f2dc-cdef-40bd-bf21-00251e8d0db7"
+        name="ICommand" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="93ca7a6c-a06d-472b-9545-9fe11278a280"
+        name="targetListViewModel" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="cc029cec-bc60-45f0-8417-e0dc81238720"
+        name="string" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="abc22189-1c41-465a-a180-6ba18d3d6ba1"
+        name="Capture" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="02f68944-4bcd-4f28-b259-71167fc9b136"
+        name="TargetListViewModel" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="0820483b-8470-4958-bcda-4cfef11201e7"
+        name="IImage" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="ecaf525f-79a8-48f0-95bc-197bc87b713b"
+        name="IntPtr" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e60cb238-6c50-442b-9e1e-3fbe43fdad44"
+        name="IStrategy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="8f5a63e6-4871-498a-bb5c-e1ac61f0f6b8"
+            name="GetTargetAndKillIt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d9536813-a37f-4920-b5bc-7cb14215d375"
+        name="KillAllFriendsStrategy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="c1539c87-43d7-4a56-a726-e8004bb2959d"
+            isSubstitutable="false">
+            <classMoniker
+              Id="e60cb238-6c50-442b-9e1e-3fbe43fdad44"
+              LastKnownName="IStrategy"
+              LastKnownLocation="GUIModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="406fde34-6bb3-4be5-98e8-8229b9e291be"
+            name="GetTargetAndKillIt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8c3aa0c7-b59b-4b60-a1f0-4bfd5c6fc6c9"
+        name="KillAllStrategy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="5e846a10-a79f-483d-9654-2bcb551db48e"
+            isSubstitutable="false">
+            <classMoniker
+              Id="e60cb238-6c50-442b-9e1e-3fbe43fdad44"
+              LastKnownName="IStrategy"
+              LastKnownLocation="GUIModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="1bb6794c-3933-4701-a8e6-acdd57663954"
+            name="GetTargetAndKillIt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d65c0831-fb7c-4e8b-965e-2a5de5d7d83a"
+        name="RapidFireStrategy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="258745b5-bb52-4f52-80f7-a7fdb4a86f0b"
+            isSubstitutable="false">
+            <classMoniker
+              Id="e60cb238-6c50-442b-9e1e-3fbe43fdad44"
+              LastKnownName="IStrategy"
+              LastKnownLocation="GUIModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="5fd342b8-9d11-4d4a-96d6-18ac9c5f9ae0"
+            name="GetTargetAndKillIt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="d1dfd1d4-932c-4b5b-b5ca-5a28cad03505"
+        name="StrategyActivityDiagram"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="d672c7c4-9155-4916-895a-0e80d6cb6734"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6321b00d-c9c1-4c63-84fe-242cd17a32fc"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="aee04c32-0512-4bd4-91a3-2cc6eb30b66f"
+                  LastKnownName="User selects missile launcher type"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="aee04c32-0512-4bd4-91a3-2cc6eb30b66f"
+            name="User selects missile launcher type"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="a953ba1d-6020-4e80-9d5d-b8679d0718d6"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="1699c92f-e607-41db-8d5b-00c64e94e1a0"
+                  LastKnownName="Main Window is initialized"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="c636e35b-8314-468e-bb86-9ac928677eb3"
+            name="Camera is turned on and in a ready state"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3dfb84fb-c9e3-4dfd-9aff-9968574e5c24"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="26dbea62-9ee4-454e-ae4b-9cb2572c9468"
+                  LastKnownName="Main window is awaiting action. "
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="1699c92f-e607-41db-8d5b-00c64e94e1a0"
+            name="Main Window is initialized"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="dca420da-280e-48fb-9610-34f404c01fbf"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c636e35b-8314-468e-bb86-9ac928677eb3"
+                  LastKnownName="Camera is turned on and in a ready state"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="538956ba-aeea-4b2e-9f0f-a46e704b0a3c"
+            name="Video displayed on user interface"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="44e1fe6b-842c-4040-8518-7d82346dfe64"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="538956ba-aeea-4b2e-9f0f-a46e704b0a3c"
+                  LastKnownName="Video displayed on user interface"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="1384698c-570d-4c48-a970-0b6918ea7879"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="9b6922e7-db7b-46d8-b741-705a517126e9"
+                  LastKnownName="User selects &quot;Stop&quot;"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="9b6922e7-db7b-46d8-b741-705a517126e9"
+            name="User selects &quot;Stop&quot;"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3b808f5a-1c56-4bf2-b0df-884e293e4cdf"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c636e35b-8314-468e-bb86-9ac928677eb3"
+                  LastKnownName="Camera is turned on and in a ready state"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="7a924ccb-f8d2-496d-918e-87832be2efd9"
+            name="App connects to game server"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="fb9ef4d6-35d9-40bf-bf01-a616c922824e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c6a9a60d-15eb-4a8d-8b8f-adcc6c33ca35"
+                  LastKnownName="Game is selected"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="c6a9a60d-15eb-4a8d-8b8f-adcc6c33ca35"
+            name="Game is selected"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2dbe5007-f700-4460-80b0-e325fa9b6800"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d7a0c7da-1cb5-42e8-be1b-334c71e95fd9"
+                  LastKnownName="Targets are loaded from Server"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="d7a0c7da-1cb5-42e8-be1b-334c71e95fd9"
+            name="Targets are loaded from Server"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="612a8722-77c7-4119-85e3-d8a1442620c5"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="2dbc764b-b28a-4977-9ea8-9323598cb43a"
+                  LastKnownName="User starts game"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="2dbc764b-b28a-4977-9ea8-9323598cb43a"
+            name="User starts game"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7ea6b210-b791-462e-a485-df03ce7e0bac"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b664ab96-ae1f-4413-ba49-584d6d6a6632"
+                  LastKnownName="Game starts in automatic mode"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="b664ab96-ae1f-4413-ba49-584d6d6a6632"
+            name="Game starts in automatic mode"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d534631d-64ef-453c-b517-158b513eb617"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="453a7a9c-d917-471d-baef-ae44e81f06f1"
+                  LastKnownName="Concrete Strategy is called "
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="d1bd350d-4553-460f-a269-f86418dcf7ca"
+            name="Fire at target"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="75e39e65-e329-4e0b-816c-90647f858a38"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="bf15b027-7546-4a44-8dd7-776cc1d92913"
+                  LastKnownName="Decision7"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="26dbea62-9ee4-454e-ae4b-9cb2572c9468"
+            name="Main window is awaiting action. "
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ab0298bb-f3de-4f07-8cba-386ed5357b23"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="7a924ccb-f8d2-496d-918e-87832be2efd9"
+                  LastKnownName="App connects to game server"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="3df6c0af-e40e-4988-957e-57360a86dcad"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="552c0506-2e2f-4b9b-886f-60360e1823c4"
+                  LastKnownName="Decision9"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="81f09eb1-b29a-47a0-8d27-a25c1f98447b"
+            name="Move launcher to target position based on strategy"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7b2097ff-5abd-463e-97b1-eabae10e3dd4"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d1bd350d-4553-460f-a269-f86418dcf7ca"
+                  LastKnownName="Fire at target"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="bf15b027-7546-4a44-8dd7-776cc1d92913"
+            name="Decision7"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="544a0da4-b8f1-4b71-9c2b-1822b9cbde78"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="6e229067-6e0a-4431-9f62-7580459cc43a"
+                  LastKnownName="Join2"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="b5d380a0-c3ec-4fba-9cc3-dd6ea642ac79"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="baeea5fe-d8f8-476e-ac34-ae4e2c8cd9b4"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="06e5b239-faa7-42a8-b3bb-a02d21f5ce9e"
+            name="Reload"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="edc4c03f-948a-4259-b745-927f3c794d8a"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="81f09eb1-b29a-47a0-8d27-a25c1f98447b"
+                  LastKnownName="Move launcher to target position based on strategy"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="552c0506-2e2f-4b9b-886f-60360e1823c4"
+            name="Decision9"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b3353dfc-7fcf-435b-9a25-1527b50f5565"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="4b92c74e-5a08-4a67-8d35-4550038d311f"
+                  LastKnownName="Fork2"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <forkNode
+            Id="4b92c74e-5a08-4a67-8d35-4550038d311f"
+            name="Fork2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="910cafa7-2c5e-4d08-b01d-4bffe2d880c6"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="538956ba-aeea-4b2e-9f0f-a46e704b0a3c"
+                  LastKnownName="Video displayed on user interface"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <joinNode
+            Id="6e229067-6e0a-4431-9f62-7580459cc43a"
+            name="Join2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3a3864ed-15f0-4761-97cc-58df7c1ee8cb"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="a192b858-92a8-418c-841d-f2707c38e754"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <activityFinalNode
+            Id="a192b858-92a8-418c-841d-f2707c38e754"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="453a7a9c-d917-471d-baef-ae44e81f06f1"
+            name="Concrete Strategy is called "
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="69bbd10d-df68-4827-9058-2ccb68ef6cc6"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="ef9187bd-edc1-45c7-83dc-1582ddd61cdf"
+                  LastKnownName="Fork1"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode
+            Id="ef9187bd-edc1-45c7-83dc-1582ddd61cdf"
+            name="Fork1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="967a0932-c73e-4fdd-b4f7-1290bf1d7d46"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="ef49c89f-75b8-4f8c-893b-c00f260325a5"
+                  LastKnownName="Game Timer starts"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="792b9fe9-da82-402a-8ac7-73a4ab13fce2"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="81f09eb1-b29a-47a0-8d27-a25c1f98447b"
+                  LastKnownName="Move launcher to target position based on strategy"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction
+            Id="ef49c89f-75b8-4f8c-893b-c00f260325a5"
+            name="Game Timer starts"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="13048c16-f571-4bd8-b331-724935d3965f"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e2263261-4721-4f31-aeb9-6e4ba76ad32f"
+                  LastKnownName="Game Timer increments"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="e2263261-4721-4f31-aeb9-6e4ba76ad32f"
+            name="Game Timer increments"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e52df70d-c428-4814-802d-2ad052c18733"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="fee29dbc-c8ee-4a18-97ab-0442f26ca02e"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="baeea5fe-d8f8-476e-ac34-ae4e2c8cd9b4"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b9a4612a-5257-47c3-bcb2-5819127739de"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="06e5b239-faa7-42a8-b3bb-a02d21f5ce9e"
+                  LastKnownName="Reload"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="db8139e7-c35b-489f-b2fc-2a5eaf0266aa"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="81f09eb1-b29a-47a0-8d27-a25c1f98447b"
+                  LastKnownName="Move launcher to target position based on strategy"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode
+            Id="fee29dbc-c8ee-4a18-97ab-0442f26ca02e"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7499c541-3879-447d-ac35-a2226534cabe"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e2263261-4721-4f31-aeb9-6e4ba76ad32f"
+                  LastKnownName="Game Timer increments"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="d457668f-c7ed-414c-840f-5240429e2c15"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="6e229067-6e0a-4431-9f62-7580459cc43a"
+                  LastKnownName="Join2"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+        </nodes>
+      </activity>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

@@ -139,6 +139,20 @@
       <SubType>Content</SubType>
       <DependentUpon>SequenceDiagram.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="Strategy.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Strategy.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Strategy.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="StrategyActivityDiagram.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="StrategyActivityDiagram.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>StrategyActivityDiagram.activitydiagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="GUI.classdiagram">
       <SubType>Content</SubType>
@@ -150,5 +164,19 @@
     <Content Include="ModelDefinition\GUIModeling.uml">
       <SubType>Content</SubType>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Applications\Console\Console.csproj">
+      <Name>Console</Name>
+      <Project>{998a4d40-b4f7-440e-b60e-784d976d0f0f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\GUI\GUI.csproj">
+      <Name>GUI</Name>
+      <Project>{018ff906-3e1d-405b-b99e-08ad83f7dac5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\SAD.Core\SAD.Core.csproj">
+      <Name>SAD.Core</Name>
+      <Project>{f4b6ae36-e99c-4d86-a020-58f2c940e6b1}</Project>
+    </ProjectReference>
   </ItemGroup>
 </Project>

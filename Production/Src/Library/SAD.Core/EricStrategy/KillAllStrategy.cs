@@ -20,6 +20,8 @@ namespace SAD.Core.EricStrategy
     {
         private TargetManager targetManager;
         private GameWatch gameWatch;
+
+    
         public void GetTargetAndKillIt()
         {
 

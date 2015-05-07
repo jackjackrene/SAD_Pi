@@ -132,7 +132,7 @@
     <Compile Include="Devices\Missile Launcher\Subclasses\MockMissileLauncher.cs" />
     <Compile Include="Devices\VideoCamera\Video.cs" />
     <Compile Include="EricStrategy\IStrategy.cs" />
-    <Compile Include="EricStrategy\KillAllFriendsStrategy.cs" />
+    <Compile Include="EricStrategy\KillAllFoesStrategy.cs" />
     <Compile Include="EricStrategy\KillAllStrategy.cs" />
     <Compile Include="EricStrategy\RapidFireStrategy.cs" />
     <Compile Include="Game\IGame.cs" />
