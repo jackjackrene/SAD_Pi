@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace SAD.Core.Strategy.Subclasses
 {
-    sealed class PrioritizeFriendsStrategy : GameStrategy
+    class GameDefaultStrategy : GameStrategy
     {
-
     }
 }

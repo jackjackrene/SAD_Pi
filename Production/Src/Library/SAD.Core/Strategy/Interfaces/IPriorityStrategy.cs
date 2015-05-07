@@ -8,6 +8,6 @@ namespace SAD.Core.Strategy.Interfaces
 {
     public interface IPriorityStrategy
     {
-        void PrioritizeTargets();
+        Target PrioritizeTargets();
     }
 }

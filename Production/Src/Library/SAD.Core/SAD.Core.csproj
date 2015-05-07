@@ -142,6 +142,16 @@
     <Compile Include="Data\TargetManager.cs" />
     <Compile Include="Server\GameServer.cs" />
     <Compile Include="Server\ServerDataCoverter\TargetConverter.cs" />
+    <Compile Include="Strategy\Data\GameStrategyType.cs" />
+    <Compile Include="Strategy\GameStrategy.cs" />
+    <Compile Include="Strategy\GameStrategyFactory.cs" />
+    <Compile Include="Strategy\Interfaces\IPriorityStrategy.cs" />
+    <Compile Include="Strategy\Subclasses\GameFiveStrategy.cs" />
+    <Compile Include="Strategy\Subclasses\GameOneStrategy.cs" />
+    <Compile Include="Strategy\Subclasses\GameDefaultStrategy.cs" />
+    <Compile Include="Strategy\Subclasses\GameTwoStrategy.cs" />
+    <Compile Include="Strategy\Subclasses\GameThreeStrategy.cs" />
+    <Compile Include="Strategy\Subclasses\GameFourStrategy.cs" />
     <Compile Include="Time\GameWatch.cs" />
   </ItemGroup>
   <ItemGroup>
