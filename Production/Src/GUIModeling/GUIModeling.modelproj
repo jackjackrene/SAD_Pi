@@ -146,6 +146,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Strategy.classdiagram</DependentUpon>
     </Content>
+    <Content Include="StrategyActivityDiagram.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="StrategyActivityDiagram.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>StrategyActivityDiagram.activitydiagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="GUI.classdiagram">
       <SubType>Content</SubType>
