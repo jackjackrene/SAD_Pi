@@ -145,6 +145,7 @@ namespace SAD.Core.Strategy
         {
             Target priorityTarget = new Target();
             List<Target> targetList;
+            List<Target> sortedList;
 
             // What do we care about?
             if (foesOnly == true)
@@ -152,10 +153,20 @@ namespace SAD.Core.Strategy
             else
                 targetList = targetManager.GetAllTargets.ToList();
 
-            
+            // Use selection sort to order from greatest points to least points
+            for (int i = 0; i < targetList.Count; i++)
+            {
+                int largestPointValue = i;
+
+                for (int j = i; j < targetList.Count; j++)
+                {
+                    if (targetList[largestPointValue].Points < targetList[j].Points)
+                        largestPointValue = j;
+                }
+            }
 
 
-            return priorityTarget;
+                return priorityTarget;
         }
     }
 }

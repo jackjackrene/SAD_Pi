@@ -134,7 +134,7 @@ namespace SAD.Core.Server.ServerDataCoverter
             if (oldSadTargetList.Count == 0)
             {
                 // Everyone is alive!
-                target.WasHtLastTime = false;
+                target.WasHitLastTime = false;
                 target.Status = true;
             }
             else
@@ -142,16 +142,16 @@ namespace SAD.Core.Server.ServerDataCoverter
                 Target lastTargetShotAt = FindOldTarget(serverTarget.name);
 
                 // Has it been hit and were waiting for it respawn?
-                if (target.WasHtLastTime == true)
+                if (target.WasHitLastTime == true)
                 {
                     TimeSpan spawnRate = TimeSpan.FromSeconds(lastTargetShotAt.SpawnRate);
 
                     // Has it respawned?
-                    if ((lastTargetShotAt.TimeOfLastHit + spawnRate) > gameWatch.GetCurrentTime())
+                    if (TimeSpan.Compare((lastTargetShotAt.TimeOfLastHit + spawnRate), gameWatch.GetCurrentTime()) == 1)
                     {
                         // Its alive again!
                         target.Status = true;
-                        target.WasHtLastTime = false; // we havent hit again
+                        target.WasHitLastTime = false; // we havent hit again
                     }
                     else
                         target.Status = false; // still dead
@@ -163,7 +163,7 @@ namespace SAD.Core.Server.ServerDataCoverter
                     {
                         // Its hit!
                         target.Status = false; // its dead
-                        target.WasHtLastTime = true; 
+                        target.WasHitLastTime = true; 
 
                         target.TimeOfLastHit = gameWatch.GetCurrentTime();
                     }

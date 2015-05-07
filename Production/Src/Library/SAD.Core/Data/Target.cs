@@ -30,7 +30,7 @@ namespace SAD.Core
         { get; set; }
         public TimeSpan TimeOfLastHit
         { get; set; }
-        public bool WasHtLastTime
+        public bool WasHitLastTime
         { get; set; }
 
         public double SpawnRate
