@@ -133,6 +133,7 @@
     <Compile Include="Devices\VideoCamera\Video.cs" />
     <Compile Include="EricStrategy\IStrategy.cs" />
     <Compile Include="EricStrategy\KillAllStrategy.cs" />
+    <Compile Include="EricStrategy\RapidFireStrategy.cs" />
     <Compile Include="Game\IGame.cs" />
     <Compile Include="IO\CommentException.cs" />
     <Compile Include="IO\INIFileReader.cs" />
