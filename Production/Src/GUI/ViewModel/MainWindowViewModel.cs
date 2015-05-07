@@ -164,8 +164,8 @@ namespace GUI.ViewModel
 
              await runGameTask;
 
-            /* JAD's version 
-               WARNING. NOT TESTED */
+            /* JAD's version */
+
             /*
              gameStrategy = gameStrategyFactory.CreateGameStrategy(m_selectedGame);
 

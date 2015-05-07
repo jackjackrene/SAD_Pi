@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="d541d7d4-7e57-4ee4-ad09-8f4d4f438368"
   name="GUIModeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -126,6 +126,62 @@
       Id="49c3767a-49ce-4f27-a4f6-ac3a396e8df2">
       <body>If game timer reaches 1 minute
 </body>
+    </comment>
+    <comment
+      Id="f8248dd5-6d45-4cdf-811c-8f786cc3bcc7">
+      <body>JAD's Strategy!
+</body>
+      <annotatedElements>
+        <initialNodeMoniker
+          Id="3c0f004b-9d45-4b85-8806-6cd038ab9ebf"
+          LastKnownName="Initial1"
+          LastKnownLocation="GUIModeling.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="320d5b12-43b8-45d0-9d4f-77c5e4a46df0">
+      <body>Game runs on its own task
+</body>
+      <annotatedElements>
+        <forkNodeMoniker
+          Id="73f2bc3e-0f39-458b-86be-52cebc816506"
+          LastKnownName="Fork1"
+          LastKnownLocation="GUIModeling.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="eaffddb3-b9ea-4645-8a79-6298771c8c07">
+      <body>While the running time is under one minute
+
+</body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="773b930f-fdd0-41f4-ad62-469392a52868"
+          LastKnownName="Decision1"
+          LastKnownLocation="GUIModeling.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="bc2d645d-d89a-4eae-a559-94c2f9aa0730">
+      <body>If out of missiles
+</body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="c47ce6c0-fa26-4c9a-91eb-480faaa32020"
+          LastKnownName="Decision3"
+          LastKnownLocation="GUIModeling.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="d3f13bdd-21a8-496c-8ff1-9982fa3dbf9f">
+      <body>If the game hasn't ended
+</body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="d5f79526-d03f-42aa-988e-d73c74d1fcae"
+          LastKnownName="Decision2"
+          LastKnownLocation="GUIModeling.uml" />
+      </annotatedElements>
     </comment>
   </ownedCommentsInternal>
   <profileInstances>
@@ -1977,6 +2033,1403 @@
           </decisionNode>
         </nodes>
       </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="ab8df084-b8ee-42f2-9a9a-8b7d7630900a"
+        name="GameStrategy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="3c0f004b-9d45-4b85-8806-6cd038ab9ebf"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="21c9e246-cacd-485d-b57b-776738be256a"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="1f4c4726-1d08-42c8-a84f-6eecf089e773"
+                  LastKnownName="User Starts Game"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="1f4c4726-1d08-42c8-a84f-6eecf089e773"
+            name="User Starts Game"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f238c70a-5a58-411f-b17e-2bddf98ee1c1"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b805f967-5967-443a-a1d2-422274ae6fe5"
+                  LastKnownName="Game Server is updated with the selected game"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="b805f967-5967-443a-a1d2-422274ae6fe5"
+            name="Game Server is updated with the selected game"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="714041e7-08f6-4bfe-98db-bae272fc4397"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="15457607-bf6f-4155-a123-a966ebb483a8"
+                  LastKnownName="Factory returns an appropriate strategy"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode
+            Id="73f2bc3e-0f39-458b-86be-52cebc816506"
+            name="Fork1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c8c92dd1-7755-418b-b1b2-293fed177509"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="07280ddd-ef5f-4b74-994b-5f67fd57f372"
+                  LastKnownName="Game Clock starts and runs"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="288e985b-a5f5-4674-a3a9-7f3fc76c1d63"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="0adb2f89-b7b0-4ec3-9551-a5060740d2c2"
+                  LastKnownName="The list of targets is updated"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction
+            Id="07280ddd-ef5f-4b74-994b-5f67fd57f372"
+            name="Game Clock starts and runs"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="92b2a4a3-fb2b-4b5f-be2b-bb8902adabad"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="773b930f-fdd0-41f4-ad62-469392a52868"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="0adb2f89-b7b0-4ec3-9551-a5060740d2c2"
+            name="The list of targets is updated"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="add9d1e7-b861-484c-9d16-0d26fc44d8d6"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="34cfd460-ff57-430b-8cfa-5fc600b5ac01"
+                  LastKnownName="A target is selected"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="773b930f-fdd0-41f4-ad62-469392a52868"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="99fb3761-74eb-4cbc-a51a-142472d1a1e0"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="07280ddd-ef5f-4b74-994b-5f67fd57f372"
+                  LastKnownName="Game Clock starts and runs"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="3da0f7ae-c280-41c1-8d84-3dc590d54811"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="dab98f57-e860-42a5-a62c-f3e735a929fc"
+                  LastKnownName="Join1"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="15457607-bf6f-4155-a123-a966ebb483a8"
+            name="Factory returns an appropriate strategy"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ae88984f-a58f-4b35-9b6b-ae058d4403ad"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="73f2bc3e-0f39-458b-86be-52cebc816506"
+                  LastKnownName="Fork1"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <joinNode
+            Id="dab98f57-e860-42a5-a62c-f3e735a929fc"
+            name="Join1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c9af1dae-b9ac-42af-8f26-07b3fbe05186"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="0156d8f4-2f50-4aa2-ab15-29a9d5a907b0"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <opaqueAction
+            Id="34cfd460-ff57-430b-8cfa-5fc600b5ac01"
+            name="A target is selected"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5577b98d-5deb-4226-b308-5f58463eb892"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="c47ce6c0-fa26-4c9a-91eb-480faaa32020"
+                  LastKnownName="Decision3"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="2fc29417-fdce-40fb-b737-ea8b75a0437a"
+            name="The tagert is shot at"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e9db3f3d-7ee3-4a3e-ad43-dcf980f357f9"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="d5f79526-d03f-42aa-988e-d73c74d1fcae"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="d5f79526-d03f-42aa-988e-d73c74d1fcae"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="9868194c-d856-4038-8d70-84a98a6ccd82"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="dab98f57-e860-42a5-a62c-f3e735a929fc"
+                  LastKnownName="Join1"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="55253b8c-52a8-4cf2-aa3a-49e1f7359f9e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="0adb2f89-b7b0-4ec3-9551-a5060740d2c2"
+                  LastKnownName="The list of targets is updated"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode
+            Id="c47ce6c0-fa26-4c9a-91eb-480faaa32020"
+            name="Decision3"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="72f1f9bf-9029-4b7a-a6c3-52d9a9ceb749"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="2fc29417-fdce-40fb-b737-ea8b75a0437a"
+                  LastKnownName="The tagert is shot at"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="8b9b4580-fd7e-4006-afe8-fa2f2ad205f4"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="7d6af1a1-fa4d-4081-bee5-758d36b2c6ab"
+                  LastKnownName="Reload"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="7d6af1a1-fa4d-4081-bee5-758d36b2c6ab"
+            name="Reload"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c6febb2d-1b66-476e-bcf6-bfc2431f23e3"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="2fc29417-fdce-40fb-b737-ea8b75a0437a"
+                  LastKnownName="The tagert is shot at"
+                  LastKnownLocation="GUIModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="0156d8f4-2f50-4aa2-ab15-29a9d5a907b0"
+            name="ActivityFinal1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8bc10067-e232-48c2-a4f7-6943d75fcc52"
+        name="Abstract GameStrategy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="7ae02401-5fa3-487f-b96d-82412b8ea23e">
+            <interfaceMoniker
+              Id="d70a30d9-85e8-4cb8-b009-6783b039e7bc"
+              LastKnownName="IGame"
+              LastKnownLocation="GUIModeling.uml" />
+          </interfaceRealization>
+          <interfaceRealization
+            Id="2b6654d3-da63-45b0-bb2e-a6caae331cdd">
+            <interfaceMoniker
+              Id="36afc38f-6ca7-45fd-8775-de599c14c398"
+              LastKnownName="IPriorityStrategy"
+              LastKnownLocation="GUIModeling.uml" />
+          </interfaceRealization>
+          <dependency
+            Id="822c25dd-be59-4f25-b5c5-f924eff8f239">
+            <classMoniker
+              Id="f3308d4f-6b4a-4a27-897b-b3ab68f1ed88"
+              LastKnownName="GameStrategyFactory"
+              LastKnownLocation="GUIModeling.uml" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="1f909d07-2aaf-4b0a-989f-7cb4d15f98f9"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b28358a2-0c72-454c-870f-5779a6ebcb23"
+              LastKnownName="GameOneStrategy"
+              LastKnownLocation="GUIModeling.uml" />
+          </generalization>
+          <generalization
+            Id="ffd6dde8-545e-4bbc-8ad3-888e4e546206"
+            isSubstitutable="false">
+            <classMoniker
+              Id="fc1de06a-fe5c-4cb5-8e44-333860d546ac"
+              LastKnownName="GameTwoStrategy"
+              LastKnownLocation="GUIModeling.uml" />
+          </generalization>
+          <generalization
+            Id="6d5a9ee0-6323-4efc-8123-43b08314ffc2"
+            isSubstitutable="false">
+            <classMoniker
+              Id="4a2bcc32-f140-4dc4-af3f-96c9eac8e235"
+              LastKnownName="GameThreeStrategy"
+              LastKnownLocation="GUIModeling.uml" />
+          </generalization>
+          <generalization
+            Id="b3760108-0dc8-4973-80e4-93d514f617f5"
+            isSubstitutable="false">
+            <classMoniker
+              Id="dd23f24f-0d42-414b-bc5e-f31b8c661f85"
+              LastKnownName="GameFourStrategy"
+              LastKnownLocation="GUIModeling.uml" />
+          </generalization>
+          <generalization
+            Id="e70e86aa-81cf-46a1-aa1a-7f7b637c125a"
+            isSubstitutable="false">
+            <classMoniker
+              Id="91e5ccd0-7a41-4270-bda1-b47386ceb090"
+              LastKnownName="GameFiveStrategy"
+              LastKnownLocation="GUIModeling.uml" />
+          </generalization>
+          <generalization
+            Id="430d4487-2a66-4ba6-b204-6020f3c76075"
+            isSubstitutable="false">
+            <classMoniker
+              Id="ff14acba-7d57-4dd4-ab52-80d5048247eb"
+              LastKnownName="GameDefaultStrategy"
+              LastKnownLocation="GUIModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="d6db5a51-cfeb-4adb-90b1-0808881139c7"
+            name="targetConverter"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="dcf15ecb-8fba-41e3-a239-05df9cd93eff"
+                LastKnownName="TargetConverter"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c70c0853-cba3-4045-b984-999f601a43ec"
+            name="gameWatch"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="6cb23af4-8711-4ffd-8c8f-e1a7c0c7aa01"
+                LastKnownName="GameWatch"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6151ecbc-19e9-4212-a9cc-7a20ebadd617"
+            name="missileLauncher"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="38e4a677-d0de-49cc-a2fe-7e612ad2a714"
+                LastKnownName="MissileLauncher"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="205d7a8c-06b1-4fa8-aabc-1f865803b5b9"
+            name="gameServer"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="7d351012-6537-40fd-8d6a-d15486b06fcd"
+                LastKnownName="GameServer"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2c440e52-8b28-4a7c-a34a-ab8c72a90f6b"
+            name="targetManager"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="1dfb789f-23e0-42af-9f36-0bf2e0e73b86"
+                LastKnownName="TargetManager"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="4c2ad307-8b24-44f2-9333-d93a9a959bf7"
+            name="foesOnly"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2e5caffd-bfd4-4102-af78-f038d4eff02c"
+                LastKnownName="bool"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="698aaa41-7802-4885-a4ab-307cb927c863"
+            name="isBlinking"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2e5caffd-bfd4-4102-af78-f038d4eff02c"
+                LastKnownName="bool"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a948aae3-8310-4eeb-9bff-5dc70f003918"
+            name="canChangeSides"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2e5caffd-bfd4-4102-af78-f038d4eff02c"
+                LastKnownName="bool"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="57d677c4-9de6-4dbf-af4d-af5e9e153951"
+            name="requiresVision"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2e5caffd-bfd4-4102-af78-f038d4eff02c"
+                LastKnownName="bool"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="fa3fd6c0-6cc6-447d-af4f-c8551d309c2f"
+            name="gameStartTime"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2e5caffd-bfd4-4102-af78-f038d4eff02c"
+                LastKnownName="bool"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="781392a4-fc0f-4e7d-8924-8c69477541b3"
+            name="lastTargetShotAt"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="113d6147-a337-4bfb-afc7-4fde9c4d49da"
+                LastKnownName="Target"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="d315da4d-246d-4317-bf42-e7710480f060"
+            name="GameStrategy"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7871d92f-1c78-4c98-a644-6eb726736a52"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="0b05aa01-d244-468c-b6ea-5099039cd3e4"
+                      LastKnownName="Constructor"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d39a7f8a-52e8-4e34-ba0a-27d363962eac"
+            name="FoesOnly"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="29823a5f-d0e6-4464-9965-421985684649"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2e5caffd-bfd4-4102-af78-f038d4eff02c"
+                      LastKnownName="bool"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3d161334-e98b-47c7-ad19-c5f7cd279c9a"
+            name="IsBlinking"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="51428b84-a541-48c9-8ffa-e6d8de5b7003"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2e5caffd-bfd4-4102-af78-f038d4eff02c"
+                      LastKnownName="bool"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="42c06e8d-6928-4273-8a59-badcdf01992d"
+            name="CanChangeSides"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2532efa7-9f8c-46b6-8266-4ac92f648963"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2e5caffd-bfd4-4102-af78-f038d4eff02c"
+                      LastKnownName="bool"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f63f17b5-929f-4d2c-aaa4-54681629d206"
+            name="RequiresVision"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1ffa2607-fc89-4fbe-b89b-8a5a458d8f9c"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2e5caffd-bfd4-4102-af78-f038d4eff02c"
+                      LastKnownName="bool"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fb054375-ba42-4119-9f24-5e4d85d0470f"
+            name="IsTargetOn"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c2347185-8591-4872-9f82-f4fcf2d463a1"
+                  name="flashRate"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2e5caffd-bfd4-4102-af78-f038d4eff02c"
+                      LastKnownName="bool"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="64db7f30-1f32-4770-a59e-f38cbd096a0e"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2e5caffd-bfd4-4102-af78-f038d4eff02c"
+                      LastKnownName="bool"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="dcd9f4ca-9808-4c5f-b146-7022ffc05a4b"
+            name="TimeTillTargetRespawns"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7d92b344-ee68-4974-a3b3-8d5bc2666fa5"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="432cf370-1544-494d-873a-3e089c7baa52"
+                      LastKnownName="TimeSpan"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9d7f358a-bca2-4b47-8e90-28fe68372865"
+                  name="timeOfLastHit"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="432cf370-1544-494d-873a-3e089c7baa52"
+                      LastKnownName="TimeSpan"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3cd8a898-cc22-4c4c-a21b-d968981aad28"
+                  name="spawnRate"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="432cf370-1544-494d-873a-3e089c7baa52"
+                      LastKnownName="TimeSpan"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1108fabe-4dc9-448d-b161-1cc78eae491f"
+            name="SortTargetList"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="27b51f44-ca6e-45fa-bb36-0a318fd79eb1"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="ab42add0-412a-47da-8e8c-3060fa5cfc74"
+                      LastKnownName="List"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="24128525-82e3-4b00-82cc-706ff8dd0cc8"
+            name="HasSwappedSide"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ce55c153-5b78-4c3f-a92a-c8c262f9972c"
+                  name="hitCount"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="69dd6f8a-d53f-40d5-b964-7f4264d96ef4"
+                      LastKnownName="int"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a14d8755-97ac-4e11-84ce-3c7570b78683"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2e5caffd-bfd4-4102-af78-f038d4eff02c"
+                      LastKnownName="bool"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0389e38d-4ea4-4430-8479-89d622a1d996"
+            name="StartGame"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="3f13e14c-35b3-40ba-999e-8772a0b3ac36"
+            name="PrioritizeTargets"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b70fc9a3-f365-4016-9fad-1b0d832ef6cf"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="113d6147-a337-4bfb-afc7-4fde9c4d49da"
+                      LastKnownName="Target"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b28358a2-0c72-454c-870f-5779a6ebcb23"
+        name="GameOneStrategy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fc1de06a-fe5c-4cb5-8e44-333860d546ac"
+        name="GameTwoStrategy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4a2bcc32-f140-4dc4-af3f-96c9eac8e235"
+        name="GameThreeStrategy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="dd23f24f-0d42-414b-bc5e-f31b8c661f85"
+        name="GameFourStrategy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="91e5ccd0-7a41-4270-bda1-b47386ceb090"
+        name="GameFiveStrategy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="d70a30d9-85e8-4cb8-b009-6783b039e7bc"
+        name="IGame"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="fe5902f4-fb5e-4641-83f6-fcf04bcd1712"
+            name="StartGame"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="36afc38f-6ca7-45fd-8775-de599c14c398"
+        name="IPriorityStrategy"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="1e1f3ff5-4f8c-49d7-9e43-7d22a80b8836"
+            name="PrioritizeTargets"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bcbabcc8-47ed-4d46-bb22-eecbc49d250a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="113d6147-a337-4bfb-afc7-4fde9c4d49da"
+                      LastKnownName="Target"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ff14acba-7d57-4dd4-ab52-80d5048247eb"
+        name="GameDefaultStrategy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="67840b4f-1de2-4713-8e0d-06f0efa825b8"
+        name="GameStrategyType"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="f22b8ee7-a4df-4dc0-9024-3d1cc113e351"
+            isDerived="false"
+            sourceEndRoleName="GameStrategyType"
+            targetEndRoleName="GameStrategyFactory"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f3308d4f-6b4a-4a27-897b-b3ab68f1ed88"
+              LastKnownName="GameStrategyFactory"
+              LastKnownLocation="GUIModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="02bdc158-d1af-44b7-8187-a3216101dd02"
+                  name="GameStrategyType"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9844cd8b-aa9a-4bb2-bb80-ffa5bdac82d3"
+                  name="GameStrategyFactory"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="a736b810-affe-4c54-a300-72f16fbf6d7a"
+            name="GameOne" />
+          <enumerationLiteral
+            Id="c78eb810-35f5-48a0-a651-0cc83a20bd7f"
+            name="GameTwo" />
+          <enumerationLiteral
+            Id="028e8cfb-e9ab-442e-9260-9b701d4c3176"
+            name="GameThree" />
+          <enumerationLiteral
+            Id="49ba6cc9-114a-4f72-9c92-d0b10beb6a74"
+            name="GameFour" />
+          <enumerationLiteral
+            Id="c2f7e056-2045-4397-b058-2650adef3bd9"
+            name="GameFive" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f3308d4f-6b4a-4a27-897b-b3ab68f1ed88"
+        name="GameStrategyFactory"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="a12a2eca-df5c-487a-b4a8-af31d89fe175"
+            name="gameOne"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="cc029cec-bc60-45f0-8417-e0dc81238720"
+                LastKnownName="string"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a6663662-bea0-45b5-ab40-b38ca499e394"
+            name="gameTwo"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="cc029cec-bc60-45f0-8417-e0dc81238720"
+                LastKnownName="string"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c9911dbb-1280-4bb7-afd7-5460eb6265eb"
+            name="gameThree"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="cc029cec-bc60-45f0-8417-e0dc81238720"
+                LastKnownName="string"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bf78014e-9e74-4175-bf0b-dc200bd516c6"
+            name="gameFour"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="cc029cec-bc60-45f0-8417-e0dc81238720"
+                LastKnownName="string"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="af1c6580-50c7-4e29-b2b9-6251c4951902"
+            name="gameFive"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="cc029cec-bc60-45f0-8417-e0dc81238720"
+                LastKnownName="string"
+                LastKnownLocation="GUIModeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8517f1f9-40b6-478d-a763-3f9a91c6165a"
+            name="GameStrategyFactory"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="eb0af79c-c997-4d41-90df-f5509e705d3e"
+            name="GetInstance"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d483329a-5c71-42e1-93e1-f14a55cbde9d"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="f3308d4f-6b4a-4a27-897b-b3ab68f1ed88"
+                      LastKnownName="GameStrategyFactory"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b4441efa-e4e9-4934-8fcb-8ca19c527c6e"
+            name="CreateGameStrategy"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f4de48ec-909c-448d-822e-b07e78ba94a2"
+                  name="gameType"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="cc029cec-bc60-45f0-8417-e0dc81238720"
+                      LastKnownName="string"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4081162c-b526-4de6-983c-dd6083b7105c"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <activityMoniker
+                      Id="ab8df084-b8ee-42f2-9a9a-8b7d7630900a"
+                      LastKnownName="GameStrategy"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="93bfb745-71ae-44ea-a91f-748239f2a8cf"
+            name="GameOne"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1c0335e9-5c53-4ff8-8938-cb6b01d9bb67"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="cc029cec-bc60-45f0-8417-e0dc81238720"
+                      LastKnownName="string"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="74769cb0-da55-4ca0-a999-fb2aedf64ce5"
+            name="GameTwo"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="780a7b35-195a-4a56-a748-4c20a560756d"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="cc029cec-bc60-45f0-8417-e0dc81238720"
+                      LastKnownName="string"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fc2bd174-6164-4ced-8a23-1d1b77b88a9a"
+            name="GameThree"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4d13eb1d-b81a-4f7a-8a37-0cbb233468f4"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="cc029cec-bc60-45f0-8417-e0dc81238720"
+                      LastKnownName="string"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="70358075-a8af-4c07-b0d5-dd10a3e81067"
+            name="GameFour"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="07818401-1df2-4b69-800e-edf18faad228"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="cc029cec-bc60-45f0-8417-e0dc81238720"
+                      LastKnownName="string"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c199dfb7-5842-4067-ba2b-6907f52a6aec"
+            name="GameFive"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f15fd92b-8185-4f21-8359-ce50873234ed"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="cc029cec-bc60-45f0-8417-e0dc81238720"
+                      LastKnownName="string"
+                      LastKnownLocation="GUIModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="b8ffdff0-6f65-4f7a-b295-b4bd57bfe083"
+        name="TargetConvert" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="dcf15ecb-8fba-41e3-a239-05df9cd93eff"
+        name="TargetConverter" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="6cb23af4-8711-4ffd-8c8f-e1a7c0c7aa01"
+        name="GameWatch" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="38e4a677-d0de-49cc-a2fe-7e612ad2a714"
+        name="MissileLauncher" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7d351012-6537-40fd-8d6a-d15486b06fcd"
+        name="GameServer" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="1dfb789f-23e0-42af-9f36-0bf2e0e73b86"
+        name="TargetManager" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="2e5caffd-bfd4-4102-af78-f038d4eff02c"
+        name="bool" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="113d6147-a337-4bfb-afc7-4fde9c4d49da"
+        name="Target" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="0b05aa01-d244-468c-b6ea-5099039cd3e4"
+        name="Constructor" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="432cf370-1544-494d-873a-3e089c7baa52"
+        name="TimeSpan" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="ab42add0-412a-47da-8e8c-3060fa5cfc74"
+        name="List" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="69dd6f8a-d53f-40d5-b964-7f4264d96ef4"
+        name="int" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="3d0ef134-9fcd-4683-877a-a41edaf76478"
+        name="GUIModeling::" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

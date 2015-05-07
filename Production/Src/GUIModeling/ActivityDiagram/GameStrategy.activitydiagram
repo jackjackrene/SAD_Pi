@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="7af35666-ee6b-4080-b9d3-997edbf88299" name="GameStrategy" linkedPackageId="5d56616a-b7d2-460e-8983-4e93369f7033" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="101e8930-2527-49f0-bff9-ca6a2d2d8588">
+      <elementDefinition Id="f8248dd5-6d45-4cdf-811c-8f786cc3bcc7" />
+      <body>JAD's Strategy!
+</body>
+      <annotatedElements>
+        <initialNodeMoniker Id="c1e9a1cc-9b32-4abe-8e82-fc5a91eea865" LastKnownName="Initial1" />
+      </annotatedElements>
+    </comment>
+    <comment Id="26e71a39-e92b-4c68-a860-3650efa959de">
+      <elementDefinition Id="320d5b12-43b8-45d0-9d4f-77c5e4a46df0" />
+      <body>Game runs on its own task
+</body>
+      <annotatedElements>
+        <forkNodeMoniker Id="f8e1eb94-bda0-4e95-8e0d-776c2e264ed9" LastKnownName="Fork1" />
+      </annotatedElements>
+    </comment>
+    <comment Id="544edd7b-8885-46b4-87c0-698880c3868a">
+      <elementDefinition Id="eaffddb3-b9ea-4645-8a79-6298771c8c07" />
+      <body>While the running time is under one minute
+
+</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="5d17250e-11e3-4ff2-ae2a-124e2508481b" LastKnownName="Decision1" />
+      </annotatedElements>
+    </comment>
+    <comment Id="329acace-30e8-4de8-8e1c-62519fd3f89d">
+      <elementDefinition Id="bc2d645d-d89a-4eae-a559-94c2f9aa0730" />
+      <body>If out of missiles
+</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="51987c67-1c0c-4613-b464-f392d6210e21" LastKnownName="Decision3" />
+      </annotatedElements>
+    </comment>
+    <comment Id="820d9401-063d-4ff2-8ab1-ba9e953b68bb">
+      <elementDefinition Id="d3f13bdd-21a8-496c-8ff1-9982fa3dbf9f" />
+      <body>If the game hasn't ended
+</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="698b7913-bb8e-44af-90d2-cab4bf81c220" LastKnownName="Decision2" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="ad319bee-5e18-4e71-bca4-3e55350cf0ca">
+      <profileInstance Id="ab9322f3-0992-4712-825c-46f2977cfcbc" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="7807fe34-fb65-4f85-954e-d94fba25b430">
+      <profileInstance Id="7c939b55-7cb9-4435-8e93-ef95d9e386d0" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="30d68c2d-e5ac-4419-8028-cc069568cfd2">
+      <profileInstance Id="c5f1b94e-8425-419b-a6d9-3c0223f044ad" name="CSharpProfile">
+        <elementDefinition Id="73f69f8b-e7c8-44a3-9a72-8e2a0eadc116" />
+      </profileInstance>
+      <elementDefinition Id="e24e8d4a-521d-4c15-8229-3ab05c56dd4e" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="f216a7e4-f8c2-4a77-86c1-634d8f8010a2" name="GameStrategy" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="ab8df084-b8ee-42f2-9a9a-8b7d7630900a" />
+        <nodes>
+          <initialNode Id="c1e9a1cc-9b32-4abe-8e82-fc5a91eea865" name="Initial1" isLeaf="false">
+            <elementDefinition Id="3c0f004b-9d45-4b85-8806-6cd038ab9ebf" />
+            <flowNodeTargets>
+              <controlFlow Id="4194dda8-26e7-4808-a883-d01c750ece13" isLeaf="false">
+                <opaqueActionMoniker Id="080cc246-fa7a-432c-8661-1af1e9ad89f3" LastKnownName="User Starts Game" />
+                <elementDefinition Id="21c9e246-cacd-485d-b57b-776738be256a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="080cc246-fa7a-432c-8661-1af1e9ad89f3" name="User Starts Game" isLeaf="false">
+            <elementDefinition Id="1f4c4726-1d08-42c8-a84f-6eecf089e773" />
+            <flowNodeTargets>
+              <controlFlow Id="757aff31-7c6a-48aa-8e1a-6dbe53242d89" isLeaf="false">
+                <opaqueActionMoniker Id="61b76bfc-91d5-450f-a708-1075b01578a1" LastKnownName="Game Server is updated with the selected game" />
+                <elementDefinition Id="f238c70a-5a58-411f-b17e-2bddf98ee1c1" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="61b76bfc-91d5-450f-a708-1075b01578a1" name="Game Server is updated with the selected game" isLeaf="false">
+            <elementDefinition Id="b805f967-5967-443a-a1d2-422274ae6fe5" />
+            <flowNodeTargets>
+              <controlFlow Id="773985b4-e18d-44d1-b549-8dc36b2a5a2e" isLeaf="false">
+                <opaqueActionMoniker Id="bfb7ca3e-9132-494d-82d4-1640956e1f57" LastKnownName="Factory returns an appropriate strategy" />
+                <elementDefinition Id="714041e7-08f6-4bfe-98db-bae272fc4397" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode Id="f8e1eb94-bda0-4e95-8e0d-776c2e264ed9" name="Fork1" isLeaf="false">
+            <elementDefinition Id="73f2bc3e-0f39-458b-86be-52cebc816506" />
+            <flowNodeTargets>
+              <controlFlow Id="1afa9df6-721e-466a-88d7-e0ba0ad7cc3b" isLeaf="false">
+                <opaqueActionMoniker Id="815fd581-d60c-4581-a574-36c9bf126ec1" LastKnownName="Game Clock starts and runs" />
+                <elementDefinition Id="c8c92dd1-7755-418b-b1b2-293fed177509" />
+              </controlFlow>
+              <controlFlow Id="dfc43f9d-2ca8-4dbe-88f8-b491842a0a2a" isLeaf="false">
+                <opaqueActionMoniker Id="3d2bdf17-a005-44b2-8fde-a2dd523dc49f" LastKnownName="The list of targets is updated" />
+                <elementDefinition Id="288e985b-a5f5-4674-a3a9-7f3fc76c1d63" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction Id="815fd581-d60c-4581-a574-36c9bf126ec1" name="Game Clock starts and runs" isLeaf="false">
+            <elementDefinition Id="07280ddd-ef5f-4b74-994b-5f67fd57f372" />
+            <flowNodeTargets>
+              <controlFlow Id="2a645345-9d69-4004-8da3-f620ba712713" isLeaf="false">
+                <decisionNodeMoniker Id="5d17250e-11e3-4ff2-ae2a-124e2508481b" LastKnownName="Decision1" />
+                <elementDefinition Id="92b2a4a3-fb2b-4b5f-be2b-bb8902adabad" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="3d2bdf17-a005-44b2-8fde-a2dd523dc49f" name="The list of targets is updated" isLeaf="false">
+            <elementDefinition Id="0adb2f89-b7b0-4ec3-9551-a5060740d2c2" />
+            <flowNodeTargets>
+              <controlFlow Id="b2b3f197-ee2b-4255-b9fd-920435165453" isLeaf="false">
+                <opaqueActionMoniker Id="774911fe-0fbf-4fef-a99a-72ec67ee8bc2" LastKnownName="A target is selected" />
+                <elementDefinition Id="add9d1e7-b861-484c-9d16-0d26fc44d8d6" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="5d17250e-11e3-4ff2-ae2a-124e2508481b" name="Decision1" isLeaf="false">
+            <elementDefinition Id="773b930f-fdd0-41f4-ad62-469392a52868" />
+            <flowNodeTargets>
+              <controlFlow Id="b10ce301-a257-48eb-a27c-a9baa3770e12" isLeaf="false">
+                <opaqueActionMoniker Id="815fd581-d60c-4581-a574-36c9bf126ec1" LastKnownName="Game Clock starts and runs" />
+                <elementDefinition Id="99fb3761-74eb-4cbc-a51a-142472d1a1e0" />
+              </controlFlow>
+              <controlFlow Id="28571b11-7928-42d5-ab50-fd2a338243e0" isLeaf="false">
+                <joinNodeMoniker Id="1f812b7b-05ec-4ced-932c-0541f2df5ab4" LastKnownName="Join1" />
+                <elementDefinition Id="3da0f7ae-c280-41c1-8d84-3dc590d54811" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="bfb7ca3e-9132-494d-82d4-1640956e1f57" name="Factory returns an appropriate strategy" isLeaf="false">
+            <elementDefinition Id="15457607-bf6f-4155-a123-a966ebb483a8" />
+            <flowNodeTargets>
+              <controlFlow Id="22295846-f278-456f-95ba-c8ccc32ead30" isLeaf="false">
+                <forkNodeMoniker Id="f8e1eb94-bda0-4e95-8e0d-776c2e264ed9" LastKnownName="Fork1" />
+                <elementDefinition Id="ae88984f-a58f-4b35-9b6b-ae058d4403ad" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <joinNode Id="1f812b7b-05ec-4ced-932c-0541f2df5ab4" name="Join1" isLeaf="false">
+            <elementDefinition Id="dab98f57-e860-42a5-a62c-f3e735a929fc" />
+            <flowNodeTargets>
+              <controlFlow Id="ba8b3651-7af2-404e-82fe-d7c7d2522402" isLeaf="false">
+                <activityFinalNodeMoniker Id="46bc2731-dacf-4596-a47a-df36d708308c" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="c9af1dae-b9ac-42af-8f26-07b3fbe05186" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <opaqueAction Id="774911fe-0fbf-4fef-a99a-72ec67ee8bc2" name="A target is selected" isLeaf="false">
+            <elementDefinition Id="34cfd460-ff57-430b-8cfa-5fc600b5ac01" />
+            <flowNodeTargets>
+              <controlFlow Id="39a6d848-acfc-4a73-a8d4-f07086866c93" isLeaf="false">
+                <decisionNodeMoniker Id="51987c67-1c0c-4613-b464-f392d6210e21" LastKnownName="Decision3" />
+                <elementDefinition Id="5577b98d-5deb-4226-b308-5f58463eb892" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="90157f03-1a3b-4e57-ba52-41f30498b897" name="The tagert is shot at" isLeaf="false">
+            <elementDefinition Id="2fc29417-fdce-40fb-b737-ea8b75a0437a" />
+            <flowNodeTargets>
+              <controlFlow Id="8e855d18-3752-459d-807b-9729274ca886" isLeaf="false">
+                <decisionNodeMoniker Id="698b7913-bb8e-44af-90d2-cab4bf81c220" LastKnownName="Decision2" />
+                <elementDefinition Id="e9db3f3d-7ee3-4a3e-ad43-dcf980f357f9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="698b7913-bb8e-44af-90d2-cab4bf81c220" name="Decision2" isLeaf="false">
+            <elementDefinition Id="d5f79526-d03f-42aa-988e-d73c74d1fcae" />
+            <flowNodeTargets>
+              <controlFlow Id="c00efd9c-6466-4861-9855-a905c37e7f2f" isLeaf="false">
+                <joinNodeMoniker Id="1f812b7b-05ec-4ced-932c-0541f2df5ab4" LastKnownName="Join1" />
+                <elementDefinition Id="9868194c-d856-4038-8d70-84a98a6ccd82" />
+              </controlFlow>
+              <controlFlow Id="42885947-8e3e-451d-9671-8f017299de8f" isLeaf="false">
+                <opaqueActionMoniker Id="3d2bdf17-a005-44b2-8fde-a2dd523dc49f" LastKnownName="The list of targets is updated" />
+                <elementDefinition Id="55253b8c-52a8-4cf2-aa3a-49e1f7359f9e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode Id="51987c67-1c0c-4613-b464-f392d6210e21" name="Decision3" isLeaf="false">
+            <elementDefinition Id="c47ce6c0-fa26-4c9a-91eb-480faaa32020" />
+            <flowNodeTargets>
+              <controlFlow Id="b991fae9-4464-4979-b145-e47b16a8bbac" isLeaf="false">
+                <opaqueActionMoniker Id="90157f03-1a3b-4e57-ba52-41f30498b897" LastKnownName="The tagert is shot at" />
+                <elementDefinition Id="72f1f9bf-9029-4b7a-a6c3-52d9a9ceb749" />
+              </controlFlow>
+              <controlFlow Id="326e8286-04d7-405a-b2fc-07ef479cce28" isLeaf="false">
+                <opaqueActionMoniker Id="ed2d5549-94a9-44f7-b26b-0947482b6c35" LastKnownName="Reload" />
+                <elementDefinition Id="8b9b4580-fd7e-4006-afe8-fa2f2ad205f4" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="ed2d5549-94a9-44f7-b26b-0947482b6c35" name="Reload" isLeaf="false">
+            <elementDefinition Id="7d6af1a1-fa4d-4081-bee5-758d36b2c6ab" />
+            <flowNodeTargets>
+              <controlFlow Id="6a8c0e45-66dd-477a-900d-a8f46a84f355" isLeaf="false">
+                <opaqueActionMoniker Id="90157f03-1a3b-4e57-ba52-41f30498b897" LastKnownName="The tagert is shot at" />
+                <elementDefinition Id="c6febb2d-1b66-476e-bcf6-bfc2431f23e3" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="46bc2731-dacf-4596-a47a-df36d708308c" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="0156d8f4-2f50-4aa2-ab15-29a9d5a907b0" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="5d56616a-b7d2-460e-8983-4e93369f7033" name="GUIModeling">
+    <elementDefinition Id="d541d7d4-7e57-4ee4-ad09-8f4d4f438368" />
+  </package>
+</activityRootModel>

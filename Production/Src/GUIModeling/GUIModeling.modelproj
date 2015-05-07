@@ -22,6 +22,20 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="ActivityDiagram\GameStrategy.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ActivityDiagram\GameStrategy.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ActivityDiagram\GameStrategy.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="ClassDiagram\GameStrategy.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ClassDiagram\GameStrategy.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ClassDiagram\GameStrategy.classdiagram</DependentUpon>
+    </Content>
     <Content Include="Iteration4ActivityDiagram.activitydiagram">
       <SubType>Content</SubType>
     </Content>
@@ -164,6 +178,8 @@
     <Content Include="ModelDefinition\GUIModeling.uml">
       <SubType>Content</SubType>
     </Content>
+    <Folder Include="ClassDiagram" />
+    <Folder Include="ActivityDiagram" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Applications\Console\Console.csproj">

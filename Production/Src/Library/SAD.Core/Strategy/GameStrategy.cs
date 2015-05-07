@@ -11,6 +11,7 @@ using SAD.Core.Time;
 using BuildDefender;
 using SAD.Core.Devices;
 using SAD.Core.Server;
+using System.Windows.Forms;
 
 namespace SAD.Core.Strategy
 {
@@ -177,6 +178,13 @@ namespace SAD.Core.Strategy
 
                 // Shoot at it
                 missileLauncher.Kill(victim.Phi, victim.Theta);
+
+                // Reload (IF)
+                if (missileLauncher.CurrentMissileCount == 0)
+                {
+                    MessageBox.Show("Reload", "Reload", MessageBoxButtons.OK);
+                    missileLauncher.Reload();
+                }
             }
         }
 
