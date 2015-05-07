@@ -89,6 +89,8 @@ namespace GUI.ViewModel
             StopGameCommand = new MyCommand(StopGame);
 
             m_strategy = new KillAllStrategy();
+           // m_strategy = new KillAllFoesStrategy();
+            //m_strategy = new RapidFireStrategy();
            
         }
         /// <summary>

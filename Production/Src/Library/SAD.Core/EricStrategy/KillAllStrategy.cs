@@ -63,7 +63,6 @@ namespace SAD.Core.EricStrategy
                 var targetToShoot = prioritize(TargetList);
                 missileLauncher.Kill(targetToShoot.Phi, targetToShoot.Theta);
 
-
                 currentTime = gameWatch.GetCurrentTime();
                 minutesInGame = currentTime.Minutes;
                 
@@ -93,7 +92,7 @@ namespace SAD.Core.EricStrategy
                 {
                     targetToHitIndex = index;
                 }
-
+                
             }
             return TargetList[targetToHitIndex];
         }
