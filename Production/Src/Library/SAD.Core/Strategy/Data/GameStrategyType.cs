@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace SAD.Core.Strategy.Data
 {
-   public enum GameStrategyType
+   public enum GameType
    {
-       PrioritizeFoes,
-       PrioritizeFriends,
-       PrioritizeClosestTargets,
-       PrioritizeHighestPoints
+       GameOne,
+       GameTwo,
+       GameThree,
+       GameFour,
+       GameFive
    }
 }
