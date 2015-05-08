@@ -88,9 +88,10 @@ namespace SAD.Core.EricStrategy
                 {
                     // logic to check time of last hit. 
                 }
-                if (targetToShoot.Points > highestPointValue)
+                if (targetToShoot.Points >= highestPointValue)
                 {
                     targetToHitIndex = index;
+                    highestPointValue = targetToShoot.Points;
                 }
                 
             }
