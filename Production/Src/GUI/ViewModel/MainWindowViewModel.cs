@@ -91,6 +91,7 @@ namespace GUI.ViewModel
             m_strategy = new KillAllStrategy();
            // m_strategy = new KillAllFoesStrategy();
             //m_strategy = new RapidFireStrategy();
+            //m_strategy = new DangerousTraitorStrategy();
            
         }
         /// <summary>

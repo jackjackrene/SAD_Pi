@@ -131,6 +131,7 @@
     <Compile Include="Devices\Missile Launcher\Subclasses\DreamCheekyMissileLauncher.cs" />
     <Compile Include="Devices\Missile Launcher\Subclasses\MockMissileLauncher.cs" />
     <Compile Include="Devices\VideoCamera\Video.cs" />
+    <Compile Include="EricStrategy\DangerousTraitorStrategy.cs" />
     <Compile Include="EricStrategy\IStrategy.cs" />
     <Compile Include="EricStrategy\KillAllFoesStrategy.cs" />
     <Compile Include="EricStrategy\KillAllStrategy.cs" />

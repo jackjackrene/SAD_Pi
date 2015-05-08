@@ -16,13 +16,13 @@ using System.Windows.Forms;
 
 namespace SAD.Core.EricStrategy
 {
-    public class KillAllFoesStrategy : IStrategy
+    public class DangerousTraitorStrategy : IStrategy
     {
         private TargetManager targetManager;
         private GameWatch gameWatch;
 
-   
-    
+
+
         public void GetTargetAndKillIt()
         {
 
@@ -90,11 +90,16 @@ namespace SAD.Core.EricStrategy
                 {
                     // logic to check time of last hit. 
                 }
-                if ((targetToShoot.Points >= highestPointValue) && targetToShoot.Friend == false)
+                if (highestPointValue < 0)
+                {
+                    highestPointValue = highestPointValue * -1;
+                }
+                if ((targetToShoot.Points >= highestPointValue))
                 {
                     targetToHitIndex = index;
                     highestPointValue = targetToShoot.Points;
                 }
+
 
             }
             return TargetList[targetToHitIndex];
